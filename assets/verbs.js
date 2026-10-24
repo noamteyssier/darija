@@ -45,7 +45,7 @@ function render({ v, t, i }) {
   };
 }
 
-const q = quiz($('quiz'), { name: 'verbs', pool, render });
+const q = quiz($('quiz'), { name: 'verbs', pool, render, traits: c => ['p' + c.i, 't' + c.t, 'k' + c.v.kind] });
 
 function counts(pred) { return VERBS.filter(pred).length; }
 function chip(label, n, on, onClick) {
