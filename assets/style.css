@@ -114,6 +114,9 @@ input:disabled{opacity:.75}
 .vbody .kind{margin:0; font-size:.9rem; color:var(--muted)}
 .vbody .kind strong{color:var(--fg)}
 .vbody .row .f .lat{font-weight:700}
+.vbody .row.ex{display:flex; flex-direction:column; align-items:stretch; gap:2px}
+.vbody .row.ex .ar{font-size:1.25rem; color:var(--muted)}
+.vbody .row.ex strong{color:var(--accent)}
 .vbody .row .f .ar{font-size:1.3rem; color:var(--muted); font-weight:500}
 .sub{margin:0; font:700 .8rem var(--body); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .prose{display:flex; flex-direction:column; gap:12px; font-size:.93rem; color:var(--muted)}
