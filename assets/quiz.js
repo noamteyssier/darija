@@ -1,11 +1,12 @@
 // A drill card: prompt, choose-or-type answer, feedback, and a table after answering.
 // Missed items get heavier and come back more often; weights are saved per drill.
+// A drill can pass traits(item) (e.g. pronoun, tense, verb type): then misses weigh the traits (weight = sqrt of their product), not the item.
 import { $, prefs, disp, norm, shuffle, load, bindSeg, scriptSeg, esc } from './common.js';
 
 const STATS = '<div class="stats" aria-live="polite"><span>Today <b data-s="right">0</b>/<b data-s="total">0</b></span><span>Streak <b data-s="streak">0</b></span><span>Best <b data-s="best">0</b></span><span>Weak <b data-s="weak">0</b></span><span data-s="pool"></span></div>';
 
-export function quiz(root, { name, pool, render, onSettings }) {
-  const saved = load(name, { weights: {}, best: 0 });
+export function quiz(root, { name, pool, render, onSettings, traits }) {
+  const saved = load(name, { weights: {}, traits: {}, best: 0 });
   const sess = { right: 0, total: 0, streak: 0 };
   let item = null, view = null, answered = false, ok = false, lastKey = '';
 
@@ -27,7 +28,20 @@ export function quiz(root, { name, pool, render, onSettings }) {
 
   const q = k => root.querySelector('[data-q="' + k + '"]');
   const s = k => root.querySelector('[data-s="' + k + '"]');
-  const weight = k => (typeof saved.weights[k] === 'number' ? saved.weights[k] : 1);
+  const w1 = (m, k) => (typeof m[k] === 'number' ? m[k] : 1);
+  // With traits, "Weak" counts weak traits (pronouns, tenses, verb types) in the set, not items.
+  const weight = c => (traits ? Math.sqrt(traits(c).reduce((a, t) => a * w1(saved.traits, t), 1)) : w1(saved.weights, c.key));
+
+  // A trait is weak when it is high and clearly above the rest of its kind (the first letter of its name),
+  // so a weak pronoun that drags every tense up with it does not flag all the tenses too.
+  function weakTraits(p) {
+    const byKind = {};
+    for (const t of new Set(p.flatMap(traits))) (byKind[t[0]] = byKind[t[0]] || []).push(w1(saved.traits, t));
+    return Object.values(byKind).reduce((n, ws) => {
+      const mean = ws.reduce((a, b) => a + b, 0) / ws.length;
+      return n + ws.filter(w => w > 1.5 && w > 1.5 * mean).length;
+    }, 0);
+  }
 
   function stats() {
     const p = pool();
@@ -35,7 +49,9 @@ export function quiz(root, { name, pool, render, onSettings }) {
     s('total').textContent = sess.total;
     s('streak').textContent = sess.streak;
     s('best').textContent = saved.best;
-    s('weak').textContent = p.filter(c => weight(c.key) > 1.5).length;
+    s('weak').textContent = traits
+      ? weakTraits(p)
+      : p.filter(c => weight(c) > 1.5).length;
     s('pool').textContent = p.length + ' in this set';
   }
 
@@ -43,9 +59,9 @@ export function quiz(root, { name, pool, render, onSettings }) {
     const cs = pool().filter(c => c.key !== lastKey);
     if (!cs.length) return pool()[0] || null;
     let total = 0;
-    cs.forEach(c => { total += weight(c.key); });
+    cs.forEach(c => { total += weight(c); });
     let r = Math.random() * total;
-    for (const c of cs) { r -= weight(c.key); if (r <= 0) return c; }
+    for (const c of cs) { r -= weight(c); if (r <= 0) return c; }
     return cs[cs.length - 1];
   }
 
@@ -99,8 +115,12 @@ export function quiz(root, { name, pool, render, onSettings }) {
   }
 
   function grade(good) {
-    const k = item.key, w = weight(k);
-    saved.weights[k] = good ? Math.max(0.3, w * 0.6) : Math.min(12, w + 3);
+    if (traits) {
+      for (const t of traits(item)) { const w = w1(saved.traits, t); saved.traits[t] = good ? Math.max(0.3, w * 0.9) : Math.min(8, w + 1); }
+    } else {
+      const k = item.key, w = w1(saved.weights, k);
+      saved.weights[k] = good ? Math.max(0.3, w * 0.6) : Math.min(12, w + 3);
+    }
     sess.total++;
     if (good) { sess.right++; sess.streak++; if (sess.streak > saved.best) saved.best = sess.streak; }
     else sess.streak = 0;
@@ -173,7 +193,7 @@ export function quiz(root, { name, pool, render, onSettings }) {
     }
     clearTimeout(armed); armed = null;
     b.textContent = 'Reset progress for this drill';
-    saved.weights = {}; saved.best = 0; sess.right = sess.total = sess.streak = 0;
+    saved.weights = {}; saved.traits = {}; saved.best = 0; sess.right = sess.total = sess.streak = 0;
     saved.save(); next();
   });
 
