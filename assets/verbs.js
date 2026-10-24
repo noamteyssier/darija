@@ -3,7 +3,7 @@ import { quiz, formTable } from './quiz.js';
 import { loadVerbs, TENSE, isStrong, glossOf } from './verbs-data.js';
 
 header();
-const set = load('verbs-set', { tense: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false });
+const set = load('verbs-set', { tense: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false, prons: PRON.map((_, i) => i) });
 const data = await loadVerbs();
 const VERBS = data.verbs;
 
@@ -22,7 +22,7 @@ function pool() {
   if (poolCache) return poolCache;
   const ts = set.tense === 'all' ? ['past', 'pres', 'fut'] : [set.tense];
   const out = [];
-  for (const v of verbsInSet()) for (const t of ts) for (let i = 0; i < 8; i++) out.push({ v, t, i, key: v.id + '|' + t + '|' + i });
+  for (const v of verbsInSet()) for (const t of ts) for (const i of set.prons) out.push({ v, t, i, key: v.id + '|' + t + '|' + i });
   return (poolCache = out);
 }
 
@@ -61,6 +61,7 @@ function changed() {
   poolCache = null;
   const n = set.topics.length + (set.vtype !== 'all' ? 1 : 0);
   $('moreSummary').textContent = n ? 'More filters (' + n + ' on)' : 'More filters';
+  $('pronSummary').textContent = 'Pronouns (' + set.prons.length + ' of 8)';
   q.next();
 }
 function toggle(arr, x) { const k = arr.indexOf(x); if (k >= 0) arr.splice(k, 1); else arr.push(x); }
@@ -72,5 +73,22 @@ $('levels').appendChild(chip('★ Starred', prefs.stars.length, set.starred, () 
 for (const [tp, name] of Object.entries(data.topics)) {
   $('topics').appendChild(chip(name, counts(v => v.topics.includes(tp)), set.topics.includes(tp), () => toggle(set.topics, tp)));
 }
+function syncProns() {
+  $('prons').querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-pressed', String(set.prons.includes(i))));
+}
+PRON.forEach((p, i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.innerHTML = esc(p.lat) + '<small>' + esc(p.en) + '</small>';
+  b.addEventListener('click', () => {
+    if (set.prons.includes(i) && set.prons.length === 1) return; // keep at least one
+    toggle(set.prons, i);
+    set.prons.sort((a, b) => a - b);
+    syncProns(); changed();
+  });
+  $('prons').appendChild(b);
+});
+$('pronAll').addEventListener('click', () => { set.prons = PRON.map((_, i) => i); syncProns(); changed(); });
+syncProns();
 bindSeg($('verbSettings'), set, () => changed());
 changed();
