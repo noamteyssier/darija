@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Verbs · Darija Drills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header id="top"></header>
+
+  <div class="settings" id="verbSettings">
+    <div class="seg" role="group" aria-label="Tense" data-group="tense">
+      <button type="button" data-val="past">Past</button>
+      <button type="button" data-val="pres">Present</button>
+      <button type="button" data-val="fut">Future</button>
+      <button type="button" data-val="all">All</button>
+    </div>
+    <div>
+      <p class="lbl">Verb set</p>
+      <div class="chipset" id="levels" role="group" aria-label="Levels"></div>
+    </div>
+    <details class="more">
+      <summary id="moreSummary">More filters</summary>
+      <div class="settings">
+        <div>
+          <p class="lbl">Topics (none picked = all)</p>
+          <div class="chipset" id="topics" role="group" aria-label="Topics"></div>
+        </div>
+        <div class="seg" role="group" aria-label="Verb type" data-group="vtype">
+          <button type="button" data-val="strong">Regular</button>
+          <button type="button" data-val="weak">Weak</button>
+          <button type="button" data-val="all">Both</button>
+        </div>
+        <p class="note">Star verbs in the <a href="dictionary.html">dictionary</a> to build your own set.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="panel" id="quiz"></div>
+  <p class="note">Forms follow general Casablanca / Rabat Darija. Arabizi: 3 for ع, 7 for ح, gh for غ, kh for خ, q for ق. Future is ghadi plus the present without ka-. nta and nti sound the same in the past.</p>
+</div>
+<script type="module" src="assets/verbs.js"></script>
+</body>
+</html>

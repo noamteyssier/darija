@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Darija Drills</title>
+<meta name="description" content="Drills for Moroccan Arabic (Darija): verb conjugation, possessives, gender and plurals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header id="top"></header>
+  <p class="lead">Short drills for Moroccan Arabic as spoken in Casablanca and Rabat, in arabizi and Arabic script.</p>
+  <div class="home">
+    <a class="tile" href="verbs.html"><b>Verbs</b><span id="vcount">Past, present and future. Start with the Starter set and add more as you learn them.</span></a>
+    <a class="tile" href="nouns.html"><b>Nouns</b><span>Four modules: my book, dyal, gender and agreement, plurals.</span></a>
+    <a class="tile" href="dictionary.html"><b>Dictionary</b><span>Search every verb and noun, see full tables, star verbs to drill.</span></a>
+    <a class="tile" href="rules.html"><b>Rules</b><span>How the endings work, verb types, the article, agreement.</span></a>
+  </div>
+  <p class="note">Progress is saved in this browser only.</p>
+</div>
+<script type="module">
+import { header, getJSON } from './assets/common.js';
+header();
+getJSON('data/verbs.json').then(d => {
+  document.getElementById('vcount').textContent = d.verbs.length + ' verbs in past, present and future. Start with the Starter set and add more as you learn them.';
+}).catch(() => {});
+</script>
+</body>
+</html>

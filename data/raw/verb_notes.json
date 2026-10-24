@@ -1,0 +1,231 @@
+{
+ "override": {
+  "tnbba": {
+   "exclude": true,
+   "why": "rare, hamza spelling"
+  },
+  "faj'a": {
+   "exclude": true,
+   "why": "rare, hamza spelling"
+  },
+  "tsal": {
+   "exclude": true,
+   "why": "rare"
+  },
+  "sal|sal": {
+   "exclude": true,
+   "why": "rare"
+  },
+  "bġa|bġi|knt": {
+   "exclude": true,
+   "why": "duplicate of bgha (want)"
+  },
+  "thla f": {
+   "exclude": true,
+   "why": "duplicate of thella"
+  },
+  "nqs": {
+   "exclude": true,
+   "why": "duplicate of nqes"
+  },
+  "qabl ḍ-ḍar": {
+   "exclude": true,
+   "why": "rare idiom"
+  },
+  "gabl ḍ-ḍar": {
+   "exclude": true,
+   "why": "rare idiom"
+  },
+  "hzz b l bala": {
+   "exclude": true,
+   "why": "rare idiom"
+  },
+  "mat عla": {
+   "exclude": true,
+   "why": "idiom of mat (die)"
+  },
+  "thlla f": {
+   "kind": "final",
+   "past1": "thllit",
+   "en": [
+    "look after / take care of"
+   ],
+   "note": "Used with f: thella f rasek, take care of yourself."
+  },
+  "عaš": {
+   "kind": "hollow",
+   "past1": "عšt",
+   "en": [
+    "live / survive"
+   ]
+  },
+  "عam": {
+   "kind": "hollow",
+   "past1": "عmt"
+  },
+  "tzad": {
+   "kind": "doubled",
+   "past1": "tzadit",
+   "label": "longa",
+   "verify": "The book gives tzadt; tzadit is the common Casablanca form."
+  },
+  "xtar": {
+   "label": "longa",
+   "en": [
+    "choose"
+   ]
+  },
+  "tnffs": {
+   "en": [
+    "breathe"
+   ]
+  },
+  "jab": {
+   "en": [
+    "bring"
+   ]
+  },
+  "mḍġ": {
+   "en": [
+    "chew"
+   ]
+  },
+  "fzg": {
+   "en": [
+    "get damp / be wet"
+   ]
+  },
+  "šṭн": {
+   "en": [
+    "dance"
+   ]
+  },
+  "thnna": {
+   "en": [
+    "calm down / stop worrying",
+    "get rid of (+ mn)"
+   ]
+  },
+  "gal": {
+   "ar_pc": [
+    "qal",
+    "qul",
+    "qlt"
+   ]
+  },
+  "ḍrb t": {
+   "obj": {
+    "lat": "t-tilifun",
+    "ar": "التيليفون"
+   },
+   "en": [
+    "call (on the phone)"
+   ]
+  },
+  "qddm ṭalab": {
+   "obj": {
+    "lat": "talab",
+    "ar": "طلب"
+   }
+  },
+  "šdd f l нbs": {
+   "obj": {
+    "lat": "f l-7bs",
+    "ar": "ف الحبس"
+   }
+  },
+  "jmع l flus": {
+   "obj": {
+    "lat": "l-flus",
+    "ar": "الفلوس"
+   }
+  },
+  "dar l iḍrab": {
+   "obj": {
+    "lat": "l-idrab",
+    "ar": "الإضراب"
+   }
+  },
+  "нlf b llah": {
+   "obj": {
+    "lat": "b-llah",
+    "ar": "بالله"
+   }
+  },
+  "rdd l-bal": {
+   "obj": {
+    "lat": "l-bal",
+    "ar": "البال"
+   }
+  },
+  "šdd": {
+   "en": [
+    "hold / grab / catch",
+    "arrest someone",
+    "get / receive"
+   ]
+  },
+  "šrb": {
+   "en": [
+    "drink",
+    "absorb"
+   ]
+  },
+  "gls": {
+   "en": [
+    "sit / stay"
+   ]
+  },
+  "daz": {
+   "en": [
+    "pass / go by / go through"
+   ]
+  },
+  "tlع": {
+   "en": [
+    "go up / climb / get on"
+   ]
+  },
+  "dar": {
+   "en": [
+    "do / make / put"
+   ]
+  },
+  "kan": {
+   "label": "irregular"
+  },
+  "ja": {
+   "label": "irregular"
+  },
+  "kla": {
+   "en": [
+    "eat"
+   ]
+  },
+  "xda": {
+   "en": [
+    "take / get"
+   ]
+  },
+  "tعarf mعa": {
+   "en": [
+    "get to know (each other)"
+   ]
+  },
+  "tعrrf mعa": {
+   "en": [
+    "get to know / recognize"
+   ]
+  },
+  "wllf": {
+   "en": [
+    "get used to"
+   ]
+  },
+  "tkllf b": {
+   "en": [
+    "be in charge of"
+   ]
+  }
+ }
+}

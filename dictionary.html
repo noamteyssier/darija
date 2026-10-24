@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dictionary · Darija Drills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-script="both">
+<div class="wrap">
+  <header id="top"></header>
+  <div class="card" id="filters">
+    <div class="seg" role="group" aria-label="Word kind" data-group="what">
+      <button type="button" data-val="verbs">Verbs</button>
+      <button type="button" data-val="nouns">Nouns</button>
+      <button type="button" data-val="adjs">Adjectives</button>
+    </div>
+    <label for="search">Search by English, arabizi or Arabic</label>
+    <input type="search" id="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="e.g. write, kteb, كتب">
+    <div id="verbFilters" class="settings">
+      <div class="seg" role="group" aria-label="Level" data-group="level">
+        <button type="button" data-val="all">All</button>
+        <button type="button" data-val="1">Starter</button>
+        <button type="button" data-val="2">Everyday</button>
+        <button type="button" data-val="3">Extended</button>
+        <button type="button" data-val="star">★</button>
+      </div>
+    </div>
+  </div>
+  <p class="note" id="count"></p>
+  <div class="vlist" id="list"></div>
+  <button class="btn ghost" type="button" id="more" hidden>Show more</button>
+  <p class="note">Verbs come from the Peace Corps <i>Moroccan Arabic</i> glossary (2011, pages 163–192), with short vowels added and spelled in arabizi. The page number is shown on each entry. Plurals marked “not in the book” were added separately.</p>
+</div>
+<script type="module" src="assets/dictionary.js"></script>
+</body>
+</html>
