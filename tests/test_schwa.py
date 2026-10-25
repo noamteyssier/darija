@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
-import build_verbs as b  # noqa: E402
+import build_verbs as b
 
 C_FORMS = {
     "ktb": "kteb", "sqqṭ": "seqqeṭ", "trjm": "terjem", "tqddm": "tqeddem", "txaṣm": "txaṣem",

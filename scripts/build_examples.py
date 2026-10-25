@@ -123,7 +123,7 @@ def ask(group):
     r = subprocess.run(
         ["claude", "-p", "--model", MODEL, "--effort", "high", "--tools", "", "--no-session-persistence",
          "--system-prompt", STYLE, "--output-format", "json", "--json-schema", json.dumps(SCHEMA), prompt],
-        capture_output=True, text=True, cwd=RAW.parent)
+        check=False, capture_output=True, text=True, cwd=RAW.parent)
     try:
         out = json.loads(r.stdout)
     except json.JSONDecodeError:
