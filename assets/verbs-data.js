@@ -56,16 +56,20 @@ export const loadExamples = id => examples.has(id)
   ? Promise.resolve(examples.get(id))
   : getJSON('data/examples/' + id + '.json').catch(() => []).then(ex => (examples.set(id, ex), ex));
 
-// The examples table, verb form in bold. Rows are listed best match first: the drilled slot
-// ({ t, p, neg }), then the same person in other tenses, then the rest. Without a person
-// (dictionary, match) a verb with the full set lists the positive sentences of tense t (default
-// present). max caps the rows.
+// The examples table, verb form in bold. For a drilled slot ({ t, p, neg }) the rows are the
+// drilled slot, then the same person and polarity in other tenses; only when the verb has none
+// of those does it fall back to the same person in the other polarity, then the same tense, then
+// the rest. Without a person (dictionary, match) a verb with the full set lists the positive
+// sentences of tense t (default present). max caps the rows.
 export function exampleTable(v, { script, t, p, neg = false, max = 8 } = {}) {
   let ex = examples.get(v.id) || [];
   if (!ex.length) return '';
   if (p !== undefined) {
-    const rank = e => (e.t === t && e.p === p && !!e.neg === neg ? 0 : e.p === p && !!e.neg === neg ? 1 : e.t === t ? 2 : 3);
-    ex = ex.map((e, i) => [rank(e), i, e]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).slice(0, max).map(x => x[2]);
+    const same = e => e.p === p && !!e.neg === neg;
+    const rank = e => (same(e) ? (e.t === t ? 0 : 1) : e.p === p ? 2 : e.t === t ? 3 : 4);
+    ex = ex.map((e, i) => [rank(e), i, e]).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+    if (ex[0][0] <= 1) ex = ex.filter(x => x[0] <= 1);
+    ex = ex.slice(0, max).map(x => x[2]);
   } else if (ex.length > 3) ex = ex.filter(e => e.t === (t || 'pres') && !e.neg).slice(0, max);
   const mark = (s, f) => esc(s).replace(esc(f), '<strong>' + esc(f) + '</strong>');
   return '<div class="table"><h2>examples</h2>' + ex.map(e => {
