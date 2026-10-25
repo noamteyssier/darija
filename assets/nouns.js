@@ -2,7 +2,7 @@ import { $, OWNER, prefs, header, load, esc, getJSON, shuffle } from './common.j
 import { quiz, formTable } from './quiz.js';
 
 header();
-const st = load('nouns-set', { module: 'mine' });
+const st = load('nouns-set', { module: 'mine', owners: OWNER.map((_, i) => i) });
 const { nouns: NOUNS, adjectives: ADJS } = await getJSON('data/nouns.json');
 const A = Object.fromEntries(ADJS.map(a => [a.id, a]));
 
@@ -52,7 +52,7 @@ const MODULES = {
   mine: {
     n: 1, title: 'My book', sub: 'Possessive endings: ktabi, ktabek, ktabu',
     intro: '<p>Add an ending to the noun: <strong>-i</strong> my, <strong>-ek</strong> your, <strong>-u</strong> his, <strong>-ha</strong> her, <strong>-na</strong> our, <strong>-kum</strong> your (pl.), <strong>-hum</strong> their.</p><p>Feminine nouns ending in <strong>-a</strong> turn it into <strong>-t-</strong>: magana, maganti. After a vowel, my is <strong>-ya</strong> and his is <strong>-h</strong>: khuya, khuh. Endings sound natural on family, body parts and a few everyday things.</p>',
-    pool: () => NOUNS.filter(n => n.mine).flatMap(n => OWNER.map((_, i) => ({ n, i, key: 'mine|' + n.id + '|' + i }))),
+    pool: () => NOUNS.filter(n => n.mine).flatMap(n => st.owners.map(i => ({ n, i, key: 'mine|' + n.id + '|' + i }))),
     render: ({ n, i }) => ({
       chip: 'Ending', gloss: n.en,
       word: { lat: n.lat, ar: n.ar },
@@ -66,7 +66,7 @@ const MODULES = {
   dyal: {
     n: 2, title: 'The book of mine', sub: 'dyal: l-ktab dyali, d-dar dyalha',
     intro: '<p>Put <strong>the</strong> on the noun and follow it with <strong>dyal</strong> plus an ending: l-ktab dyali, my book. dyal works with almost any noun, and it is the usual choice for things you own.</p><p><strong>the</strong> is l- before most letters but copies the first letter before t d r z s sh n l j and their emphatic forms: d-dar, s-sarut, t-tumubil.</p>',
-    pool: () => NOUNS.filter(n => n.dyal).flatMap(n => OWNER.map((_, i) => ({ n, i, key: 'dyal|' + n.id + '|' + i }))),
+    pool: () => NOUNS.filter(n => n.dyal).flatMap(n => st.owners.map(i => ({ n, i, key: 'dyal|' + n.id + '|' + i }))),
     render: ({ n, i }) => ({
       chip: 'dyal', gloss: n.en,
       word: { lat: n.lat, ar: n.ar },
@@ -156,7 +156,27 @@ const MODULES = {
   },
 };
 
-let q = null;
+let q = null, cache = null;
+const hasOwners = () => ['mine', 'dyal'].includes(st.module);
+function syncOwners() {
+  $('ownerBox').hidden = !hasOwners();
+  $('owners').querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-pressed', String(st.owners.includes(i))));
+  $('ownerSummary').textContent = 'Possessors (' + st.owners.length + ' of ' + OWNER.length + ')';
+}
+function toggle(arr, x) { const k = arr.indexOf(x); if (k >= 0) arr.splice(k, 1); else arr.push(x); }
+function ownersChanged() { st.owners.sort((a, b) => a - b); st.save(); cache = null; syncOwners(); q.next(); }
+OWNER.forEach((o, i) => {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.innerHTML = esc(o.lat) + '<small>' + esc(o.en) + '</small>';
+  b.addEventListener('click', () => {
+    if (st.owners.includes(i) && st.owners.length === 1) return; // keep at least one
+    toggle(st.owners, i);
+    ownersChanged();
+  });
+  $('owners').appendChild(b);
+});
+$('ownerAll').addEventListener('click', () => { st.owners = OWNER.map((_, i) => i); ownersChanged(); });
 function progress(id) {
   const saved = load('nouns-' + id, { weights: {} });
   const items = MODULES[id].pool();
@@ -172,7 +192,8 @@ function start() {
   const m = MODULES[st.module] || MODULES.mine;
   drawModules();
   $('introText').innerHTML = m.intro + '<p><a href="rules.html#nouns">All noun rules</a></p>';
-  let cache = null;
+  cache = null;
+  syncOwners();
   q = quiz($('quiz'), {
     name: 'nouns-' + st.module,
     pool: () => (cache ||= m.pool()),
