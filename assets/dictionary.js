@@ -1,10 +1,9 @@
 import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON, toggleStar } from './common.js';
-import { loadVerbs, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
+import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
-const [vdata, ndata, examples] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'),
-  getJSON('data/examples.json').catch(() => ({}))]);
+const [vdata, ndata, examples] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), loadExamples()]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -33,19 +32,6 @@ function table(title, labels, lat, ar) {
     '<div class="row"><span class="p"><span>' + esc(p.lat) + '</span><span class="par" lang="ar" dir="rtl">' + esc(p.ar) + '</span><span class="pen">' + esc(p.en) + '</span></span><span class="f">' + both(lat[i], ar[i]) + '</span></div>').join('') + '</div>';
 }
 
-// Example sentences from scripts/build_examples.py, with the verb form in bold.
-function exampleList(v) {
-  const ex = examples[v.id];
-  if (!ex) return '';
-  const mark = (s, f) => esc(s).replace(esc(f), '<strong>' + esc(f) + '</strong>');
-  return '<div class="table"><h2>examples</h2>' + ex.map(e => {
-    const f = v[e.t];
-    return '<div class="row ex"><span class="p">' + esc(TENSE[e.t].label.toLowerCase() + ' · ' + PRON[e.p].lat) + '</span>'
-      + '<span class="lat">' + mark(e.lat, f.lat[e.p]) + '</span><span class="ar" lang="ar" dir="rtl">' + mark(e.ar, f.ar[e.p]) + '</span>'
-      + '<span class="pen">' + esc(e.en) + '</span></div>';
-  }).join('') + '</div>';
-}
-
 function verbItems() {
   return ranked(vdata.verbs.filter(v => st.level === 'star' ? prefs.stars.includes(v.id) : st.level === 'all' || String(v.level) === st.level),
     v => [v.lat, v.ar, v.en, v.id]).map(v => ({
@@ -61,7 +47,7 @@ function verbItems() {
         '<button type="button" data-tense="' + t + '" aria-pressed="' + (st.tense === t) + '">' + x.label + '</button>').join('') + '</div>';
       const f = v[st.tense];
       h += table(v.lat + ' · ' + TENSE[st.tense].label.toLowerCase(), PRON, f.lat, f.ar);
-      h += exampleList(v);
+      h += exampleTable(v, examples);
       h += '<p class="note">' + esc(glossOf(v)) + ' · source: ' + esc(v.src) + ' (book spelling: ' + esc(v.pc) + ')</p>';
       return h;
     },

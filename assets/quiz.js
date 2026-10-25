@@ -8,7 +8,7 @@ const STATS = '<div class="stats" aria-live="polite"><span>Today <b data-s="righ
 export function quiz(root, { name, pool, render, onSettings, traits }) {
   const saved = load(name, { weights: {}, traits: {}, best: 0 });
   const sess = { right: 0, total: 0, streak: 0 };
-  let item = null, view = null, answered = false, ok = false, lastKey = '';
+  let item = null, view = null, answered = false, ok = false, lastKey = '', tab = null;
 
   root.innerHTML = STATS
     + '<div class="settings"><div class="seg" role="group" aria-label="Answer style" data-group="mode"><button type="button" data-val="choose">Choose</button><button type="button" data-val="type">Type</button></div>'
@@ -82,6 +82,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
   function next(forced) {
     item = forced || pick();
     answered = false;
+    tab = null;
     lastKey = item ? item.key : '';
     q('fb').hidden = true; q('after').hidden = true; q('next').hidden = true;
     draw();
@@ -135,9 +136,21 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
     fb.innerHTML = '<strong>' + (good ? 'Correct' : 'Not quite. It is:') + '</strong><span class="ans">' + disp(view.answer.lat, view.answer.ar) + '</span>'
       + (view.why ? '<span class="why">' + esc(view.why) + '</span>' : '');
     fb.hidden = false;
-    const after = view.after ? view.after() : '';
-    q('after').innerHTML = after;
-    q('after').hidden = !after;
+    // after(good) returns html, or tabs [{ label, html, open }] where open marks the default tab.
+    const after = view.after ? view.after(good) : '';
+    const box = q('after');
+    if (Array.isArray(after)) {
+      const cur = tab ?? Math.max(0, after.findIndex(t => t.open));
+      box.innerHTML = '<div class="seg" role="group" aria-label="Show">' + after.map((t, i) =>
+        '<button type="button" data-tab="' + i + '" aria-pressed="' + (i === cur) + '">' + esc(t.label) + '</button>').join('') + '</div>'
+        + after.map((t, i) => '<div data-panel="' + i + '"' + (i === cur ? '' : ' hidden') + '>' + t.html + '</div>').join('');
+      box.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', () => {
+        tab = Number(b.dataset.tab);
+        box.querySelectorAll('[data-tab]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+        box.querySelectorAll('[data-panel]').forEach(x => { x.hidden = x.dataset.panel !== b.dataset.tab; });
+      }));
+    } else box.innerHTML = after;
+    box.hidden = !after.length;
     const nb = q('next');
     nb.hidden = false;
     setTimeout(() => { try { nb.focus({ preventScroll: true }); } catch (e) { /* ignore */ } }, 0);
