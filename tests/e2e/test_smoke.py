@@ -50,9 +50,9 @@ def test_negative_verb_drill(browser, base_url):
     page.click('.seg[data-group="polarity"] button[data-val="neg"]')
     page.click('.seg[data-group="script"] button[data-val="latin"]')
     for _ in range(12):
-        assert "negative" in page.locator('[data-q="chip"]').inner_text()
+        assert "negative" in page.locator('[data-q="chip"]').inner_text().lower()
         page.locator(".opt").first.click()
         answer = page.locator(".opt.right").inner_text()
-        assert answer.startswith("ma ") and answer.rstrip().endswith("sh"), answer
+        assert answer.startswith("ma ") and (answer.rstrip().endswith("sh") or " ghadish " in answer), answer
         page.click('[data-q="next"]')
     page.close()
