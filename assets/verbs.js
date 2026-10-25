@@ -4,7 +4,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, isStrong, glossOf, negate
 
 header();
 const set = load('verbs-set', { tense: 'all', polarity: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false, prons: PRON.map((_, i) => i) });
-const [data, examples] = await Promise.all([loadVerbs(), loadExamples()]);
+const data = await loadVerbs();
 const VERBS = data.verbs;
 
 function verbsInSet() {
@@ -28,6 +28,7 @@ function pool() {
 }
 
 function render({ v, t, i, neg }) {
+  loadExamples(v.id);
   const f = v[t];
   const other = t === 'pres' ? 'past' : 'pres';
   const forms = (x, tt) => x.lat.map((lat, j) => ({ lat, ar: x.ar[j] })).map(o => (neg ? negate(o, tt) : o));
@@ -54,7 +55,7 @@ function render({ v, t, i, neg }) {
       const conj = neg
         ? formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase() + ' · negative', PRON.map(p => p.lat), full.map(o => o.lat), full.map(o => o.ar), i)
         : formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase(), PRON.map(p => p.lat), f.lat, f.ar, i);
-      const ex = exampleTable(v, examples, { script: prefs.script, first: t });
+      const ex = exampleTable(v, { script: prefs.script, t, p: i, neg, max: 4 });
       return ex ? [{ label: 'Conjugation', html: conj, open: !good }, { label: 'Examples', html: ex, open: good }] : conj;
     },
   };

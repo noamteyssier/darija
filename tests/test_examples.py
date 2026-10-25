@@ -7,7 +7,7 @@ from typing import ClassVar
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from build_examples import bad_script, has_form, slots
+from build_examples import bad_script, has_form, negate, slots
 
 V = {v["id"]: v for v in json.loads((ROOT / "data/verbs.json").read_text())["verbs"]}
 
@@ -24,6 +24,20 @@ class Slots(unittest.TestCase):
         pres = V["msha"]["pres"]
         self.assertEqual(fut["lat"], "ghadi " + pres["lat"][fut["p"]][2:])
         self.assertEqual(fut["ar"], "غادي " + pres["ar"][fut["p"]][1:])
+
+
+class Full(unittest.TestCase):
+    def test_every_slot_once(self):
+        a = slots(V["kteb"], full=True)
+        self.assertEqual(len(a), 48)
+        self.assertEqual([s["slot"] for s in a], list(range(48)))
+        self.assertEqual(len({(s["tense"], s["p"], s["neg"]) for s in a}), 48)
+
+    def test_negation(self):
+        self.assertEqual(negate("ktebt", "كتبت", "past"), ("ma ktebtsh", "ما كتبتش"))
+        self.assertEqual(negate("ghadi nkteb", "غادي نكتب", "fut"), ("ma ghadish nkteb", "ما غاديش نكتب"))
+        neg = [s for s in slots(V["kteb"], full=True) if s["neg"] and s["tense"] == "fut"]
+        self.assertTrue(all(s["lat"].startswith("ma ghadish ") for s in neg))
 
 
 class HasForm(unittest.TestCase):

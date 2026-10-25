@@ -48,20 +48,32 @@ export function glossOf(v) {
   return 'to ' + v.en + (v.prep ? ' (+ ' + v.prep + ')' : '');
 }
 
-// Example sentences from scripts/build_examples.py; the site still works without the file.
-export const loadExamples = () => getJSON('data/examples.json').catch(() => ({}));
+// Example sentences from scripts/build_examples.py, one file per verb. Fetch with loadExamples(id)
+// (drill pages call it in render(), so the file has arrived by the time an answer is shown), then
+// exampleTable reads the cache. The site still works without the files.
+const examples = new Map();
+export const loadExamples = id => examples.has(id)
+  ? Promise.resolve(examples.get(id))
+  : getJSON('data/examples/' + id + '.json').catch(() => []).then(ex => (examples.set(id, ex), ex));
 
-// The examples table, verb form in bold. first: tense to list first (the one just drilled).
-export function exampleTable(v, examples, { script, first } = {}) {
-  const ex = examples[v.id];
-  if (!ex) return '';
+// The examples table, verb form in bold. Rows are listed best match first: the drilled slot
+// ({ t, p, neg }), then the same person in other tenses, then the rest. Without a person
+// (dictionary, match) a verb with the full set lists the positive sentences of tense t (default
+// present). max caps the rows.
+export function exampleTable(v, { script, t, p, neg = false, max = 8 } = {}) {
+  let ex = examples.get(v.id) || [];
+  if (!ex.length) return '';
+  if (p !== undefined) {
+    const rank = e => (e.t === t && e.p === p && !!e.neg === neg ? 0 : e.p === p && !!e.neg === neg ? 1 : e.t === t ? 2 : 3);
+    ex = ex.map((e, i) => [rank(e), i, e]).sort((a, b) => a[0] - b[0] || a[1] - b[1]).slice(0, max).map(x => x[2]);
+  } else if (ex.length > 3) ex = ex.filter(e => e.t === (t || 'pres') && !e.neg).slice(0, max);
   const mark = (s, f) => esc(s).replace(esc(f), '<strong>' + esc(f) + '</strong>');
-  const rows = first ? [...ex].sort((a, b) => (b.t === first) - (a.t === first)) : ex;
-  return '<div class="table"><h2>examples</h2>' + rows.map(e => {
-    const f = v[e.t];
-    const L = '<span class="lat">' + mark(e.lat, f.lat[e.p]) + '</span>';
-    const A = '<span class="ar" lang="ar" dir="rtl">' + mark(e.ar, f.ar[e.p]) + '</span>';
-    return '<div class="row ex"><span class="p">' + esc(TENSE[e.t].label.toLowerCase() + ' · ' + PRON[e.p].lat) + '</span>'
+  return '<div class="table"><h2>examples</h2>' + ex.map(e => {
+    const f = { lat: v[e.t].lat[e.p], ar: v[e.t].ar[e.p] };
+    const g = e.neg ? negate(f, e.t) : f;
+    const L = '<span class="lat">' + mark(e.lat, g.lat) + '</span>';
+    const A = '<span class="ar" lang="ar" dir="rtl">' + mark(e.ar, g.ar) + '</span>';
+    return '<div class="row ex"><span class="p">' + esc(TENSE[e.t].label.toLowerCase() + ' · ' + PRON[e.p].lat + (e.neg ? ' · negative' : '')) + '</span>'
       + (script === 'latin' ? L : script === 'arabic' ? A : L + A)
       + '<span class="pen">' + esc(e.en) + '</span></div>';
   }).join('') + '</div>';
