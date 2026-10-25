@@ -3,10 +3,11 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from typing import ClassVar
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from build_examples import bad_script, has_form, slots  # noqa: E402
+from build_examples import bad_script, has_form, slots
 
 V = {v["id"]: v for v in json.loads((ROOT / "data/verbs.json").read_text())["verbs"]}
 
@@ -26,7 +27,7 @@ class Slots(unittest.TestCase):
 
 
 class HasForm(unittest.TestCase):
-    slot = {"lat": "ghadi nmshi", "ar": "غادي نمشي"}
+    slot: ClassVar = {"lat": "ghadi nmshi", "ar": "غادي نمشي"}
 
     def test_whole_words(self):
         self.assertTrue(has_form({"lat": "Ghadi nmshi l s-suq.", "ar": "غادي نمشي للسوق؟"}, self.slot))
