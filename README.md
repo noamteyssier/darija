@@ -15,7 +15,7 @@ python3 -m http.server 8765
 ## Layout
 
 ```
-index.html verbs.html nouns.html dictionary.html rules.html
+index.html verbs.html match.html nouns.html dictionary.html rules.html
 assets/                shared CSS and ES modules (common.js, quiz.js, one module per page)
 data/verbs.json        706 verbs with full past and present paradigms (generated)
 data/nouns.json        nouns and adjectives with possessive, dyal, definite and plural forms (generated)
