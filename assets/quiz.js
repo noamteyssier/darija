@@ -5,13 +5,13 @@ import { $, prefs, disp, norm, shuffle, load, bindSeg, scriptSeg, esc } from './
 
 const STATS = '<div class="stats" aria-live="polite"><span>Today <b data-s="right">0</b>/<b data-s="total">0</b></span><span>Streak <b data-s="streak">0</b></span><span>Best <b data-s="best">0</b></span><span>Weak <b data-s="weak">0</b></span><span data-s="pool"></span></div>';
 
-export function quiz(root, { name, pool, render, onSettings, traits }) {
+export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
   const saved = load(name, { weights: {}, traits: {}, best: 0 });
   const sess = { right: 0, total: 0, streak: 0 };
   let item = null, view = null, answered = false, ok = false, lastKey = '', tab = null;
 
   root.innerHTML = STATS
-    + '<div class="settings"><div class="seg" role="group" aria-label="Answer style" data-group="mode"><button type="button" data-val="choose">Choose</button><button type="button" data-val="type">Type</button></div>'
+    + '<div class="settings">' + (noMode ? '' : '<div class="seg" role="group" aria-label="Answer style" data-group="mode"><button type="button" data-val="choose">Choose</button><button type="button" data-val="type">Type</button></div>')
     + scriptSeg() + '</div>'
     + '<section class="card" aria-live="polite">'
     + '<p class="note" data-q="empty" hidden>Nothing in this set yet. Pick at least one group above.</p><div data-q="main" style="display:contents">'
@@ -28,6 +28,8 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
 
   const q = k => root.querySelector('[data-q="' + k + '"]');
   const s = k => root.querySelector('[data-s="' + k + '"]');
+  // view.plain: lat is a plain English string, shown as is in every script setting.
+  const show = (lat, ar) => (view.plain ? '<span class="lat">' + esc(lat) + '</span>' : disp(lat, ar));
   const w1 = (m, k) => (typeof m[k] === 'number' ? m[k] : 1);
   // With traits, "Weak" counts weak traits (pronouns, tenses, verb types) in the set, not items.
   const weight = c => (traits ? Math.sqrt(traits(c).reduce((a, t) => a * w1(saved.traits, t), 1)) : w1(saved.weights, c.key));
@@ -73,7 +75,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
     q('chip').innerHTML = view.chip || '';
     q('gloss').textContent = view.gloss || '';
     q('word').className = 'word' + (view.small ? ' small' : '');
-    q('word').innerHTML = view.word ? disp(view.word.lat, view.word.ar) : '';
+    q('word').innerHTML = view.wordHtml ?? (view.word ? disp(view.word.lat, view.word.ar) : '');
     const who = !view.ask.ar || prefs.script === 'latin' ? view.ask.lat : prefs.script === 'arabic' ? view.ask.ar : view.ask.lat + ' · ' + view.ask.ar;
     q('ask').innerHTML = '<span class="who"></span>' + (view.ask.en ? '<span class="en">(' + esc(view.ask.en) + ')</span>' : '');
     q('ask').querySelector('.who').textContent = who || '';
@@ -89,7 +91,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
     if (!item) return;
     const opts = q('opts'), form = q('form');
     opts.innerHTML = '';
-    if (prefs.mode === 'choose' || view.chooseOnly) {
+    if (prefs.mode === 'choose' || noMode || view.chooseOnly) {
       form.hidden = true; opts.hidden = false;
       const seen = new Set([view.answer.lat]);
       const items = [{ ...view.answer, ok: true }];
@@ -102,7 +104,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
       (view.keepOrder ? items.sort((a, b) => view.order.indexOf(a.lat) - view.order.indexOf(b.lat)) : shuffle(items)).forEach(it => {
         const b = document.createElement('button');
         b.type = 'button'; b.className = 'opt';
-        b.innerHTML = disp(it.lat, it.ar);
+        b.innerHTML = show(it.lat, it.ar);
         b.dataset.ok = it.ok ? '1' : '0'; b.dataset.lat = it.lat; b.dataset.ar = it.ar;
         b.addEventListener('click', () => choose(b, it.ok));
         opts.appendChild(b);
@@ -133,7 +135,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
     ok = good;
     const fb = q('fb');
     fb.className = 'fb ' + (good ? 'good' : 'bad');
-    fb.innerHTML = '<strong>' + (good ? 'Correct' : 'Not quite. It is:') + '</strong><span class="ans">' + disp(view.answer.lat, view.answer.ar) + '</span>'
+    fb.innerHTML = '<strong>' + (good ? 'Correct' : 'Not quite. It is:') + '</strong><span class="ans">' + show(view.answer.lat, view.answer.ar) + '</span>'
       + (view.why ? '<span class="why">' + esc(view.why) + '</span>' : '');
     fb.hidden = false;
     // after(good) returns html, or tabs [{ label, html, open }] where open marks the default tab.
@@ -179,7 +181,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
   });
   q('next').addEventListener('click', () => {
     next();
-    if (prefs.mode === 'type') { try { q('answer').focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
+    if (prefs.mode === 'type' && !noMode) { try { q('answer').focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
   });
 
   const settingsBox = root.querySelector('.settings');
@@ -189,7 +191,7 @@ export function quiz(root, { name, pool, render, onSettings, traits }) {
     if (k === 'script' && item) {
       if (!answered) return next(item);
       draw();
-      root.querySelectorAll('.opt').forEach(b => { b.innerHTML = disp(b.dataset.lat, b.dataset.ar); });
+      root.querySelectorAll('.opt').forEach(b => { b.innerHTML = show(b.dataset.lat, b.dataset.ar); });
       result(ok);
     } else next();
     if (onSettings) onSettings(k);

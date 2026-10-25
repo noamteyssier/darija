@@ -87,6 +87,7 @@ export function getJSON(path) {
 
 const PAGES = [
   ['verbs.html', 'Verbs'],
+  ['match.html', 'Match'],
   ['nouns.html', 'Nouns'],
   ['dictionary.html', 'Dictionary'],
   ['rules.html', 'Rules'],
