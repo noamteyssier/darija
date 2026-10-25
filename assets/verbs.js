@@ -33,6 +33,7 @@ function render({ v, t, i }) {
   const options = [...shuffle(forms(f)), ...shuffle(forms(v[other]))];
   const accept = t === 'fut' ? [f.lat[i].replace(/^ghadi /, 'gha'), f.ar[i].replace(/^غادي /, 'غا')] : [];
   return {
+    chipCls: 'tense-' + t,
     chip: TENSE[t].label + '<span class="ar" lang="ar" dir="rtl">' + TENSE[t].ar + '</span>',
     gloss: glossOf(v),
     word: { lat: v.lat, ar: v.ar },

@@ -73,6 +73,7 @@ export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
     if (!item) { stats(); return; }
     view = render(item);
     q('chip').innerHTML = view.chip || '';
+    q('chip').className = 'chip' + (view.chipCls ? ' ' + view.chipCls : '');
     q('gloss').textContent = view.gloss || '';
     q('word').className = 'word' + (view.small ? ' small' : '');
     q('word').innerHTML = view.wordHtml ?? (view.word ? disp(view.word.lat, view.word.ar) : '');
