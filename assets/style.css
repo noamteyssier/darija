@@ -45,6 +45,9 @@ details.more .settings{gap:12px}
 .card{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:18px; display:flex; flex-direction:column; gap:14px}
 .chips{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
 .chip{font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); border:1px solid var(--line); border-radius:999px; padding:3px 10px}
+.chip.tense-past{color:var(--info); background:#2a3330}
+.chip.tense-pres{color:var(--good); background:var(--good-bg)}
+.chip.tense-fut{color:var(--weak); background:#3d2a1a}
 .chip .ar{font-size:.95rem; letter-spacing:0; text-transform:none; margin-inline-start:6px; display:inline}
 .word{display:flex; flex-direction:column; gap:2px}
 .word .lat{font:700 2.6rem/1.05 var(--display); letter-spacing:-0.02em; overflow-wrap:anywhere}
