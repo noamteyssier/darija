@@ -8,13 +8,14 @@ const A = Object.fromEntries(ADJS.map(a => [a.id, a]));
 
 // Which noun topics each adjective makes sense with.
 const ALL = ['family', 'body', 'home', 'clothes', 'things', 'places', 'animal'];
+const FOOD = ['food'];
 const STUFF = ['home', 'clothes', 'things'];
 const ADJ_FOR = {
-  kbir: ALL, sghir: ALL, zwin: [...ALL, 'abstract'], mzyan: [...ALL, 'abstract', 'time'], khayb: [...ALL, 'abstract', 'time'],
+  kbir: [...ALL, ...FOOD], sghir: [...ALL, ...FOOD], zwin: [...ALL, 'abstract'], mzyan: [...ALL, ...FOOD, 'abstract', 'time'], khayb: [...ALL, ...FOOD, 'abstract', 'time'],
   twil: ['family', 'clothes', 'time'], qsir: ['family', 'clothes', 'time'],
   jdid: [...STUFF, 'places', 'time'], qdim: [...STUFF, 'places'],
   nqi: ['body', ...STUFF, 'places', 'animal'], mussekh: ['body', ...STUFF, 'places', 'animal'],
-  ghali: STUFF, rkhis: STUFF, b3id: ['places'], qrib: ['places'], '7lu': ['family'], bsit: ['abstract'],
+  ghali: [...STUFF, ...FOOD], rkhis: [...STUFF, ...FOOD], b3id: ['places'], qrib: ['places'], '7lu': ['family'], bsit: ['abstract'],
   fer7an: ['family'], meskin: ['family', 'animal'], '3iyan': ['family', 'animal'], ji3an: ['family', 'animal'], meshghul: ['family'], mrid: ['family', 'animal'],
   byed: [...STUFF, 'animal'], k7el: [...STUFF, 'animal'], '7mer': STUFF, zreq: STUFF, khder: STUFF, sfer: STUFF,
 };
@@ -25,7 +26,7 @@ const first = en => en.split(' / ')[0];
 function enPlural(en) {
   const m = first(en).match(/^([^(]*?)\s*(\(.*\))?$/);
   const w = m[1], tail = m[2] ? ' ' + m[2] : '';
-  const irr = { man: 'men', woman: 'women', foot: 'feet', knife: 'knives', shoes: 'shoes', pants: 'pants', 'small shop': 'small shops', 'sheet of paper': 'sheets of paper' };
+  const irr = { man: 'men', woman: 'women', child: 'children', fish: 'fish', foot: 'feet', knife: 'knives', shoes: 'shoes', pants: 'pants', 'small shop': 'small shops', 'sheet of paper': 'sheets of paper' };
   const p = irr[w] || (/[^aeiou]y$/.test(w) ? w.slice(0, -1) + 'ies' : /(s|sh|ch|x)$/.test(w) ? w + 'es' : w + 's');
   return p + tail;
 }
