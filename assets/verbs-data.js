@@ -18,6 +18,16 @@ export const KINDS = {
   irregular: { name: 'irregular', text: 'The stem changes in a way the patterns above do not predict. Learn the table.' },
 };
 
+// Negation wraps the verb: ma + form + sh (ma ktebtsh). The future's ghadi takes the sh: ma ghadish nkteb.
+const ma = x => ({ lat: 'ma ' + x.lat, ar: 'ما ' + x.ar });
+const sh = (x, t) => (t === 'fut'
+  ? { lat: x.lat.replace(/^ghadi /, 'ghadish '), ar: x.ar.replace(/^غادي /, 'غاديش ') }
+  : { lat: x.lat + 'sh', ar: x.ar + 'ش' });
+export const negate = (x, t) => ma(sh(x, t));
+// The contracted future (ghankteb) is negated like any other verb: ma ghanktebsh.
+// The two half-negations learners produce by mistake: ma without sh, and sh without ma.
+export const halfNegations = (x, t) => [ma(x), sh(x, t)];
+
 export const isStrong = v => v.kind === 'sound';
 
 export async function loadVerbs() {
