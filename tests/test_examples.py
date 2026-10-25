@@ -7,7 +7,7 @@ from typing import ClassVar
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-from build_examples import bad_script, has_form, negate, slots
+from build_examples import bad_script, has_form, negate, reviewed, slots
 
 V = {v["id"]: v for v in json.loads((ROOT / "data/verbs.json").read_text())["verbs"]}
 
@@ -38,6 +38,19 @@ class Full(unittest.TestCase):
         self.assertEqual(negate("ghadi nkteb", "غادي نكتب", "fut"), ("ma ghadish nkteb", "ما غاديش نكتب"))
         neg = [s for s in slots(V["kteb"], full=True) if s["neg"] and s["tense"] == "fut"]
         self.assertTrue(all(s["lat"].startswith("ma ghadish ") for s in neg))
+
+
+class Reviewed(unittest.TestCase):
+    gem: ClassVar = {"kteb": [{"slot": i, "lat": f"l{i}", "ar": f"a{i}", "en": f"e{i}"} for i in range(4)], "shaf": [{"slot": 0, "lat": "x", "ar": "x", "en": "x"}]}
+
+    def test_ok_fixed_dropped_unreviewed(self):
+        rev = {"kteb": {"0": {"ok": True}, "1": {"ok": False, "why": "w", "lat": "L", "ar": "A", "en": "E"},
+                        "2": {"ok": False, "why": "w", "lat": "", "ar": "", "en": ""}}}
+        out = reviewed(self.gem, rev)
+        self.assertEqual(out, {"kteb": [self.gem["kteb"][0], {"slot": 1, "lat": "L", "ar": "A", "en": "E"}]})
+
+    def test_nothing_without_review(self):
+        self.assertEqual(reviewed(self.gem, {}), {})
 
 
 class HasForm(unittest.TestCase):

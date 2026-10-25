@@ -6,7 +6,9 @@ Default: each verb gets three slots, one per tense, each with a different person
 verb id, so reruns pick the same slots (data/raw/examples/sonnet.json).
 --full: each verb gets every slot, 3 tenses x 8 persons x positive/negative = 48
 (data/raw/examples/sonnet-full.json). Without --level or --ids it takes levels 1 and 2.
-A verb in the full file is built from it; the rest from the short file.
+A verb in the full file is built from it; the rest from the short file. Verbs in gemini-full.json
+(scripts/gemini_batch.py) count as full too, but only the slots scripts/review_examples.py passed
+(data/raw/examples/gemini-reviewed.json); sonnet-full wins when a verb is in both.
 
 The prompt hands the model the conjugated form from data/verbs.json (negated with ma ... sh for
 negative slots): it only writes the sentence around it, and any sentence that lost the form is dropped.
@@ -26,6 +28,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/examples/sonnet.json"
 RAW_FULL = ROOT / "data/raw/examples/sonnet-full.json"
+RAW_GEMINI = ROOT / "data/raw/examples/gemini-full.json"
+RAW_REVIEWED = ROOT / "data/raw/examples/gemini-reviewed.json"
 OUT = ROOT / "data/examples"
 MODEL = "claude-sonnet-5-5"  # the bare "sonnet" alias gives an older Sonnet
 PRON = ["ana", "nta", "nti", "huwa", "hiya", "7na", "ntuma", "huma"]
@@ -162,8 +166,29 @@ def ask(group, full=False):
     return {x["id"]: x["sentences"] for x in out["structured_output"]["verbs"]}
 
 
+def reviewed(gem, rev):
+    """Gemini sentences the Sonnet review passed (scripts/review_examples.py), corrected where it gave a fix.
+    A verb or slot the review has not covered, or one it dropped, stays out."""
+    out = {}
+    for k, sents in gem.items():
+        verdicts = rev.get(k)
+        if not verdicts:
+            continue
+        keep = []
+        for x in sents:
+            r = verdicts.get(str(x["slot"]))
+            if r and r["ok"]:
+                keep.append(x)
+            elif r and r.get("lat"):
+                keep.append({**x, "lat": r["lat"], "ar": r["ar"], "en": r["en"]})
+        out[k] = keep
+    return out
+
+
 def build(verbs):
     raw, raw_full = read(RAW, {}), read(RAW_FULL, {})
+    for k, sents in reviewed(read(RAW_GEMINI, {}), read(RAW_REVIEWED, {})).items():
+        raw_full.setdefault(k, sents)
     out, dropped = {}, []
     for v in verbs:
         full = v["id"] in raw_full
