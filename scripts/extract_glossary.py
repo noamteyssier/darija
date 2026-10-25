@@ -14,7 +14,7 @@ FIRST, LAST = 167, 196  # 0-based pdf page indices of the glossary
 
 def main(path):
     reader = pypdf.PdfReader(path)
-    rows = []
+    rows: list[dict] = []
     for i in range(FIRST, LAST + 1):
         page = i - 4  # printed page number
         text = unicodedata.normalize("NFC", reader.pages[i].extract_text(extraction_mode="layout"))

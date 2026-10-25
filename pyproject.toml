@@ -8,6 +8,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "playwright",
+    "pypdf",
     "pytest",
     "ruff",
     "ty",
@@ -24,6 +25,3 @@ line-length = 100
 
 [tool.ty.environment]
 extra-paths = ["scripts"]
-
-[tool.ty.src]
-include = ["tests"]
