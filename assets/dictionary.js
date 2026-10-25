@@ -1,9 +1,9 @@
 import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON, toggleStar } from './common.js';
-import { loadVerbs, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
+import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
-const [vdata, ndata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json')]);
+const [vdata, ndata, examples] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), loadExamples()]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -47,6 +47,7 @@ function verbItems() {
         '<button type="button" data-tense="' + t + '" aria-pressed="' + (st.tense === t) + '">' + x.label + '</button>').join('') + '</div>';
       const f = v[st.tense];
       h += table(v.lat + ' · ' + TENSE[st.tense].label.toLowerCase(), PRON, f.lat, f.ar);
+      h += exampleTable(v, examples);
       h += '<p class="note">' + esc(glossOf(v)) + ' · source: ' + esc(v.src) + ' (book spelling: ' + esc(v.pc) + ')</p>';
       return h;
     },

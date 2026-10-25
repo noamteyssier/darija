@@ -1,5 +1,5 @@
 // Verb data: loads data/verbs.json (built by scripts/build_verbs.py) and adds the future.
-import { getJSON } from './common.js';
+import { getJSON, esc, PRON } from './common.js';
 
 export const TENSE = {
   past: { label: 'Past', ar: 'ماضي' },
@@ -36,4 +36,23 @@ export async function loadVerbs() {
 
 export function glossOf(v) {
   return 'to ' + v.en + (v.prep ? ' (+ ' + v.prep + ')' : '');
+}
+
+// Example sentences from scripts/build_examples.py; the site still works without the file.
+export const loadExamples = () => getJSON('data/examples.json').catch(() => ({}));
+
+// The examples table, verb form in bold. first: tense to list first (the one just drilled).
+export function exampleTable(v, examples, { script, first } = {}) {
+  const ex = examples[v.id];
+  if (!ex) return '';
+  const mark = (s, f) => esc(s).replace(esc(f), '<strong>' + esc(f) + '</strong>');
+  const rows = first ? [...ex].sort((a, b) => (b.t === first) - (a.t === first)) : ex;
+  return '<div class="table"><h2>examples</h2>' + rows.map(e => {
+    const f = v[e.t];
+    const L = '<span class="lat">' + mark(e.lat, f.lat[e.p]) + '</span>';
+    const A = '<span class="ar" lang="ar" dir="rtl">' + mark(e.ar, f.ar[e.p]) + '</span>';
+    return '<div class="row ex"><span class="p">' + esc(TENSE[e.t].label.toLowerCase() + ' · ' + PRON[e.p].lat) + '</span>'
+      + (script === 'latin' ? L : script === 'arabic' ? A : L + A)
+      + '<span class="pen">' + esc(e.en) + '</span></div>';
+  }).join('') + '</div>';
 }

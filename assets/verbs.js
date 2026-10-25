@@ -1,10 +1,10 @@
 import { $, PRON, prefs, header, load, bindSeg, esc, shuffle } from './common.js';
 import { quiz, formTable } from './quiz.js';
-import { loadVerbs, TENSE, isStrong, glossOf } from './verbs-data.js';
+import { loadVerbs, loadExamples, exampleTable, TENSE, isStrong, glossOf } from './verbs-data.js';
 
 header();
 const set = load('verbs-set', { tense: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false, prons: PRON.map((_, i) => i) });
-const data = await loadVerbs();
+const [data, examples] = await Promise.all([loadVerbs(), loadExamples()]);
 const VERBS = data.verbs;
 
 function verbsInSet() {
@@ -41,7 +41,11 @@ function render({ v, t, i }) {
     options: options.filter(o => o.lat !== f.lat[i]),
     accept,
     why: v.note,
-    after: () => formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase(), PRON.map(p => p.lat), f.lat, f.ar, i),
+    after: good => {
+      const conj = formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase(), PRON.map(p => p.lat), f.lat, f.ar, i);
+      const ex = exampleTable(v, examples, { script: prefs.script, first: t });
+      return ex ? [{ label: 'Conjugation', html: conj, open: !good }, { label: 'Examples', html: ex, open: good }] : conj;
+    },
   };
 }
 
