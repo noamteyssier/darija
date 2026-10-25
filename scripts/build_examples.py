@@ -129,7 +129,7 @@ def tokens(s):
 
 def bad_script(sent):
     """Latin outside the arabizi alphabet, or Latin inside the Arabic."""
-    return not re.fullmatch(r"[a-z0-9' ?!.,-]+", sent["lat"].lower()) or re.search(r"[A-Za-z]", sent["ar"])
+    return not re.fullmatch(r"[a-z37' ?!.,-]+", sent["lat"].lower()) or re.search(r"[A-Za-z]", sent["ar"])
 
 
 def has_form(sent, slot):
