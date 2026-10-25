@@ -1,5 +1,5 @@
 import { $, PRON, OWNER, header, both, esc, getJSON } from './common.js';
-import { loadVerbs, KINDS } from './verbs-data.js';
+import { loadVerbs, KINDS, TENSE, negate } from './verbs-data.js';
 
 header();
 const [{ verbs }, { nouns }] = await Promise.all([loadVerbs(), getJSON('data/nouns.json')]);
@@ -40,6 +40,13 @@ function renderTense() {
 }
 document.querySelectorAll('#rulesSeg button').forEach(b => b.addEventListener('click', () => { tense = b.dataset.val; renderTense(); }));
 renderTense();
+
+const NEG = [['past', 'kteb', 3], ['pres', 'kteb', 3], ['fut', 'kteb', 3]];
+$('negTable').innerHTML = '<h2>kteb · ma … sh</h2>' + NEG.map(([t, id, i]) => {
+  const x = V[id][t];
+  const n = negate({ lat: x.lat[i], ar: x.ar[i] }, t);
+  return '<div class="row"><span class="p">' + esc(TENSE[t].label.toLowerCase()) + '</span><span class="f">' + both(x.lat[i], x.ar[i]) + '</span><span class="f">' + both(n.lat, n.ar) + '</span></div>';
+}).join('');
 
 const EXAMPLES = { sound: 'fhem', initial: 'wsel', hollow: 'shaf', final: 'bgha', doubled: 'shedd', longa: 'khtar', hamza: 'kla', irregular: 'kan' };
 $('kinds').innerHTML = Object.entries(KINDS).map(([k, x]) => {

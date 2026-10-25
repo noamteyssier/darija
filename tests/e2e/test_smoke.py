@@ -41,3 +41,18 @@ def test_page_loads_clean(browser, base_url, name, size):
     assert not overflow, "horizontal scroll"
     assert not problems, "\n".join(problems)
     page.close()
+
+
+def test_negative_verb_drill(browser, base_url):
+    page = browser.new_page()
+    page.route(lambda url: not url.startswith(base_url), lambda route: route.fulfill(status=200, body=""))
+    page.goto(f"{base_url}/verbs.html", wait_until="networkidle")
+    page.click('.seg[data-group="polarity"] button[data-val="neg"]')
+    page.click('.seg[data-group="script"] button[data-val="latin"]')
+    for _ in range(12):
+        assert "negative" in page.locator('[data-q="chip"]').inner_text()
+        page.locator(".opt").first.click()
+        answer = page.locator(".opt.right").inner_text()
+        assert answer.startswith("ma ") and answer.rstrip().endswith("sh"), answer
+        page.click('[data-q="next"]')
+    page.close()
