@@ -1,9 +1,9 @@
 import { $, PRON, prefs, header, load, bindSeg, esc, shuffle } from './common.js';
 import { quiz, formTable } from './quiz.js';
-import { loadVerbs, loadExamples, exampleTable, TENSE, isStrong, glossOf } from './verbs-data.js';
+import { loadVerbs, loadExamples, exampleTable, TENSE, isStrong, glossOf, negate, halfNegations } from './verbs-data.js';
 
 header();
-const set = load('verbs-set', { tense: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false, prons: PRON.map((_, i) => i) });
+const set = load('verbs-set', { tense: 'all', polarity: 'all', levels: ['1'], topics: [], vtype: 'all', starred: false, prons: PRON.map((_, i) => i) });
 const [data, examples] = await Promise.all([loadVerbs(), loadExamples()]);
 const VERBS = data.verbs;
 
@@ -21,36 +21,46 @@ let poolCache = null;
 function pool() {
   if (poolCache) return poolCache;
   const ts = set.tense === 'all' ? ['past', 'pres', 'fut'] : [set.tense];
+  const ns = set.polarity === 'all' ? [false, true] : [set.polarity === 'neg'];
   const out = [];
-  for (const v of verbsInSet()) for (const t of ts) for (const i of set.prons) out.push({ v, t, i, key: v.id + '|' + t + '|' + i });
+  for (const v of verbsInSet()) for (const t of ts) for (const i of set.prons) for (const neg of ns) out.push({ v, t, i, neg, key: v.id + '|' + t + '|' + i + (neg ? '|neg' : '') });
   return (poolCache = out);
 }
 
-function render({ v, t, i }) {
+function render({ v, t, i, neg }) {
   const f = v[t];
   const other = t === 'pres' ? 'past' : 'pres';
-  const forms = x => x.lat.map((lat, j) => ({ lat, ar: x.ar[j] }));
-  const options = [...shuffle(forms(f)), ...shuffle(forms(v[other]))];
-  const accept = t === 'fut' ? [f.lat[i].replace(/^ghadi /, 'gha'), f.ar[i].replace(/^غادي /, 'غا')] : [];
+  const forms = (x, tt) => x.lat.map((lat, j) => ({ lat, ar: x.ar[j] })).map(o => (neg ? negate(o, tt) : o));
+  let options = [...shuffle(forms(f, t)), ...shuffle(forms(v[other], other))];
+  const full = neg ? forms(f, t) : null;
+  const answer = neg ? full[i] : { lat: f.lat[i], ar: f.ar[i] };
+  // Contracted future (ghankteb): the same slot, with or without negation.
+  const accept = t === 'fut' ? [{ lat: f.lat[i].replace(/^ghadi /, 'gha'), ar: f.ar[i].replace(/^غادي /, 'غا') }] : [];
+  const accepted = neg ? accept.map(a => negate(a, 'pres')) : accept;
+  // Negative drills lead with the half-negations, the likeliest mix-ups.
+  if (neg) options = [...halfNegations({ lat: f.lat[i], ar: f.ar[i] }, t), ...options];
+  const tag = neg ? ' · negative' : '';
   return {
     chipCls: 'tense-' + t,
-    chip: TENSE[t].label + '<span class="ar" lang="ar" dir="rtl">' + TENSE[t].ar + '</span>',
+    chip: TENSE[t].label + tag + '<span class="ar" lang="ar" dir="rtl">' + TENSE[t].ar + (neg ? ' منفي' : '') + '</span>',
     gloss: glossOf(v),
     word: { lat: v.lat, ar: v.ar },
     ask: { lat: PRON[i].lat, ar: PRON[i].ar, en: PRON[i].en },
-    answer: { lat: f.lat[i], ar: f.ar[i] },
-    options: options.filter(o => o.lat !== f.lat[i]),
-    accept,
+    answer,
+    options: options.filter(o => o.lat !== answer.lat),
+    accept: accepted.flatMap(a => [a.lat, a.ar]),
     why: v.note,
     after: good => {
-      const conj = formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase(), PRON.map(p => p.lat), f.lat, f.ar, i);
+      const conj = neg
+        ? formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase() + ' · negative', PRON.map(p => p.lat), full.map(o => o.lat), full.map(o => o.ar), i)
+        : formTable(v.lat + ' · ' + TENSE[t].label.toLowerCase(), PRON.map(p => p.lat), f.lat, f.ar, i);
       const ex = exampleTable(v, examples, { script: prefs.script, first: t });
       return ex ? [{ label: 'Conjugation', html: conj, open: !good }, { label: 'Examples', html: ex, open: good }] : conj;
     },
   };
 }
 
-const q = quiz($('quiz'), { name: 'verbs', pool, render, traits: c => ['p' + c.i, 't' + c.t, 'k' + c.v.kind] });
+const q = quiz($('quiz'), { name: 'verbs', pool, render, traits: c => ['p' + c.i, 't' + c.t, 'k' + c.v.kind, 'n' + (c.neg ? 1 : 0)] });
 
 function counts(pred) { return VERBS.filter(pred).length; }
 function chip(label, n, on, onClick) {
