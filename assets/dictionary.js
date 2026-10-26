@@ -3,7 +3,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf 
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
-const [vdata, ndata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json')]);
+const [vdata, ndata, pdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -80,9 +80,29 @@ function adjItems() {
   }));
 }
 
+function prepItems() {
+  return ranked(pdata.prepositions, p => [p.lat, p.ar, p.en, p.type, ...(p.pronouns ? p.pronouns.lat : [])]).map(p => ({
+    id: p.id, lat: p.lat, ar: p.ar, en: p.en,
+    badges: [['strong', p.type]],
+    body: () => {
+      let h = '';
+      if (p.note) h += '<p class="kind">' + esc(p.note) + '</p>';
+      if (p.with_pronouns && p.pronouns) {
+        h += table(p.lat + ' · with pronoun endings', OWNER, p.pronouns.lat, p.pronouns.ar);
+      }
+      if (p.examples && p.examples.length) {
+        h += '<div class="table"><h2>examples</h2>' + p.examples.map(ex =>
+          '<div class="row"><span class="p">' + esc(ex.en) + '</span><span class="f">' + both(ex.lat, ex.ar) + '</span></div>').join('') + '</div>';
+      }
+      if (p.src) h += '<p class="note">Source: ' + esc(p.src) + '</p>';
+      return h;
+    },
+  }));
+}
+
 function render(focusId) {
-  const items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : adjItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : ndata.adjectives.length;
+  const items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : prepItems();
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : pdata.prepositions.length;
   $('verbFilters').hidden = st.what !== 'verbs';
   $('count').textContent = items.length + ' of ' + total;
   const box = $('list');

@@ -2,9 +2,14 @@ import { $, PRON, OWNER, header, both, esc, getJSON } from './common.js';
 import { loadVerbs, KINDS, TENSE, negate } from './verbs-data.js';
 
 header();
-const [{ verbs }, { nouns }] = await Promise.all([loadVerbs(), getJSON('data/nouns.json')]);
+const [{ verbs }, { nouns }, { prepositions }] = await Promise.all([
+  loadVerbs(),
+  getJSON('data/nouns.json'),
+  getJSON('data/prepositions.json'),
+]);
 const V = Object.fromEntries(verbs.map(v => [v.id, v]));
-const ktab = nouns.find(n => n.id === 'ktab');
+const N = Object.fromEntries(nouns.map(n => [n.id, n]));
+const ktab = N.ktab, magana = N.magana;
 
 const RULES = {
   past: {
@@ -56,5 +61,33 @@ $('kinds').innerHTML = Object.entries(KINDS).map(([k, x]) => {
   return '<p><strong>' + esc(x.name[0].toUpperCase() + x.name.slice(1)) + '</strong> (' + n + ' verbs). ' + esc(x.text) + ex + '</p>';
 }).join('');
 
-$('possTable').innerHTML = '<h2>ktab · book</h2>' + OWNER.map((o, i) =>
-  '<div class="row"><span class="p">' + esc(o.en) + ' book</span><span class="f">' + both(ktab.mine.lat[i], ktab.mine.ar[i]) + '</span></div>').join('');
+const POSS_END = ['-i', '-ek', '-u', '-ha', '-na', '-kum', '-hum'];
+let possView = 'endings';
+function renderPoss() {
+  document.querySelectorAll('#possSeg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.val === possView)));
+  const ex = possView === 'examples';
+  const head = ex
+    ? [ktab, magana].map(n => '<th>' + esc(n.lat) + '<br><span class="pen">' + esc(n.en) + '</span></th>').join('')
+    : '<th>Masculine</th><th>Feminine</th>';
+  const cell = i => ex
+    ? [ktab, magana].map(n => '<td>' + both(n.mine.lat[i], n.mine.ar[i]) + '</td>').join('')
+    : '<td class="pt">' + POSS_END[i] + '</td><td class="pt">-t' + POSS_END[i].slice(1) + '</td>';
+  $('possTable').innerHTML = '<div class="scroll"><table class="rt"><thead><tr><th>Pronoun</th>' + head + '</tr></thead><tbody>'
+    + OWNER.map((o, i) => '<tr><td><span class="lat">' + o.lat + '</span><span class="par2" lang="ar" dir="rtl">' + o.ar + '</span><span class="pen">' + esc(o.en) + '</span></td>' + cell(i) + '</tr>').join('')
+    + '</tbody></table></div>';
+}
+document.querySelectorAll('#possSeg button').forEach(b => b.addEventListener('click', () => { possView = b.dataset.val; renderPoss(); }));
+renderPoss();
+
+const P = Object.fromEntries(prepositions.map(p => [p.id, p]));
+const SAMPLE_PREPS = ['l', 'f', 'm3a', '3la', 'men', '3nd'];
+const PREP_PRON_EN = ['me', 'you', 'him', 'her', 'us', 'you (pl.)', 'them'];
+let ph = '<div class="scroll"><table class="rt prep"><thead><tr><th></th>'
+  + SAMPLE_PREPS.map(id => '<th>' + esc(P[id].lat) + '<br><span class="pen">' + esc(P[id].en.split(' / ')[0]) + '</span></th>').join('')
+  + '</tr></thead><tbody>';
+OWNER.forEach((o, i) => {
+  ph += '<tr><td><span class="lat">' + o.lat + '</span><span class="pen">' + PREP_PRON_EN[i] + '</span></td>'
+    + SAMPLE_PREPS.map(id => '<td>' + both(P[id].pronouns.lat[i], P[id].pronouns.ar[i]) + '</td>').join('')
+    + '</tr>';
+});
+$('prepTable').innerHTML = ph + '</tbody></table></div>';

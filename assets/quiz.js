@@ -136,8 +136,10 @@ export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
     ok = good;
     const fb = q('fb');
     fb.className = 'fb ' + (good ? 'good' : 'bad');
-    fb.innerHTML = '<strong>' + (good ? 'Correct' : 'Not quite. It is:') + '</strong><span class="ans">' + show(view.answer.lat, view.answer.ar) + '</span>'
-      + (view.why ? '<span class="why">' + esc(view.why) + '</span>' : '');
+    const whyContent = view.whyHtml || (view.why ? esc(view.why) : '');
+    fb.innerHTML = '<strong>' + (good ? 'Correct' : 'Not quite. It is:') + '</strong>'
+      + '<div class="ans">' + show(view.answer.lat, view.answer.ar) + '</div>'
+      + (whyContent ? '<div class="why">' + whyContent + '</div>' : '');
     fb.hidden = false;
     // after(good) returns html, or tabs [{ label, html, open }] where open marks the default tab.
     const after = view.after ? view.after(good) : '';
