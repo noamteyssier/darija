@@ -1,0 +1,1012 @@
+{
+  "_doc": "Hand-written source for scripts/build_prepositions.py. Prepositions in Casablanca / Rabat Darija, pronoun paradigms (7 persons: ana, nta/nti, huwa, hiya, 7na, ntuma, huma), verb collocations, and idiomatic expressions.",
+  "prepositions": [
+    {
+      "id": "l",
+      "lat": "l",
+      "ar": "ل",
+      "en": "to / for",
+      "type": "simple",
+      "src": "PC 42, 115",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["liya", "lik", "lih", "liha", "lina", "likum", "lihum"],
+        "ar": ["ليا", "ليك", "ليه", "ليها", "لينا", "ليكم", "ليهم"],
+        "altLat": ["li", null, "lu", null, null, null, null],
+        "altAr": ["لي", null, "لو", null, null, null, null]
+      },
+      "note": "Prefix attached to nouns (l-Chad, l Amy). With pronouns, often liya/li and lih/lu. Expresses direction, recipient, or beneficiary. Also used with ymkn (ymkn liya = I can).",
+      "examples": [
+        { "lat": "ṣifṭt bra lih", "ar": "صيفطت برا ليه", "en": "I sent a letter to him" },
+        { "lat": "sm7 liya", "ar": "سمح ليا", "en": "Excuse me / forgive me" },
+        { "lat": "ymkn lina n-mshiw", "ar": "يمكن لينا نمشيو", "en": "We can go (it is possible for us to go)" },
+        { "lat": "Thomas šrah liha", "ar": "توماس شراه ليها", "en": "Thomas bought it for her" }
+      ]
+    },
+    {
+      "id": "f",
+      "lat": "f",
+      "ar": "ف",
+      "en": "in / at / about",
+      "type": "simple",
+      "src": "PC 42, 118",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["fiya", "fik", "fih", "fiha", "fina", "fikum", "fihum"],
+        "ar": ["فيا", "فيك", "فيه", "فيها", "فينا", "فيكم", "فيهم"]
+      },
+      "note": "Prefix attached to nouns (f d-dar = at home). Used for location, time, and physical sensations or states (fiya j-ju3 = I am hungry, fih s-skhana = he has a fever).",
+      "examples": [
+        { "lat": "suwlt fik l-bar7", "ar": "سولت فيك البارح", "en": "I asked about you yesterday" },
+        { "lat": "thlla f rask", "ar": "تهلى ف راسك", "en": "Take care of yourself" },
+        { "lat": "fiya j-ju3", "ar": "فيا الجوع", "en": "I am hungry" },
+        { "lat": "had d-dar fiha xmsa d l-byut", "ar": "هاد الدار فيها خمسة د البيوت", "en": "This house has five rooms in it" }
+      ]
+    },
+    {
+      "id": "b",
+      "lat": "b",
+      "ar": "ب",
+      "en": "with / by / by means of",
+      "type": "simple",
+      "src": "PC 42, 119",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["biya", "bik", "bih", "biha", "bina", "bikum", "bihum"],
+        "ar": ["بيا", "بيك", "بيه", "بيها", "بينا", "بيكم", "بيهم"]
+      },
+      "note": "Prefix expressing instrument (b l-yed = with hands), manner (b sh-shwiya = slowly, b z-zerba = quickly), price (b-sh7al = for how much), and verbs like tzuwj b (marry) and 7lm b (dream of).",
+      "examples": [
+        { "lat": "tzuwjat bih l-عam l-li fat", "ar": "تزوجات بيه العام اللي فات", "en": "She married him last year" },
+        { "lat": "7lmt bik", "ar": "حلمت بيك", "en": "I dreamed about you" },
+        { "lat": "r77bu bina f ḍarhum", "ar": "رحبو بينا ف دارهم", "en": "They welcomed us into their home" },
+        { "lat": "b sh-shwiya عafak", "ar": "ب الشوية عفاك", "en": "Slowly, please" }
+      ]
+    },
+    {
+      "id": "m3a",
+      "lat": "m3a",
+      "ar": "مع",
+      "en": "with (someone)",
+      "type": "simple",
+      "src": "PC 42, 117",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["m3aya", "m3ak", "m3ah", "m3aha", "m3ana", "m3akum", "m3ahum"],
+        "ar": ["معايا", "معاك", "معاه", "معاها", "معانا", "معاكم", "معاهم"]
+      },
+      "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), d7k m3a (joke with).",
+      "examples": [
+        { "lat": "tlaqit m3ah f l-bosṭa", "ar": "تلاقيت معاه ف البوسطة", "en": "I met with him at the post office" },
+        { "lat": "ġir kan-ḍ7k m3ak", "ar": "غير كاندحك معاك", "en": "I'm just joking with you" },
+        { "lat": "bġiti t-mši m3aya?", "ar": "بغيتي تمشي معايا؟", "en": "Do you want to come with me?" }
+      ]
+    },
+    {
+      "id": "3la",
+      "lat": "3la",
+      "ar": "على",
+      "en": "on / about / onto",
+      "type": "simple",
+      "src": "PC 42, 116",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["3liya", "3lik", "3lih", "3liha", "3lina", "3likum", "3lihum"],
+        "ar": ["عليا", "عليك", "عليه", "عليها", "علينا", "عليكم", "عليهم"]
+      },
+      "note": "Spatial 'on', topical 'about', obligation (3liya n-mshi = I must go), directions (3l limn = to the right), and verbs like qllb 3la (look for), mat 3la (love), d7k 3la (laugh at / mock).",
+      "examples": [
+        { "lat": "tkllmna عlih", "ar": "تكلمنا عليه", "en": "We talked about it" },
+        { "lat": "kan-qllb عliha", "ar": "كانقلب عليها", "en": "I am looking for it (f.)" },
+        { "lat": "kan-mut عla l-pitza", "ar": "كانموت على البيتزا", "en": "I love pizza (am dying for pizza)" },
+        { "lat": "ma-tkdb-š عliya", "ar": "ما تكدبش عليا", "en": "Don't lie to me" }
+      ]
+    },
+    {
+      "id": "men",
+      "lat": "men",
+      "ar": "من",
+      "en": "from / of / than",
+      "type": "simple",
+      "src": "PC 42, 119",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["menni", "mennek", "mennu", "mennha", "menna", "mennkum", "mennhum"],
+        "ar": ["مني", "منك", "منو", "منها", "منا", "منكم", "منهم"]
+      },
+      "note": "Doubles the n before pronoun suffixes (menni, mennek, mennu). Used for origin, comparisons (kber menni = older than me), and fear (khaf men).",
+      "examples": [
+        { "lat": "ana mn l-mġrib", "ar": "أنا من المغرب", "en": "I am from Morocco" },
+        { "lat": "huwa kbr mnni", "ar": "هو كبر مني", "en": "He is older than me" },
+        { "lat": "kay-xaf mn l-klab", "ar": "كايخاف من الكلاب", "en": "He is afraid of dogs" }
+      ]
+    },
+    {
+      "id": "3nd",
+      "lat": "3nd",
+      "ar": "عند",
+      "en": "at / with / to have",
+      "type": "simple",
+      "src": "PC 35, 40",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["3ndi", "3ndek", "3ndu", "3ndha", "3ndna", "3ndkum", "3ndhum"],
+        "ar": ["عندي", "عندك", "عندو", "عندها", "عندنا", "عندكم", "عندهم"]
+      },
+      "note": "The primary verb equivalent for 'to have' in Darija: 3ndi ktab (I have a book). Also means at someone's place: mshit 3nd t-tbib (I went to the doctor).",
+      "examples": [
+        { "lat": "weš عndk ṣ-ṣrf?", "ar": "واش عندك الصرف؟", "en": "Do you have change?" },
+        { "lat": "عndna ustad mzyan", "ar": "عندنا أستاد مزيان", "en": "We have a good teacher" },
+        { "lat": "mšit عnd mul l-нanut", "ar": "مشيت عند مول الحانوت", "en": "I went to the storekeeper's" },
+        { "lat": "ma-عndi-š l-weqt", "ar": "ما عنديش الوقت", "en": "I don't have time" }
+      ]
+    },
+    {
+      "id": "bla",
+      "lat": "bla",
+      "ar": "بلا",
+      "en": "without",
+      "type": "simple",
+      "src": "PC 42, LP 26",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["blaya", "blak", "blah", "blaha", "blana", "blakum", "blahum"],
+        "ar": ["بلايا", "بلاك", "بلاه", "بلاها", "بلانا", "بلاكم", "بلاهم"],
+        "altLat": ["blabiya", null, null, null, null, null, null],
+        "altAr": ["بلابيا", null, null, null, null, null, null]
+      },
+      "note": "Expresses lack or absence: bla sokkar (without sugar). Polite response: bla jmil (you're welcome / don't mention it).",
+      "examples": [
+        { "lat": "qhwa bla skkar", "ar": "قهوة بلا سكر", "en": "Coffee without sugar" },
+        { "lat": "ma-t-mši-š blaya", "ar": "ما تمشيش بلايا", "en": "Don't go without me" },
+        { "lat": "bla jmil", "ar": "بلا جميل", "en": "You're welcome (not at all)" }
+      ]
+    },
+    {
+      "id": "fuq",
+      "lat": "fuq",
+      "ar": "فوق",
+      "en": "above / on top of / over",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["fuqi", "fuqek", "fuqu", "fuqha", "fuqna", "fuqkum", "fuqhum"],
+        "ar": ["فوقي", "فوقك", "فوقو", "فوقها", "فوقنا", "فوقكم", "فوقهم"]
+      },
+      "note": "Location physically on top of or above something: fuq t-tebla (on the table), fuq s-snduq (on top of the box).",
+      "examples": [
+        { "lat": "l-kora fuq ṣ-ṣnduq", "ar": "الكورة فوق الصندوق", "en": "The ball is on top of the box" },
+        { "lat": "l-ktab fuq t-tebla", "ar": "الكتاب فوق الطبلة", "en": "The book is on the table" }
+      ]
+    },
+    {
+      "id": "te7t",
+      "lat": "te7t",
+      "ar": "تحت",
+      "en": "under / below",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["te7ti", "te7tek", "te7tu", "te7tha", "te7tna", "te7tkum", "te7thum"],
+        "ar": ["تحتي", "تحتك", "تحتو", "تحتها", "تحتنا", "تحتكم", "تحتهم"]
+      },
+      "note": "Location physically underneath: te7t t-tebla (under the table), te7t sh-shjra (under the tree).",
+      "examples": [
+        { "lat": "l-meṣṣ te7t t-tebla", "ar": "المص تحت الطبلة", "en": "The cat is under the table" },
+        { "lat": "gls te7t š-šjra", "ar": "جلس تحت الشجرة", "en": "He sat under the tree" }
+      ]
+    },
+    {
+      "id": "qddam",
+      "lat": "qddam",
+      "ar": "قدام",
+      "en": "in front of / ahead",
+      "type": "locative",
+      "src": "PC 42, 43",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["qddami", "qddamek", "qddamu", "qddamha", "qddamna", "qddamkum", "qddamhum"],
+        "ar": ["قدامي", "قدامك", "قدامو", "قدامها", "قدامنا", "قدامكم", "قدامهم"]
+      },
+      "note": "Spatial position in front of: qddam d-dar (in front of the house). Directions: zid l qddam (go ahead a bit).",
+      "examples": [
+        { "lat": "tlaqina qddam la-gar", "ar": "تلاقينا قدام لاگار", "en": "We met in front of the train station" },
+        { "lat": "zid šwiya l qddam", "ar": "زيد شوية ل قدام", "en": "Go ahead a bit" }
+      ]
+    },
+    {
+      "id": "mura",
+      "lat": "mura",
+      "ar": "مورا",
+      "en": "behind / after",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["muraya", "murak", "murah", "muraha", "murana", "murakum", "murahum"],
+        "ar": ["مورايا", "موراك", "موراه", "موراها", "مورانا", "موراكم", "موراهم"],
+        "altLat": ["muri", null, null, null, null, null, null],
+        "altAr": ["موري", null, null, null, null, null, null]
+      },
+      "note": "Position behind (also said mor or wra): mura d-dar (behind the house), muraya (behind me).",
+      "examples": [
+        { "lat": "d-dar jat mura j-jamع", "ar": "الدار جات مورا الجامع", "en": "The house is behind the mosque" },
+        { "lat": "huwa kay-tmšša muraya", "ar": "هو كايتمشى مورايا", "en": "He is walking behind me" }
+      ]
+    },
+    {
+      "id": "7da",
+      "lat": "7da",
+      "ar": "حدا",
+      "en": "next to / beside",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["7daya", "7dak", "7dah", "7daha", "7dana", "7dakum", "7dahum"],
+        "ar": ["حدايا", "حداك", "حداه", "حداها", "حدانا", "حداكم", "حداهم"]
+      },
+      "note": "Physical proximity beside: 7da l-bab (next to the door), gls 7daya (sit next to me).",
+      "examples": [
+        { "lat": "gls нdaya", "ar": "جلس حدايا", "en": "Sit next to me" },
+        { "lat": "l-нanut нda l-bosṭa", "ar": "الحانوت حدا البوسطة", "en": "The store is next to the post office" }
+      ]
+    },
+    {
+      "id": "bin",
+      "lat": "bin",
+      "ar": "بين",
+      "en": "between / among",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["bini", "binek", "binu", "binha", "binatna", "binatkum", "binathum"],
+        "ar": ["بيني", "بينك", "بينو", "بينها", "بيناتنا", "بيناتكم", "بيناتهم"],
+        "altLat": [null, null, null, null, "binna", "binkum", "binhum"],
+        "altAr": [null, null, null, null, "بينا", "بينكم", "بينهم"]
+      },
+      "note": "Position between two or more: bin d-dar u l-mdrasa. With plural pronoun endings it inserts -at-: binatna (between us).",
+      "examples": [
+        { "lat": "had š-ši ġir binatna", "ar": "هاد الشي غير بيناتنا", "en": "This is just between us" },
+        { "lat": "l-banka jat bin la-gar u s-suq", "ar": "البنكة جات بين لاگار و السوق", "en": "The bank is between the station and the market" }
+      ]
+    },
+    {
+      "id": "b-jenb",
+      "lat": "b-jenb",
+      "ar": "بجنب",
+      "en": "beside / by the side of",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["b-jenbi", "b-jenbek", "b-jenbu", "b-jenbha", "b-jenbna", "b-jenbkum", "b-jenbhum"],
+        "ar": ["بجنبي", "بجنبك", "بجنبو", "بجنبها", "بجنبنا", "بجنبكم", "بجنبهم"]
+      },
+      "note": "Literal 'by the side of': b-jenb l-b7er (by the sea).",
+      "examples": [
+        { "lat": "tmššina b-jenb l-bнr", "ar": "تمشينا بجنب البحر", "en": "We walked beside the sea" }
+      ]
+    },
+    {
+      "id": "dyal",
+      "lat": "dyal",
+      "ar": "ديال",
+      "en": "of / belonging to",
+      "type": "simple",
+      "src": "PC 8, 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["dyali", "dyalek", "dyalu", "dyalha", "dyalna", "dyalkum", "dyalhum"],
+        "ar": ["ديالي", "ديالك", "ديالو", "ديالها", "ديالنا", "ديالكم", "ديالهم"]
+      },
+      "note": "Possession marker: l-ktab dyali (my book). Stands alone as mine, yours: had l-beztam dyali (this wallet is mine).",
+      "examples": [
+        { "lat": "had l-ktab dyali", "ar": "هاد الكتاب ديالي", "en": "This book is mine" },
+        { "lat": "d-dar dyalha", "ar": "الدار ديالها", "en": "Her house" }
+      ]
+    },
+    {
+      "id": "qbel",
+      "lat": "qbel",
+      "ar": "قبل",
+      "en": "before",
+      "type": "temporal",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["qbel menni", "qbel mennek", "qbel mennu", "qbel mennha", "qbel menna", "qbel mennkum", "qbel mennhum"],
+        "ar": ["قبل مني", "قبل منك", "قبل منو", "قبل منها", "قبل منا", "قبل منكم", "قبل منهم"],
+        "altLat": ["qbli", "qblek", "qblu", "qblha", "qblna", "qblkum", "qblhum"],
+        "altAr": ["قبلي", "قبلك", "قبلو", "قبلها", "قبلنا", "قبلكم", "قبلهم"]
+      },
+      "note": "Time before: qbel l-xedma (before work). With pronouns, Moroccan Arabic usually uses qbel men + pronoun (qbel menni).",
+      "examples": [
+        { "lat": "wṣl qbl mnni", "ar": "وصل قبل مني", "en": "He arrived before me" },
+        { "lat": "qbl l-fṭur", "ar": "قبل الفطور", "en": "Before breakfast" }
+      ]
+    },
+    {
+      "id": "b3d",
+      "lat": "b3d",
+      "ar": "بعد",
+      "en": "after",
+      "type": "temporal",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["b3d menni", "b3d mennek", "b3d mennu", "b3d mennha", "b3d menna", "b3d mennkum", "b3d mennhum"],
+        "ar": ["بعد مني", "بعد منك", "بعد منو", "بعد منها", "بعد منا", "بعد منكم", "بعد منهم"],
+        "altLat": ["b3di", "b3dek", "b3du", "b3dha", "b3dna", "b3dkum", "b3dhum"],
+        "altAr": ["بعدي", "بعدك", "بعدو", "بعدها", "بعدنا", "بعدكم", "بعدهم"]
+      },
+      "note": "Time after: b3d l-ghda (after lunch), mn b3d (afterwards). With pronouns, usually b3d men + pronoun.",
+      "examples": [
+        { "lat": "n-tlaqaw bعd l-xedma", "ar": "نتلاقاو بعد الخدمة", "en": "Let's meet after work" },
+        { "lat": "ja bعd mnni", "ar": "جا بعد مني", "en": "He came after me" }
+      ]
+    },
+    {
+      "id": "7tta",
+      "lat": "7tta",
+      "ar": "حتى",
+      "en": "until / up to / even",
+      "type": "temporal",
+      "src": "PC 42, 44",
+      "with_pronouns": false,
+      "note": "Indicates time or limit: 7tta l-ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
+      "examples": [
+        { "lat": "sir nišan нtta l z-znqa t-talta", "ar": "سير نيشان حتى ل الزنقة التالتة", "en": "Go straight until the 3rd street" },
+        { "lat": "glst f ḍ-ḍar нtta l l-lil", "ar": "جلست ف الدار حتى ل الليل", "en": "I stayed at home until the night" }
+      ]
+    },
+    {
+      "id": "mqabl_m3a",
+      "lat": "mqabl m3a",
+      "ar": "مقابل مع",
+      "en": "facing / opposite",
+      "type": "locative",
+      "src": "PC 42",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["mqabl m3aya", "mqabl m3ak", "mqabl m3ah", "mqabl m3aha", "mqabl m3ana", "mqabl m3akum", "mqabl m3ahum"],
+        "ar": ["مقابل معايا", "مقابل معاك", "مقابل معاه", "مقابل معاها", "مقابل معانا", "مقابل معاكم", "مقابل معاهم"]
+      },
+      "note": "Directly facing or across the street from: mqabl m3a la-gar (opposite the station).",
+      "examples": [
+        { "lat": "l-oṭil mqabl mعa la-gar", "ar": "لوطيل مقابل مع لاگار", "en": "The hotel is opposite the train station" }
+      ]
+    },
+    {
+      "id": "qrib_men",
+      "lat": "qrib men",
+      "ar": "قريب من",
+      "en": "close to / near",
+      "type": "relational",
+      "src": "PC 43",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["qrib menni", "qrib mennek", "qrib mennu", "qrib mennha", "qrib menna", "qrib mennkum", "qrib mennhum"],
+        "ar": ["قريب مني", "قريب منك", "قريب منو", "قريب منها", "قريب منا", "قريب منكم", "قريب منهم"]
+      },
+      "note": "Proximity in distance: qrib mn hna (close to here). Takes men before pronouns and nouns.",
+      "examples": [
+        { "lat": "weš kayn ši sbiṭar qrib mn hna?", "ar": "واش كاين شي سبيطار قريب من هنا؟", "en": "Is there a hospital close to here?" },
+        { "lat": "huwa qrib mnni", "ar": "هو قريب مني", "en": "He is close to me" }
+      ]
+    },
+    {
+      "id": "b3id_men",
+      "lat": "b3id men",
+      "ar": "بعيد من",
+      "en": "far from",
+      "type": "relational",
+      "src": "PC 43",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["b3id menni", "b3id mennek", "b3id mennu", "b3id mennha", "b3id menna", "b3id mennkum", "b3id mennhum"],
+        "ar": ["بعيد مني", "بعيد منك", "بعيد منو", "بعيد منها", "بعيد منا", "بعيد منكم", "بعيد منهم"]
+      },
+      "note": "Distance: b3id mn hna (far from here). Feminine noun takes b3ida mn.",
+      "examples": [
+        { "lat": "ḍ-ḍar bعida mn la-gar", "ar": "الدار بعيدة من لاگار", "en": "The house is far from the train station" },
+        { "lat": "bعid mn hna", "ar": "بعيد من هنا", "en": "Far from here" }
+      ]
+    },
+    {
+      "id": "dakhel",
+      "lat": "dakhel",
+      "ar": "داخل",
+      "en": "inside",
+      "type": "locative",
+      "src": "LP 26",
+      "with_pronouns": false,
+      "note": "Inside an enclosed space: dakhel d-dar or l-dakhel d d-dar.",
+      "examples": [
+        { "lat": "kayn l-daxl d ḍ-ḍar", "ar": "كاين لداخل د الدار", "en": "He is inside the house" }
+      ]
+    },
+    {
+      "id": "berra",
+      "lat": "berra",
+      "ar": "برا",
+      "en": "outside",
+      "type": "locative",
+      "src": "LP 26",
+      "with_pronouns": false,
+      "note": "Outside of a place: berra d d-dar (outside the house), xrej l-berra (go outside).",
+      "examples": [
+        { "lat": "glsu brra d l-qhwa", "ar": "جلسو برا د القهوة", "en": "They sat outside the cafe" }
+      ]
+    },
+    {
+      "id": "b-sabab",
+      "lat": "b-sabab",
+      "ar": "بسبب",
+      "en": "because of / due to",
+      "type": "relational",
+      "src": "LP 26",
+      "with_pronouns": false,
+      "note": "Expresses cause or reason: b-sabab sh-shta (due to the rain).",
+      "examples": [
+        { "lat": "ma-ja-š b-sbab š-šta", "ar": "ما جاش بسباب الشتا", "en": "He didn't come because of the rain" }
+      ]
+    },
+    {
+      "id": "3la_qbel",
+      "lat": "3la qbel",
+      "ar": "على قبل",
+      "en": "because of / for the sake of",
+      "type": "relational",
+      "src": "PC 61",
+      "with_pronouns": true,
+      "pronouns": {
+        "lat": ["3la qbli", "3la qblek", "3la qblu", "3la qblha", "3la qblna", "3la qblkum", "3la qblhum"],
+        "ar": ["على قبلي", "على قبلك", "على قبلو", "على قبلها", "على قبلنا", "على قبلكم", "على قبلهم"]
+      },
+      "note": "For the sake of / on account of someone: 3la qblek (for your sake / because of you).",
+      "examples": [
+        { "lat": "jit عla qblk", "ar": "جيت على قبلك", "en": "I came for your sake" }
+      ]
+    }
+  ],
+  "collocations": [
+    {
+      "verb": "fkkr",
+      "verbAr": "فكر",
+      "en": "to think",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "think about",
+      "exampleLat": "kan-fkkr fik",
+      "exampleAr": "كانفكر فيك",
+      "exampleEn": "I am thinking about you",
+      "src": "PC 118"
+    },
+    {
+      "verb": "qllb",
+      "verbAr": "قلب",
+      "en": "to search",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "look for / search for",
+      "exampleLat": "kan-qllb عla sarut",
+      "exampleAr": "كانقلب على ساروت",
+      "exampleEn": "I am looking for the key",
+      "src": "PC 116"
+    },
+    {
+      "verb": "d7k",
+      "verbAr": "ضحك",
+      "en": "to laugh",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "laugh at / mock",
+      "exampleLat": "kay-ḍнk عliya",
+      "exampleAr": "كايدحك عليا",
+      "exampleEn": "He is laughing at me",
+      "src": "PC 116"
+    },
+    {
+      "verb": "d7k",
+      "verbAr": "ضحك",
+      "en": "to laugh",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "joke with / laugh with",
+      "exampleLat": "ġir kan-ḍнk mعak",
+      "exampleAr": "غير كاندحك معاك",
+      "exampleEn": "I am just joking with you",
+      "src": "PC 117"
+    },
+    {
+      "verb": "suwl",
+      "verbAr": "سول",
+      "en": "to ask",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "ask about / check on (a person)",
+      "exampleLat": "suwlt fik l-barн",
+      "exampleAr": "سولت فيك البارح",
+      "exampleEn": "I asked about you yesterday",
+      "src": "PC 118"
+    },
+    {
+      "verb": "suwl",
+      "verbAr": "سول",
+      "en": "to ask",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "inquire about (a thing / topic)",
+      "exampleLat": "suwl عla t-taman",
+      "exampleAr": "سول على التمن",
+      "exampleEn": "He asked about the price",
+      "src": "PC 116"
+    },
+    {
+      "verb": "sm7",
+      "verbAr": "سمح",
+      "en": "to excuse / forgive",
+      "prep": "l",
+      "prepAr": "ل",
+      "meaning": "excuse / forgive",
+      "exampleLat": "smн liya عafak",
+      "exampleAr": "سمح ليا عفاك",
+      "exampleEn": "Excuse me please",
+      "src": "PC 115"
+    },
+    {
+      "verb": "tlaqa",
+      "verbAr": "تلاقى",
+      "en": "to meet",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "meet with",
+      "exampleLat": "tlaqit mعah f l-bosṭa",
+      "exampleAr": "تلاقيت معاه ف البوسطة",
+      "exampleEn": "I met with him at the post office",
+      "src": "PC 117"
+    },
+    {
+      "verb": "xaf",
+      "verbAr": "خاف",
+      "en": "to fear",
+      "prep": "men",
+      "prepAr": "من",
+      "meaning": "be afraid of",
+      "exampleLat": "Jerry kay-khaf men Tom",
+      "exampleAr": "جيري كايخاف من طوم",
+      "exampleEn": "Jerry is afraid of Tom",
+      "src": "PC 119"
+    },
+    {
+      "verb": "thlla",
+      "verbAr": "تهلى",
+      "en": "to take care",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "take care of",
+      "exampleLat": "thlla f rask",
+      "exampleAr": "تهلى ف راسك",
+      "exampleEn": "Take care of yourself",
+      "src": "PC 118"
+    },
+    {
+      "verb": "taq",
+      "verbAr": "تاق",
+      "en": "to trust",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "trust in",
+      "exampleLat": "tqna fih",
+      "exampleAr": "تقنا فيه",
+      "exampleEn": "We trusted in him",
+      "src": "PC 118"
+    },
+    {
+      "verb": "mat",
+      "verbAr": "مات",
+      "en": "to die",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "love / be crazy about",
+      "exampleLat": "kan-mut عla l-pitza",
+      "exampleAr": "كانموت على البيتزا",
+      "exampleEn": "I love pizza (am dying for it)",
+      "src": "PC 116"
+    },
+    {
+      "verb": "tzuwj",
+      "verbAr": "تزوج",
+      "en": "to marry",
+      "prep": "b",
+      "prepAr": "ب",
+      "meaning": "marry",
+      "exampleLat": "tzuwjat bih",
+      "exampleAr": "تزوجات بيه",
+      "exampleEn": "She married him",
+      "src": "PC 119"
+    },
+    {
+      "verb": "7lm",
+      "verbAr": "حلم",
+      "en": "to dream",
+      "prep": "b",
+      "prepAr": "ب",
+      "meaning": "dream about",
+      "exampleLat": "нlmt bih l-barн",
+      "exampleAr": "حلمت بيه البارح",
+      "exampleEn": "I dreamed about him last night",
+      "src": "PC 119"
+    },
+    {
+      "verb": "ṣifṭ",
+      "verbAr": "صيفط",
+      "en": "to send",
+      "prep": "l",
+      "prepAr": "ل",
+      "meaning": "send to",
+      "exampleLat": "ṣifṭat bra lih",
+      "exampleAr": "صيفطات برا ليه",
+      "exampleEn": "She sent a letter to him",
+      "src": "PC 115"
+    },
+    {
+      "verb": "gal",
+      "verbAr": "قال",
+      "en": "to say",
+      "prep": "l",
+      "prepAr": "ل",
+      "meaning": "say to / tell",
+      "exampleLat": "galtha lih",
+      "exampleAr": "گالتها ليه",
+      "exampleEn": "She told it to him",
+      "src": "PC 115"
+    },
+    {
+      "verb": "jab",
+      "verbAr": "جاب",
+      "en": "to bring",
+      "prep": "l",
+      "prepAr": "ل",
+      "meaning": "bring to",
+      "exampleLat": "jab l-kadu liha",
+      "exampleAr": "جاب الكادو ليها",
+      "exampleEn": "He brought the gift to her",
+      "src": "PC 115"
+    },
+    {
+      "verb": "fssr",
+      "verbAr": "فسر",
+      "en": "to explain",
+      "prep": "l",
+      "prepAr": "ل",
+      "meaning": "explain to",
+      "exampleLat": "fssrat d-drs lina",
+      "exampleAr": "فسرات الدرس لينا",
+      "exampleEn": "She explained the lesson to us",
+      "src": "PC 115"
+    },
+    {
+      "verb": "tkllm",
+      "verbAr": "تكلم",
+      "en": "to speak",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "speak about",
+      "exampleLat": "tkllmna عla d-dawr dyalna",
+      "exampleAr": "تكلمنا على الدور ديالنا",
+      "exampleEn": "We spoke about our role",
+      "src": "PC 116"
+    },
+    {
+      "verb": "kdb",
+      "verbAr": "كدب",
+      "en": "to lie",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "lie to",
+      "exampleLat": "ma-tkdb-š عliya",
+      "exampleAr": "ما تكدبش عليا",
+      "exampleEn": "Don't lie to me",
+      "src": "PC 116"
+    },
+    {
+      "verb": "dafع",
+      "verbAr": "دافع",
+      "en": "to defend",
+      "prep": "3la",
+      "prepAr": "على",
+      "meaning": "defend",
+      "exampleLat": "dafع عla ṣaнbu",
+      "exampleAr": "دافع على صاحبو",
+      "exampleEn": "He defended his friend",
+      "src": "PC 116"
+    },
+    {
+      "verb": "shark",
+      "verbAr": "شارك",
+      "en": "to participate",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "participate in",
+      "exampleLat": "šark f l-mšruع",
+      "exampleAr": "شارك ف المشروع",
+      "exampleEn": "He participated in the project",
+      "src": "PC 118"
+    },
+    {
+      "verb": "hḍr",
+      "verbAr": "هضر",
+      "en": "to speak",
+      "prep": "f",
+      "prepAr": "ف",
+      "meaning": "talk about / gossip behind the back of",
+      "exampleLat": "ma-t-hḍr-š fiya",
+      "exampleAr": "ما تهضرش فيا",
+      "exampleEn": "Don't gossip about me behind my back",
+      "src": "PC 118"
+    },
+    {
+      "verb": "hḍr",
+      "verbAr": "هضر",
+      "en": "to speak",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "speak with / talk to",
+      "exampleLat": "weš ymkn liya n-hḍr mعak?",
+      "exampleAr": "واش يمكن ليا نهضر معاك؟",
+      "exampleEn": "Can I talk with you?",
+      "src": "PC 116"
+    },
+    {
+      "verb": "t3awn",
+      "verbAr": "تعاون",
+      "en": "to cooperate",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "help / cooperate with",
+      "exampleLat": "tعawn mعana f l-xedma",
+      "exampleAr": "تعاون معانا ف الخدمة",
+      "exampleEn": "He helped us with the work",
+      "src": "PC 117"
+    },
+    {
+      "verb": "bqa",
+      "verbAr": "بقى",
+      "en": "to stay",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "stay with",
+      "exampleLat": "bqa mعaya šwiya",
+      "exampleAr": "بقى معايا شوية",
+      "exampleEn": "Stay with me a little",
+      "src": "PC 117"
+    },
+    {
+      "verb": "txaṣm",
+      "verbAr": "تخاصم",
+      "en": "to argue",
+      "prep": "m3a",
+      "prepAr": "مع",
+      "meaning": "quarrel with / have a falling out with",
+      "exampleLat": "txaṣm mعa xuh",
+      "exampleAr": "تخاصم مع خوه",
+      "exampleEn": "He quarreled with his brother",
+      "src": "PC 117"
+    },
+    {
+      "verb": "amn",
+      "verbAr": "أمن",
+      "en": "to believe",
+      "prep": "b",
+      "prepAr": "ب",
+      "meaning": "believe in",
+      "exampleLat": "kay-amn b llah",
+      "exampleAr": "كايأمن ب الله",
+      "exampleEn": "He believes in God",
+      "src": "PC 119"
+    },
+    {
+      "verb": "r77b",
+      "verbAr": "رحب",
+      "en": "to welcome",
+      "prep": "b",
+      "prepAr": "ب",
+      "meaning": "welcome",
+      "exampleLat": "rннbu biya f ḍarhum",
+      "exampleAr": "رحبو بيا ف دارهم",
+      "exampleEn": "They welcomed me into their house",
+      "src": "PC 119"
+    },
+    {
+      "verb": "tkllf",
+      "verbAr": "تكلف",
+      "en": "to be responsible",
+      "prep": "b",
+      "prepAr": "ب",
+      "meaning": "take care of / be in charge of",
+      "exampleLat": "tkllf b l-ġda",
+      "exampleAr": "تكلف ب الغدا",
+      "exampleEn": "He took charge of lunch",
+      "src": "PC 119"
+    },
+    {
+      "verb": "tleb",
+      "verbAr": "طلب",
+      "en": "to ask / request",
+      "prep": "men",
+      "prepAr": "من",
+      "meaning": "ask of / request from",
+      "exampleLat": "tlbt mennu y-عawnni",
+      "exampleAr": "طلبت منو يعاوني",
+      "exampleEn": "I asked him to help me",
+      "src": "LP 26"
+    }
+  ],
+  "idioms": [
+    {
+      "id": "hungry",
+      "pattern": "f",
+      "prompt": "I am hungry",
+      "lat": "fiya j-ju3",
+      "ar": "فيا الجوع",
+      "en": "I am hungry (lit. in me hunger)",
+      "note": "f + pronoun expresses sensations and physical states.",
+      "src": "PC 118"
+    },
+    {
+      "id": "thirsty",
+      "pattern": "f",
+      "prompt": "I am thirsty",
+      "lat": "fiya l-3ṭsh",
+      "ar": "فيا العطش",
+      "en": "I am thirsty (lit. in me thirst)",
+      "note": "f + pronoun expresses sensations and physical states.",
+      "src": "PC 118"
+    },
+    {
+      "id": "sleepy",
+      "pattern": "f",
+      "prompt": "I am sleepy",
+      "lat": "fiya n-n3as",
+      "ar": "فيا النعاس",
+      "en": "I am sleepy (lit. in me sleep)",
+      "note": "f + pronoun expresses sensations and physical states.",
+      "src": "PC 118"
+    },
+    {
+      "id": "cold",
+      "pattern": "f",
+      "prompt": "I feel cold",
+      "lat": "fiya l-berd",
+      "ar": "فيا البرد",
+      "en": "I am cold (lit. in me cold)",
+      "note": "f + pronoun expresses sensations and physical states.",
+      "src": "PC 118"
+    },
+    {
+      "id": "fever",
+      "pattern": "f",
+      "prompt": "He has a fever",
+      "lat": "fih s-skhana",
+      "ar": "فيه السخانة",
+      "en": "He has a fever (lit. in him heat)",
+      "note": "fih s-skhana is the standard way to say someone has a fever.",
+      "src": "PC 118"
+    },
+    {
+      "id": "have_money",
+      "pattern": "3nd",
+      "prompt": "I have money",
+      "lat": "3ndi l-flus",
+      "ar": "عندي الفلوس",
+      "en": "I have money",
+      "note": "3nd + pronoun is the verb 'to have' in Darija.",
+      "src": "PC 35"
+    },
+    {
+      "id": "have_change",
+      "pattern": "3nd",
+      "prompt": "Do you have change?",
+      "lat": "weš 3ndk ṣ-ṣrf?",
+      "ar": "واش عندك الصرف؟",
+      "en": "Do you have change?",
+      "note": "Common market / shop phrase with 3nd.",
+      "src": "PC 35"
+    },
+    {
+      "id": "no_time",
+      "pattern": "3nd",
+      "prompt": "I don't have time",
+      "lat": "ma-3ndi-sh l-weqt",
+      "ar": "ما عنديش الوقت",
+      "en": "I don't have time",
+      "note": "Negation wraps 3ndi: ma-3ndi-sh.",
+      "src": "PC 35"
+    },
+    {
+      "id": "must_go",
+      "pattern": "3la",
+      "prompt": "I must go",
+      "lat": "3liya n-mshi",
+      "ar": "عليا نمشي",
+      "en": "I have to go (lit. upon me to go)",
+      "note": "3la + pronoun expresses obligation or duty.",
+      "src": "PC 116"
+    },
+    {
+      "id": "love_much",
+      "pattern": "3la",
+      "prompt": "I love pizza (am crazy about it)",
+      "lat": "kan-mut 3la l-pitza",
+      "ar": "كانموت على البيتزا",
+      "en": "I love pizza (lit. I die on pizza)",
+      "note": "mat 3la is an idiom meaning to love or be crazy about something.",
+      "src": "PC 116"
+    },
+    {
+      "id": "excuse_me",
+      "pattern": "l",
+      "prompt": "Excuse me",
+      "lat": "sm7 liya",
+      "ar": "سمح ليا",
+      "en": "Excuse me / forgive me",
+      "note": "sm7 requires l before the person.",
+      "src": "PC 115"
+    },
+    {
+      "id": "youre_welcome",
+      "pattern": "bla",
+      "prompt": "You're welcome",
+      "lat": "bla jmil",
+      "ar": "بلا جميل",
+      "en": "You're welcome (lit. without favor)",
+      "note": "The polite Darija answer to shukran (thank you).",
+      "src": "PC 35"
+    },
+    {
+      "id": "take_care",
+      "pattern": "f",
+      "prompt": "Take care of yourself",
+      "lat": "thlla f rask",
+      "ar": "تهلى ف راسك",
+      "en": "Take care of yourself",
+      "note": "thlla requires f.",
+      "src": "PC 118"
+    },
+    {
+      "id": "can_we_go",
+      "pattern": "l",
+      "prompt": "We can go",
+      "lat": "ymkn lina n-mshiw",
+      "ar": "يمكن لينا نمشيو",
+      "en": "We can go (lit. it is possible for us to go)",
+      "note": "ymkn + l + pronoun expresses capability or permission.",
+      "src": "PC 115"
+    },
+    {
+      "id": "sit_next_to_me",
+      "pattern": "7da",
+      "prompt": "Sit next to me",
+      "lat": "gls 7daya",
+      "ar": "جلس حدايا",
+      "en": "Sit next to me",
+      "note": "7da + pronoun suffix -ya.",
+      "src": "PC 42"
+    },
+    {
+      "id": "dont_lie_to_me",
+      "pattern": "3la",
+      "prompt": "Don't lie to me",
+      "lat": "ma-tkdb-sh 3liya",
+      "ar": "ما تكدبش عليا",
+      "en": "Don't lie to me",
+      "note": "kdb requires 3la before the person.",
+      "src": "PC 116"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ First time: uv run --with playwright playwright install chromium
 import pytest
 from playwright.sync_api import sync_playwright
 
-PAGES = ["index.html", "verbs.html", "match.html", "nouns.html", "dictionary.html", "rules.html"]
+PAGES = ["index.html", "verbs.html", "match.html", "nouns.html", "prepositions.html", "dictionary.html", "rules.html"]
 VIEWPORTS = {"desktop": {"width": 1280, "height": 800}, "mobile": {"width": 375, "height": 812}}
 
 
@@ -55,4 +55,39 @@ def test_negative_verb_drill(browser, base_url):
         answer = page.locator(".opt.right").inner_text()
         assert answer.startswith("ma ") and (answer.rstrip().endswith("sh") or " ghadish " in answer), answer
         page.click('[data-q="next"]')
+    page.close()
+
+
+def test_prepositions_drill(browser, base_url):
+    page = browser.new_page()
+    page.route(lambda url: not url.startswith(base_url), lambda route: route.fulfill(status=200, body=""))
+    page.goto(f"{base_url}/prepositions.html", wait_until="networkidle")
+
+    # Module 1: Meanings & Direction
+    assert page.locator(".module").count() == 4
+    assert page.locator(".opt").count() >= 3
+    page.locator(".opt").first.click()
+    assert page.locator('[data-q="next"]').is_visible()
+    page.click('[data-q="next"]')
+
+    # Module 2: Pronoun endings
+    page.click('.module[data-id="endings"]')
+    assert page.locator("#pronBox").is_visible()
+    assert page.locator(".opt").count() >= 3
+    page.locator(".opt").first.click()
+    assert page.locator(".table").count() >= 1  # formTable is shown after answering
+    page.click('[data-q="next"]')
+
+    # Module 3: Verb collocations
+    page.click('.module[data-id="collocations"]')
+    assert page.locator(".opt").count() >= 3
+    page.locator(".opt").first.click()
+    assert page.locator('[data-q="next"]').is_visible()
+
+    # Module 4: Idioms
+    page.click('.module[data-id="idioms"]')
+    assert page.locator(".opt").count() >= 3
+    page.locator(".opt").first.click()
+    assert page.locator('[data-q="next"]').is_visible()
+
     page.close()

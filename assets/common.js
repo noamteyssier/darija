@@ -89,6 +89,7 @@ const PAGES = [
   ['verbs.html', 'Verbs'],
   ['match.html', 'Match'],
   ['nouns.html', 'Nouns'],
+  ['prepositions.html', 'Prepositions'],
   ['dictionary.html', 'Dictionary'],
   ['rules.html', 'Rules'],
 ];
@@ -102,6 +103,11 @@ export function header() {
     + '<nav class="tabs" aria-label="Pages">'
     + PAGES.map(([href, name]) => '<a href="' + href + '"' + (href === here ? ' aria-current="page"' : '') + '>' + name + '</a>').join('')
     + '</nav>';
+  const cur = el.querySelector('nav.tabs a[aria-current="page"]');
+  if (cur && cur.offsetLeft > 0) {
+    const nav = el.querySelector('nav.tabs');
+    nav.scrollLeft = cur.offsetLeft - (nav.clientWidth - cur.clientWidth) / 2;
+  }
 }
 
 // Segmented buttons: <div class="seg" data-group="x"><button data-val="...">
