@@ -2,7 +2,11 @@ import { $, PRON, OWNER, header, both, esc, getJSON } from './common.js';
 import { loadVerbs, KINDS, TENSE, negate } from './verbs-data.js';
 
 header();
-const [{ verbs }, { nouns }] = await Promise.all([loadVerbs(), getJSON('data/nouns.json')]);
+const [{ verbs }, { nouns }, { prepositions }] = await Promise.all([
+  loadVerbs(),
+  getJSON('data/nouns.json'),
+  getJSON('data/prepositions.json'),
+]);
 const V = Object.fromEntries(verbs.map(v => [v.id, v]));
 const ktab = nouns.find(n => n.id === 'ktab');
 
@@ -58,3 +62,16 @@ $('kinds').innerHTML = Object.entries(KINDS).map(([k, x]) => {
 
 $('possTable').innerHTML = '<h2>ktab · book</h2>' + OWNER.map((o, i) =>
   '<div class="row"><span class="p">' + esc(o.en) + ' book</span><span class="f">' + both(ktab.mine.lat[i], ktab.mine.ar[i]) + '</span></div>').join('');
+
+const P = Object.fromEntries(prepositions.map(p => [p.id, p]));
+const SAMPLE_PREPS = ['l', 'f', 'm3a', '3la', 'men', '3nd'];
+const PREP_PRON_EN = ['me', 'you', 'him', 'her', 'us', 'you (pl.)', 'them'];
+let ph = '<div class="scroll"><table class="rt prep"><thead><tr><th></th>'
+  + SAMPLE_PREPS.map(id => '<th>' + esc(P[id].lat) + '<br><span class="pen">' + esc(P[id].en.split(' / ')[0]) + '</span></th>').join('')
+  + '</tr></thead><tbody>';
+OWNER.forEach((o, i) => {
+  ph += '<tr><td><span class="lat">' + o.lat + '</span><span class="pen">' + PREP_PRON_EN[i] + '</span></td>'
+    + SAMPLE_PREPS.map(id => '<td>' + both(P[id].pronouns.lat[i], P[id].pronouns.ar[i]) + '</td>').join('')
+    + '</tr>';
+});
+$('prepTable').innerHTML = ph + '</tbody></table></div>';
