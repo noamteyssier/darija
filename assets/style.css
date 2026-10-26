@@ -158,3 +158,8 @@ input:disabled{opacity:.75}
 .lead{color:var(--muted); margin:0}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.toc{display:flex; flex-wrap:wrap; gap:6px 28px}
+.toc div{display:flex; flex-direction:column; min-width:140px}
+.toc a{padding:5px 0; color:var(--muted); font-size:.88rem; text-decoration:none}
+.toc a:first-child{color:var(--fg); font-weight:700}
+.toc a:hover{color:var(--accent)}
