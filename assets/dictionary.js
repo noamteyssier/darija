@@ -3,7 +3,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf 
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
-const [vdata, ndata, pdata, examples] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), loadExamples()]);
+const [vdata, ndata, pdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -47,7 +47,7 @@ function verbItems() {
         '<button type="button" data-tense="' + t + '" aria-pressed="' + (st.tense === t) + '">' + x.label + '</button>').join('') + '</div>';
       const f = v[st.tense];
       h += table(v.lat + ' · ' + TENSE[st.tense].label.toLowerCase(), PRON, f.lat, f.ar);
-      h += exampleTable(v, examples);
+      h += exampleTable(v, { t: st.tense });
       h += '<p class="note">' + esc(glossOf(v)) + ' · source: ' + esc(v.src) + ' (book spelling: ' + esc(v.pc) + ')</p>';
       return h;
     },
@@ -116,7 +116,11 @@ function render(focusId) {
     el.innerHTML = '<div class="vrow"><button type="button" class="vhead" aria-expanded="' + isOpen + '"><span class="vmain">' + both(it.lat, it.ar) + '</span>'
       + '<span class="vside"><span class="en">' + esc(it.en) + '</span><span class="badges">' + it.badges.map(([c, t]) => '<span class="badge ' + c + '">' + esc(t) + '</span>').join('') + '</span></span></button>'
       + (it.star ? '<button type="button" class="star" aria-label="Star ' + esc(it.lat) + '" aria-pressed="' + prefs.stars.includes(it.id) + '">★</button>' : '') + '</div>';
-    el.querySelector('.vhead').addEventListener('click', () => { open = isOpen ? null : it.id; render(it.id); });
+    el.querySelector('.vhead').addEventListener('click', async () => {
+      open = isOpen ? null : it.id;
+      if (open && st.what === 'verbs') await loadExamples(it.id);
+      render(it.id);
+    });
     const star = el.querySelector('.star');
     if (star) star.addEventListener('click', () => star.setAttribute('aria-pressed', String(toggleStar(it.id))));
     if (isOpen) {

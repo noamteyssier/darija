@@ -4,7 +4,7 @@ import { loadVerbs, loadExamples, exampleTable, glossOf } from './verbs-data.js'
 
 header();
 const set = load('match-set', { dir: 'en-ar', choices: '4', levels: ['1'], topics: [], starred: false });
-const [data, examples] = await Promise.all([loadVerbs(), loadExamples()]);
+const data = await loadVerbs();
 const VERBS = data.verbs;
 
 let poolCache = null;
@@ -16,6 +16,7 @@ function pool() {
 }
 
 function render({ v }) {
+  loadExamples(v.id);
   const toAr = set.dir === 'en-ar';
   const gloss = glossOf(v);
   // Wrong choices come from the whole set (all verbs if it is tiny), never sharing the answer's meaning or spelling.
@@ -31,7 +32,7 @@ function render({ v }) {
     answer: toAr ? { lat: v.lat, ar: v.ar } : { lat: gloss, ar: '' },
     options: others.map(o => (toAr ? { lat: o.lat, ar: o.ar } : { lat: glossOf(o), ar: '' })),
     max: Number(set.choices),
-    after: () => exampleTable(v, examples, { script: prefs.script }),
+    after: () => exampleTable(v, { script: prefs.script, max: 3 }),
   };
 }
 
