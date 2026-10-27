@@ -8,7 +8,7 @@ W = {w["id"]: w for w in D["words"]}
 
 class Words(unittest.TestCase):
     def test_known_words(self):
-        self.assertEqual(W["lyum"]["en"], "today")
+        self.assertEqual(W["l-yum"]["en"], "today")
         self.assertEqual(W["ghedda"]["ar"], "غدا")
         self.assertEqual(W["limen"]["group"], "direction")
         self.assertEqual(W["had-s-semmana"]["en"], "this week")

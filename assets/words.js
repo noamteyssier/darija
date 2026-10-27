@@ -37,8 +37,8 @@ function make(group) {
 
 const MODULES = {
   time: {
-    n: 1, title: 'Today, yesterday, tomorrow', sub: 'lyum, lbare7, ghedda, daba, dima, imta...',
-    intro: '<p>Time words do not change: <strong>lyum</strong> today, <strong>lbare7</strong> yesterday, <strong>ghedda</strong> tomorrow, <strong>daba</strong> now. Put them first in the sentence: lbare7 mshit, yesterday I went. The past or future comes from the verb, not from the time word.</p>',
+    n: 1, title: 'Today, yesterday, tomorrow', sub: 'l-yum, l-bare7, ghedda, daba, dima, imta...',
+    intro: '<p>Time words do not change: <strong>l-yum</strong> today, <strong>l-bare7</strong> yesterday, <strong>ghedda</strong> tomorrow, <strong>daba</strong> now. Put them at the end of the sentence: mshit l-bare7, I went yesterday. The past or future comes from the verb, not from the time word.</p>',
     ...make('time'),
   },
   calendar: {
