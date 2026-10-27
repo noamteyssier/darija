@@ -3,7 +3,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf 
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
-const [vdata, ndata, pdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json')]);
+const [vdata, ndata, pdata, wdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -100,9 +100,23 @@ function prepItems() {
   }));
 }
 
+const GROUP = { time: 'time', calendar: 'calendar', direction: 'place' };
+function wordItems() {
+  return ranked(wdata.words, w => [w.lat, w.ar, w.en, GROUP[w.group]]).map(w => ({
+    id: w.id, lat: w.lat, ar: w.ar, en: w.en,
+    badges: [['strong', GROUP[w.group]]],
+    body: () => {
+      let h = '';
+      if (w.note) h += '<p class="kind">' + esc(w.note) + '</p>';
+      if (w.ex) h += '<div class="table"><h2>example</h2><div class="row"><span class="p">' + esc(w.ex.en) + '</span><span class="f">' + both(w.ex.lat, w.ex.ar) + '</span></div></div>';
+      return h || '<p class="note">Does not change form.</p>';
+    },
+  }));
+}
+
 function render(focusId) {
-  const items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : prepItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : pdata.prepositions.length;
+  const items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : prepItems();
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : pdata.prepositions.length;
   $('verbFilters').hidden = st.what !== 'verbs';
   $('count').textContent = items.length + ' of ' + total;
   const box = $('list');
