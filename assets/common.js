@@ -90,6 +90,7 @@ const PAGES = [
   ['match.html', 'Match'],
   ['nouns.html', 'Nouns'],
   ['prepositions.html', 'Prepositions'],
+  ['words.html', 'Time &amp; place'],
   ['dictionary.html', 'Dictionary'],
   ['rules.html', 'Rules'],
 ];
