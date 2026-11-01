@@ -121,7 +121,8 @@ function render(focusId) {
   if (!tags.includes(st.tag)) st.tag = '';
   if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));
   const tf = $('tagFilters');
-  tf.hidden = !tags.length;
+  $('tagBox').hidden = !tags.length;
+  $('tagSummary').textContent = st.tag ? 'Tags (' + st.tag + ')' : 'Tags';
   tf.innerHTML = tags.map(t => '<button type="button" aria-pressed="' + (t === st.tag) + '" data-tag="' + esc(t) + '">' + esc(t) + '</button>').join('');
   $('verbFilters').hidden = st.what !== 'verbs';
   $('count').textContent = items.length + ' of ' + total;
