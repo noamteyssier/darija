@@ -29,8 +29,9 @@ nav.tabs a[aria-current="page"]{background:var(--accent); color:var(--accent-fg)
 .stats{display:flex; flex-wrap:wrap; gap:6px 16px; font-size:.85rem; color:var(--muted); font-variant-numeric:tabular-nums}
 .stats b{color:var(--fg); font-weight:700}
 .settings{display:flex; flex-direction:column; gap:8px}
-.seg{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:3px; gap:3px}
-.seg button{min-width:0; min-height:40px; border:0; border-radius:9px; background:transparent; color:var(--muted); font:500 .88rem var(--body); cursor:pointer}
+.seg{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(max-content,1fr); overflow-x:auto; scrollbar-width:none; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:3px; gap:3px}
+.seg::-webkit-scrollbar{display:none}
+.seg button{padding:0 12px; white-space:nowrap; min-height:40px; border:0; border-radius:9px; background:transparent; color:var(--muted); font:500 .88rem var(--body); cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--accent); color:var(--accent-fg); font-weight:700}
 .chipset{display:flex; flex-wrap:wrap; gap:6px}
 .chipset button{min-height:34px; padding:4px 12px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--muted); font:500 .82rem var(--body); cursor:pointer}
