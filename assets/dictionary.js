@@ -2,7 +2,7 @@ import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON,
 import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
-const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres' });
+const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres', tag: '' });
 const [vdata, ndata, pdata, wdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
@@ -36,7 +36,7 @@ function verbItems() {
   return ranked(vdata.verbs.filter(v => st.level === 'star' ? prefs.stars.includes(v.id) : st.level === 'all' || String(v.level) === st.level),
     v => [v.lat, v.ar, v.en, v.id]).map(v => ({
     id: v.id, lat: v.lat, ar: v.ar, en: v.en, star: true,
-    badges: [[isStrong(v) ? 'strong' : 'weak', KINDS[v.kind].name], ['l' + v.level, vdata.levels[v.level]]],
+    badges: [[isStrong(v) ? 'strong' : 'weak', KINDS[v.kind].name], ['l' + v.level, vdata.levels[v.level]], ...v.topics.map(t => ['', vdata.topics[t]])],
     body: () => {
       const k = KINDS[v.kind];
       let h = '<p class="kind"><strong>' + esc(k.name[0].toUpperCase() + k.name.slice(1)) + '.</strong> ' + esc(k.text) + '</p>';
@@ -57,7 +57,7 @@ function verbItems() {
 function nounItems() {
   return ranked(ndata.nouns, n => [n.lat, n.ar, n.en, n.pl ? n.pl.lat : '']).map(n => ({
     id: n.id, lat: n.lat, ar: n.ar, en: n.en,
-    badges: [[n.g === 'f' ? 'weak' : 'strong', n.g === 'f' ? 'feminine' : 'masculine']],
+    badges: [[n.g === 'f' ? 'weak' : 'strong', n.g === 'f' ? 'feminine' : 'masculine'], ['', n.topic]],
     body: () => {
       let h = '<div class="table"><h2>forms</h2>'
         + '<div class="row"><span class="p">the</span><span class="f">' + both(n.def.lat, n.def.ar) + '</span></div>'
@@ -115,8 +115,15 @@ function wordItems() {
 }
 
 function render(focusId) {
-  const items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : prepItems();
+  let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : prepItems();
   const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : pdata.prepositions.length;
+  const tags = [...new Set(items.flatMap(it => it.badges.map(b => b[1])))].sort();
+  if (!tags.includes(st.tag)) st.tag = '';
+  if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));
+  const tf = $('tagFilters');
+  $('tagBox').hidden = !tags.length;
+  $('tagSummary').textContent = st.tag ? 'Tags (' + st.tag + ')' : 'Tags';
+  tf.innerHTML = tags.map(t => '<button type="button" aria-pressed="' + (t === st.tag) + '" data-tag="' + esc(t) + '">' + esc(t) + '</button>').join('');
   $('verbFilters').hidden = st.what !== 'verbs';
   $('count').textContent = items.length + ' of ' + total;
   const box = $('list');
@@ -151,6 +158,12 @@ function render(focusId) {
   if (toFocus) try { toFocus.focus({ preventScroll: true }); } catch (e) { /* ignore */ }
 }
 
+$('tagFilters').addEventListener('click', e => {
+  const t = e.target.closest('[data-tag]');
+  if (!t) return;
+  st.tag = st.tag === t.dataset.tag ? '' : t.dataset.tag;
+  st.save(); shown = PAGE; open = null; render();
+});
 bindSeg($('filters'), st, () => { st.save(); shown = PAGE; open = null; render(); });
 $('search').addEventListener('input', e => { q = e.target.value; shown = PAGE; render(); });
 $('more').addEventListener('click', () => { shown += PAGE; render(); });
