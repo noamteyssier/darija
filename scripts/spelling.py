@@ -239,6 +239,24 @@ def canon(text, spelling, keep=()):
     return WORD.sub(fix, text)
 
 
+def clean_ar(text):
+    """Arabic script conventions (docs/spelling.md): no diacritics, and f, l, b joined to the next word
+    (ف الدار -> فالدار, ل الليل -> لليل)."""
+    out, particle = [], ""
+    for w in re.sub("[\u064b-\u0652]", "", text).split(" "):
+        if particle:
+            if particle == "ل" and w.startswith("الل"):
+                w = w[2:]
+            elif particle == "ل" and w.startswith("ال"):
+                w = w[1:]
+            w, particle = particle + w, ""
+        if w in ("ف", "ل", "ب"):
+            particle = w
+        else:
+            out.append(w)
+    return " ".join(out + ([particle] if particle else []))
+
+
 def canon_fields(x, spelling, keys=("lat",), keep=()):
     """canon() on every string under the given keys (and in lists under them), in place."""
     if isinstance(x, list):

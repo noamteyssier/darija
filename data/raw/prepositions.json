@@ -38,7 +38,7 @@
       "note": "Prefix attached to nouns (f d-dar = at home). Used for location, time, and physical sensations or states (fiya j-ju3 = I am hungry, fih s-skhana = he has a fever).",
       "examples": [
         { "lat": "suwlt fik l-bar7", "ar": "سولت فيك البارح", "en": "I asked about you yesterday" },
-        { "lat": "thlla f rask", "ar": "تهلى ف راسك", "en": "Take care of yourself" },
+        { "lat": "thlla f rask", "ar": "تهلى فراسك", "en": "Take care of yourself" },
         { "lat": "fiya j-ju3", "ar": "فيا الجوع", "en": "I am hungry" },
         { "lat": "had d-dar fiha xmsa d l-byut", "ar": "هاد الدار فيها خمسة د البيوت", "en": "This house has five rooms in it" }
       ]
@@ -59,8 +59,8 @@
       "examples": [
         { "lat": "tzuwjat bih l-عam l-li fat", "ar": "تزوجات بيه العام اللي فات", "en": "She married him last year" },
         { "lat": "7lmt bik", "ar": "حلمت بيك", "en": "I dreamed about you" },
-        { "lat": "r77bu bina f ḍarhum", "ar": "رحبو بينا ف دارهم", "en": "They welcomed us into their home" },
-        { "lat": "b ch-chwiya عafak", "ar": "ب الشوية عفاك", "en": "Slowly, please" }
+        { "lat": "r77bu bina f ḍarhum", "ar": "رحبو بينا فدارهم", "en": "They welcomed us into their home" },
+        { "lat": "b ch-chwiya عafak", "ar": "بالشوية عفاك", "en": "Slowly, please" }
       ]
     },
     {
@@ -77,7 +77,7 @@
       },
       "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), d7k m3a (joke with).",
       "examples": [
-        { "lat": "tlaqit m3ah f l-bosṭa", "ar": "تلاقيت معاه ف البوسطة", "en": "I met with him at the post office" },
+        { "lat": "tlaqit m3ah f l-bosṭa", "ar": "تلاقيت معاه فالبوسطة", "en": "I met with him at the post office" },
         { "lat": "ġir kan-ḍ7k m3ak", "ar": "غير كاندحك معاك", "en": "I'm just joking with you" },
         { "lat": "bġiti t-mši m3aya?", "ar": "بغيتي تمشي معايا؟", "en": "Do you want to come with me?" }
       ]
@@ -213,7 +213,7 @@
       "note": "Spatial position in front of: qddam d-dar (in front of the house). Directions: zid l qddam (go ahead a bit).",
       "examples": [
         { "lat": "tlaqina qddam la-gar", "ar": "تلاقينا قدام لاگار", "en": "We met in front of the train station" },
-        { "lat": "zid šwiya l qddam", "ar": "زيد شوية ل قدام", "en": "Go ahead a bit" }
+        { "lat": "zid šwiya l qddam", "ar": "زيد شوية لقدام", "en": "Go ahead a bit" }
       ]
     },
     {
@@ -359,8 +359,8 @@
       "with_pronouns": false,
       "note": "Indicates time or limit: 7tta l-ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
       "examples": [
-        { "lat": "sir nišan нtta l z-znqa t-talta", "ar": "سير نيشان حتى ل الزنقة التالتة", "en": "Go straight until the 3rd street" },
-        { "lat": "glst f ḍ-ḍar нtta l l-lil", "ar": "جلست ف الدار حتى ل الليل", "en": "I stayed at home until the night" }
+        { "lat": "sir nišan нtta l z-znqa t-talta", "ar": "سير نيشان حتى للزنقة التالتة", "en": "Go straight until the 3rd street" },
+        { "lat": "glst f ḍ-ḍar нtta l l-lil", "ar": "جلست فالدار حتى لليل", "en": "I stayed at home until the night" }
       ]
     },
     {
@@ -566,7 +566,7 @@
       "prepAr": "مع",
       "meaning": "meet with",
       "exampleLat": "tlaqit mعah f l-bosṭa",
-      "exampleAr": "تلاقيت معاه ف البوسطة",
+      "exampleAr": "تلاقيت معاه فالبوسطة",
       "exampleEn": "I met with him at the post office",
       "src": "PC 117"
     },
@@ -590,7 +590,7 @@
       "prepAr": "ف",
       "meaning": "take care of",
       "exampleLat": "thlla f rask",
-      "exampleAr": "تهلى ف راسك",
+      "exampleAr": "تهلى فراسك",
       "exampleEn": "Take care of yourself",
       "src": "PC 118"
     },
@@ -734,7 +734,7 @@
       "prepAr": "ف",
       "meaning": "participate in",
       "exampleLat": "šark f l-mšruع",
-      "exampleAr": "شارك ف المشروع",
+      "exampleAr": "شارك فالمشروع",
       "exampleEn": "He participated in the project",
       "src": "PC 118"
     },
@@ -770,7 +770,7 @@
       "prepAr": "مع",
       "meaning": "help / cooperate with",
       "exampleLat": "tعawn mعana f l-xedma",
-      "exampleAr": "تعاون معانا ف الخدمة",
+      "exampleAr": "تعاون معانا فالخدمة",
       "exampleEn": "He helped us with the work",
       "src": "PC 117"
     },
@@ -806,7 +806,7 @@
       "prepAr": "ب",
       "meaning": "believe in",
       "exampleLat": "kay-amn b llah",
-      "exampleAr": "كايأمن ب الله",
+      "exampleAr": "كايأمن بالله",
       "exampleEn": "He believes in God",
       "src": "PC 119"
     },
@@ -818,7 +818,7 @@
       "prepAr": "ب",
       "meaning": "welcome",
       "exampleLat": "rннbu biya f ḍarhum",
-      "exampleAr": "رحبو بيا ف دارهم",
+      "exampleAr": "رحبو بيا فدارهم",
       "exampleEn": "They welcomed me into their house",
       "src": "PC 119"
     },
@@ -830,7 +830,7 @@
       "prepAr": "ب",
       "meaning": "take care of / be in charge of",
       "exampleLat": "tkllf b l-ġda",
-      "exampleAr": "تكلف ب الغدا",
+      "exampleAr": "تكلف بالغدا",
       "exampleEn": "He took charge of lunch",
       "src": "PC 119"
     },
@@ -973,7 +973,7 @@
       "pattern": "f",
       "prompt": "Take care of yourself",
       "lat": "thlla f rask",
-      "ar": "تهلى ف راسك",
+      "ar": "تهلى فراسك",
       "en": "Take care of yourself",
       "note": "thlla requires f.",
       "src": "PC 118"

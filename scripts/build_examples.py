@@ -26,7 +26,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from spelling import canon, load, prompt_words
+from spelling import canon, clean_ar, load, prompt_words
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/examples/sonnet.json"
@@ -204,7 +204,7 @@ def build(verbs):
             if not r:
                 continue
             what = f"{v['id']}/{s['tense']}{'/neg' if s['neg'] else ''}/{PRON[s['p']]}"
-            r = {**r, "lat": canon(r["lat"], spelling, keep=s["lat"].split())}
+            r = {**r, "lat": canon(r["lat"], spelling, keep=s["lat"].split()), "ar": clean_ar(r["ar"])}
             if not has_form(r, s):
                 dropped.append(f"{what}: {r['lat']} (needs {s['lat']})")
                 continue
