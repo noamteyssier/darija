@@ -1,6 +1,6 @@
 """Canonical arabizi spellings: one spelling per word, everywhere on the site (docs/spelling.md).
 
-    python3 scripts/spelling.py --doda DIR [--atlaset TSV]   recount the corpora -> data/raw/spelling_counts.json
+    python3 scripts/spelling.py --doda DIR [--atlaset DIR]   recount the corpora -> data/raw/spelling_counts.json
     python3 scripts/spelling.py                               counts -> data/spelling.json
 
 Letters are fixed rules: ch for ش (what most Moroccans write), q not 9, kh not 5, u not o or ou
@@ -24,6 +24,9 @@ MANUAL = ROOT / "data/raw/spelling.json"
 OUT = ROOT / "data/spelling.json"
 MIN, RATIO = 20, 1.5
 WORD = re.compile(r"[A-Za-z0-9'-]+")
+# Atlaset rows written by people (no translated, model-written or Wikipedia-style sets), by dataset_source prefix
+ATLASET = ("atlasia/Social_Media_Darija_DS", "atlasia/facebook_darija_dataset", "MTCD", "MAC Corpus", "common-crawl",
+           "bourbouh/moroccan-darija-youtube-subtitles", "darija_youtube_subtitles")
 
 
 def site(t):
@@ -56,6 +59,17 @@ def split(tok):
     return "", tok
 
 
+def atlaset_latin(directory):
+    """Latin-script rows of the Atlaset parquet shards: a real source, 6+ Latin letters, and Arabic letters under a quarter of the letters."""
+    import pyarrow.parquet as pq  # only needed here, so the site scripts don't depend on it
+    for f in sorted(glob.glob(f"{directory}/*.parquet")):
+        for b in pq.ParquetFile(f).iter_batches(columns=["dataset_source", "text"]):
+            for src, text in zip(b.column(0).to_pylist(), b.column(1).to_pylist()):
+                lat, ar = len(re.findall(r"[A-Za-z]", text)), len(re.findall(r"[\u0600-\u06FF]", text))
+                if src.startswith(ATLASET) and lat >= 6 and 3 * ar < lat:
+                    yield " ".join(text.split())
+
+
 def count_corpora(doda, atlaset):
     c = Counter()
     files = [f"{doda}/sentences/sentences.csv", *sorted(glob.glob(f"{doda}/ongoing/*.csv")), f"{doda}/x-tra/shorts.csv"]
@@ -63,8 +77,8 @@ def count_corpora(doda, atlaset):
         for r in csv.DictReader(open(f, encoding="utf-8")):
             c.update(site(t) for t in WORD.findall((r.get("darija") or "").lower()))
     if atlaset:
-        for line in open(atlaset, encoding="utf-8"):
-            c.update(site(t) for t in WORD.findall(line.split("\t", 1)[-1].lower()))
+        for text in atlaset_latin(atlaset):
+            c.update(site(t) for t in WORD.findall(text.lower()))
     return {t: n for t, n in sorted(c.items()) if n >= 3}
 
 
@@ -200,7 +214,7 @@ def load():
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--doda", help="clone of github.com/darija-open-dataset/dataset")
-    ap.add_argument("--atlaset", help="tsv of source<TAB>text, Latin-script rows of atlasia/Atlaset")
+    ap.add_argument("--atlaset", help="folder with the parquet shards of atlasia/Atlaset (needs pyarrow)")
     a = ap.parse_args()
     if a.doda:
         COUNTS.write_text(json.dumps(count_corpora(a.doda, a.atlaset), ensure_ascii=False, separators=(",", ":")) + "\n")
