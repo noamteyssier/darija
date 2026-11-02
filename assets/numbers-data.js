@@ -1,8 +1,8 @@
 const UNITS = [null, ['wa7ed', 'واحد'], ['juj', 'جوج'], ['tlata', 'تلاتة'], ['rb3a', 'ربعة'], ['khamsa', 'خمسة'], ['setta', 'ستة'], ['sb3a', 'سبعة'], ['tmanya', 'تمنية'], ['ts3ud', 'تسعود'],
-  ['3ashra', 'عشرة'], ['7dash', 'حداش'], ['tnash', 'طناش'], ['tlettash', 'تلطاش'], ['rb3tash', 'ربعطاش'], ['khamstash', 'خمسطاش'], ['settash', 'سطاش'], ['sb3tash', 'سبعطاش'], ['tmentash', 'تمنطاش'], ['ts3tash', 'تسعطاش']];
-const TENS = [null, null, ['3ashrin', 'عشرين'], ['tlatin', 'تلاتين'], ['rb3in', 'ربعين'], ['khamsin', 'خمسين'], ['settin', 'ستين'], ['sb3in', 'سبعين'], ['tmanin', 'تمانين'], ['ts3in', 'تسعين']];
+  ['3achra', 'عشرة'], ['7dach', 'حداش'], ['tnach', 'طناش'], ['tlettach', 'تلطاش'], ['rb3tach', 'ربعطاش'], ['khamstach', 'خمسطاش'], ['settach', 'سطاش'], ['sb3tach', 'سبعطاش'], ['tmentach', 'تمنطاش'], ['ts3tach', 'تسعطاش']];
+const TENS = [null, null, ['3achrin', 'عشرين'], ['tlatin', 'تلاتين'], ['rb3in', 'ربعين'], ['khamsin', 'خمسين'], ['settin', 'ستين'], ['sb3in', 'سبعين'], ['tmanin', 'تمانين'], ['ts3in', 'تسعين']];
 // Hundreds from 300 and thousands from 3000 use these short stems: tlt mya, tlt alaf.
-const STEM = { 3: ['tlt', 'تلت'], 4: ['rb3', 'ربع'], 5: ['khms', 'خمس'], 6: ['stt', 'ست'], 7: ['sb3', 'سبع'], 8: ['tmn', 'تمن'], 9: ['ts3', 'تسع'], 10: ['3ashr', 'عشر'] };
+const STEM = { 3: ['tlt', 'تلت'], 4: ['rb3', 'ربع'], 5: ['khms', 'خمس'], 6: ['stt', 'ست'], 7: ['sb3', 'سبع'], 8: ['tmn', 'تمن'], 9: ['ts3', 'تسع'], 10: ['3achr', 'عشر'] };
 
 // 0 to 10000. Parts (thousands, hundreds, then units and tens) are joined with "w" (and).
 export function say(n) {
@@ -13,7 +13,7 @@ export function say(n) {
   if (h) parts.push(h === 1 ? ['mya', 'مية'] : h === 2 ? ['mitin', 'ميتين'] : [STEM[h][0] + ' mya', STEM[h][1] + ' مية']);
   if (r && r < 20) parts.push(UNITS[r]);
   else if (r) {
-    // 2 is tnin beside a ten (tnin w 3ashrin), juj on its own.
+    // 2 is tnin beside a ten (tnin w 3achrin), juj on its own.
     if (r % 10) parts.push(r % 10 === 2 ? ['tnin', 'تنين'] : UNITS[r % 10]);
     parts.push(TENS[Math.floor(r / 10)]);
   }

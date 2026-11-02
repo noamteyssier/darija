@@ -20,8 +20,8 @@ const first = en => en.split(' / ')[0];
 
 const MODULES = {
   meanings: {
-    n: 1, title: 'Meanings & Direction', sub: 'fuq, te7t, qddam, mura, 7da, bin, bla, men, 3la...',
-    intro: '<p>Master what each preposition means in Moroccan Darija: spatial positions (<strong>fuq</strong> above, <strong>te7t</strong> under, <strong>qddam</strong> in front of, <strong>mura</strong> behind, <strong>7da</strong> next to, <strong>bin</strong> between), direction, and core relations (<strong>m3a</strong> with, <strong>bla</strong> without, <strong>men</strong> from, <strong>3la</strong> on/about, <strong>l</strong> to/for, <strong>f</strong> in/at).</p>',
+    n: 1, title: 'Meanings & Direction', sub: 'fuq, te7t, qdam, mura, 7da, bin, bla, mn, 3la...',
+    intro: '<p>Master what each preposition means in Moroccan Darija: spatial positions (<strong>fuq</strong> above, <strong>te7t</strong> under, <strong>qdam</strong> in front of, <strong>mura</strong> behind, <strong>7da</strong> next to, <strong>bin</strong> between), direction, and core relations (<strong>m3a</strong> with, <strong>bla</strong> without, <strong>mn</strong> from, <strong>3la</strong> on/about, <strong>l</strong> to/for, <strong>f</strong> in/at).</p>',
     pool: () => PREPS.map(p => ({ p, key: 'm|' + p.id })),
     render: ({ p }) => {
       const distractors = shuffle(PREPS.filter(o => o.id !== p.id)).slice(0, 3);
@@ -39,8 +39,8 @@ const MODULES = {
     },
   },
   endings: {
-    n: 2, title: 'Pronoun endings', sub: 'm3aya, lih, fiha, menna, 3ndkum, blak...',
-    intro: '<p>Prepositions attach pronoun suffixes, but with distinct sound changes: <strong>l</strong> becomes <em>liya, lik, lih...</em>; <strong>f</strong> becomes <em>fiya, fik...</em>; <strong>men</strong> doubles the n: <em>menni, mennek, menna...</em>; <strong>3la</strong> becomes <em>3liya, 3lik...</em>; <strong>bin</strong> adds -at- in the plural: <em>binatna, binatkum, binathum</em>.</p>',
+    n: 2, title: 'Pronoun endings', sub: 'm3aya, lih, fiha, mena, 3ndkum, blak...',
+    intro: '<p>Prepositions attach pronoun suffixes, but with distinct sound changes: <strong>l</strong> becomes <em>liya, lik, lih...</em>; <strong>f</strong> becomes <em>fiya, fik...</em>; <strong>mn</strong> doubles the n: <em>mni, mnek, mena...</em>; <strong>3la</strong> becomes <em>3liya, 3lik...</em>; <strong>bin</strong> adds -at- in the plural: <em>binatna, binatkum, binathum</em>.</p>',
     pool: () => PREPS.filter(p => p.with_pronouns).flatMap(p => st.prons.map(i => ({ p, i, key: 'e|' + p.id + '|' + i }))),
     render: ({ p, i }) => {
       const pron = PREP_PRONS[i];
@@ -70,8 +70,8 @@ const MODULES = {
     },
   },
   collocations: {
-    n: 3, title: 'Verb collocations', sub: 'fkkr f, qllb 3la, tlaqa m3a, khaf men, sm7 l...',
-    intro: '<p>Many Darija verbs require a specific preposition: you think <em>in</em> something (<strong>fkkr f</strong>), look <em>on</em> something (<strong>qllb 3la</strong>), and joke <em>with</em> someone (<strong>d7k m3a</strong>) but mock / laugh <em>at</em> someone with <strong>d7k 3la</strong>.</p>',
+    n: 3, title: 'Verb collocations', sub: 'fkkr f, qllb 3la, tlaqa m3a, khaf mn, sm7 l...',
+    intro: '<p>Many Darija verbs require a specific preposition: you think <em>in</em> something (<strong>fkkr f</strong>), look <em>on</em> something (<strong>qllb 3la</strong>), and joke <em>with</em> someone (<strong>de7k m3a</strong>) but mock / laugh <em>at</em> someone with <strong>de7k 3la</strong>.</p>',
     pool: () => COLLOCS.map((c, idx) => ({ c, key: 'c|' + idx + '|' + c.verb + '|' + c.prep })),
     render: ({ c }) => {
       const verbObj = { lat: c.verb, ar: c.verbAr };
@@ -92,8 +92,8 @@ const MODULES = {
     },
   },
   idioms: {
-    n: 4, title: 'Idioms & States', sub: 'fiya j-ju3, 3ndi flus, thlla f rask...',
-    intro: '<p>Prepositions power everyday Darija phrases: <strong>f</strong> expresses sensations and illnesses (<em>fiya j-ju3</em> = I am hungry, <em>fih s-skhana</em> = he has a fever); <strong>3nd</strong> expresses possession (<em>3ndi flus</em>); <strong>3la</strong> expresses obligation (<em>3liya n-mshi</em>); and polite greetings use <em>sm7 liya</em> and <em>bla jmil</em>.</p>',
+    n: 4, title: 'Idioms & States', sub: 'fiya j-ju3, 3ndi flus, thla f rasek...',
+    intro: '<p>Prepositions power everyday Darija phrases: <strong>f</strong> expresses sensations and illnesses (<em>fiya j-ju3</em> = I am hungry, <em>fih s-skhana</em> = he has a fever); <strong>3end</strong> expresses possession (<em>3ndi flus</em>); <strong>3la</strong> expresses obligation (<em>3liya n-mchi</em>); and polite greetings use <em>sm7 liya</em> and <em>bla jmil</em>.</p>',
     pool: () => IDIOMS.map(im => ({ im, key: 'i|' + im.id })),
     render: ({ im }) => {
       const distractors = shuffle(IDIOMS.filter(o => o.id !== im.id)).slice(0, 3).map(o => ({ lat: o.lat, ar: o.ar }));

@@ -53,14 +53,14 @@ class TestPrepositions(unittest.TestCase):
         self.assertEqual(f, ["fiya", "fik", "fih", "fiha", "fina", "fikum", "fihum"])
         self.assertEqual(self.preps["f"]["pronouns"]["ar"][0], "فيا")
 
-        # 3nd: 3ndi, 3ndek, 3ndu, 3ndha, 3ndna, 3ndkum, 3ndhum
+        # 3nd: 3ndi, 3ndk, 3ndu, 3ndha, 3ndna, 3ndkum, 3ndhum
         nd = self.preps["3nd"]["pronouns"]["lat"]
-        self.assertEqual(nd, ["3ndi", "3ndek", "3ndu", "3ndha", "3ndna", "3ndkum", "3ndhum"])
+        self.assertEqual(nd, ["3ndi", "3ndk", "3ndu", "3ndha", "3ndna", "3ndkum", "3ndhum"])
         self.assertEqual(self.preps["3nd"]["pronouns"]["ar"][0], "عندي")
 
-        # men: menni, mennek, mennu, mennha, menna, mennkum, mennhum
+        # mn: each form spelled as the counts say (docs/spelling.md)
         men = self.preps["men"]["pronouns"]["lat"]
-        self.assertEqual(men, ["menni", "mennek", "mennu", "mennha", "menna", "mennkum", "mennhum"])
+        self.assertEqual(men, ["mni", "mnek", "mnu", "mnha", "mena", "mennkum", "menhum"])
         self.assertEqual(self.preps["men"]["pronouns"]["ar"][0], "مني")
 
         # 3la: 3liya, 3lik, 3lih, 3liha, 3lina, 3likum, 3lihum
@@ -86,7 +86,7 @@ class TestPrepositions(unittest.TestCase):
             self.assertEqual(c["exampleBlank"].count("___"), 1, c["exampleLat"])
         by_verb = {(c["verb"], c["prep"]): c for c in self.collocations}
         self.assertEqual(by_verb[("fkkr", "f")]["exampleBlank"], "kan-fkkr ___")
-        self.assertEqual(by_verb[("khaf", "men")]["exampleBlank"], "Jerry kay-khaf ___ Tom")
+        self.assertEqual(by_verb[("khaf", "mn")]["exampleBlank"], "Jerry kay-khaf ___ Tom")
 
     def test_no_stray_apostrophe_digraphs(self):
         text = DATA_PATH.read_text(encoding="utf-8")

@@ -10,8 +10,9 @@ A verb in the full file is built from it; the rest from the short file. Verbs in
 (scripts/gemini_batch.py) count as full too, but only the slots scripts/review_examples.py passed
 (data/raw/examples/gemini-reviewed.json); sonnet-full wins when a verb is in both.
 
-The prompt hands the model the conjugated form from data/verbs.json (negated with ma ... sh for
+The prompt hands the model the conjugated form from data/verbs.json (negated with ma ... ch for
 negative slots): it only writes the sentence around it, and any sentence that lost the form is dropped.
+Every sentence goes through spelling.canon() (docs/spelling.md) before it is kept.
 
 Runs `claude -p` on the logged-in plan, one call per group of verbs, saving after each call; verbs
 already in the file are skipped, so a stopped run picks up where it left off. Every run rebuilds
@@ -24,6 +25,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+
+from spelling import canon, load, prompt_words
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data/raw/examples/sonnet.json"
@@ -40,13 +43,13 @@ TENSE_EN = {"past": "past", "pres": "present (habitual / ongoing)", "fut": "futu
 STYLE = """You write example sentences for learners of Moroccan Arabic (Casablanca / Rabat Darija).
 
 Arabizi spelling, as used on the site: lowercase ASCII only, no accents. 3 = ع, 7 = ح (always:
-b7er, 7efla, m7etta), q = ق, gh = غ, kh = خ, sh = ش, 2 is never used, 9 is never used (write q),
-ch is never used. Write the schwa as e where it is pronounced (ketbat, l-mektab). Spell words out
-in full (daba, not db). The article takes a hyphen and assimilates before sun letters (l-ktab,
-d-dar, sh-shems, t-tumubil, r-rbat). The prepositions f, l, b, mn, 3la are separate words before
-the noun (f d-dar, l s-suq, b t-tobis, f s-sba7). A noun with a possessive ending takes no article
-(khuya, not l-khuya). Possessives as the site spells them: dyali, dyalek, dyalu, dyalha, dyalna,
-dyalkum, dyalhum, and the same endings on nouns (khuk, khuha, khukum).
+b7er, 7efla, m7etta), q = ق, gh = غ, kh = خ, ch = ش (never sh), 2 is never used, 9 is never used
+(write q). u, never o or ou, except in French loanwords (t-tobis, s-salon). Spell words out in full
+(daba, not db). The article takes a hyphen and assimilates before sun letters (l-ktab, d-dar,
+ch-chems, t-tumubil, r-rbat). The prepositions f, l, b, mn, 3la are separate words before the noun
+(f d-dar, l s-suq, b t-tobis, f s-sba7). A noun with a possessive ending takes no article (khuya,
+not l-khuya). Possessives as the site spells them: dyali, dyalk, dyalu, dyalha, dyalna, dyalkum,
+dyalhum. Spell these common words exactly like this: {words}.
 
 Arabic script: Arabic letters only, no diacritics. The article is always ال; f, l, b join the next
 word the way Moroccans write them (فالدار, للسوق, بالطوبيس, لخويا). Future marker غادي.
@@ -54,7 +57,7 @@ The two scripts must spell the same words in the same order.
 
 Rules for every sentence:
 - A slot marked negative needs a negative statement built on the negated form you are given
-  (ma ktebtsh, ma ghadish nkteb), kept exactly as given. The English must be negative too.
+  (ma ktebtch, ma ghadich nkteb), kept exactly as given. The English must be negative too.
 - The English must match the slot's tense and person: "we" for 7na, "you (f.)" for nti, and so on.
 - Natural, everyday Darija, 3 to 8 words. Not Modern Standard Arabic, not French spelling.
 - It must contain the verb form you are given exactly as given, as its own word, in both scripts.
@@ -66,10 +69,10 @@ Before answering, reread each sentence word by word against these rules and both
 
 Examples of the style:
 past, ana, ktebt / كتبت: "ktebt bra l khuya" / "كتبت برا لخويا" / "I wrote a letter to my brother."
-pres, huma, kayshufu / كيشوفو: "kayshufu t-tilfaza kul lila" / "كيشوفو التلفازة كل ليلة" / "They watch TV every night."
-fut, ana, ghadi nmshi / غادي نمشي: "ghadi nmshi l s-suq ghedda" / "غادي نمشي للسوق غدا" / "I'm going to go to the market tomorrow."
-past negative, huwa, ma shafsh / ما شافش: "ma shafsh khuya l-yum" / "ما شافش خويا اليوم" / "He didn't see my brother today."
-"""
+pres, huma, kaychufu / كيشوفو: "kaychufu t-tilfaza kul lila" / "كيشوفو التلفازة كل ليلة" / "They watch TV every night."
+fut, ana, ghadi nmchi / غادي نمشي: "ghadi nmchi l s-suq ghda" / "غادي نمشي للسوق غدا" / "I'm going to go to the market tomorrow."
+past negative, huwa, ma chafch / ما شافش: "ma chafch khuya l-yum" / "ما شافش خويا اليوم" / "He didn't see my brother today."
+""".replace("{words}", ", ".join(prompt_words()))
 
 SCHEMA = {
     "type": "object",
@@ -86,10 +89,10 @@ SCHEMA = {
 
 
 def negate(lat, ar, t):
-    """ma + form + sh; the future's ghadi takes the sh (same rule as negate in assets/verbs-data.js)."""
+    """ma + form + ch; the future's ghadi takes the ch (same rule as negate in assets/verbs-data.js)."""
     if t == "fut":
-        return "ma " + lat.replace("ghadi ", "ghadish ", 1), "ما " + ar.replace("غادي ", "غاديش ", 1)
-    return "ma " + lat + "sh", "ما " + ar + "ش"
+        return "ma " + lat.replace("ghadi ", "ghadich ", 1), "ما " + ar.replace("غادي ", "غاديش ", 1)
+    return "ma " + lat + "ch", "ما " + ar + "ش"
 
 
 def forms(v, t):
@@ -111,7 +114,9 @@ def slots(v, full=False):
     if full:
         return [slot(i, v, t, p, bool(n)) for i, (t, p, n) in enumerate(
             (t, p, n) for t in TENSES for p in range(8) for n in (0, 1))]
-    persons = random.Random(v["id"]).sample(range(8), 3)
+    # seeded with the id as spelled before ش became ch, so existing sentences keep their persons
+    seed = v["id"].replace("sh", "s'h").replace("ch", "sh")
+    persons = random.Random(seed).sample(range(8), 3)
     return [slot(i, v, t, p) for i, (t, p) in enumerate(zip(TENSES, persons))]
 
 
@@ -189,7 +194,7 @@ def build(verbs):
     raw, raw_full = read(RAW, {}), read(RAW_FULL, {})
     for k, sents in reviewed(read(RAW_GEMINI, {}), read(RAW_REVIEWED, {})).items():
         raw_full.setdefault(k, sents)
-    out, dropped = {}, []
+    out, dropped, spelling = {}, [], load()
     for v in verbs:
         full = v["id"] in raw_full
         by_slot = {x["slot"]: x for x in (raw_full if full else raw).get(v["id"], [])}
@@ -199,6 +204,7 @@ def build(verbs):
             if not r:
                 continue
             what = f"{v['id']}/{s['tense']}{'/neg' if s['neg'] else ''}/{PRON[s['p']]}"
+            r = {**r, "lat": canon(r["lat"], spelling, keep=s["lat"].split())}
             if not has_form(r, s):
                 dropped.append(f"{what}: {r['lat']} (needs {s['lat']})")
                 continue

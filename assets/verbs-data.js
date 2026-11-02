@@ -10,23 +10,23 @@ export const TENSE = {
 export const KINDS = {
   sound: { name: 'regular', text: 'Every root letter is a consonant, so the stem keeps its shape. Before -at, -u and -i the schwa moves forward (kteb becomes ketbat, katketbi).' },
   initial: { name: 'starts with w', text: 'The first root letter is w. It conjugates like a regular verb (wsel, weslat, kanwsel).' },
-  hollow: { name: 'hollow', text: 'A long vowel sits in the middle. It drops before the past endings -t, -ti, -na, -tu (shaf becomes shft) and comes back in the present (kanshuf).' },
+  hollow: { name: 'hollow', text: 'A long vowel sits in the middle. It drops before the past endings -t, -ti, -na, -tu (chaf becomes chft) and comes back in the present (kanchuf).' },
   final: { name: 'ends in a vowel', text: 'The stem ends in a vowel. The past adds -i- before consonant endings (bgha becomes bghit). The present ends in -i or -a; -a verbs add -y for nti (katqray).' },
-  doubled: { name: 'doubled', text: 'The stem ends in a doubled letter. The past adds -i- before consonant endings (shedd becomes sheddit); the present is regular (kanshedd).' },
+  doubled: { name: 'doubled', text: 'The stem ends in a doubled letter. The past adds -i- before consonant endings (chedd becomes cheddit); the present is regular (kanchedd).' },
   longa: { name: 'long a stem', text: 'The stem keeps a long a. The past adds -i- before consonant endings (khtar becomes khtarit).' },
   hamza: { name: 'dropped hamza', text: 'The first root letter was a hamza. The past works like a final-vowel verb (klit); the present starts with a- (kanakul, katakli).' },
   irregular: { name: 'irregular', text: 'The stem changes in a way the patterns above do not predict. Learn the table.' },
 };
 
-// Negation wraps the verb: ma + form + sh (ma ktebtsh). The future's ghadi takes the sh: ma ghadish nkteb.
+// Negation wraps the verb: ma + form + ch (ma ktebtch). The future's ghadi takes the ch: ma ghadich nkteb.
 const ma = x => ({ lat: 'ma ' + x.lat, ar: 'ما ' + x.ar });
-const sh = (x, t) => (t === 'fut'
-  ? { lat: x.lat.replace(/^ghadi /, 'ghadish '), ar: x.ar.replace(/^غادي /, 'غاديش ') }
-  : { lat: x.lat + 'sh', ar: x.ar + 'ش' });
-export const negate = (x, t) => ma(sh(x, t));
-// The contracted future (ghankteb) is negated like any other verb: ma ghanktebsh.
-// The two half-negations learners produce by mistake: ma without sh, and sh without ma.
-export const halfNegations = (x, t) => [ma(x), sh(x, t)];
+const ch = (x, t) => (t === 'fut'
+  ? { lat: x.lat.replace(/^ghadi /, 'ghadich '), ar: x.ar.replace(/^غادي /, 'غاديش ') }
+  : { lat: x.lat + 'ch', ar: x.ar + 'ش' });
+export const negate = (x, t) => ma(ch(x, t));
+// The contracted future (ghankteb) is negated like any other verb: ma ghanktebch.
+// The two half-negations learners produce by mistake: ma without ch, and ch without ma.
+export const halfNegations = (x, t) => [ma(x), ch(x, t)];
 
 export const isStrong = v => v.kind === 'sound';
 

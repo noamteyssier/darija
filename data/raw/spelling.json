@@ -1,0 +1,35 @@
+{
+ "_doc": "Hand-made input to scripts/spelling.py (docs/spelling.md). keep: words written as they are, mostly French loanwords that keep o, and names. force: canonical -> variants, decided by hand over the counts. distinct: spellings that look like variants of each other but are different words.",
+ "keep": [
+  "amine", "bato", "biro", "bob", "bola", "bolis", "bosta", "bostat", "bota", "botilla", "botola", "brawo",
+  "chofaj", "chofur", "dekor", "euro", "formaj", "garson", "gato", "jornal", "kado", "kadoyat", "kamyon",
+  "karro", "karrosa", "karton", "koffr", "kontrat", "kontrol", "kontrolat", "korda", "kostim", "manto",
+  "maraton", "mario", "menu", "mikro", "morsu", "motor", "numro", "olampiyat", "omlet", "ordinatur", "oroppa",
+  "otil", "otorut", "pong", "portabl", "portablat", "post", "resto", "restoran", "robini", "rondpwan",
+  "salon", "sero", "siro", "stilo", "stiloyat", "stop", "thomas", "tiyo", "tobis", "tobisat", "tom", "triko",
+  "volan", "weekend"
+ ],
+ "force": {
+  "ayam": ["ayyam", "eyyam"],
+  "bezzaf": ["bzzef", "bezzef", "bzf", "bzef"],
+  "had": ["hed"],
+  "bolis": ["bulis", "buliss"],
+  "kontrol": ["kuntrol", "kuntrul"],
+  "kontrolat": ["kuntrolat", "kuntrulat"],
+  "lewel": ["lowel", "luwel", "lwel", "lewwel"],
+  "motor": ["motur", "mutur"],
+  "mzyan": ["mezian", "mzian"],
+  "otil": ["otel"],
+  "restoran": ["ristoran", "restora"],
+  "salon": ["sallun", "salun"],
+  "tilifun": ["telefon", "telefun"],
+  "w": ["u"],
+  "wach": ["wech", "wch"]
+ },
+ "distinct": [
+  ["bba", "ba"], ["mmi", "mi"], ["mmu", "mu"], ["bbak", "bak"], ["bbah", "bah"], ["bbaha", "baha"], ["lli",
+  "li"], ["sirr", "sir"], ["7all", "7al"], ["erd", "red"], ["merrat", "mrat"], ["marra", "mara"], ["jedd",
+  "jd"], ["3ddel", "3del"], ["7mam", "7mmam", "7emmam"], ["saff", "saf"], ["merra", "mmerra", "mra", "mera"],
+  ["khes", "kheses", "khs", "khses"], ["qllb", "qelb", "qleb"]
+ ]
+}

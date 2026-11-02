@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 VOWELS = set("aiu")
-LAT = {"š": "sh", "x": "kh", "ġ": "gh", "ع": "3", "н": "7", "ṭ": "t", "ṣ": "s", "ḍ": "d", "ẓ": "z", "ḥ": "7"}
+LAT = {"š": "ch", "x": "kh", "ġ": "gh", "ع": "3", "н": "7", "ṭ": "t", "ṣ": "s", "ḍ": "d", "ẓ": "z", "ḥ": "7"}
 AR = {
     "b": "ب", "t": "ت", "j": "ج", "н": "ح", "x": "خ", "d": "د", "r": "ر", "z": "ز", "s": "س",
     "š": "ش", "ṣ": "ص", "ḍ": "ض", "ṭ": "ط", "ẓ": "ظ", "ع": "ع", "ġ": "غ", "f": "ف", "q": "ق",
@@ -111,13 +111,13 @@ def v_form(cform):
 
 
 def lat(pc_syll):
-    """Book letters -> arabizi. A real s+h, k+h or g+h gets an apostrophe so it can't be
-    read as the digraphs sh / kh / gh (s'her, stay up late)."""
+    """Book letters -> arabizi. A real k+h or g+h gets an apostrophe so it can't be
+    read as the digraphs kh / gh (ش is ch, so s+h is just sh: sher, stay up late)."""
     s = unicodedata.normalize("NFC", pc_syll)
     out = []
     for i, c in enumerate(s):
         out.append(LAT.get(c, c))
-        if c in "skg" and s[i + 1:i + 2] == "h":
+        if c in "kg" and s[i + 1:i + 2] == "h":
             out.append("'")
     return "".join(out)
 

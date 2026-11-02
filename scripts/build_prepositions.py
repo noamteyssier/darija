@@ -13,15 +13,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_verbs import ar, lat
+from spelling import canon_fields, load
 
 PRONOUN_PERSONS = ["ana", "nta / nti", "huwa", "hiya", "7na", "ntuma", "huma"]
 
 
 def clean_lat(s):
-    """Book letters -> arabizi. Raw entries already in arabizi keep their sh / kh / gh digraphs."""
+    """Book letters -> arabizi. Raw entries already in arabizi keep their kh / gh digraphs."""
     if s is None:
         return None
-    return re.sub(r"([skg])'h", r"\1h", lat(s))
+    return re.sub(r"([kg])'h", r"\1h", lat(s))
 
 
 def blank(example, prep, forms):
@@ -123,11 +124,11 @@ def main():
             "src": im.get("src", ""),
         })
 
-    body = {
+    body = canon_fields({
         "prepositions": prepositions,
         "collocations": collocations,
         "idioms": idioms,
-    }
+    }, load(), ("lat", "altLat", "exampleLat", "verb", "prep"))
 
     out = json.dumps(body, ensure_ascii=False, indent=2)
     (ROOT / "data/prepositions.json").write_text(out + "\n", encoding="utf-8")

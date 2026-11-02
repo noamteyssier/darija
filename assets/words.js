@@ -37,18 +37,18 @@ function make(group) {
 
 const MODULES = {
   time: {
-    n: 1, title: 'Today, yesterday, tomorrow', sub: 'l-yum, l-bare7, ghedda, daba, dima, imta...',
-    intro: '<p>Time words do not change: <strong>l-yum</strong> today, <strong>l-bare7</strong> yesterday, <strong>ghedda</strong> tomorrow, <strong>daba</strong> now. Put them at the end of the sentence: mshit l-bare7, I went yesterday. The past or future comes from the verb, not from the time word.</p>',
+    n: 1, title: 'Today, yesterday, tomorrow', sub: 'l-yum, l-bare7, ghda, daba, dima, imta...',
+    intro: '<p>Time words do not change: <strong>l-yum</strong> today, <strong>l-bare7</strong> yesterday, <strong>ghda</strong> tomorrow, <strong>daba</strong> now. Put them at the end of the sentence: mchit l-bare7, I went yesterday. The past or future comes from the verb, not from the time word.</p>',
     ...make('time'),
   },
   calendar: {
-    n: 2, title: 'Week, month, year', sub: 's-semmana, sh-shher, l-3am, l-khmis, had l-3am...',
-    intro: '<p>This is <strong>had</strong> plus the noun with <strong>the</strong>: had s-semmana, this week. Next and last follow the noun after it: <strong>jay / jaya</strong> for next and <strong>lli fat / lli fatet</strong> for last. Feminine nouns (semmana) take the -a and -et forms: s-semmana jaya, s-semmana lli fatet. Masculine ones (shher, 3am) do not: sh-shher jay.</p><p>The days are used with the article: l-khmis, j-jem3a. Add <strong>nhar</strong> if you want to be clear: nhar l-khmis.</p>',
+    n: 2, title: 'Week, month, year', sub: 's-semmana, ch-chher, l-3am, l-khmis, had l-3am...',
+    intro: '<p>This is <strong>had</strong> plus the noun with <strong>the</strong>: had s-semmana, this week. Next and last follow the noun after it: <strong>jay / jaya</strong> for next and <strong>lli fat / lli fatet</strong> for last. Feminine nouns (semmana) take the -a and -et forms: s-semmana jaya, s-semmana lli fatet. Masculine ones (chher, 3am) do not: ch-chher jay.</p><p>The days are used with the article: l-khmis, j-jem3a. Add <strong>nhar</strong> if you want to be clear: nhar l-khmis.</p>',
     ...make('calendar'),
   },
   direction: {
-    n: 3, title: 'Left, right, north, south', sub: 'limen, liser, nishan, shmal, hna, temma...',
-    intro: '<p>To a place, use <strong>3la</strong>: 3la limen to the right, 3la liser to the left. Straight on is <strong>nishan</strong>. A few short commands cover most directions: dwer 3la limen, mshi nishan, 7bes hna.</p><p>The compass words are <strong>shmal</strong>, <strong>janub</strong>, <strong>sharq</strong> and <strong>gharb</strong>. People mostly use left and right in the street.</p>',
+    n: 3, title: 'Left, right, north, south', sub: 'limen, liser, nichan, chmal, hna, tma...',
+    intro: '<p>To a place, use <strong>3la</strong>: 3la limen to the right, 3la liser to the left. Straight on is <strong>nichan</strong>. A few short commands cover most directions: dewer 3la limen, mchi nichan, 7bes hna.</p><p>The compass words are <strong>chmal</strong>, <strong>janub</strong>, <strong>charq</strong> and <strong>gharb</strong>. People mostly use left and right in the street.</p>',
     ...make('direction'),
   },
 };
