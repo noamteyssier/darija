@@ -24,6 +24,130 @@ export const OWNER = [
 
 export function $(id) { return document.getElementById(id); }
 
+// Ids renamed since progress was saved, old -> new. Add a line per rename (collocations use the whole key).
+const RENAMED = {
+  // verbs
+  'shreb': 'chreb',
+  'shref': 'chref',
+  'neshshet': 'nechchet',
+  'shedd': 'chedd',
+  'tshetter': 'tchetter',
+  'mshet': 'mchet',
+  'shra': 'chra',
+  'nqesh': 'nqech',
+  'gheshsh': 'ghechch',
+  'shmet': 'chmet',
+  'shre7': 'chre7',
+  'tshekka': 'tchekka',
+  'tshawer': 'tchawer',
+  'khsha': 'khcha',
+  'shte7': 'chte7',
+  't3eshsha': 't3echcha',
+  'ktashef': 'ktachef',
+  'naqesh': 'naqech',
+  'sherreb': 'cherreb',
+  'nshef': 'nchef',
+  'neshshef': 'nechchef',
+  '7eshshem': '7echchem',
+  '7shem': '7chem',
+  'shejje3': 'chejje3',
+  'shbe3': 'chbe3',
+  'nshet': 'nchet',
+  'msha': 'mcha',
+  'shwa': 'chwa',
+  'nsher': 'ncher',
+  'sherref': 'cherref',
+  'shedd-2': 'chedd-2',
+  'fettesh': 'fettech',
+  'hemmesh': 'hemmech',
+  'shat': 'chat',
+  'sh3el': 'ch3el',
+  'shaf': 'chaf',
+  'tshabeh': 'tchabeh',
+  'shbeh': 'chbeh',
+  'rshem': 'rchem',
+  'reshshe7': 'rechche7',
+  'sharek': 'charek',
+  'qeshsher': 'qechcher',
+  'tqeshsher': 'tqechcher',
+  'riyesh': 'riyech',
+  'shellel': 'chellel',
+  'tshawef': 'tchawef',
+  'duwesh': 'duwech',
+  'terresh': 'terrech',
+  'shemm': 'chemm',
+  'reshsh': 'rechch',
+  'feshshesh': 'fechchech',
+  "s'her": 'sher',
+  'sheffer': 'cheffer',
+  'tmeshsha': 'tmechcha',
+  'tshemmesh': 'tchemmech',
+  '3ash': '3ach',
+  'shetteb': 'chetteb',
+  'qeshsheb': 'qechcheb',
+  'shiyer': 'chiyer',
+  'shhed': 'chhed',
+  'teshten': 'techten',
+  // nouns and adjectives
+  'wjeh': 'wjjeh',
+  'sh3er': 'ch3er',
+  'kersh': 'kerch',
+  'tebla': 'tbla',
+  'tebsil': 'tbsil',
+  'tlfaza': 'telfaza',
+  'medrasa': 'mdrasa',
+  'meshsh': 'mechch',
+  'shher': 'chher', // also a word
+  'shems': 'chems',
+  'sukkar': 'sukar',
+  'shurba': 'churba',
+  'sandwish': 'sandwich',
+  '3sha': '3cha',
+  'matisha': 'maticha',
+  'furshita': 'furchita',
+  'salun': 'salon',
+  'shebbak': 'chebbak',
+  'meshghul': 'mchghul',
+  // words
+  'ghedda': 'ghda',
+  'b3d-ghedda': 'b3d-ghda',
+  'men-b3d': 'mn-b3d',
+  'bekri': 'bkri',
+  'l-3shiya': 'l-3chiya',
+  'sh-shta': 'ch-chta',
+  'had-sh-shher': 'had-ch-chher',
+  'sh-shher-jay': 'ch-chher-jay',
+  'sh-shher-lli-fat': 'ch-chher-lli-fat',
+  'nishan': 'nichan',
+  'shmal': 'chmal',
+  'sharq': 'charq',
+  'temma': 'tma',
+  'dwer-3la-limen': 'dewer-3la-limen',
+  'dwer-3la-liser': 'dewer-3la-liser',
+  'mshi-nishan': 'mchi-nichan',
+  // collocations
+  'c|2|d7k|3la': 'c|2|de7k|3la',
+  'c|3|d7k|m3a': 'c|3|de7k|m3a',
+  'c|8|khaf|men': 'c|8|khaf|mn',
+  'c|9|thlla|f': 'c|9|thla|f',
+  'c|21|shark|f': 'c|21|chark|f',
+  'c|30|tleb|men': 'c|30|tleb|mn',
+};
+
+// Saved weights are keyed by drill keys that embed ids ('mine|khu|0', 'shaf|pres|1'); stars hold bare ids.
+function renameKey(k) {
+  return RENAMED[k] ?? k.split('|').map(s => RENAMED[s] ?? s).join('|');
+}
+
+function migrate(p) {
+  if (Array.isArray(p.stars)) p.stars = [...new Set(p.stars.map(id => RENAMED[id] ?? id))];
+  if (p.weights && typeof p.weights === 'object') {
+    const w = {};
+    for (const k of Object.keys(p.weights)) { const n = renameKey(k); if (!(n in p.weights) || n === k) w[n] = p.weights[k]; }
+    p.weights = w;
+  }
+}
+
 export function load(name, defaults) {
   const key = 'darija:' + name;
   let data = structuredClone(defaults);
@@ -31,7 +155,7 @@ export function load(name, defaults) {
     const raw = localStorage.getItem(key);
     if (raw) {
       const p = JSON.parse(raw);
-      if (p && typeof p === 'object') data = Object.assign(data, p);
+      if (p && typeof p === 'object') { migrate(p); data = Object.assign(data, p); }
     }
   } catch (e) { /* private mode or blocked storage: start fresh */ }
   data.save = () => {
