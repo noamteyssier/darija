@@ -75,6 +75,14 @@
   "l-gheda": "l-ghda",
   "l-ghedda": "l-ghda"
  },
+ "glued": {
+  "jjay": "j-jay",
+  "l7ed": "l-7ed",
+  "latay": "l-atay",
+  "lbare7": "l-bare7",
+  "lyum": "l-yum",
+  "lyuma": "l-yuma"
+ },
  "words": {
   "3amer": {
    "by": "schwa",
@@ -514,6 +522,13 @@
     "che": 8
    }
   },
+  "chab": {
+   "by": "corpus",
+   "counts": {
+    "chab": 31,
+    "chaab": 4
+   }
+  },
   "chaft": {
    "by": "corpus",
    "counts": {
@@ -603,7 +618,8 @@
    "counts": {
     "cheklat": 18,
     "chklat": 12,
-    "chkklat": 3
+    "chkklat": 3,
+    "chkelat": 0
    }
   },
   "chkun": {

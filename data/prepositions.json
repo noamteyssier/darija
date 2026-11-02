@@ -8,7 +8,7 @@
       "type": "simple",
       "src": "PC 42, 115",
       "with_pronouns": true,
-      "note": "Prefix attached to nouns (l-Chad, l Amy). With pronouns, often liya/li and lih/lu. Expresses direction, recipient, or beneficiary. Also used with ymkn (ymkn liya = I can).",
+      "note": "Prefix attached to nouns (l-Chad, l Amy). With pronouns, often liya/li and lih/lu. Expresses direction, recipient, or beneficiary. Also used with ymken (ymken liya = I can).",
       "pronouns": {
         "lat": [
           "liya",
@@ -182,7 +182,7 @@
       "type": "simple",
       "src": "PC 42, 117",
       "with_pronouns": true,
-      "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), d7k m3a (joke with).",
+      "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), de7k m3a (joke with).",
       "pronouns": {
         "lat": [
           "m3aya",
@@ -229,7 +229,7 @@
       "type": "simple",
       "src": "PC 42, 116",
       "with_pronouns": true,
-      "note": "Spatial 'on', topical 'about', obligation (3liya n-mchi = I must go), directions (3l limn = to the right), and verbs like qllb 3la (look for), mat 3la (love), d7k 3la (laugh at / mock).",
+      "note": "Spatial 'on', topical 'about', obligation (3liya n-mchi = I must go), directions (3la limen = to the right), and verbs like qllb 3la (look for), mat 3la (love), de7k 3la (laugh at / mock).",
       "pronouns": {
         "lat": [
           "3liya",
@@ -281,7 +281,7 @@
       "type": "simple",
       "src": "PC 42, 119",
       "with_pronouns": true,
-      "note": "Doubles the n before pronoun suffixes (menni, mennek, mennu). Used for origin, comparisons (kber menni = older than me), and fear (khaf men).",
+      "note": "Takes the pronoun endings directly (mni, mnek, mnu). Used for origin, comparisons (kber mni = older than me), and fear (khaf mn).",
       "pronouns": {
         "lat": [
           "mni",
@@ -380,7 +380,7 @@
       "type": "simple",
       "src": "PC 42, LP 26",
       "with_pronouns": true,
-      "note": "Expresses lack or absence: bla sokkar (without sugar). Polite response: bla jmil (you're welcome / don't mention it).",
+      "note": "Expresses lack or absence: bla sukar (without sugar). Polite response: bla jmil (you're welcome / don't mention it).",
       "pronouns": {
         "lat": [
           "blaya",
@@ -445,7 +445,7 @@
       "type": "locative",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Location physically on top of or above something: fuq t-tebla (on the table), fuq s-snduq (on top of the box).",
+      "note": "Location physically on top of or above something: fuq t-tbla (on the table), fuq s-snduq (on top of the box).",
       "pronouns": {
         "lat": [
           "fuqi",
@@ -487,7 +487,7 @@
       "type": "locative",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Location physically underneath: te7t t-tebla (under the table), te7t ch-chjra (under the tree).",
+      "note": "Location physically underneath: te7t t-tbla (under the table), te7t ch-chejra (under the tree).",
       "pronouns": {
         "lat": [
           "te7ti",
@@ -529,7 +529,7 @@
       "type": "locative",
       "src": "PC 42, 43",
       "with_pronouns": true,
-      "note": "Spatial position in front of: qddam d-dar (in front of the house). Directions: zid l qddam (go ahead a bit).",
+      "note": "Spatial position in front of: qdam d-dar (in front of the house). Directions: zid l qdam (go ahead a bit).",
       "pronouns": {
         "lat": [
           "qdami",
@@ -571,7 +571,7 @@
       "type": "locative",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Position behind (also said mor or wra): mura d-dar (behind the house), muraya (behind me).",
+      "note": "Position behind (also said mur or wra): mura d-dar (behind the house), muraya (behind me).",
       "pronouns": {
         "lat": [
           "muraya",
@@ -673,7 +673,7 @@
       "type": "locative",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Position between two or more: bin d-dar u l-mdrasa. With plural pronoun endings it inserts -at-: binatna (between us).",
+      "note": "Position between two or more: bin d-dar w l-mdrasa. With plural pronoun endings it inserts -at-: binatna (between us).",
       "pronouns": {
         "lat": [
           "bini",
@@ -812,7 +812,7 @@
       "type": "temporal",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Time before: qbel l-xedma (before work). With pronouns, Moroccan Arabic usually uses qbel men + pronoun (qbel menni).",
+      "note": "Time before: qbel l-khdma (before work). With pronouns, Moroccan Arabic usually uses qbel mn + pronoun (qbel mni).",
       "pronouns": {
         "lat": [
           "qbel mni",
@@ -872,7 +872,7 @@
       "type": "temporal",
       "src": "PC 42",
       "with_pronouns": true,
-      "note": "Time after: b3d l-ghda (after lunch), mn b3d (afterwards). With pronouns, usually b3d men + pronoun.",
+      "note": "Time after: b3d l-ghda (after lunch), mn b3d (afterwards). With pronouns, usually b3d mn + pronoun.",
       "pronouns": {
         "lat": [
           "b3d mni",
@@ -932,7 +932,7 @@
       "type": "temporal",
       "src": "PC 42, 44",
       "with_pronouns": false,
-      "note": "Indicates time or limit: 7tta l-ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
+      "note": "Indicates time or limit: 7tta ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
       "examples": [
         {
           "lat": "sir nichan 7tta l z-zenqa t-talta",
@@ -991,7 +991,7 @@
       "type": "relational",
       "src": "PC 43",
       "with_pronouns": true,
-      "note": "Proximity in distance: qrib mn hna (close to here). Takes men before pronouns and nouns.",
+      "note": "Proximity in distance: qrib mn hna (close to here). Takes mn before pronouns and nouns.",
       "pronouns": {
         "lat": [
           "qrib mni",
@@ -1075,10 +1075,10 @@
       "type": "locative",
       "src": "LP 26",
       "with_pronouns": false,
-      "note": "Inside an enclosed space: dakhel d-dar or l-dakhel d d-dar.",
+      "note": "Inside an enclosed space: dakhl d-dar or d-dakhl d d-dar.",
       "examples": [
         {
-          "lat": "kayn l-dakhl d d-dar",
+          "lat": "kayn d-dakhl d d-dar",
           "ar": "كاين لداخل د الدار",
           "en": "He is inside the house"
         }
@@ -1092,7 +1092,7 @@
       "type": "locative",
       "src": "LP 26",
       "with_pronouns": false,
-      "note": "Outside of a place: berra d d-dar (outside the house), xrej l-berra (go outside).",
+      "note": "Outside of a place: berra d d-dar (outside the house), khrej l-berra (go outside).",
       "examples": [
         {
           "lat": "glsu berra d l-qehwa",
@@ -1689,7 +1689,7 @@
       "lat": "thla f rasek",
       "ar": "تهلى فراسك",
       "en": "Take care of yourself",
-      "note": "thlla requires f.",
+      "note": "thla requires f.",
       "src": "PC 118"
     },
     {
@@ -1699,7 +1699,7 @@
       "lat": "ymken lina n-mchiw",
       "ar": "يمكن لينا نمشيو",
       "en": "We can go (lit. it is possible for us to go)",
-      "note": "ymkn + l + pronoun expresses capability or permission.",
+      "note": "ymken + l + pronoun expresses capability or permission.",
       "src": "PC 115"
     },
     {
