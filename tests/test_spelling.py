@@ -18,7 +18,7 @@ class Canon(unittest.TestCase):
         self.assertEqual(sp.canon("huwa mezyan bzzaf", S), "huwa mzyan bezzaf")
 
     def test_article(self):
-        self.assertEqual(sp.canon("f l-khdma", S), "f l-khedma")
+        self.assertEqual(sp.canon("f l-khedma", S), "f l-khdma")
         self.assertEqual(sp.canon("z-znqa", S), "z-zenqa")
 
     def test_letters(self):
@@ -57,6 +57,17 @@ class Map(unittest.TestCase):
         for group in json.loads(sp.MANUAL.read_text())["distinct"]:
             for w in group:
                 self.assertNotIn(tab.get(w), set(group) - {w}, group)
+
+
+class Tables(unittest.TestCase):
+    def test_one_spelling_per_table(self):
+        for table in sp.paradigms():
+            got = [sp.canon(f, S, sp.NOUN_KEEP) if f else f for f in table]
+            self.assertIn(got, list(sp.table_spellings(table)), table)
+
+    def test_examples(self):
+        for raw, want in (("mennek", "mnek"), ("menna", "mna"), ("mennhum", "mnhum"), ("qddamek", "qdamek"), ("3ndek", "3ndk")):
+            self.assertEqual(sp.canon(raw, S), want)
 
 
 class SiteData(unittest.TestCase):

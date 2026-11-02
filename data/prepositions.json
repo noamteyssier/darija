@@ -288,9 +288,9 @@
           "mnek",
           "mnu",
           "mnha",
-          "mena",
-          "mennkum",
-          "menhum"
+          "mna",
+          "mnkum",
+          "mnhum"
         ],
         "ar": [
           "مني",
@@ -322,7 +322,7 @@
     },
     {
       "id": "3nd",
-      "lat": "3end",
+      "lat": "3nd",
       "ar": "عند",
       "en": "at / with / to have",
       "type": "simple",
@@ -361,7 +361,7 @@
           "en": "We have a good teacher"
         },
         {
-          "lat": "mchit 3end mul l-7anut",
+          "lat": "mchit 3nd mul l-7anut",
           "ar": "مشيت عند مول الحانوت",
           "en": "I went to the storekeeper's"
         },
@@ -533,12 +533,12 @@
       "pronouns": {
         "lat": [
           "qdami",
-          "qddamek",
-          "qddamu",
-          "qddamha",
-          "qddamna",
-          "qddamkum",
-          "qddamhum"
+          "qdamek",
+          "qdamu",
+          "qdamha",
+          "qdamna",
+          "qdamkum",
+          "qdamhum"
         ],
         "ar": [
           "قدامي",
@@ -819,9 +819,9 @@
           "qbel mnek",
           "qbel mnu",
           "qbel mnha",
-          "qbel mena",
-          "qbel mennkum",
-          "qbel menhum"
+          "qbel mna",
+          "qbel mnkum",
+          "qbel mnhum"
         ],
         "ar": [
           "قبل مني",
@@ -879,9 +879,9 @@
           "b3d mnek",
           "b3d mnu",
           "b3d mnha",
-          "b3d mena",
-          "b3d mennkum",
-          "b3d menhum"
+          "b3d mna",
+          "b3d mnkum",
+          "b3d mnhum"
         ],
         "ar": [
           "بعد مني",
@@ -913,7 +913,7 @@
       },
       "examples": [
         {
-          "lat": "n-tlaqaw b3d l-khedma",
+          "lat": "n-tlaqaw b3d l-khdma",
           "ar": "نتلاقاو بعد الخدمة",
           "en": "Let's meet after work"
         },
@@ -998,9 +998,9 @@
           "qrib mnek",
           "qrib mnu",
           "qrib mnha",
-          "qrib mena",
-          "qrib mennkum",
-          "qrib menhum"
+          "qrib mna",
+          "qrib mnkum",
+          "qrib mnhum"
         ],
         "ar": [
           "قريب مني",
@@ -1040,9 +1040,9 @@
           "b3id mnek",
           "b3id mnu",
           "b3id mnha",
-          "b3id mena",
-          "b3id mennkum",
-          "b3id menhum"
+          "b3id mna",
+          "b3id mnkum",
+          "b3id mnhum"
         ],
         "ar": [
           "بعيد مني",
@@ -1477,7 +1477,7 @@
       "prep": "m3a",
       "prepAr": "مع",
       "meaning": "help / cooperate with",
-      "exampleLat": "t3awn m3ana f l-khedma",
+      "exampleLat": "t3awn m3ana f l-khdma",
       "exampleAr": "تعاون معانا ف الخدمة",
       "exampleEn": "He helped us with the work",
       "src": "PC 117"

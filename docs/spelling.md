@@ -70,7 +70,6 @@ the one that writes more schwa wins (it is easier to read aloud).
 | good | mzyan | mzyan 548, mezian 28, mezyan 24 |
 | early | bkri | bkri 149, bekri 72 |
 | after | b3d | b3d 78, be3d 36 |
-| work | khedma | khedma 323, khdma 316 (close: more schwa wins) |
 | coffee | qehwa | qehwa 45, qhwa 45 (close: more schwa wins) |
 
 **Exception: a short list of words keeps its doubled letter**, against the counts. Native writers often
@@ -103,9 +102,13 @@ and `ba` are different words. Neither are stretched vowels (`bzaaaf`) or text-me
 - **The article** takes a hyphen and copies a sun letter: `l-ktab`, `d-dar`, `ch-chems`, `t-tumubil`.
   This is grammar, not a count (corpus writers rarely mark it), so the site keeps it.
 - **f, l, b, mn, 3la** are separate words before a noun: `f d-dar`, `l s-suq`, `b t-tobis`.
-- **dyal** and pronoun endings follow the counts per word: `dyalk` (508 vs `dyalek` 19), `3ndk`, but
-  `rasek` (close: more schwa wins). The same goes for nouns and prepositions with endings, which
-  `scripts/build_nouns.py` and `scripts/build_prepositions.py` build and then pass through `canon()`.
+- **Pronoun tables** are chosen as a whole, so a table never mixes spellings: `mn` gives `mni, mnek, mnu,
+  mnha, mna, mnkum, mnhum`, and `qdam` gives `qdami, qdamek, ...`. `table_force()` in `scripts/spelling.py`
+  tries the table with and without schwa, doubled letters and the `-ek` of "your". A version replaces the
+  table as written only if the forms it changes have at least 20 hits and 1.5 times the hits of the forms
+  they replace. That's how `dyalk` (508 vs `dyalek` 19) and `3ndk` come out, while `rasek` stays. The
+  headword follows its table, which is how `3nd` beats `3end` and work becomes `khdma` (`khdmti` 23 vs
+  `khedmti` 3). Tables keep the regular change before an ending (`rajel`, `rajli`; `wjeh`, `wejhi`).
 - **Negation** wraps the verb with `ma ... ch`: `ma ktebtch`, `ma ghadich nkteb`.
 
 ## Arabic script
@@ -129,7 +132,7 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
 ## How it is applied
 
 1. `scripts/spelling.py` turns the counts and `data/raw/spelling.json` into `data/spelling.json`:
-   for each word, the site's spelling, how it was chosen (`corpus`, `schwa`, `manual`) and the counts.
+   for each word, the site's spelling, how it was chosen (`corpus`, `schwa`, `table`, `manual`) and the counts.
 2. `canon()` rewrites arabizi text to those spellings. `build_nouns.py`, `build_prepositions.py`,
    `build_words.py` and `build_examples.py` run it on everything they write.
 3. `tests/test_spelling.py` fails if any generated data uses a spelling the map rewrites, uses `9`, or
