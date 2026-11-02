@@ -218,6 +218,7 @@ const PAGES = [
   ['prepositions.html', 'Prepositions'],
   ['numbers.html', 'Numbers'],
   ['words.html', 'Time &amp; place'],
+  ['vocab.html', 'Vocabulary'],
   ['dictionary.html', 'Dictionary'],
   ['rules.html', 'Rules'],
 ];

@@ -4,7 +4,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf 
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres', tag: '' });
-const [vdata, ndata, pdata, wdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
+const [vdata, ndata, pdata, wdata, ddata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json'), getJSON('data/doda.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -132,9 +132,17 @@ function wordItems() {
   }));
 }
 
+function vocabItems() {
+  return ranked(ddata.words, w => [w.lat, w.ar, w.en, w.topic]).map(w => ({
+    id: w.id, lat: w.lat, ar: w.ar, en: w.en,
+    badges: [['strong', w.topic]],
+    body: () => '<p class="note">Source: ' + esc(w.src) + ' (<a href="https://github.com/darija-open-dataset/dataset">DODa</a>, CC BY-NC 4.0). Not checked against the Peace Corps book; check it with a speaker.</p>',
+  }));
+}
+
 function render(focusId) {
-  let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : st.what === 'nums' ? numberItems() : prepItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'nums' ? NUMS.length : pdata.prepositions.length;
+  let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : st.what === 'vocab' ? vocabItems() : st.what === 'nums' ? numberItems() : prepItems();
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'vocab' ? ddata.words.length : st.what === 'nums' ? NUMS.length : pdata.prepositions.length;
   const tags = [...new Set(items.flatMap(it => it.badges.map(b => b[1])))].sort();
   if (!tags.includes(st.tag)) st.tag = '';
   if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));
