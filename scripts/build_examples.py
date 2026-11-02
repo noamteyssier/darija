@@ -70,7 +70,7 @@ Before answering, reread each sentence word by word against these rules and both
 Examples of the style:
 past, ana, ktebt / كتبت: "ktebt bra l khuya" / "كتبت برا لخويا" / "I wrote a letter to my brother."
 pres, huma, kaychufu / كيشوفو: "kaychufu t-tilfaza kul lila" / "كيشوفو التلفازة كل ليلة" / "They watch TV every night."
-fut, ana, ghadi nmchi / غادي نمشي: "ghadi nmchi l s-suq ghda" / "غادي نمشي للسوق غدا" / "I'm going to go to the market tomorrow."
+fut, ana, ghadi nmchi / غادي نمشي: "ghadi nmchi l s-suq ghedda" / "غادي نمشي للسوق غدا" / "I'm going to go to the market tomorrow."
 past negative, huwa, ma chafch / ما شافش: "ma chafch khuya l-yum" / "ما شافش خويا اليوم" / "He didn't see my brother today."
 """.replace("{words}", ", ".join(prompt_words()))
 

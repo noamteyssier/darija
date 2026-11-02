@@ -14,7 +14,7 @@ S = sp.load()
 
 class Canon(unittest.TestCase):
     def test_counted(self):
-        self.assertEqual(sp.canon("ghadi nmchi ghedda", S), "ghadi nmchi ghda")
+        self.assertEqual(sp.canon("ghadi nmchi ghda", S), "ghadi nmchi ghedda")
         self.assertEqual(sp.canon("huwa mezyan bzzaf", S), "huwa mzyan bezzaf")
 
     def test_article(self):
@@ -32,7 +32,9 @@ class Canon(unittest.TestCase):
     def test_kept(self):
         for s in ("t-tobis", "s-salon", "mmi", "bba", "lli", "ma ktebtch"):
             self.assertEqual(sp.canon(s, S), s)
-        self.assertEqual(sp.canon("ghedda", S, keep=["ghedda"]), "ghedda")
+        self.assertEqual(sp.canon("ghda", S, keep=["ghda"]), "ghda")
+        self.assertEqual(sp.canon("kla l-ghda", S), "kla l-ghda")  # lunch, not tomorrow
+        self.assertEqual(sp.canon("l-gheda", S), "l-ghda")
         self.assertEqual(sp.canon("Thomas chrah liha", S), "Thomas chrah liha")
         self.assertEqual(sp.canon("meT3am", S), "meT3am")
 
@@ -61,8 +63,13 @@ class SiteData(unittest.TestCase):
     """Every arabizi string the site shows from data/ is already canonical."""
 
     def test_canonical(self):
-        bad = [s for s in sp.site_text() if sp.canon(s, S) != s]
+        bad = [s for s in sp.site_text() if sp.canon(s, S, sp.NOUN_KEEP) != s]
         self.assertEqual(bad[:20], [], f"{len(bad)} strings, e.g. {[sp.canon(s, S) for s in bad[:3]]}")
+
+    def test_tomorrow_is_not_lunch(self):
+        for f in sorted((ROOT / "data/examples").glob("*.json")):
+            for s in json.loads(f.read_text()):
+                self.assertNotIn("ghda", s["lat"].split(), s["lat"])
 
     def test_letters(self):
         keep = set(S["keep"])

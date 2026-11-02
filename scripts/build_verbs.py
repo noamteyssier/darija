@@ -313,7 +313,7 @@ def main():
                 for i, f in idx.items():
                     forms[t][script][int(i)] = f
         if v["obj"]:
-            ol, oa = (o["obj"]["lat"], o["obj"]["ar"]) if "obj" in o else (lat(v["obj"]), ar_phrase(v["obj"]))
+            ol, oa = (o["obj"]["lat"], o["obj"]["ar"]) if "obj" in o else (lat(v["obj"]).replace("blli", "bli"), ar_phrase(v["obj"]))
             for t in forms:
                 forms[t]["lat"] = [f + " " + ol for f in forms[t]["lat"]]
                 forms[t]["ar"] = [f + " " + oa for f in forms[t]["ar"]]
