@@ -142,7 +142,7 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
 2. `canon()` rewrites arabizi text to those spellings. `build_nouns.py`, `build_prepositions.py`,
    `build_words.py` and `build_examples.py` run it on everything they write.
 3. `tests/test_spelling.py` fails if any generated data uses a spelling the map rewrites, uses `9`, or
-   uses `o` outside the `keep` list, or if an article does not copy its sun letter.
+   uses `o` outside the `keep` list, or if an article does not copy its sun letter. It also checks page text and notes (below).
 4. The example prompts (`STYLE` in `scripts/build_examples.py`, shared with `gemini_batch.py` and
    `review_examples.py`) state the letter rules and list the words the model has misspelled before.
 
@@ -152,5 +152,11 @@ counts would make tables uneven (`wselt wslti wslti wsel weslat wslna`) and merg
 (`qder` can, `qedder` estimate). The one exception is the particle `bli` (`bli` 294, `blli` 8), which
 `build_verbs.py` writes to match the rest of the site.
 
-Not covered: page text in `assets/*.js` and `*.html` mixes English and arabizi, so
-it was fixed by hand and is not tested.
+Page text is checked in part: the test takes the static `<strong>` / `<em>` text in `assets/*.js` and
+`*.html` and the `note` fields of `data/raw/*.json`, and checks only words that must be arabizi: a digit
+(`d7k`), an article hyphen (`t-tebla`), or a variant in the map (`menni`, `qddam`, `u`). English cannot be
+told apart reliably (`canon()` turns `for` into `fur`), so the test does not check the rest.
+
+Not covered: plain arabizi words with no digit, hyphen or map entry (`sokkar`, `mor`), words in notes
+whose only difference is a letter rule (`o`), the Peace Corps `x` (the test rejects it, `canon()` does not rewrite it), and
+any other page text (`<code>`, headings, paragraphs).

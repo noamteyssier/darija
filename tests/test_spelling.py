@@ -115,5 +115,59 @@ class SiteData(unittest.TestCase):
         self.assertEqual(sorted(bad), [])
 
 
+# English words that are also variants in the map; the notes mix English and arabizi
+ENGLISH = {"like", "me", "be"}
+
+
+def page_strings():
+    """(where, text) for the static <strong>/<em> text in the pages and every note in data/raw/*.json."""
+    for f in sorted([*ROOT.glob("assets/*.js"), *ROOT.glob("*.html")]):
+        for m in re.finditer(r"<(strong|em)>([^<]*)</\1>", f.read_text()):
+            if not re.search(r"['+]|esc\(", m[2]):  # built from data at run time
+                yield f.name, m[2]
+
+    def notes(x):
+        for k, v in (x.items() if isinstance(x, dict) else enumerate(x)):
+            if k == "note" and isinstance(v, str):
+                yield v
+            elif isinstance(v, (dict, list)):
+                yield from notes(v)
+    for f in sorted((ROOT / "data/raw").glob("*.json")):
+        for n in notes(json.loads(f.read_text())):
+            yield f.name, n
+
+
+def arabizi(text):
+    """The words of a page string that can only be arabizi: a digit (3la, d7k), an article hyphen (d-dar),
+    or a known variant from the map (menni, qddam, u). Endings and lists of letters are skipped. English cannot be told apart in general, so plain
+    words that canon() leaves or only rewrites by letter rules (sokkar, mor, kolchi) are not checked."""
+    tab = sp.table(S)
+    for t in sp.WORD.findall(text):
+        w = t.strip("'-")
+        if t.startswith("-") or len(w) == 1 and w != "u":  # endings (-u), lists of letters (t d r z s)
+            continue
+        if w == w.lower() and w not in ENGLISH and (re.search(r"\d|[a-z]-[a-z]", w) or w in tab or w in S["glued"] or w in S["tokens"]):
+            yield w
+
+
+class PageText(unittest.TestCase):
+    maxDiff = None
+
+    """Arabizi in the pages and notes was fixed by hand; this keeps new variants out."""
+
+    def test_canonical(self):
+        bad = {(f, w): sp.canon(w, S, sp.NOUN_KEEP) for f, s in page_strings() for w in arabizi(s)
+               if sp.canon(w, S, sp.NOUN_KEEP) != w}
+        self.assertEqual(bad, {})
+
+    def test_finds_arabizi(self):
+        self.assertEqual(list(arabizi("Takes men before nouns: d-dar, 3la, bla sokkar like me")), ["men", "d-dar", "3la"])
+        self.assertGreater(len({w for _, s in page_strings() for w in arabizi(s)}), 50)
+
+    def test_no_peace_corps_x(self):
+        bad = {(f, w) for f, s in page_strings() for w in sp.WORD.findall(s.lower()) if sp.split(w)[1].startswith("x")}
+        self.assertEqual(sorted(bad), [])
+
+
 if __name__ == "__main__":
     unittest.main()

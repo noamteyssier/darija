@@ -15,7 +15,7 @@
         "altLat": ["li", null, "lu", null, null, null, null],
         "altAr": ["لي", null, "لو", null, null, null, null]
       },
-      "note": "Prefix attached to nouns (l-Chad, l Amy). With pronouns, often liya/li and lih/lu. Expresses direction, recipient, or beneficiary. Also used with ymkn (ymkn liya = I can).",
+      "note": "Prefix attached to nouns (l-Chad, l Amy). With pronouns, often liya/li and lih/lu. Expresses direction, recipient, or beneficiary. Also used with ymken (ymken liya = I can).",
       "examples": [
         { "lat": "ṣifṭt bra lih", "ar": "صيفطت برا ليه", "en": "I sent a letter to him" },
         { "lat": "sm7 liya", "ar": "سمح ليا", "en": "Excuse me / forgive me" },
@@ -75,7 +75,7 @@
         "lat": ["m3aya", "m3ak", "m3ah", "m3aha", "m3ana", "m3akum", "m3ahum"],
         "ar": ["معايا", "معاك", "معاه", "معاها", "معانا", "معاكم", "معاهم"]
       },
-      "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), d7k m3a (joke with).",
+      "note": "Accompaniment with people: m3aya (with me). Also exact time: m3a t-tlata (at 3 o'clock). Verbs of interaction: tlaqa m3a (meet with), de7k m3a (joke with).",
       "examples": [
         { "lat": "tlaqit m3ah f l-bosṭa", "ar": "تلاقيت معاه ف البوسطة", "en": "I met with him at the post office" },
         { "lat": "ġir kan-ḍ7k m3ak", "ar": "غير كاندحك معاك", "en": "I'm just joking with you" },
@@ -94,7 +94,7 @@
         "lat": ["3liya", "3lik", "3lih", "3liha", "3lina", "3likum", "3lihum"],
         "ar": ["عليا", "عليك", "عليه", "عليها", "علينا", "عليكم", "عليهم"]
       },
-      "note": "Spatial 'on', topical 'about', obligation (3liya n-mchi = I must go), directions (3l limn = to the right), and verbs like qllb 3la (look for), mat 3la (love), d7k 3la (laugh at / mock).",
+      "note": "Spatial 'on', topical 'about', obligation (3liya n-mchi = I must go), directions (3la limen = to the right), and verbs like qllb 3la (look for), mat 3la (love), de7k 3la (laugh at / mock).",
       "examples": [
         { "lat": "tkllmna عlih", "ar": "تكلمنا عليه", "en": "We talked about it" },
         { "lat": "kan-qllb عliha", "ar": "كانقلب عليها", "en": "I am looking for it (f.)" },
@@ -114,7 +114,7 @@
         "lat": ["menni", "mennek", "mennu", "mennha", "menna", "mennkum", "mennhum"],
         "ar": ["مني", "منك", "منو", "منها", "منا", "منكم", "منهم"]
       },
-      "note": "Doubles the n before pronoun suffixes (menni, mennek, mennu). Used for origin, comparisons (kber menni = older than me), and fear (khaf men).",
+      "note": "Takes the pronoun endings directly (mni, mnek, mnu). Used for origin, comparisons (kber mni = older than me), and fear (khaf mn).",
       "examples": [
         { "lat": "ana mn l-mġrib", "ar": "أنا من المغرب", "en": "I am from Morocco" },
         { "lat": "huwa kbr mnni", "ar": "هو كبر مني", "en": "He is older than me" },
@@ -155,7 +155,7 @@
         "altLat": ["blabiya", null, null, null, null, null, null],
         "altAr": ["بلابيا", null, null, null, null, null, null]
       },
-      "note": "Expresses lack or absence: bla sokkar (without sugar). Polite response: bla jmil (you're welcome / don't mention it).",
+      "note": "Expresses lack or absence: bla sukar (without sugar). Polite response: bla jmil (you're welcome / don't mention it).",
       "examples": [
         { "lat": "qhwa bla skkar", "ar": "قهوة بلا سكر", "en": "Coffee without sugar" },
         { "lat": "ma-t-mši-š blaya", "ar": "ما تمشيش بلايا", "en": "Don't go without me" },
@@ -174,7 +174,7 @@
         "lat": ["fuqi", "fuqek", "fuqu", "fuqha", "fuqna", "fuqkum", "fuqhum"],
         "ar": ["فوقي", "فوقك", "فوقو", "فوقها", "فوقنا", "فوقكم", "فوقهم"]
       },
-      "note": "Location physically on top of or above something: fuq t-tebla (on the table), fuq s-snduq (on top of the box).",
+      "note": "Location physically on top of or above something: fuq t-tbla (on the table), fuq s-snduq (on top of the box).",
       "examples": [
         { "lat": "l-kora fuq ṣ-ṣnduq", "ar": "الكورة فوق الصندوق", "en": "The ball is on top of the box" },
         { "lat": "l-ktab fuq t-tebla", "ar": "الكتاب فوق الطبلة", "en": "The book is on the table" }
@@ -192,7 +192,7 @@
         "lat": ["te7ti", "te7tek", "te7tu", "te7tha", "te7tna", "te7tkum", "te7thum"],
         "ar": ["تحتي", "تحتك", "تحتو", "تحتها", "تحتنا", "تحتكم", "تحتهم"]
       },
-      "note": "Location physically underneath: te7t t-tebla (under the table), te7t ch-chjra (under the tree).",
+      "note": "Location physically underneath: te7t t-tbla (under the table), te7t ch-chejra (under the tree).",
       "examples": [
         { "lat": "l-meṣṣ te7t t-tebla", "ar": "المص تحت الطبلة", "en": "The cat is under the table" },
         { "lat": "gls te7t š-šjra", "ar": "جلس تحت الشجرة", "en": "He sat under the tree" }
@@ -210,7 +210,7 @@
         "lat": ["qddami", "qddamek", "qddamu", "qddamha", "qddamna", "qddamkum", "qddamhum"],
         "ar": ["قدامي", "قدامك", "قدامو", "قدامها", "قدامنا", "قدامكم", "قدامهم"]
       },
-      "note": "Spatial position in front of: qddam d-dar (in front of the house). Directions: zid l qddam (go ahead a bit).",
+      "note": "Spatial position in front of: qdam d-dar (in front of the house). Directions: zid l qdam (go ahead a bit).",
       "examples": [
         { "lat": "tlaqina qddam la-gar", "ar": "تلاقينا قدام لاگار", "en": "We met in front of the train station" },
         { "lat": "zid šwiya l qddam", "ar": "زيد شوية ل قدام", "en": "Go ahead a bit" }
@@ -230,7 +230,7 @@
         "altLat": ["muri", null, null, null, null, null, null],
         "altAr": ["موري", null, null, null, null, null, null]
       },
-      "note": "Position behind (also said mor or wra): mura d-dar (behind the house), muraya (behind me).",
+      "note": "Position behind (also said mur or wra): mura d-dar (behind the house), muraya (behind me).",
       "examples": [
         { "lat": "d-dar jat mura j-jamع", "ar": "الدار جات مورا الجامع", "en": "The house is behind the mosque" },
         { "lat": "huwa kay-tmšša muraya", "ar": "هو كايتمشى مورايا", "en": "He is walking behind me" }
@@ -268,7 +268,7 @@
         "altLat": [null, null, null, null, "binna", "binkum", "binhum"],
         "altAr": [null, null, null, null, "بينا", "بينكم", "بينهم"]
       },
-      "note": "Position between two or more: bin d-dar u l-mdrasa. With plural pronoun endings it inserts -at-: binatna (between us).",
+      "note": "Position between two or more: bin d-dar w l-mdrasa. With plural pronoun endings it inserts -at-: binatna (between us).",
       "examples": [
         { "lat": "had š-ši ġir binatna", "ar": "هاد الشي غير بيناتنا", "en": "This is just between us" },
         { "lat": "l-banka jat bin la-gar u s-suq", "ar": "البنكة جات بين لاگار و السوق", "en": "The bank is between the station and the market" }
@@ -323,7 +323,7 @@
         "altLat": ["qbli", "qblek", "qblu", "qblha", "qblna", "qblkum", "qblhum"],
         "altAr": ["قبلي", "قبلك", "قبلو", "قبلها", "قبلنا", "قبلكم", "قبلهم"]
       },
-      "note": "Time before: qbel l-xedma (before work). With pronouns, Moroccan Arabic usually uses qbel men + pronoun (qbel menni).",
+      "note": "Time before: qbel l-khdma (before work). With pronouns, Moroccan Arabic usually uses qbel mn + pronoun (qbel mni).",
       "examples": [
         { "lat": "wṣl qbl mnni", "ar": "وصل قبل مني", "en": "He arrived before me" },
         { "lat": "qbl l-fṭur", "ar": "قبل الفطور", "en": "Before breakfast" }
@@ -343,7 +343,7 @@
         "altLat": ["b3di", "b3dek", "b3du", "b3dha", "b3dna", "b3dkum", "b3dhum"],
         "altAr": ["بعدي", "بعدك", "بعدو", "بعدها", "بعدنا", "بعدكم", "بعدهم"]
       },
-      "note": "Time after: b3d l-ghda (after lunch), mn b3d (afterwards). With pronouns, usually b3d men + pronoun.",
+      "note": "Time after: b3d l-ghda (after lunch), mn b3d (afterwards). With pronouns, usually b3d mn + pronoun.",
       "examples": [
         { "lat": "n-tlaqaw bعd l-xedma", "ar": "نتلاقاو بعد الخدمة", "en": "Let's meet after work" },
         { "lat": "ja bعd mnni", "ar": "جا بعد مني", "en": "He came after me" }
@@ -357,7 +357,7 @@
       "type": "temporal",
       "src": "PC 42, 44",
       "with_pronouns": false,
-      "note": "Indicates time or limit: 7tta l-ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
+      "note": "Indicates time or limit: 7tta ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
       "examples": [
         { "lat": "sir nišan нtta l z-znqa t-talta", "ar": "سير نيشان حتى ل الزنقة التالتة", "en": "Go straight until the 3rd street" },
         { "lat": "glst f ḍ-ḍar нtta l l-lil", "ar": "جلست ف الدار حتى ل الليل", "en": "I stayed at home until the night" }
@@ -392,7 +392,7 @@
         "lat": ["qrib menni", "qrib mennek", "qrib mennu", "qrib mennha", "qrib menna", "qrib mennkum", "qrib mennhum"],
         "ar": ["قريب مني", "قريب منك", "قريب منو", "قريب منها", "قريب منا", "قريب منكم", "قريب منهم"]
       },
-      "note": "Proximity in distance: qrib mn hna (close to here). Takes men before pronouns and nouns.",
+      "note": "Proximity in distance: qrib mn hna (close to here). Takes mn before pronouns and nouns.",
       "examples": [
         { "lat": "weš kayn ši sbiṭar qrib mn hna?", "ar": "واش كاين شي سبيطار قريب من هنا؟", "en": "Is there a hospital close to here?" },
         { "lat": "huwa qrib mnni", "ar": "هو قريب مني", "en": "He is close to me" }
@@ -424,7 +424,7 @@
       "type": "locative",
       "src": "LP 26",
       "with_pronouns": false,
-      "note": "Inside an enclosed space: dakhel d-dar or l-dakhel d d-dar.",
+      "note": "Inside an enclosed space: dakhl d-dar or d-dakhl d d-dar.",
       "examples": [
         { "lat": "kayn l-daxl d ḍ-ḍar", "ar": "كاين لداخل د الدار", "en": "He is inside the house" }
       ]
@@ -437,7 +437,7 @@
       "type": "locative",
       "src": "LP 26",
       "with_pronouns": false,
-      "note": "Outside of a place: berra d d-dar (outside the house), xrej l-berra (go outside).",
+      "note": "Outside of a place: berra d d-dar (outside the house), khrej l-berra (go outside).",
       "examples": [
         { "lat": "glsu brra d l-qhwa", "ar": "جلسو برا د القهوة", "en": "They sat outside the cafe" }
       ]
@@ -975,7 +975,7 @@
       "lat": "thlla f rask",
       "ar": "تهلى ف راسك",
       "en": "Take care of yourself",
-      "note": "thlla requires f.",
+      "note": "thla requires f.",
       "src": "PC 118"
     },
     {
@@ -985,7 +985,7 @@
       "lat": "ymkn lina n-mchiw",
       "ar": "يمكن لينا نمشيو",
       "en": "We can go (lit. it is possible for us to go)",
-      "note": "ymkn + l + pronoun expresses capability or permission.",
+      "note": "ymken + l + pronoun expresses capability or permission.",
       "src": "PC 115"
     },
     {
