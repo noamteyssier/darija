@@ -17,11 +17,26 @@ Typed answers are forgiving either way: `norm()` in `assets/common.js` accepts `
 | [DODa](https://github.com/darija-open-dataset/dataset) (MIT) | the human-written rows only: `sentences/sentences.csv`, `ongoing/*.csv`, `x-tra/shorts.csv` (not the model-written DODa-500K) | about 147k rows, 439k words |
 | [atlasia/Atlaset](https://huggingface.co/datasets/atlasia/Atlaset) (gated) | Latin-script rows from real sources, almost all Facebook comments | about 6k rows, 44k words |
 
+Atlaset is gated: accept its terms on Hugging Face while logged in, then download the five parquet
+shards `train-0.parquet` to `train-4.parquet` (about 1.1 GB) into one folder, for example
+`huggingface-cli download atlasia/Atlaset --repo-type dataset --include "train-*.parquet" --local-dir atlaset`.
+The script
+reads every `*.parquet` in the folder and keeps a row when:
+
+- its `dataset_source` starts with `atlasia/Social_Media_Darija_DS`, `atlasia/facebook_darija_dataset`,
+  `MTCD`, `MAC Corpus`, `common-crawl`, `bourbouh/moroccan-darija-youtube-subtitles` or
+  `darija_youtube_subtitles`: written by people, not translated or model-written (the other sources
+  are instruction sets, Wikipedia, summaries and the like);
+- it has at least 6 Latin letters and Arabic letters (U+0600 to U+06FF) are under a quarter of the
+  letters. Most Atlaset text is Arabic script, and this leaves 6,052 of its rows. Arabic
+  presentation forms (the Arabic seen in some `common-crawl` rows) are not counted as Arabic here.
+
 The counts are stored in `data/raw/spelling_counts.json` (words seen at least 3 times), so the map can
-be rebuilt without the downloads. To recount:
+be rebuilt without the downloads. To recount (pyarrow is only needed for `--atlaset`, and is not a
+dependency of the site scripts; it takes about 30 seconds):
 
 ```sh
-python3 scripts/spelling.py --doda path/to/dataset --atlaset atlaset_latin.tsv
+uv run --with pyarrow python3 scripts/spelling.py --doda path/to/dataset --atlaset path/to/atlaset
 ```
 
 ## Letters: fixed rules
