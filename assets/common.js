@@ -89,7 +89,9 @@ const RENAMED = {
   'shhed': 'chhed',
   'teshten': 'techten',
   // nouns and adjectives
-  'wjeh': 'wjjeh',
+  'wjjeh': 'wjeh',
+  'fumm': 'fum',
+  'khedma': 'khdma',
   'sh3er': 'ch3er',
   'kersh': 'kerch',
   'tebla': 'tbla',

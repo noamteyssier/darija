@@ -119,15 +119,6 @@
     "3iniyya": 0
    }
   },
-  "3la": {
-   "by": "corpus",
-   "counts": {
-    "3la": 3390,
-    "3ela": 18,
-    "3laa": 3,
-    "3lla": 3
-   }
-  },
   "3lach": {
    "by": "corpus",
    "counts": {
@@ -136,108 +127,12 @@
     "3laach": 3
    }
   },
-  "3lih": {
-   "by": "corpus",
-   "counts": {
-    "3lih": 631,
-    "3liiih": 3
-   }
-  },
-  "3liha": {
-   "by": "corpus",
-   "counts": {
-    "3liha": 338,
-    "3eliha": 3
-   }
-  },
-  "3lik": {
-   "by": "corpus",
-   "counts": {
-    "3lik": 1007,
-    "3elik": 9,
-    "3liik": 3
-   }
-  },
-  "3liya": {
-   "by": "corpus",
-   "counts": {
-    "3liya": 618,
-    "3liyya": 24
-   }
-  },
-  "3emi": {
-   "by": "schwa",
-   "counts": {
-    "3mi": 16,
-    "3emi": 11,
-    "3mmi": 5,
-    "3emmi": 0
-   }
-  },
   "3mri": {
    "by": "corpus",
    "counts": {
     "3mri": 35,
     "3emri": 3,
     "3emmri": 0
-   }
-  },
-  "3end": {
-   "by": "schwa",
-   "counts": {
-    "3nd": 162,
-    "3end": 151
-   }
-  },
-  "3ndha": {
-   "by": "corpus",
-   "counts": {
-    "3ndha": 68,
-    "3endha": 44
-   }
-  },
-  "3ndhum": {
-   "by": "corpus",
-   "counts": {
-    "3ndhum": 76,
-    "3endhum": 38
-   }
-  },
-  "3ndi": {
-   "by": "corpus",
-   "counts": {
-    "3ndi": 457,
-    "3endi": 213
-   }
-  },
-  "3ndk": {
-   "by": "corpus",
-   "counts": {
-    "3ndk": 344,
-    "3endek": 197,
-    "3ndek": 62,
-    "3endk": 37
-   }
-  },
-  "3ndkum": {
-   "by": "corpus",
-   "counts": {
-    "3ndkum": 73,
-    "3endkum": 24
-   }
-  },
-  "3ndna": {
-   "by": "corpus",
-   "counts": {
-    "3ndna": 97,
-    "3endna": 20
-   }
-  },
-  "3ndu": {
-   "by": "corpus",
-   "counts": {
-    "3ndu": 231,
-    "3endu": 127
    }
   },
   "3ers": {
@@ -406,13 +301,6 @@
     "aye": 3
    }
   },
-  "b": {
-   "by": "corpus",
-   "counts": {
-    "b": 736,
-    "be": 31
-   }
-  },
   "b3d": {
    "by": "corpus",
    "counts": {
@@ -501,14 +389,6 @@
     "beid": 0
    }
   },
-  "bik": {
-   "by": "corpus",
-   "counts": {
-    "bik": 175,
-    "bike": 4,
-    "biik": 3
-   }
-  },
   "bien": {
    "by": "corpus",
    "counts": {
@@ -516,39 +396,11 @@
     "bein": 3
    }
   },
-  "bina": {
-   "by": "corpus",
-   "counts": {
-    "bina": 42,
-    "binna": 0
-   }
-  },
-  "biya": {
-   "by": "corpus",
-   "counts": {
-    "biya": 76,
-    "biyya": 3
-   }
-  },
   "bkri": {
    "by": "corpus",
    "counts": {
     "bkri": 149,
     "bekri": 72
-   }
-  },
-  "bla": {
-   "by": "corpus",
-   "counts": {
-    "bla": 917,
-    "bela": 3
-   }
-  },
-  "blastek": {
-   "by": "corpus",
-   "counts": {
-    "blastek": 25,
-    "blastk": 11
    }
   },
   "blays": {
@@ -563,15 +415,6 @@
    "counts": {
     "bni": 56,
     "beni": 4
-   }
-  },
-  "bentek": {
-   "by": "schwa",
-   "counts": {
-    "bentek": 19,
-    "bntk": 9,
-    "bentk": 4,
-    "bntek": 3
    }
   },
   "berra": {
@@ -669,21 +512,6 @@
    "counts": {
     "ch": 57,
     "che": 8
-   }
-  },
-  "ch3ri": {
-   "by": "corpus",
-   "counts": {
-    "ch3ri": 24,
-    "che3ri": 15
-   }
-  },
-  "che3rek": {
-   "by": "schwa",
-   "counts": {
-    "ch3rk": 12,
-    "che3rek": 12,
-    "ch3rek": 7
    }
   },
   "chaft": {
@@ -891,14 +719,6 @@
     "dareb": 10
    }
   },
-  "darek": {
-   "by": "corpus",
-   "counts": {
-    "darek": 40,
-    "dark": 12,
-    "darrek": 3
-   }
-  },
   "dghya": {
    "by": "corpus",
    "counts": {
@@ -981,20 +801,6 @@
     "dwwr": 3
    }
   },
-  "dyal": {
-   "by": "corpus",
-   "counts": {
-    "dyal": 1485,
-    "deyal": 6
-   }
-  },
-  "dyalk": {
-   "by": "corpus",
-   "counts": {
-    "dyalk": 508,
-    "dyalek": 19
-   }
-  },
   "fac": {
    "by": "schwa",
    "counts": {
@@ -1016,13 +822,6 @@
     "fayet": 0
    }
   },
-  "fih": {
-   "by": "corpus",
-   "counts": {
-    "fih": 727,
-    "fiih": 4
-   }
-  },
   "film": {
    "by": "corpus",
    "counts": {
@@ -1035,13 +834,6 @@
    "counts": {
     "fin": 1089,
     "fine": 9
-   }
-  },
-  "fiya": {
-   "by": "corpus",
-   "counts": {
-    "fiya": 232,
-    "fiyya": 27
    }
   },
   "fker": {
@@ -1461,13 +1253,6 @@
     "khaliid": 3
    }
   },
-  "khalti": {
-   "by": "corpus",
-   "counts": {
-    "khalti": 66,
-    "khaltii": 4
-   }
-  },
   "khasek": {
    "by": "schwa",
    "counts": {
@@ -1531,31 +1316,6 @@
     "khddem": 13,
     "khdm": 9,
     "kheddem": 5
-   }
-  },
-  "khedma": {
-   "by": "schwa",
-   "counts": {
-    "khedma": 323,
-    "khdma": 316,
-    "khdema": 0
-   }
-  },
-  "khdmti": {
-   "by": "corpus",
-   "counts": {
-    "khdmti": 23,
-    "khddemti": 3,
-    "khedmti": 3
-   }
-  },
-  "khdemtek": {
-   "by": "corpus",
-   "counts": {
-    "khdemtek": 34,
-    "khdmtk": 7,
-    "khdemtk": 3,
-    "khedmtek": 0
    }
   },
   "khdmu": {
@@ -1646,20 +1406,6 @@
    "counts": {
     "khsrat": 22,
     "khesrat": 4
-   }
-  },
-  "khti": {
-   "by": "corpus",
-   "counts": {
-    "khti": 211,
-    "kheti": 19
-   }
-  },
-  "khtek": {
-   "by": "corpus",
-   "counts": {
-    "khtek": 28,
-    "khtk": 12
    }
   },
   "khuta": {
@@ -1786,14 +1532,6 @@
     "kulllu": 0
    }
   },
-  "l": {
-   "by": "corpus",
-   "counts": {
-    "l": 1669,
-    "el": 384,
-    "le": 127
-   }
-  },
   "le3ab": {
    "by": "schwa",
    "counts": {
@@ -1861,55 +1599,11 @@
     "lebsa": 17
    }
   },
-  "lih": {
-   "by": "corpus",
-   "counts": {
-    "lih": 864,
-    "elih": 10
-   }
-  },
-  "liha": {
-   "by": "corpus",
-   "counts": {
-    "liha": 555,
-    "eliha": 5
-   }
-  },
-  "lihum": {
-   "by": "corpus",
-   "counts": {
-    "lihum": 304,
-    "elihum": 4
-   }
-  },
-  "lik": {
-   "by": "corpus",
-   "counts": {
-    "lik": 2170,
-    "elik": 10,
-    "like": 9,
-    "liik": 5
-   }
-  },
-  "likum": {
-   "by": "corpus",
-   "counts": {
-    "likum": 124,
-    "elikum": 4
-   }
-  },
   "limun": {
    "by": "corpus",
    "counts": {
     "limun": 50,
     "limune": 3
-   }
-  },
-  "liya": {
-   "by": "corpus",
-   "counts": {
-    "liya": 2303,
-    "liyya": 33
    }
   },
   "lekher": {
@@ -1939,23 +1633,6 @@
    "counts": {
     "m": 170,
     "me": 82
-   }
-  },
-  "m3a": {
-   "by": "corpus",
-   "counts": {
-    "m3a": 1622,
-    "me3a": 5,
-    "m3aa": 3
-   }
-  },
-  "m3ak": {
-   "by": "corpus",
-   "counts": {
-    "m3ak": 810,
-    "m3aak": 4,
-    "me3ak": 4,
-    "m3aaak": 3
    }
   },
   "m3qul": {
@@ -2103,82 +1780,6 @@
     "melyun": 8
    }
   },
-  "mn": {
-   "by": "corpus",
-   "counts": {
-    "mn": 2272,
-    "men": 1402,
-    "meen": 3
-   }
-  },
-  "mena": {
-   "by": "schwa",
-   "counts": {
-    "mna": 11,
-    "mena": 10,
-    "mnna": 5,
-    "menna": 3
-   }
-  },
-  "mnha": {
-   "by": "corpus",
-   "counts": {
-    "mnha": 63,
-    "menha": 40,
-    "mennha": 0
-   }
-  },
-  "menhum": {
-   "by": "schwa",
-   "counts": {
-    "mnhum": 25,
-    "menhum": 18,
-    "mennhum": 0
-   }
-  },
-  "mni": {
-   "by": "corpus",
-   "counts": {
-    "mni": 107,
-    "meni": 51,
-    "menni": 15,
-    "mnni": 8
-   }
-  },
-  "mnek": {
-   "by": "corpus",
-   "counts": {
-    "mnek": 72,
-    "mnk": 58,
-    "menek": 12,
-    "menk": 9,
-    "mnnek": 8,
-    "mnnk": 3,
-    "mennek": 0
-   }
-  },
-  "mnu": {
-   "by": "corpus",
-   "counts": {
-    "mnu": 102,
-    "mennu": 15,
-    "mnnu": 5
-   }
-  },
-  "mrati": {
-   "by": "corpus",
-   "counts": {
-    "mrati": 36,
-    "merati": 3
-   }
-  },
-  "mratek": {
-   "by": "corpus",
-   "counts": {
-    "mratek": 26,
-    "mratk": 6
-   }
-  },
   "merd": {
    "by": "corpus",
    "counts": {
@@ -2255,13 +1856,6 @@
    "counts": {
     "munasib": 18,
     "munaasib": 6
-   }
-  },
-  "mura": {
-   "by": "corpus",
-   "counts": {
-    "mura": 151,
-    "murra": 6
    }
   },
   "musa3ada": {
@@ -2554,22 +2148,6 @@
     "qaleb": 4
    }
   },
-  "qdam": {
-   "by": "corpus",
-   "counts": {
-    "qdam": 61,
-    "qedam": 8,
-    "qddam": 3,
-    "qeddam": 0
-   }
-  },
-  "qdami": {
-   "by": "schwa",
-   "counts": {
-    "qdami": 16,
-    "qddami": 5
-   }
-  },
   "qdim": {
    "by": "corpus",
    "counts": {
@@ -2603,13 +2181,6 @@
    "counts": {
     "qlb": 37,
     "qeleb": 5
-   }
-  },
-  "qelbi": {
-   "by": "schwa",
-   "counts": {
-    "qlbi": 21,
-    "qelbi": 16
    }
   },
   "qr3a": {
@@ -2656,42 +2227,6 @@
     "raah": 10
    }
   },
-  "rajel": {
-   "by": "corpus",
-   "counts": {
-    "rajel": 146,
-    "rajl": 87
-   }
-  },
-  "rajelha": {
-   "by": "schwa",
-   "counts": {
-    "rajlha": 20,
-    "rajelha": 19
-   }
-  },
-  "rajlek": {
-   "by": "schwa",
-   "counts": {
-    "rajlk": 21,
-    "rajlek": 19,
-    "rajelk": 0
-   }
-  },
-  "ras": {
-   "by": "corpus",
-   "counts": {
-    "ras": 103,
-    "rase": 17
-   }
-  },
-  "rasek": {
-   "by": "schwa",
-   "counts": {
-    "rasek": 325,
-    "rask": 314
-   }
-  },
   "reb3a": {
    "by": "schwa",
    "counts": {
@@ -2727,13 +2262,6 @@
    "counts": {
     "rjal": 54,
     "rejal": 4
-   }
-  },
-  "rejli": {
-   "by": "schwa",
-   "counts": {
-    "rjli": 11,
-    "rejli": 9
    }
   },
   "rjliya": {
@@ -2772,20 +2300,6 @@
     "s77a": 7,
     "se77a": 6,
     "s7a": 3
-   }
-  },
-  "sa7bek": {
-   "by": "corpus",
-   "counts": {
-    "sa7bek": 48,
-    "sa7bk": 5
-   }
-  },
-  "sa7bti": {
-   "by": "schwa",
-   "counts": {
-    "sa7bti": 16,
-    "sa7ebti": 5
    }
   },
   "safi": {
@@ -2972,14 +2486,6 @@
    "counts": {
     "t7emmel": 46,
     "t7mel": 0
-   }
-  },
-  "te7t": {
-   "by": "corpus",
-   "counts": {
-    "te7t": 38,
-    "t7et": 8,
-    "t7tt": 7
    }
   },
   "ta7t": {
@@ -3350,29 +2856,6 @@
     "waazen": 15
    }
   },
-  "wjjeh": {
-   "by": "schwa",
-   "counts": {
-    "wjjeh": 17,
-    "wjeh": 14,
-    "wjh": 10,
-    "wejh": 0
-   }
-  },
-  "wejhi": {
-   "by": "schwa",
-   "counts": {
-    "wjhi": 18,
-    "wejhi": 15
-   }
-  },
-  "wejhek": {
-   "by": "schwa",
-   "counts": {
-    "wjhek": 13,
-    "wejhek": 11
-   }
-  },
   "wla": {
    "by": "corpus",
    "counts": {
@@ -3401,36 +2884,6 @@
    "counts": {
     "wlaw": 32,
     "welaw": 8
-   }
-  },
-  "weld": {
-   "by": "schwa",
-   "counts": {
-    "weld": 112,
-    "wld": 82
-   }
-  },
-  "weldha": {
-   "by": "schwa",
-   "counts": {
-    "weldha": 16,
-    "wldha": 5
-   }
-  },
-  "weldi": {
-   "by": "schwa",
-   "counts": {
-    "weldi": 71,
-    "wldi": 50
-   }
-  },
-  "weldek": {
-   "by": "corpus",
-   "counts": {
-    "weldek": 43,
-    "wldk": 15,
-    "weldk": 11,
-    "wldek": 7
    }
   },
   "wlit": {
@@ -3484,13 +2937,6 @@
     "wrd": 7
    }
   },
-  "werqa": {
-   "by": "schwa",
-   "counts": {
-    "werqa": 30,
-    "wrqa": 21
-   }
-  },
   "west": {
    "by": "schwa",
    "counts": {
@@ -3504,14 +2950,6 @@
    "counts": {
     "yasine": 104,
     "yasin": 23
-   }
-  },
-  "ydi": {
-   "by": "corpus",
-   "counts": {
-    "ydi": 20,
-    "yeddi": 6,
-    "yedi": 5
    }
   },
   "ydik": {
@@ -3581,6 +3019,2514 @@
    "counts": {
     "zwina": 439,
     "zewina": 3
+   }
+  },
+  "l": {
+   "by": "table",
+   "counts": {
+    "l": 1669,
+    "el": 384,
+    "le": 127
+   }
+  },
+  "liya": {
+   "by": "table",
+   "counts": {
+    "liya": 2303,
+    "liyya": 33
+   }
+  },
+  "lik": {
+   "by": "table",
+   "counts": {
+    "lik": 2170,
+    "elik": 10,
+    "like": 9,
+    "liik": 5
+   }
+  },
+  "lih": {
+   "by": "table",
+   "counts": {
+    "lih": 864,
+    "elih": 10
+   }
+  },
+  "liha": {
+   "by": "table",
+   "counts": {
+    "liha": 555,
+    "eliha": 5
+   }
+  },
+  "lina": {
+   "by": "table",
+   "counts": {
+    "lina": 388
+   }
+  },
+  "likum": {
+   "by": "table",
+   "counts": {
+    "likum": 124,
+    "elikum": 4
+   }
+  },
+  "lihum": {
+   "by": "table",
+   "counts": {
+    "lihum": 304,
+    "elihum": 4
+   }
+  },
+  "fiya": {
+   "by": "table",
+   "counts": {
+    "fiya": 232,
+    "fiyya": 27
+   }
+  },
+  "fik": {
+   "by": "table",
+   "counts": {
+    "fik": 1089
+   }
+  },
+  "fih": {
+   "by": "table",
+   "counts": {
+    "fih": 727,
+    "fiih": 4
+   }
+  },
+  "fiha": {
+   "by": "table",
+   "counts": {
+    "fiha": 702
+   }
+  },
+  "fina": {
+   "by": "table",
+   "counts": {
+    "fina": 99
+   }
+  },
+  "fikum": {
+   "by": "table",
+   "counts": {
+    "fikum": 39
+   }
+  },
+  "fihum": {
+   "by": "table",
+   "counts": {
+    "fihum": 197
+   }
+  },
+  "b": {
+   "by": "table",
+   "counts": {
+    "b": 736,
+    "be": 31
+   }
+  },
+  "biya": {
+   "by": "table",
+   "counts": {
+    "biya": 76,
+    "biyya": 3
+   }
+  },
+  "bik": {
+   "by": "table",
+   "counts": {
+    "bik": 175,
+    "bike": 4,
+    "biik": 3
+   }
+  },
+  "bih": {
+   "by": "table",
+   "counts": {
+    "bih": 198
+   }
+  },
+  "biha": {
+   "by": "table",
+   "counts": {
+    "biha": 180
+   }
+  },
+  "bina": {
+   "by": "table",
+   "counts": {
+    "bina": 42,
+    "binna": 0
+   }
+  },
+  "bikum": {
+   "by": "table",
+   "counts": {
+    "bikum": 28
+   }
+  },
+  "bihum": {
+   "by": "table",
+   "counts": {
+    "bihum": 58
+   }
+  },
+  "m3a": {
+   "by": "table",
+   "counts": {
+    "m3a": 1622,
+    "me3a": 5,
+    "m3aa": 3
+   }
+  },
+  "m3aya": {
+   "by": "table",
+   "counts": {
+    "m3aya": 604
+   }
+  },
+  "m3ak": {
+   "by": "table",
+   "counts": {
+    "m3ak": 810,
+    "m3aak": 4,
+    "me3ak": 4,
+    "m3aaak": 3
+   }
+  },
+  "m3ah": {
+   "by": "table",
+   "counts": {
+    "m3ah": 476
+   }
+  },
+  "m3aha": {
+   "by": "table",
+   "counts": {
+    "m3aha": 184
+   }
+  },
+  "m3ana": {
+   "by": "table",
+   "counts": {
+    "m3ana": 186
+   }
+  },
+  "m3akum": {
+   "by": "table",
+   "counts": {
+    "m3akum": 69
+   }
+  },
+  "m3ahum": {
+   "by": "table",
+   "counts": {
+    "m3ahum": 193
+   }
+  },
+  "3la": {
+   "by": "table",
+   "counts": {
+    "3la": 3390,
+    "3ela": 18,
+    "3laa": 3,
+    "3lla": 3
+   }
+  },
+  "3liya": {
+   "by": "table",
+   "counts": {
+    "3liya": 618,
+    "3liyya": 24
+   }
+  },
+  "3lik": {
+   "by": "table",
+   "counts": {
+    "3lik": 1007,
+    "3elik": 9,
+    "3liik": 3
+   }
+  },
+  "3lih": {
+   "by": "table",
+   "counts": {
+    "3lih": 631,
+    "3liiih": 3
+   }
+  },
+  "3liha": {
+   "by": "table",
+   "counts": {
+    "3liha": 338,
+    "3eliha": 3
+   }
+  },
+  "3lina": {
+   "by": "table",
+   "counts": {
+    "3lina": 220
+   }
+  },
+  "3likum": {
+   "by": "table",
+   "counts": {
+    "3likum": 92
+   }
+  },
+  "3lihum": {
+   "by": "table",
+   "counts": {
+    "3lihum": 224
+   }
+  },
+  "mn": {
+   "by": "table",
+   "counts": {
+    "mn": 2272,
+    "men": 1402,
+    "meen": 3
+   }
+  },
+  "mni": {
+   "by": "table",
+   "counts": {
+    "mni": 107,
+    "meni": 51,
+    "menni": 15,
+    "mnni": 8
+   }
+  },
+  "mnek": {
+   "by": "table",
+   "counts": {
+    "mnek": 72,
+    "mnk": 58,
+    "menek": 12,
+    "menk": 9,
+    "mnnek": 8,
+    "mnnk": 3,
+    "mennek": 0
+   }
+  },
+  "mnu": {
+   "by": "table",
+   "counts": {
+    "mnu": 102,
+    "mennu": 15,
+    "mnnu": 5
+   }
+  },
+  "mnha": {
+   "by": "table",
+   "counts": {
+    "mnha": 63,
+    "menha": 40,
+    "mennha": 0
+   }
+  },
+  "mna": {
+   "by": "table",
+   "counts": {
+    "mna": 11,
+    "mena": 10,
+    "mnna": 5,
+    "menna": 3
+   }
+  },
+  "mnkum": {
+   "by": "table",
+   "counts": {
+    "mnkum": 5,
+    "mennkum": 0
+   }
+  },
+  "mnhum": {
+   "by": "table",
+   "counts": {
+    "mnhum": 25,
+    "menhum": 18,
+    "mennhum": 0
+   }
+  },
+  "3nd": {
+   "by": "table",
+   "counts": {
+    "3nd": 162,
+    "3end": 151
+   }
+  },
+  "3ndi": {
+   "by": "table",
+   "counts": {
+    "3ndi": 457,
+    "3endi": 213
+   }
+  },
+  "3ndk": {
+   "by": "table",
+   "counts": {
+    "3ndk": 344,
+    "3endek": 197,
+    "3ndek": 62,
+    "3endk": 37
+   }
+  },
+  "3ndu": {
+   "by": "table",
+   "counts": {
+    "3ndu": 231,
+    "3endu": 127
+   }
+  },
+  "3ndha": {
+   "by": "table",
+   "counts": {
+    "3ndha": 68,
+    "3endha": 44
+   }
+  },
+  "3ndna": {
+   "by": "table",
+   "counts": {
+    "3ndna": 97,
+    "3endna": 20
+   }
+  },
+  "3ndkum": {
+   "by": "table",
+   "counts": {
+    "3ndkum": 73,
+    "3endkum": 24
+   }
+  },
+  "3ndhum": {
+   "by": "table",
+   "counts": {
+    "3ndhum": 76,
+    "3endhum": 38
+   }
+  },
+  "bla": {
+   "by": "table",
+   "counts": {
+    "bla": 917,
+    "bela": 3
+   }
+  },
+  "blaya": {
+   "by": "table",
+   "counts": {
+    "blaya": 0
+   }
+  },
+  "blak": {
+   "by": "table",
+   "counts": {
+    "blak": 5
+   }
+  },
+  "blah": {
+   "by": "table",
+   "counts": {
+    "blah": 10
+   }
+  },
+  "blaha": {
+   "by": "table",
+   "counts": {
+    "blaha": 0
+   }
+  },
+  "blana": {
+   "by": "table",
+   "counts": {
+    "blana": 0
+   }
+  },
+  "blakum": {
+   "by": "table",
+   "counts": {
+    "blakum": 0
+   }
+  },
+  "blahum": {
+   "by": "table",
+   "counts": {
+    "blahum": 0
+   }
+  },
+  "fuq": {
+   "by": "table",
+   "counts": {
+    "fuq": 224
+   }
+  },
+  "fuqi": {
+   "by": "table",
+   "counts": {
+    "fuqi": 0
+   }
+  },
+  "fuqek": {
+   "by": "table",
+   "counts": {
+    "fuqek": 0
+   }
+  },
+  "fuqu": {
+   "by": "table",
+   "counts": {
+    "fuqu": 0
+   }
+  },
+  "fuqha": {
+   "by": "table",
+   "counts": {
+    "fuqha": 0
+   }
+  },
+  "fuqna": {
+   "by": "table",
+   "counts": {
+    "fuqna": 0
+   }
+  },
+  "fuqkum": {
+   "by": "table",
+   "counts": {
+    "fuqkum": 0
+   }
+  },
+  "fuqhum": {
+   "by": "table",
+   "counts": {
+    "fuqhum": 0
+   }
+  },
+  "te7t": {
+   "by": "table",
+   "counts": {
+    "te7t": 38,
+    "t7et": 8,
+    "t7tt": 7
+   }
+  },
+  "te7ti": {
+   "by": "table",
+   "counts": {
+    "te7ti": 7
+   }
+  },
+  "te7tek": {
+   "by": "table",
+   "counts": {
+    "te7tek": 0
+   }
+  },
+  "te7tu": {
+   "by": "table",
+   "counts": {
+    "te7tu": 0
+   }
+  },
+  "te7tha": {
+   "by": "table",
+   "counts": {
+    "te7tha": 0
+   }
+  },
+  "te7tna": {
+   "by": "table",
+   "counts": {
+    "te7tna": 0
+   }
+  },
+  "te7tkum": {
+   "by": "table",
+   "counts": {
+    "te7tkum": 0
+   }
+  },
+  "te7thum": {
+   "by": "table",
+   "counts": {
+    "te7thum": 0
+   }
+  },
+  "qdam": {
+   "by": "table",
+   "counts": {
+    "qdam": 61,
+    "qedam": 8,
+    "qddam": 3,
+    "qeddam": 0
+   }
+  },
+  "qdami": {
+   "by": "table",
+   "counts": {
+    "qdami": 16,
+    "qddami": 5
+   }
+  },
+  "qdamek": {
+   "by": "table",
+   "counts": {
+    "qdamek": 3,
+    "qddamek": 0
+   }
+  },
+  "qdamu": {
+   "by": "table",
+   "counts": {
+    "qdamu": 3,
+    "qddamu": 0
+   }
+  },
+  "qdamha": {
+   "by": "table",
+   "counts": {
+    "qdamha": 3,
+    "qddamha": 0
+   }
+  },
+  "qdamna": {
+   "by": "table",
+   "counts": {
+    "qdamna": 0,
+    "qddamna": 0
+   }
+  },
+  "qdamkum": {
+   "by": "table",
+   "counts": {
+    "qdamkum": 0,
+    "qddamkum": 0
+   }
+  },
+  "qdamhum": {
+   "by": "table",
+   "counts": {
+    "qdamhum": 4,
+    "qddamhum": 0
+   }
+  },
+  "mura": {
+   "by": "table",
+   "counts": {
+    "mura": 151,
+    "murra": 6
+   }
+  },
+  "muraya": {
+   "by": "table",
+   "counts": {
+    "muraya": 0
+   }
+  },
+  "murak": {
+   "by": "table",
+   "counts": {
+    "murak": 14
+   }
+  },
+  "murah": {
+   "by": "table",
+   "counts": {
+    "murah": 7
+   }
+  },
+  "muraha": {
+   "by": "table",
+   "counts": {
+    "muraha": 36
+   }
+  },
+  "murana": {
+   "by": "table",
+   "counts": {
+    "murana": 0
+   }
+  },
+  "murakum": {
+   "by": "table",
+   "counts": {
+    "murakum": 0
+   }
+  },
+  "murahum": {
+   "by": "table",
+   "counts": {
+    "murahum": 3
+   }
+  },
+  "7daya": {
+   "by": "table",
+   "counts": {
+    "7daya": 19
+   }
+  },
+  "7dak": {
+   "by": "table",
+   "counts": {
+    "7dak": 11
+   }
+  },
+  "7dah": {
+   "by": "table",
+   "counts": {
+    "7dah": 11
+   }
+  },
+  "7daha": {
+   "by": "table",
+   "counts": {
+    "7daha": 4
+   }
+  },
+  "7dana": {
+   "by": "table",
+   "counts": {
+    "7dana": 17
+   }
+  },
+  "7dakum": {
+   "by": "table",
+   "counts": {
+    "7dakum": 3
+   }
+  },
+  "7dahum": {
+   "by": "table",
+   "counts": {
+    "7dahum": 8
+   }
+  },
+  "bini": {
+   "by": "table",
+   "counts": {
+    "bini": 18
+   }
+  },
+  "binek": {
+   "by": "table",
+   "counts": {
+    "binek": 6
+   }
+  },
+  "binu": {
+   "by": "table",
+   "counts": {
+    "binu": 0
+   }
+  },
+  "binha": {
+   "by": "table",
+   "counts": {
+    "binha": 0
+   }
+  },
+  "binatna": {
+   "by": "table",
+   "counts": {
+    "binatna": 41
+   }
+  },
+  "binatkum": {
+   "by": "table",
+   "counts": {
+    "binatkum": 16
+   }
+  },
+  "binathum": {
+   "by": "table",
+   "counts": {
+    "binathum": 33
+   }
+  },
+  "b-jenb": {
+   "by": "table",
+   "counts": {
+    "b-jenb": 0
+   }
+  },
+  "b-jenbi": {
+   "by": "table",
+   "counts": {
+    "b-jenbi": 0
+   }
+  },
+  "b-jenbek": {
+   "by": "table",
+   "counts": {
+    "b-jenbek": 0
+   }
+  },
+  "b-jenbu": {
+   "by": "table",
+   "counts": {
+    "b-jenbu": 0
+   }
+  },
+  "b-jenbha": {
+   "by": "table",
+   "counts": {
+    "b-jenbha": 0
+   }
+  },
+  "b-jenbna": {
+   "by": "table",
+   "counts": {
+    "b-jenbna": 0
+   }
+  },
+  "b-jenbkum": {
+   "by": "table",
+   "counts": {
+    "b-jenbkum": 0
+   }
+  },
+  "b-jenbhum": {
+   "by": "table",
+   "counts": {
+    "b-jenbhum": 0
+   }
+  },
+  "dyal": {
+   "by": "table",
+   "counts": {
+    "dyal": 1485,
+    "deyal": 6
+   }
+  },
+  "dyali": {
+   "by": "table",
+   "counts": {
+    "dyali": 411
+   }
+  },
+  "dyalk": {
+   "by": "table",
+   "counts": {
+    "dyalk": 508,
+    "dyalek": 19
+   }
+  },
+  "dyalu": {
+   "by": "table",
+   "counts": {
+    "dyalu": 150
+   }
+  },
+  "dyalha": {
+   "by": "table",
+   "counts": {
+    "dyalha": 89
+   }
+  },
+  "dyalna": {
+   "by": "table",
+   "counts": {
+    "dyalna": 102
+   }
+  },
+  "dyalkum": {
+   "by": "table",
+   "counts": {
+    "dyalkum": 43
+   }
+  },
+  "dyalhum": {
+   "by": "table",
+   "counts": {
+    "dyalhum": 34
+   }
+  },
+  "qbli": {
+   "by": "table",
+   "counts": {
+    "qbli": 6
+   }
+  },
+  "qblek": {
+   "by": "table",
+   "counts": {
+    "qblek": 3
+   }
+  },
+  "qblu": {
+   "by": "table",
+   "counts": {
+    "qblu": 6
+   }
+  },
+  "qblha": {
+   "by": "table",
+   "counts": {
+    "qblha": 0
+   }
+  },
+  "qblna": {
+   "by": "table",
+   "counts": {
+    "qblna": 0
+   }
+  },
+  "qblkum": {
+   "by": "table",
+   "counts": {
+    "qblkum": 0
+   }
+  },
+  "qblhum": {
+   "by": "table",
+   "counts": {
+    "qblhum": 0
+   }
+  },
+  "b3di": {
+   "by": "table",
+   "counts": {
+    "b3di": 8
+   }
+  },
+  "b3dek": {
+   "by": "table",
+   "counts": {
+    "b3dek": 0
+   }
+  },
+  "b3du": {
+   "by": "table",
+   "counts": {
+    "b3du": 0
+   }
+  },
+  "b3dha": {
+   "by": "table",
+   "counts": {
+    "b3dha": 0
+   }
+  },
+  "b3dna": {
+   "by": "table",
+   "counts": {
+    "b3dna": 0
+   }
+  },
+  "b3dkum": {
+   "by": "table",
+   "counts": {
+    "b3dkum": 0
+   }
+  },
+  "b3dhum": {
+   "by": "table",
+   "counts": {
+    "b3dhum": 0
+   }
+  },
+  "khu": {
+   "by": "table",
+   "counts": {
+    "khu": 7
+   }
+  },
+  "khuya": {
+   "by": "table",
+   "counts": {
+    "khuya": 227
+   }
+  },
+  "khuk": {
+   "by": "table",
+   "counts": {
+    "khuk": 83
+   }
+  },
+  "khuh": {
+   "by": "table",
+   "counts": {
+    "khuh": 11
+   }
+  },
+  "khuha": {
+   "by": "table",
+   "counts": {
+    "khuha": 13
+   }
+  },
+  "khuna": {
+   "by": "table",
+   "counts": {
+    "khuna": 59
+   }
+  },
+  "khukum": {
+   "by": "table",
+   "counts": {
+    "khukum": 0
+   }
+  },
+  "khuhum": {
+   "by": "table",
+   "counts": {
+    "khuhum": 0
+   }
+  },
+  "khet": {
+   "by": "table",
+   "counts": {
+    "khet": 3
+   }
+  },
+  "khti": {
+   "by": "table",
+   "counts": {
+    "khti": 211,
+    "kheti": 19
+   }
+  },
+  "khtek": {
+   "by": "table",
+   "counts": {
+    "khtek": 28,
+    "khtk": 12
+   }
+  },
+  "khtu": {
+   "by": "table",
+   "counts": {
+    "khtu": 10
+   }
+  },
+  "khetha": {
+   "by": "table",
+   "counts": {
+    "khetha": 0
+   }
+  },
+  "khetna": {
+   "by": "table",
+   "counts": {
+    "khetna": 0
+   }
+  },
+  "khetkum": {
+   "by": "table",
+   "counts": {
+    "khetkum": 0
+   }
+  },
+  "khethum": {
+   "by": "table",
+   "counts": {
+    "khethum": 0
+   }
+  },
+  "bbana": {
+   "by": "table",
+   "counts": {
+    "bbana": 0
+   }
+  },
+  "bbakum": {
+   "by": "table",
+   "counts": {
+    "bbakum": 0
+   }
+  },
+  "bbahum": {
+   "by": "table",
+   "counts": {
+    "bbahum": 0
+   }
+  },
+  "mmek": {
+   "by": "table",
+   "counts": {
+    "mmek": 0
+   }
+  },
+  "mmha": {
+   "by": "table",
+   "counts": {
+    "mmha": 0
+   }
+  },
+  "mmna": {
+   "by": "table",
+   "counts": {
+    "mmna": 0
+   }
+  },
+  "mmkum": {
+   "by": "table",
+   "counts": {
+    "mmkum": 0
+   }
+  },
+  "mmhum": {
+   "by": "table",
+   "counts": {
+    "mmhum": 0
+   }
+  },
+  "3emm": {
+   "by": "table",
+   "counts": {
+    "3emm": 0
+   }
+  },
+  "3emmi": {
+   "by": "table",
+   "counts": {
+    "3mi": 16,
+    "3emi": 11,
+    "3mmi": 5,
+    "3emmi": 0
+   }
+  },
+  "3emmek": {
+   "by": "table",
+   "counts": {
+    "3emmek": 0
+   }
+  },
+  "3emmu": {
+   "by": "table",
+   "counts": {
+    "3emmu": 0
+   }
+  },
+  "3emmha": {
+   "by": "table",
+   "counts": {
+    "3emmha": 0
+   }
+  },
+  "3emmna": {
+   "by": "table",
+   "counts": {
+    "3emmna": 0
+   }
+  },
+  "3emmkum": {
+   "by": "table",
+   "counts": {
+    "3emmkum": 0
+   }
+  },
+  "3emmhum": {
+   "by": "table",
+   "counts": {
+    "3emmhum": 0
+   }
+  },
+  "3emma": {
+   "by": "table",
+   "counts": {
+    "3emma": 0
+   }
+  },
+  "3emmti": {
+   "by": "table",
+   "counts": {
+    "3emmti": 0
+   }
+  },
+  "3emmtek": {
+   "by": "table",
+   "counts": {
+    "3emmtek": 0
+   }
+  },
+  "3emmtu": {
+   "by": "table",
+   "counts": {
+    "3emmtu": 0
+   }
+  },
+  "3emmtha": {
+   "by": "table",
+   "counts": {
+    "3emmtha": 0
+   }
+  },
+  "3emmtna": {
+   "by": "table",
+   "counts": {
+    "3emmtna": 0
+   }
+  },
+  "3emmtkum": {
+   "by": "table",
+   "counts": {
+    "3emmtkum": 0
+   }
+  },
+  "3emmthum": {
+   "by": "table",
+   "counts": {
+    "3emmthum": 0
+   }
+  },
+  "khal": {
+   "by": "table",
+   "counts": {
+    "khal": 16
+   }
+  },
+  "khali": {
+   "by": "table",
+   "counts": {
+    "khali": 72
+   }
+  },
+  "khalek": {
+   "by": "table",
+   "counts": {
+    "khalek": 3
+   }
+  },
+  "khalu": {
+   "by": "table",
+   "counts": {
+    "khalu": 0
+   }
+  },
+  "khalha": {
+   "by": "table",
+   "counts": {
+    "khalha": 0
+   }
+  },
+  "khalna": {
+   "by": "table",
+   "counts": {
+    "khalna": 0
+   }
+  },
+  "khalkum": {
+   "by": "table",
+   "counts": {
+    "khalkum": 0
+   }
+  },
+  "khalhum": {
+   "by": "table",
+   "counts": {
+    "khalhum": 0
+   }
+  },
+  "khala": {
+   "by": "table",
+   "counts": {
+    "khala": 4
+   }
+  },
+  "khalti": {
+   "by": "table",
+   "counts": {
+    "khalti": 66,
+    "khaltii": 4
+   }
+  },
+  "khaltek": {
+   "by": "table",
+   "counts": {
+    "khaltek": 7
+   }
+  },
+  "khaltu": {
+   "by": "table",
+   "counts": {
+    "khaltu": 5
+   }
+  },
+  "khaltha": {
+   "by": "table",
+   "counts": {
+    "khaltha": 4
+   }
+  },
+  "khaltna": {
+   "by": "table",
+   "counts": {
+    "khaltna": 0
+   }
+  },
+  "khaltkum": {
+   "by": "table",
+   "counts": {
+    "khaltkum": 0
+   }
+  },
+  "khalthum": {
+   "by": "table",
+   "counts": {
+    "khalthum": 0
+   }
+  },
+  "jeddi": {
+   "by": "table",
+   "counts": {
+    "jeddi": 3
+   }
+  },
+  "jeddek": {
+   "by": "table",
+   "counts": {
+    "jeddek": 3
+   }
+  },
+  "jeddu": {
+   "by": "table",
+   "counts": {
+    "jeddu": 0
+   }
+  },
+  "jeddha": {
+   "by": "table",
+   "counts": {
+    "jeddha": 0
+   }
+  },
+  "jeddna": {
+   "by": "table",
+   "counts": {
+    "jeddna": 0
+   }
+  },
+  "jeddkum": {
+   "by": "table",
+   "counts": {
+    "jeddkum": 0
+   }
+  },
+  "jeddhum": {
+   "by": "table",
+   "counts": {
+    "jeddhum": 0
+   }
+  },
+  "jedda": {
+   "by": "table",
+   "counts": {
+    "jedda": 6
+   }
+  },
+  "jeddti": {
+   "by": "table",
+   "counts": {
+    "jeddti": 0
+   }
+  },
+  "jeddtek": {
+   "by": "table",
+   "counts": {
+    "jeddtek": 0
+   }
+  },
+  "jeddtu": {
+   "by": "table",
+   "counts": {
+    "jeddtu": 0
+   }
+  },
+  "jeddtha": {
+   "by": "table",
+   "counts": {
+    "jeddtha": 0
+   }
+  },
+  "jeddtna": {
+   "by": "table",
+   "counts": {
+    "jeddtna": 0
+   }
+  },
+  "jeddtkum": {
+   "by": "table",
+   "counts": {
+    "jeddtkum": 0
+   }
+  },
+  "jeddthum": {
+   "by": "table",
+   "counts": {
+    "jeddthum": 0
+   }
+  },
+  "weld": {
+   "by": "table",
+   "counts": {
+    "weld": 112,
+    "wld": 82
+   }
+  },
+  "weldi": {
+   "by": "table",
+   "counts": {
+    "weldi": 71,
+    "wldi": 50
+   }
+  },
+  "weldek": {
+   "by": "table",
+   "counts": {
+    "weldek": 43,
+    "wldk": 15,
+    "weldk": 11,
+    "wldek": 7
+   }
+  },
+  "weldha": {
+   "by": "table",
+   "counts": {
+    "weldha": 16,
+    "wldha": 5
+   }
+  },
+  "weldna": {
+   "by": "table",
+   "counts": {
+    "weldna": 8
+   }
+  },
+  "weldkum": {
+   "by": "table",
+   "counts": {
+    "weldkum": 0
+   }
+  },
+  "weldhum": {
+   "by": "table",
+   "counts": {
+    "weldhum": 0
+   }
+  },
+  "bent": {
+   "by": "table",
+   "counts": {
+    "bent": 62
+   }
+  },
+  "benti": {
+   "by": "table",
+   "counts": {
+    "benti": 37
+   }
+  },
+  "bentek": {
+   "by": "table",
+   "counts": {
+    "bentek": 19,
+    "bntk": 9,
+    "bentk": 4,
+    "bntek": 3
+   }
+  },
+  "bentu": {
+   "by": "table",
+   "counts": {
+    "bentu": 12
+   }
+  },
+  "bentha": {
+   "by": "table",
+   "counts": {
+    "bentha": 0
+   }
+  },
+  "bentna": {
+   "by": "table",
+   "counts": {
+    "bentna": 0
+   }
+  },
+  "bentkum": {
+   "by": "table",
+   "counts": {
+    "bentkum": 0
+   }
+  },
+  "benthum": {
+   "by": "table",
+   "counts": {
+    "benthum": 0
+   }
+  },
+  "mrati": {
+   "by": "table",
+   "counts": {
+    "mrati": 36,
+    "merati": 3
+   }
+  },
+  "mratek": {
+   "by": "table",
+   "counts": {
+    "mratek": 26,
+    "mratk": 6
+   }
+  },
+  "mratu": {
+   "by": "table",
+   "counts": {
+    "mratu": 48
+   }
+  },
+  "mratha": {
+   "by": "table",
+   "counts": {
+    "mratha": 0
+   }
+  },
+  "mratna": {
+   "by": "table",
+   "counts": {
+    "mratna": 0
+   }
+  },
+  "mratkum": {
+   "by": "table",
+   "counts": {
+    "mratkum": 0
+   }
+  },
+  "mrathum": {
+   "by": "table",
+   "counts": {
+    "mrathum": 0
+   }
+  },
+  "rajel": {
+   "by": "table",
+   "counts": {
+    "rajel": 146,
+    "rajl": 87
+   }
+  },
+  "rajli": {
+   "by": "table",
+   "counts": {
+    "rajli": 75
+   }
+  },
+  "rajlek": {
+   "by": "table",
+   "counts": {
+    "rajlk": 21,
+    "rajlek": 19,
+    "rajelk": 0
+   }
+  },
+  "rajlu": {
+   "by": "table",
+   "counts": {
+    "rajlu": 0
+   }
+  },
+  "rajlha": {
+   "by": "table",
+   "counts": {
+    "rajlha": 20,
+    "rajelha": 19
+   }
+  },
+  "rajlna": {
+   "by": "table",
+   "counts": {
+    "rajlna": 0
+   }
+  },
+  "rajlkum": {
+   "by": "table",
+   "counts": {
+    "rajlkum": 0
+   }
+  },
+  "rajlhum": {
+   "by": "table",
+   "counts": {
+    "rajlhum": 0
+   }
+  },
+  "sa7eb": {
+   "by": "table",
+   "counts": {
+    "sa7eb": 0
+   }
+  },
+  "sa7bi": {
+   "by": "table",
+   "counts": {
+    "sa7bi": 119
+   }
+  },
+  "sa7bek": {
+   "by": "table",
+   "counts": {
+    "sa7bek": 48,
+    "sa7bk": 5
+   }
+  },
+  "sa7bu": {
+   "by": "table",
+   "counts": {
+    "sa7bu": 27
+   }
+  },
+  "sa7bha": {
+   "by": "table",
+   "counts": {
+    "sa7bha": 0
+   }
+  },
+  "sa7bna": {
+   "by": "table",
+   "counts": {
+    "sa7bna": 0
+   }
+  },
+  "sa7bkum": {
+   "by": "table",
+   "counts": {
+    "sa7bkum": 0
+   }
+  },
+  "sa7bhum": {
+   "by": "table",
+   "counts": {
+    "sa7bhum": 0
+   }
+  },
+  "sa7ba": {
+   "by": "table",
+   "counts": {
+    "sa7ba": 0
+   }
+  },
+  "sa7bti": {
+   "by": "table",
+   "counts": {
+    "sa7bti": 16,
+    "sa7ebti": 5
+   }
+  },
+  "sa7btek": {
+   "by": "table",
+   "counts": {
+    "sa7btek": 8
+   }
+  },
+  "sa7btu": {
+   "by": "table",
+   "counts": {
+    "sa7btu": 0
+   }
+  },
+  "sa7btha": {
+   "by": "table",
+   "counts": {
+    "sa7btha": 0
+   }
+  },
+  "sa7btna": {
+   "by": "table",
+   "counts": {
+    "sa7btna": 0
+   }
+  },
+  "sa7btkum": {
+   "by": "table",
+   "counts": {
+    "sa7btkum": 0
+   }
+  },
+  "sa7bthum": {
+   "by": "table",
+   "counts": {
+    "sa7bthum": 0
+   }
+  },
+  "ras": {
+   "by": "table",
+   "counts": {
+    "ras": 103,
+    "rase": 17
+   }
+  },
+  "rasi": {
+   "by": "table",
+   "counts": {
+    "rasi": 320
+   }
+  },
+  "rasek": {
+   "by": "table",
+   "counts": {
+    "rasek": 325,
+    "rask": 314
+   }
+  },
+  "rasu": {
+   "by": "table",
+   "counts": {
+    "rasu": 172
+   }
+  },
+  "rasha": {
+   "by": "table",
+   "counts": {
+    "rasha": 0
+   }
+  },
+  "rasna": {
+   "by": "table",
+   "counts": {
+    "rasna": 17
+   }
+  },
+  "raskum": {
+   "by": "table",
+   "counts": {
+    "raskum": 16
+   }
+  },
+  "rashum": {
+   "by": "table",
+   "counts": {
+    "rashum": 0
+   }
+  },
+  "yedd": {
+   "by": "table",
+   "counts": {
+    "yedd": 0
+   }
+  },
+  "yeddi": {
+   "by": "table",
+   "counts": {
+    "ydi": 20,
+    "yeddi": 6,
+    "yedi": 5
+   }
+  },
+  "yeddek": {
+   "by": "table",
+   "counts": {
+    "yeddek": 0
+   }
+  },
+  "yeddu": {
+   "by": "table",
+   "counts": {
+    "yeddu": 0
+   }
+  },
+  "yeddha": {
+   "by": "table",
+   "counts": {
+    "yeddha": 0
+   }
+  },
+  "yeddna": {
+   "by": "table",
+   "counts": {
+    "yeddna": 0
+   }
+  },
+  "yeddkum": {
+   "by": "table",
+   "counts": {
+    "yeddkum": 0
+   }
+  },
+  "yeddhum": {
+   "by": "table",
+   "counts": {
+    "yeddhum": 0
+   }
+  },
+  "rjel": {
+   "by": "table",
+   "counts": {
+    "rjel": 4
+   }
+  },
+  "rjli": {
+   "by": "table",
+   "counts": {
+    "rjli": 11,
+    "rejli": 9
+   }
+  },
+  "rjlek": {
+   "by": "table",
+   "counts": {
+    "rjlek": 0
+   }
+  },
+  "rjlu": {
+   "by": "table",
+   "counts": {
+    "rjlu": 6
+   }
+  },
+  "rjelha": {
+   "by": "table",
+   "counts": {
+    "rjelha": 0
+   }
+  },
+  "rjelna": {
+   "by": "table",
+   "counts": {
+    "rjelna": 0
+   }
+  },
+  "rjelkum": {
+   "by": "table",
+   "counts": {
+    "rjelkum": 0
+   }
+  },
+  "rjelhum": {
+   "by": "table",
+   "counts": {
+    "rjelhum": 0
+   }
+  },
+  "3in": {
+   "by": "table",
+   "counts": {
+    "3in": 25
+   }
+  },
+  "3ini": {
+   "by": "table",
+   "counts": {
+    "3ini": 24
+   }
+  },
+  "3inek": {
+   "by": "table",
+   "counts": {
+    "3inek": 0
+   }
+  },
+  "3inu": {
+   "by": "table",
+   "counts": {
+    "3inu": 0
+   }
+  },
+  "3inha": {
+   "by": "table",
+   "counts": {
+    "3inha": 0
+   }
+  },
+  "3inna": {
+   "by": "table",
+   "counts": {
+    "3inna": 0
+   }
+  },
+  "3inkum": {
+   "by": "table",
+   "counts": {
+    "3inkum": 0
+   }
+  },
+  "3inhum": {
+   "by": "table",
+   "counts": {
+    "3inhum": 0
+   }
+  },
+  "wden": {
+   "by": "table",
+   "counts": {
+    "wden": 0
+   }
+  },
+  "wedni": {
+   "by": "table",
+   "counts": {
+    "wedni": 3
+   }
+  },
+  "wednek": {
+   "by": "table",
+   "counts": {
+    "wednek": 0
+   }
+  },
+  "wednu": {
+   "by": "table",
+   "counts": {
+    "wednu": 0
+   }
+  },
+  "wdenha": {
+   "by": "table",
+   "counts": {
+    "wdenha": 0
+   }
+  },
+  "wdenna": {
+   "by": "table",
+   "counts": {
+    "wdenna": 0
+   }
+  },
+  "wdenkum": {
+   "by": "table",
+   "counts": {
+    "wdenkum": 0
+   }
+  },
+  "wdenhum": {
+   "by": "table",
+   "counts": {
+    "wdenhum": 0
+   }
+  },
+  "wjeh": {
+   "by": "table",
+   "counts": {
+    "wjjeh": 17,
+    "wjeh": 14,
+    "wjh": 10,
+    "wejh": 0
+   }
+  },
+  "wejhi": {
+   "by": "table",
+   "counts": {
+    "wjhi": 18,
+    "wejhi": 15
+   }
+  },
+  "wejhek": {
+   "by": "table",
+   "counts": {
+    "wjhek": 13,
+    "wejhek": 11
+   }
+  },
+  "wejhu": {
+   "by": "table",
+   "counts": {
+    "wejhu": 5
+   }
+  },
+  "wjehha": {
+   "by": "table",
+   "counts": {
+    "wjehha": 0
+   }
+  },
+  "wjehna": {
+   "by": "table",
+   "counts": {
+    "wjehna": 0
+   }
+  },
+  "wjehkum": {
+   "by": "table",
+   "counts": {
+    "wjehkum": 0
+   }
+  },
+  "wjehhum": {
+   "by": "table",
+   "counts": {
+    "wjehhum": 0
+   }
+  },
+  "fum": {
+   "by": "table",
+   "counts": {
+    "fum": 12,
+    "fumm": 0
+   }
+  },
+  "fumi": {
+   "by": "table",
+   "counts": {
+    "fumi": 6,
+    "fummi": 0
+   }
+  },
+  "fumek": {
+   "by": "table",
+   "counts": {
+    "fumek": 12,
+    "fummek": 0
+   }
+  },
+  "fumu": {
+   "by": "table",
+   "counts": {
+    "fummu": 0,
+    "fumu": 0
+   }
+  },
+  "fumha": {
+   "by": "table",
+   "counts": {
+    "fumha": 3,
+    "fummha": 0
+   }
+  },
+  "fumna": {
+   "by": "table",
+   "counts": {
+    "fummna": 0,
+    "fumna": 0
+   }
+  },
+  "fumkum": {
+   "by": "table",
+   "counts": {
+    "fumkum": 0,
+    "fummkum": 0
+   }
+  },
+  "fumhum": {
+   "by": "table",
+   "counts": {
+    "fumhum": 0,
+    "fummhum": 0
+   }
+  },
+  "ch3er": {
+   "by": "table",
+   "counts": {
+    "ch3er": 16
+   }
+  },
+  "ch3ri": {
+   "by": "table",
+   "counts": {
+    "ch3ri": 24,
+    "che3ri": 15
+   }
+  },
+  "ch3rek": {
+   "by": "table",
+   "counts": {
+    "ch3rk": 12,
+    "che3rek": 12,
+    "ch3rek": 7
+   }
+  },
+  "ch3ru": {
+   "by": "table",
+   "counts": {
+    "ch3ru": 3
+   }
+  },
+  "ch3erha": {
+   "by": "table",
+   "counts": {
+    "ch3erha": 4
+   }
+  },
+  "ch3erna": {
+   "by": "table",
+   "counts": {
+    "ch3erna": 0
+   }
+  },
+  "ch3erkum": {
+   "by": "table",
+   "counts": {
+    "ch3erkum": 0
+   }
+  },
+  "ch3erhum": {
+   "by": "table",
+   "counts": {
+    "ch3erhum": 0
+   }
+  },
+  "kerch": {
+   "by": "table",
+   "counts": {
+    "kerch": 10
+   }
+  },
+  "kerchi": {
+   "by": "table",
+   "counts": {
+    "kerchi": 10
+   }
+  },
+  "kerchek": {
+   "by": "table",
+   "counts": {
+    "kerchek": 8
+   }
+  },
+  "kerchu": {
+   "by": "table",
+   "counts": {
+    "kerchu": 0
+   }
+  },
+  "kerchha": {
+   "by": "table",
+   "counts": {
+    "kerchha": 0
+   }
+  },
+  "kerchna": {
+   "by": "table",
+   "counts": {
+    "kerchna": 0
+   }
+  },
+  "kerchkum": {
+   "by": "table",
+   "counts": {
+    "kerchkum": 0
+   }
+  },
+  "kerchhum": {
+   "by": "table",
+   "counts": {
+    "kerchhum": 0
+   }
+  },
+  "qelbi": {
+   "by": "table",
+   "counts": {
+    "qlbi": 21,
+    "qelbi": 16
+   }
+  },
+  "qelbek": {
+   "by": "table",
+   "counts": {
+    "qelbek": 9
+   }
+  },
+  "qelbha": {
+   "by": "table",
+   "counts": {
+    "qelbha": 0
+   }
+  },
+  "qelbna": {
+   "by": "table",
+   "counts": {
+    "qelbna": 0
+   }
+  },
+  "qelbkum": {
+   "by": "table",
+   "counts": {
+    "qelbkum": 0
+   }
+  },
+  "qelbhum": {
+   "by": "table",
+   "counts": {
+    "qelbhum": 0
+   }
+  },
+  "smiya": {
+   "by": "table",
+   "counts": {
+    "smiya": 37
+   }
+  },
+  "smiti": {
+   "by": "table",
+   "counts": {
+    "smiti": 9
+   }
+  },
+  "smitek": {
+   "by": "table",
+   "counts": {
+    "smitek": 8
+   }
+  },
+  "smitu": {
+   "by": "table",
+   "counts": {
+    "smitu": 13
+   }
+  },
+  "smitha": {
+   "by": "table",
+   "counts": {
+    "smitha": 15
+   }
+  },
+  "smitna": {
+   "by": "table",
+   "counts": {
+    "smitna": 0
+   }
+  },
+  "smitkum": {
+   "by": "table",
+   "counts": {
+    "smitkum": 0
+   }
+  },
+  "smithum": {
+   "by": "table",
+   "counts": {
+    "smithum": 0
+   }
+  },
+  "dari": {
+   "by": "table",
+   "counts": {
+    "dari": 49
+   }
+  },
+  "darek": {
+   "by": "table",
+   "counts": {
+    "darek": 40,
+    "dark": 12,
+    "darrek": 3
+   }
+  },
+  "darha": {
+   "by": "table",
+   "counts": {
+    "darha": 35
+   }
+  },
+  "darna": {
+   "by": "table",
+   "counts": {
+    "darna": 62
+   }
+  },
+  "darkum": {
+   "by": "table",
+   "counts": {
+    "darkum": 62
+   }
+  },
+  "darhum": {
+   "by": "table",
+   "counts": {
+    "darhum": 13
+   }
+  },
+  "bit": {
+   "by": "table",
+   "counts": {
+    "bit": 179
+   }
+  },
+  "biti": {
+   "by": "table",
+   "counts": {
+    "biti": 41
+   }
+  },
+  "bitek": {
+   "by": "table",
+   "counts": {
+    "bitek": 8
+   }
+  },
+  "bitu": {
+   "by": "table",
+   "counts": {
+    "bitu": 13
+   }
+  },
+  "bitha": {
+   "by": "table",
+   "counts": {
+    "bitha": 3
+   }
+  },
+  "bitna": {
+   "by": "table",
+   "counts": {
+    "bitna": 0
+   }
+  },
+  "bitkum": {
+   "by": "table",
+   "counts": {
+    "bitkum": 0
+   }
+  },
+  "bithum": {
+   "by": "table",
+   "counts": {
+    "bithum": 0
+   }
+  },
+  "ktab": {
+   "by": "table",
+   "counts": {
+    "ktab": 170
+   }
+  },
+  "ktabi": {
+   "by": "table",
+   "counts": {
+    "ktabi": 7
+   }
+  },
+  "ktabek": {
+   "by": "table",
+   "counts": {
+    "ktabek": 0
+   }
+  },
+  "ktabu": {
+   "by": "table",
+   "counts": {
+    "ktabu": 0
+   }
+  },
+  "ktabha": {
+   "by": "table",
+   "counts": {
+    "ktabha": 0
+   }
+  },
+  "ktabna": {
+   "by": "table",
+   "counts": {
+    "ktabna": 0
+   }
+  },
+  "ktabkum": {
+   "by": "table",
+   "counts": {
+    "ktabkum": 0
+   }
+  },
+  "ktabhum": {
+   "by": "table",
+   "counts": {
+    "ktabhum": 0
+   }
+  },
+  "blasti": {
+   "by": "table",
+   "counts": {
+    "blasti": 18
+   }
+  },
+  "blastek": {
+   "by": "table",
+   "counts": {
+    "blastek": 25,
+    "blastk": 11
+   }
+  },
+  "blastu": {
+   "by": "table",
+   "counts": {
+    "blastu": 30
+   }
+  },
+  "blastha": {
+   "by": "table",
+   "counts": {
+    "blastha": 12
+   }
+  },
+  "blastna": {
+   "by": "table",
+   "counts": {
+    "blastna": 0
+   }
+  },
+  "blastkum": {
+   "by": "table",
+   "counts": {
+    "blastkum": 0
+   }
+  },
+  "blasthum": {
+   "by": "table",
+   "counts": {
+    "blasthum": 7
+   }
+  },
+  "werqa": {
+   "by": "table",
+   "counts": {
+    "werqa": 30,
+    "wrqa": 21
+   }
+  },
+  "werqti": {
+   "by": "table",
+   "counts": {
+    "werqti": 0
+   }
+  },
+  "werqtek": {
+   "by": "table",
+   "counts": {
+    "werqtek": 0
+   }
+  },
+  "werqtu": {
+   "by": "table",
+   "counts": {
+    "werqtu": 0
+   }
+  },
+  "werqtha": {
+   "by": "table",
+   "counts": {
+    "werqtha": 0
+   }
+  },
+  "werqtna": {
+   "by": "table",
+   "counts": {
+    "werqtna": 0
+   }
+  },
+  "werqtkum": {
+   "by": "table",
+   "counts": {
+    "werqtkum": 0
+   }
+  },
+  "werqthum": {
+   "by": "table",
+   "counts": {
+    "werqthum": 0
+   }
+  },
+  "khdma": {
+   "by": "table",
+   "counts": {
+    "khedma": 323,
+    "khdma": 316,
+    "khdema": 0
+   }
+  },
+  "khdmti": {
+   "by": "table",
+   "counts": {
+    "khdmti": 23,
+    "khddemti": 3,
+    "khedmti": 3
+   }
+  },
+  "khdmtk": {
+   "by": "table",
+   "counts": {
+    "khdemtek": 34,
+    "khdmtk": 7,
+    "khdemtk": 3,
+    "khedmtek": 0
+   }
+  },
+  "khdmtu": {
+   "by": "table",
+   "counts": {
+    "khdmtu": 16,
+    "khedmtu": 0
+   }
+  },
+  "khdmtha": {
+   "by": "table",
+   "counts": {
+    "khdmtha": 0,
+    "khedmtha": 0
+   }
+  },
+  "khdmtna": {
+   "by": "table",
+   "counts": {
+    "khdmtna": 0,
+    "khedmtna": 0
+   }
+  },
+  "khdmtkum": {
+   "by": "table",
+   "counts": {
+    "khdmtkum": 0,
+    "khedmtkum": 0
+   }
+  },
+  "khdmthum": {
+   "by": "table",
+   "counts": {
+    "khdmthum": 0,
+    "khedmthum": 0
+   }
+  },
+  "magana": {
+   "by": "table",
+   "counts": {
+    "magana": 20
+   }
+  },
+  "maganti": {
+   "by": "table",
+   "counts": {
+    "maganti": 0
+   }
+  },
+  "magantek": {
+   "by": "table",
+   "counts": {
+    "magantek": 0
+   }
+  },
+  "magantu": {
+   "by": "table",
+   "counts": {
+    "magantu": 0
+   }
+  },
+  "magantha": {
+   "by": "table",
+   "counts": {
+    "magantha": 0
+   }
+  },
+  "magantna": {
+   "by": "table",
+   "counts": {
+    "magantna": 0
+   }
+  },
+  "magantkum": {
+   "by": "table",
+   "counts": {
+    "magantkum": 0
+   }
+  },
+  "maganthum": {
+   "by": "table",
+   "counts": {
+    "maganthum": 0
    }
   },
   "7tta": {

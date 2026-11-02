@@ -58,9 +58,9 @@ class TestPrepositions(unittest.TestCase):
         self.assertEqual(nd, ["3ndi", "3ndk", "3ndu", "3ndha", "3ndna", "3ndkum", "3ndhum"])
         self.assertEqual(self.preps["3nd"]["pronouns"]["ar"][0], "عندي")
 
-        # mn: each form spelled as the counts say (docs/spelling.md)
+        # mn: one stem across the table (docs/spelling.md)
         men = self.preps["men"]["pronouns"]["lat"]
-        self.assertEqual(men, ["mni", "mnek", "mnu", "mnha", "mena", "mennkum", "menhum"])
+        self.assertEqual(men, ["mni", "mnek", "mnu", "mnha", "mna", "mnkum", "mnhum"])
         self.assertEqual(self.preps["men"]["pronouns"]["ar"][0], "مني")
 
         # 3la: 3liya, 3lik, 3lih, 3liha, 3lina, 3likum, 3lihum
