@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import spelling as sp
+from build_nouns import SUN
+from build_verbs import lat
 
 S = sp.load()
 
@@ -20,6 +22,17 @@ class Canon(unittest.TestCase):
     def test_article(self):
         self.assertEqual(sp.canon("f l-khedma", S), "f l-khdma")
         self.assertEqual(sp.canon("z-znqa", S), "z-zenqa")
+
+    def test_glued_article(self):
+        self.assertEqual(sp.canon("kayn lbare7 w lyum", S), "kayn l-bare7 w l-yum")
+        self.assertEqual(sp.canon("jjay", S), "j-jay")
+        # words that start with l, or with a doubled sun letter, are not the article
+        for w in ("lila", "lben", "l7em", "lun", "li", "lik", "lih", "lli"):
+            self.assertEqual(sp.canon(w, S), w)
+
+    def test_sun_letters(self):
+        self.assertEqual(sp.canon("l-dar ch-chems s-chems z-zenqa l-ktab", S), "d-dar ch-chems ch-chems z-zenqa l-ktab")
+        self.assertEqual(sp.canon("l-jiran l-lila l-restoran l-jornal", S), "j-jiran l-lila r-restoran j-jornal")
 
     def test_letters(self):
         self.assertEqual(sp.canon("l-khobz w kolchi", S), "l-khubz w kulchi")
@@ -81,6 +94,19 @@ class SiteData(unittest.TestCase):
         for f in sorted((ROOT / "data/examples").glob("*.json")):
             for s in json.loads(f.read_text()):
                 self.assertNotIn("ghda", s["lat"].split(), s["lat"])
+
+    def test_article_copies_sun_letter(self):
+        sun = {lat(c) for c in SUN} - {"l"}  # arabizi of SUN in build_nouns.py: d, ch, z, ...
+        self.assertEqual(sun, set(sp.SUN) - {"l"})
+        bad = set()
+        for s in sp.site_text():
+            for t in sp.WORD.findall(s):
+                a, stem = sp.split(t)
+                if a:
+                    first = next((x for x in sorted(sun, key=len, reverse=True) if stem.startswith(x)), "l")
+                    if a != first + "-":
+                        bad.add(t)
+        self.assertEqual(sorted(bad), [])
 
     def test_letters(self):
         keep = set(S["keep"])

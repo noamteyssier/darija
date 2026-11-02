@@ -100,7 +100,13 @@ and `ba` are different words. Neither are stretched vowels (`bzaaaf`) or text-me
   counts (`u` 3,421, written `ou` or `o`, vs `w` 723), kept for now because `w` is the site's
   long-standing spelling and reads as one letter, و.
 - **The article** takes a hyphen and copies a sun letter: `l-ktab`, `d-dar`, `ch-chems`, `t-tumubil`.
-  This is grammar, not a count (corpus writers rarely mark it), so the site keeps it.
+  This is grammar, not a count (corpus writers rarely mark it), so the site keeps it. The sun letters
+  are the ones in `SUN` in `scripts/build_nouns.py`: `t d r z s ch n l j`. The article is that letter before
+  a stem that starts with it (`j-jar`, `l-lila`) and `l-` before any other letter (`l-jornal` is
+  `j-jornal`, `l-bab` stays). `canon()` fixes a wrong one (`l-dar`, `s-chems`), also on `keep` words.
+  When the article is written glued to a stem the site uses with it (`lbare7`, `jjay`), `canon()` adds the
+  hyphen, using the `glued` table in `data/spelling.json`: stems seen at least 3 times with the article.
+  A word that is itself a stem (`lila`, `l7em`, `lun`) or a verb form is left alone.
 - **f, l, b, mn, 3la** are separate words before a noun: `f d-dar`, `l s-suq`, `b t-tobis`.
 - **Pronoun tables** are chosen as a whole, so a table never mixes spellings: `mn` gives `mni, mnek, mnu,
   mnha, mna, mnkum, mnhum`, and `qdam` gives `qdami, qdamek, ...`. `table_force()` in `scripts/spelling.py`
@@ -136,7 +142,7 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
 2. `canon()` rewrites arabizi text to those spellings. `build_nouns.py`, `build_prepositions.py`,
    `build_words.py` and `build_examples.py` run it on everything they write.
 3. `tests/test_spelling.py` fails if any generated data uses a spelling the map rewrites, uses `9`, or
-   uses `o` outside the `keep` list.
+   uses `o` outside the `keep` list, or if an article does not copy its sun letter.
 4. The example prompts (`STYLE` in `scripts/build_examples.py`, shared with `gemini_batch.py` and
    `review_examples.py`) state the letter rules and list the words the model has misspelled before.
 
