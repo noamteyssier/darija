@@ -17,11 +17,11 @@ Typed answers are forgiving either way: `norm()` in `assets/common.js` accepts `
 | [DODa](https://github.com/darija-open-dataset/dataset) (MIT) | the human-written rows only: `sentences/sentences.csv`, `ongoing/*.csv`, `x-tra/shorts.csv` (not the model-written DODa-500K) | about 147k rows, 439k words |
 | [atlasia/Atlaset](https://huggingface.co/datasets/atlasia/Atlaset) (gated) | Latin-script rows from real sources, almost all Facebook comments | about 6k rows, 44k words |
 
-Atlaset is gated: accept its terms on Hugging Face while logged in, then download the five parquet
-shards `train-0.parquet` to `train-4.parquet` (about 1.1 GB) into one folder, for example
-`huggingface-cli download atlasia/Atlaset --repo-type dataset --include "train-*.parquet" --local-dir atlaset`.
-The script
-reads every `*.parquet` in the folder and keeps a row when:
+Atlaset is gated: accept its terms on Hugging Face while logged in, then download the five train
+shards, `data/train-00000-of-00005.parquet` to `data/train-00004-of-00005.parquet` (about 1.1 GB), into
+one folder. Leave out the test shard: the script reads every `*.parquet` in the folder. For example,
+`hf download atlasia/Atlaset --repo-type dataset --include "data/train-*.parquet" --local-dir atlaset`
+puts them in `atlaset/data`. A row is kept when:
 
 - its `dataset_source` starts with `atlasia/Social_Media_Darija_DS`, `atlasia/facebook_darija_dataset`,
   `MTCD`, `MAC Corpus`, `common-crawl`, `bourbouh/moroccan-darija-youtube-subtitles` or
@@ -36,7 +36,7 @@ be rebuilt without the downloads. To recount (pyarrow is only needed for `--atla
 dependency of the site scripts; it takes about 30 seconds):
 
 ```sh
-uv run --with pyarrow python3 scripts/spelling.py --doda path/to/dataset --atlaset path/to/atlaset
+uv run --with pyarrow python3 scripts/spelling.py --doda path/to/dataset --atlaset path/to/atlaset/data
 ```
 
 ## Letters: fixed rules

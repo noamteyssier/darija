@@ -66,7 +66,7 @@ def atlaset_latin(directory):
         for b in pq.ParquetFile(f).iter_batches(columns=["dataset_source", "text"]):
             for src, text in zip(b.column(0).to_pylist(), b.column(1).to_pylist()):
                 lat, ar = len(re.findall(r"[A-Za-z]", text)), len(re.findall(r"[\u0600-\u06FF]", text))
-                if src.startswith(ATLASET) and lat >= 6 and 4 * ar < ar + lat:
+                if src.startswith(ATLASET) and lat >= 6 and 3 * ar < lat:
                     yield " ".join(text.split())
 
 
