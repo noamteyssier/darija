@@ -102,4 +102,5 @@ $('numRules').innerHTML = [
   '<p><strong>Putting them together:</strong> the small number comes first, joined with <strong>w</strong> (and): ' + nm(21) + ' (21), ' + nm(35) + ' (35). Beside a ten, 2 is <strong>tnin</strong>, not juj: ' + nm(22) + ' (22). Bigger numbers go in order, biggest first, with a <strong>w</strong> between each part: ' + nm(347) + ' (347).</p>',
   '<p><strong>Hundreds:</strong> ' + nm(100) + ' and ' + nm(200) + ' are their own words. From 300 the count is shortened and put before <strong>mya</strong>: ' + [300, 400, 500, 900].map(nm).join(', ') + '.</p>',
   '<p><strong>Thousands:</strong> ' + nm(1000) + ' and ' + nm(2000) + ' are their own words. From 3 thousand the shortened count goes before <strong>alaf</strong>, the same way as the hundreds: ' + [3000, 4000, 10000].map(nm).join(', ') + '.</p>',
+  '<p><strong>Minus:</strong> put <strong>naqes</strong> (ناقص) before the number: naqes ' + say(10).lat + ' (-10). Many people say the French <strong>moins</strong> instead, especially for temperatures: moins ' + say(10).lat + '.</p>',
 ].join('');
