@@ -1,4 +1,5 @@
 import { $, PRON, OWNER, header, both, esc, getJSON } from './common.js';
+import { say } from './numbers-data.js';
 import { loadVerbs, KINDS, TENSE, negate } from './verbs-data.js';
 
 header();
@@ -91,3 +92,14 @@ OWNER.forEach((o, i) => {
     + '</tr>';
 });
 $('prepTable').innerHTML = ph + '</tbody></table></div>';
+
+// Numbers: every example is built by say(), so the page cannot drift from the dictionary and the drill.
+const nm = n => '<strong>' + esc(say(n).lat) + '</strong>';
+$('numRules').innerHTML = [
+  '<p><strong>1 to 10:</strong> ' + [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nm).join(', ') + '.</p>',
+  '<p><strong>11 to 19</strong> end in <strong>-ash</strong>: ' + [11, 12, 13, 14, 15, 19].map(nm).join(', ') + '. Learn them as their own words.</p>',
+  '<p><strong>Tens</strong> end in <strong>-in</strong>: ' + [20, 30, 40, 50, 90].map(nm).join(', ') + '.</p>',
+  '<p><strong>Putting them together:</strong> the small number comes first, joined with <strong>w</strong> (and): ' + nm(21) + ' (21), ' + nm(35) + ' (35). Beside a ten, 2 is <strong>tnin</strong>, not juj: ' + nm(22) + ' (22). Bigger numbers go in order, biggest first, with a <strong>w</strong> between each part: ' + nm(347) + ' (347).</p>',
+  '<p><strong>Hundreds:</strong> ' + nm(100) + ' and ' + nm(200) + ' are their own words. From 300 the count is shortened and put before <strong>mya</strong>: ' + [300, 400, 500, 900].map(nm).join(', ') + '.</p>',
+  '<p><strong>Thousands:</strong> ' + nm(1000) + ' and ' + nm(2000) + ' are their own words. From 3 thousand the shortened count goes before <strong>alaf</strong>, the same way as the hundreds: ' + [3000, 4000, 10000].map(nm).join(', ') + '.</p>',
+].join('');
