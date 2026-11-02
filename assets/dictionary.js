@@ -1,4 +1,5 @@
 import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON, toggleStar } from './common.js';
+import { say, english } from './numbers-data.js';
 import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
@@ -100,6 +101,23 @@ function prepItems() {
   }));
 }
 
+// Round numbers only: 0-20, tens, hundreds, thousands. The rest are built from these (see Rules).
+const NUMS = [...Array(21).keys(), ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 10), 200, ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 100), 2000, ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 1000)];
+const NUM_ADD = n => (n < 20 ? 0 : n < 100 ? 5 : n < 1000 ? 21 : 500);
+function numberItems() {
+  return ranked(NUMS.map(n => ({ n, ...say(n), en: english(n) + ' (' + n + ')' })), x => [x.lat, x.ar, x.en]).map(x => ({
+    id: 'num-' + x.n, lat: x.lat, ar: x.ar, en: x.en,
+    badges: [['strong', x.n < 21 ? 'number' : x.n < 100 ? 'tens' : x.n < 1000 ? 'hundreds' : 'thousands']],
+    body: () => {
+      const m = x.n + NUM_ADD(x.n), e = say(m);
+      if (x.n === 2) return '<p class="kind">Also <strong>tnin</strong> (تنين), which is the form beside a ten: ' + both(say(22).lat, say(22).ar) + '.</p>';
+      return NUM_ADD(x.n)
+        ? '<div class="table"><h2>example</h2><div class="row"><span class="p">' + m + '</span><span class="f">' + both(e.lat, e.ar) + '</span></div></div>'
+        : '<p class="note">Does not change form.</p>';
+    },
+  }));
+}
+
 const GROUP = { time: 'time', calendar: 'calendar', direction: 'place' };
 function wordItems() {
   return ranked(wdata.words, w => [w.lat, w.ar, w.en, GROUP[w.group]]).map(w => ({
@@ -115,8 +133,8 @@ function wordItems() {
 }
 
 function render(focusId) {
-  let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : prepItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : pdata.prepositions.length;
+  let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : st.what === 'nums' ? numberItems() : prepItems();
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'nums' ? NUMS.length : pdata.prepositions.length;
   const tags = [...new Set(items.flatMap(it => it.badges.map(b => b[1])))].sort();
   if (!tags.includes(st.tag)) st.tag = '';
   if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));

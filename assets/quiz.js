@@ -178,7 +178,7 @@ export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
     const val = norm(q('answer').value);
     if (!val) return;
     answered = true;
-    const good = [view.answer.lat, view.answer.ar, ...(view.accept || [])].some(c => norm(c) === val);
+    const good = [view.answer.lat, view.answer.ar, ...(view.accept || [])].some(c => (view.exact ? c === q('answer').value.trim() : norm(c) === val));
     q('answer').disabled = true; q('check').hidden = true;
     grade(good); result(good);
   });

@@ -75,6 +75,9 @@ form.type{display:flex; flex-direction:column; gap:10px}
 label{font-size:.85rem; color:var(--muted)}
 input[type=text],input[type=search]{width:100%; min-height:54px; padding:10px 14px; font:500 1.3rem var(--body); border:1.5px solid var(--line); border-radius:12px; background:var(--bg); color:var(--fg)}
 input[type=search]{font-size:1.05rem; min-height:48px}
+.range{display:grid; grid-template-columns:1fr 6rem; gap:6px 12px; align-items:center}
+.range input[type=number]{width:100%; min-height:44px; padding:6px 10px; font:500 1.05rem var(--body); border:1.5px solid var(--line); border-radius:12px; background:var(--bg); color:var(--fg)}
+.range input[type=range]{width:100%; accent-color:var(--fg)}
 input:disabled{opacity:.75}
 .btn{min-height:52px; border:0; border-radius:12px; background:var(--accent); color:var(--accent-fg); font:700 1rem var(--body); cursor:pointer; width:100%}
 .btn.ghost{background:transparent; color:var(--muted); border:1px solid var(--line); min-height:44px; font-weight:500; font-size:.88rem}
