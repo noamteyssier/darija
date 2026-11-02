@@ -107,7 +107,7 @@
         },
         {
           "lat": "thla f rasek",
-          "ar": "تهلى ف راسك",
+          "ar": "تهلى فراسك",
           "en": "Take care of yourself"
         },
         {
@@ -164,12 +164,12 @@
         },
         {
           "lat": "r77bu bina f darhum",
-          "ar": "رحبو بينا ف دارهم",
+          "ar": "رحبو بينا فدارهم",
           "en": "They welcomed us into their home"
         },
         {
           "lat": "b ch-chwiya 3afak",
-          "ar": "ب الشوية عفاك",
+          "ar": "بالشوية عفاك",
           "en": "Slowly, please"
         }
       ]
@@ -206,7 +206,7 @@
       "examples": [
         {
           "lat": "tlaqit m3ah f l-bosta",
-          "ar": "تلاقيت معاه ف البوسطة",
+          "ar": "تلاقيت معاه فالبوسطة",
           "en": "I met with him at the post office"
         },
         {
@@ -558,7 +558,7 @@
         },
         {
           "lat": "zid chwiya l qdam",
-          "ar": "زيد شوية ل قدام",
+          "ar": "زيد شوية لقدام",
           "en": "Go ahead a bit"
         }
       ]
@@ -936,12 +936,12 @@
       "examples": [
         {
           "lat": "sir nichan 7tta l z-zenqa t-talta",
-          "ar": "سير نيشان حتى ل الزنقة التالتة",
+          "ar": "سير نيشان حتى للزنقة التالتة",
           "en": "Go straight until the 3rd street"
         },
         {
           "lat": "glst f d-dar 7tta l l-lil",
-          "ar": "جلست ف الدار حتى ل الليل",
+          "ar": "جلست فالدار حتى لليل",
           "en": "I stayed at home until the night"
         }
       ]
@@ -1257,7 +1257,7 @@
       "prepAr": "مع",
       "meaning": "meet with",
       "exampleLat": "tlaqit m3ah f l-bosta",
-      "exampleAr": "تلاقيت معاه ف البوسطة",
+      "exampleAr": "تلاقيت معاه فالبوسطة",
       "exampleEn": "I met with him at the post office",
       "src": "PC 117"
     },
@@ -1283,7 +1283,7 @@
       "prepAr": "ف",
       "meaning": "take care of",
       "exampleLat": "thla f rasek",
-      "exampleAr": "تهلى ف راسك",
+      "exampleAr": "تهلى فراسك",
       "exampleEn": "Take care of yourself",
       "src": "PC 118"
     },
@@ -1439,7 +1439,7 @@
       "prepAr": "ف",
       "meaning": "participate in",
       "exampleLat": "chark f l-mechru3",
-      "exampleAr": "شارك ف المشروع",
+      "exampleAr": "شارك فالمشروع",
       "exampleEn": "He participated in the project",
       "src": "PC 118"
     },
@@ -1478,7 +1478,7 @@
       "prepAr": "مع",
       "meaning": "help / cooperate with",
       "exampleLat": "t3awn m3ana f l-khdma",
-      "exampleAr": "تعاون معانا ف الخدمة",
+      "exampleAr": "تعاون معانا فالخدمة",
       "exampleEn": "He helped us with the work",
       "src": "PC 117"
     },
@@ -1517,7 +1517,7 @@
       "prepAr": "ب",
       "meaning": "believe in",
       "exampleLat": "kay-amn b llah",
-      "exampleAr": "كايأمن ب الله",
+      "exampleAr": "كايأمن بالله",
       "exampleEn": "He believes in God",
       "src": "PC 119"
     },
@@ -1530,7 +1530,7 @@
       "prepAr": "ب",
       "meaning": "welcome",
       "exampleLat": "r77bu biya f darhum",
-      "exampleAr": "رحبو بيا ف دارهم",
+      "exampleAr": "رحبو بيا فدارهم",
       "exampleEn": "They welcomed me into their house",
       "src": "PC 119"
     },
@@ -1543,7 +1543,7 @@
       "prepAr": "ب",
       "meaning": "take care of / be in charge of",
       "exampleLat": "tkllf b l-ghda",
-      "exampleAr": "تكلف ب الغدا",
+      "exampleAr": "تكلف بالغدا",
       "exampleEn": "He took charge of lunch",
       "src": "PC 119"
     },
@@ -1687,7 +1687,7 @@
       "pattern": "f",
       "prompt": "Take care of yourself",
       "lat": "thla f rasek",
-      "ar": "تهلى ف راسك",
+      "ar": "تهلى فراسك",
       "en": "Take care of yourself",
       "note": "thla requires f.",
       "src": "PC 118"

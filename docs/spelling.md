@@ -123,6 +123,15 @@ Arabic letters only, no diacritics. The article is always ال. f, l, b join the
 Moroccans write them (فالدار, للسوق, بالطوبيس). The future marker is غادي. The Arabic does not
 change with the Latin spelling: schwa and doubled letters are not written in it.
 
+The one exception to "no diacritics" is the shadda in the possessives of `bba` and `mmi` (`مّي`,
+`بّا`), which `data/nouns.json` keeps on purpose. A lone ف, ل or ب is only the preposition itself
+(its own entry in `data/prepositions.json`); inside a phrase it is joined. `ل` + `ال` drops the alef
+(`للسوق`, `لليل`). `clean_ar()` in `scripts/spelling.py` applies the diacritic and joining rules, and
+`build_examples.py` runs it on every sentence's Arabic.
+
+Not enforced: that the Arabic has the same number of words as the Latin. Once f, l, b and w are
+joined the two sides agree everywhere, but the check needs a hyphen-aware tokenizer to be worth a test.
+
 ## Hand-made choices
 
 `data/raw/spelling.json`:
@@ -143,7 +152,9 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
    `build_words.py` and `build_examples.py` run it on everything they write.
 3. `tests/test_spelling.py` fails if any generated data uses a spelling the map rewrites, uses `9`, or
    uses `o` outside the `keep` list, or if an article does not copy its sun letter. It also checks page text and notes (below).
-4. The example prompts (`STYLE` in `scripts/build_examples.py`, shared with `gemini_batch.py` and
+4. `tests/test_arabic.py` fails on Latin letters or digits in any Arabic string, diacritics (other than
+   the shadda above), a lone ال, a lone ف / ل / ب inside a phrase, and a future sentence without غادي.
+5. The example prompts (`STYLE` in `scripts/build_examples.py`, shared with `gemini_batch.py` and
    `review_examples.py`) state the letter rules and list the words the model has misspelled before.
 
 **Verbs follow rules, not counts.** Conjugated forms keep the spelling `scripts/build_verbs.py` gives them,
