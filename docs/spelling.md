@@ -14,7 +14,7 @@ Typed answers are forgiving either way: `norm()` in `assets/common.js` accepts `
 
 | Source | What | Size |
 |---|---|---|
-| [DODa](https://github.com/darija-open-dataset/dataset) (MIT) | the human-written rows only: `sentences/sentences.csv`, `ongoing/*.csv`, `x-tra/shorts.csv` (not the model-written DODa-500K) | about 147k rows, 439k words |
+| [DODa](https://github.com/darija-open-dataset/dataset) (CC BY-NC 4.0) | the human-written rows only: `sentences/sentences.csv`, `ongoing/*.csv`, `x-tra/shorts.csv` (not the model-written DODa-500K) | about 147k rows, 439k words |
 | [atlasia/Atlaset](https://huggingface.co/datasets/atlasia/Atlaset) (gated) | Latin-script rows from real sources, almost all Facebook comments | about 6k rows, 44k words |
 
 Atlaset is gated: accept its terms on Hugging Face while logged in, then download the five train
