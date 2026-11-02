@@ -1,7 +1,7 @@
 {
- "_doc": "Hand-made input to scripts/spelling.py (docs/spelling.md). keep: words written as they are, mostly French loanwords that keep o, and names. force: canonical -> variants, decided by hand over the counts. distinct: spellings that look like variants of each other but are different words.",
+ "_doc": "Hand-made input to scripts/spelling.py (docs/spelling.md). keep: words written as they are, mostly French loanwords that keep o, and names. force: canonical -> variants, decided by hand over the counts. distinct: spellings that look like variants of each other but are different words. tokens: whole-word rewrites where the article decides the word (l-ghda is lunch, ghedda is tomorrow).",
  "keep": [
-  "amine", "bato", "biro", "bob", "bola", "bolis", "bosta", "bostat", "bota", "botilla", "botola", "brawo",
+  "l-ghda", "amine", "bato", "biro", "bob", "bola", "bolis", "bosta", "bostat", "bota", "botilla", "botola", "brawo",
   "chofaj", "chofur", "dekor", "euro", "formaj", "garson", "gato", "jornal", "kado", "kadoyat", "kamyon",
   "karro", "karrosa", "karton", "koffr", "kontrat", "kontrol", "kontrolat", "korda", "kostim", "manto",
   "maraton", "mario", "menu", "mikro", "morsu", "motor", "numro", "olampiyat", "omlet", "ordinatur", "oroppa",
@@ -10,7 +10,17 @@
   "volan", "weekend"
  ],
  "force": {
+  "7tta": ["7ta", "7etta"],
   "ayam": ["ayyam", "eyyam"],
+  "bli": ["blli", "beli", "belli"],
+  "blich": ["bllich"],
+  "ghedda": ["ghda", "gheda", "ghdda"],
+  "hakka": ["haka", "haaka"],
+  "khddam": ["khdam", "kheddam", "khedam"],
+  "khddama": ["khdama", "kheddama", "khedama"],
+  "mlli": ["mli", "melli", "meli"],
+  "sebbat": ["sbat", "sebat", "sbbat"],
+  "tmma": ["tma", "tema", "temma"],
   "bezzaf": ["bzzef", "bezzef", "bzf", "bzef"],
   "had": ["hed"],
   "bolis": ["bulis", "buliss"],
@@ -26,6 +36,7 @@
   "w": ["u"],
   "wach": ["wech", "wch"]
  },
+ "tokens": {"l-gheda": "l-ghda", "l-ghedda": "l-ghda"},
  "distinct": [
   ["bba", "ba"], ["mmi", "mi"], ["mmu", "mu"], ["bbak", "bak"], ["bbah", "bah"], ["bbaha", "baha"], ["lli",
   "li"], ["sirr", "sir"], ["7all", "7al"], ["erd", "red"], ["merrat", "mrat"], ["marra", "mara"], ["jedd",

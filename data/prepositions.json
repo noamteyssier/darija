@@ -926,7 +926,7 @@
     },
     {
       "id": "7tta",
-      "lat": "7ta",
+      "lat": "7tta",
       "ar": "حتى",
       "en": "until / up to / even",
       "type": "temporal",
@@ -935,12 +935,12 @@
       "note": "Indicates time or limit: 7tta l-ghedda (until tomorrow), 7tta l d-dar (all the way to the house). Also means 'even': 7tta huwa (even him).",
       "examples": [
         {
-          "lat": "sir nichan 7ta l z-zenqa t-talta",
+          "lat": "sir nichan 7tta l z-zenqa t-talta",
           "ar": "سير نيشان حتى ل الزنقة التالتة",
           "en": "Go straight until the 3rd street"
         },
         {
-          "lat": "glst f d-dar 7ta l l-lil",
+          "lat": "glst f d-dar 7tta l l-lil",
           "ar": "جلست ف الدار حتى ل الليل",
           "en": "I stayed at home until the night"
         }

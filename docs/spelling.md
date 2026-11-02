@@ -69,12 +69,27 @@ the one that writes more schwa wins (it is easier to read aloud).
 |---|---|---|
 | good | mzyan | mzyan 548, mezian 28, mezyan 24 |
 | early | bkri | bkri 149, bekri 72 |
-| until | 7ta | 7ta 265, 7tta 39, 7etta 4 |
-| when | mli | mli 555, mlli 27, meli 8 |
-| tomorrow | ghda | ghda 331, gheda 125, ghdda 35, ghedda 17 |
 | after | b3d | b3d 78, be3d 36 |
 | work | khedma | khedma 323, khdma 316 (close: more schwa wins) |
 | coffee | qehwa | qehwa 45, qhwa 45 (close: more schwa wins) |
+
+**Exception: a short list of words keeps its doubled letter**, against the counts. Native writers often
+drop doubling (`mli` 555, `mlli` 27), but these words are pronounced doubled and learners should see that:
+
+| Word | Site | Counts |
+|---|---|---|
+| until | 7tta | 7ta 265, 7tta 39 |
+| when | mlli | mli 555, mlli 27 |
+| there | tmma | tma 220, tmma 22 |
+| working | khddam, khddama | khdam 143, khddam 27 |
+| like this | hakka | haka 221, hakka 33 |
+| shoes | sebbat | sbat 24, sbbat 8 |
+| tomorrow | ghedda | ghda 331, ghedda 17 |
+
+The list is in `force` in `data/raw/spelling.json`. DODa's Arabic can't settle this per word: its shadda
+marks follow the same writer's Latin (64% of doubled Latin rows have one, 0.8% of undoubled rows), and
+the common words never reach a useful share (`7ta` 4%, `mli` 2%). `ghedda` also keeps tomorrow apart
+from lunch, which stays `ghda` / `l-ghda`.
 
 A doubled first letter is never treated as optional: `mmi` (my mother) and `mi`, `bba` (my father)
 and `ba` are different words. Neither are stretched vowels (`bzaaaf`) or text-message abbreviations
@@ -106,7 +121,8 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
 - `keep`: words left as they are, mostly the French loanwords above.
 - `force`: a spelling chosen by hand, with the variants it replaces. Used where the model wrote a
   word the corpus spells differently (`bzzef`, `hed` for `bezzaf`, `had`), for loanwords
-  (`otel` → `otil`), and for **and** (`u` → `w`).
+  (`otel` → `otil`), for **and** (`u` → `w`), and for the doubled words above.
+- `tokens`: whole-word rewrites where the article decides the word (`l-gheda` → `l-ghda`, lunch).
 - `distinct`: spellings that look like variants of each other but are different words (`merra` once,
   `mra` woman; `sirr` secret, `sir` go; `qllb` look for, `qelb` heart).
 
@@ -121,6 +137,11 @@ change with the Latin spelling: schwa and doubled letters are not written in it.
 4. The example prompts (`STYLE` in `scripts/build_examples.py`, shared with `gemini_batch.py` and
    `review_examples.py`) state the letter rules and list the words the model has misspelled before.
 
-Not covered: conjugated verb forms keep the spelling `scripts/build_verbs.py` gives them, and
-`canon()` never rewrites them. Page text in `assets/*.js` and `*.html` mixes English and arabizi, so
+**Verbs follow rules, not counts.** Conjugated forms keep the spelling `scripts/build_verbs.py` gives them,
+and `canon()` never rewrites them. Only 3.7% of forms have enough data to decide, and following the
+counts would make tables uneven (`wselt wslti wslti wsel weslat wslna`) and merge different verbs
+(`qder` can, `qedder` estimate). The one exception is the particle `bli` (`bli` 294, `blli` 8), which
+`build_verbs.py` writes to match the rest of the site.
+
+Not covered: page text in `assets/*.js` and `*.html` mixes English and arabizi, so
 it was fixed by hand and is not tested.
