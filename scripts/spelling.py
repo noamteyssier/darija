@@ -23,7 +23,7 @@ COUNTS = ROOT / "data/raw/spelling_counts.json"
 MANUAL = ROOT / "data/raw/spelling.json"
 OUT = ROOT / "data/spelling.json"
 MIN, RATIO = 20, 1.5
-WORD = re.compile(r"[a-z0-9'-]+")
+WORD = re.compile(r"[A-Za-z0-9'-]+")
 
 
 def site(t):
@@ -158,7 +158,7 @@ def canon(text, spelling, keep=()):
     def fix(m):
         tok = m[0]
         art, stem = split(tok.lower())
-        if tok.lower() in keep or stem in keep:
+        if tok != tok.lower() or tok in keep or stem in keep:  # names (Thomas), book letters (meT3am)
             return tok
         new = tab.get(stem) or tab.get(vowels(stem), vowels(stem))
         if new == stem:

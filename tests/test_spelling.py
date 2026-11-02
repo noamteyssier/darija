@@ -33,6 +33,8 @@ class Canon(unittest.TestCase):
         for s in ("t-tobis", "s-salon", "mmi", "bba", "lli", "ma ktebtch"):
             self.assertEqual(sp.canon(s, S), s)
         self.assertEqual(sp.canon("ghedda", S, keep=["ghedda"]), "ghedda")
+        self.assertEqual(sp.canon("Thomas chrah liha", S), "Thomas chrah liha")
+        self.assertEqual(sp.canon("meT3am", S), "meT3am")
 
 
 class Map(unittest.TestCase):

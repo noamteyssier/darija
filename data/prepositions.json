@@ -64,7 +64,7 @@
           "en": "We can go (it is possible for us to go)"
         },
         {
-          "lat": "Thumas chrah liha",
+          "lat": "Thomas chrah liha",
           "ar": "توماس شراه ليها",
           "en": "Thomas bought it for her"
         }
@@ -1269,7 +1269,7 @@
       "prep": "mn",
       "prepAr": "من",
       "meaning": "be afraid of",
-      "exampleLat": "Jerry kay-khaf mn Tum",
+      "exampleLat": "Jerry kay-khaf mn Tom",
       "exampleAr": "جيري كايخاف من طوم",
       "exampleEn": "Jerry is afraid of Tom",
       "src": "PC 119"
