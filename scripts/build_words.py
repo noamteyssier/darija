@@ -10,6 +10,8 @@ import re
 import sys
 from pathlib import Path
 
+from spelling import canon_fields, load
+
 ROOT = Path(__file__).resolve().parent.parent
 GROUPS = ["time", "calendar", "direction"]
 KINDS = ["word", "phrase"]
@@ -21,10 +23,11 @@ def slug(s):
 
 def main():
     src = json.loads((ROOT / "data/raw/words.json").read_text(encoding="utf-8"))
-    words, seen = [], set()
+    words, seen, spelling = [], set(), load()
     for w in src["words"]:
         if w["group"] not in GROUPS or w["kind"] not in KINDS:
             raise ValueError(f"{w['lat']}: bad group or kind")
+        w = canon_fields(dict(w), spelling)
         wid = slug(w["lat"])
         if wid in seen:
             raise ValueError(f"duplicate id {wid}")

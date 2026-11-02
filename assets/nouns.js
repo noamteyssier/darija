@@ -16,10 +16,10 @@ const ADJ_FOR = {
   jdid: [...STUFF, 'places', 'time'], qdim: [...STUFF, 'places'],
   nqi: ['body', ...STUFF, 'places', 'animal'], mussekh: ['body', ...STUFF, 'places', 'animal'],
   ghali: [...STUFF, ...FOOD], rkhis: [...STUFF, ...FOOD], b3id: ['places'], qrib: ['places'], '7lu': ['family'], bsit: ['abstract'],
-  fer7an: ['family'], meskin: ['family', 'animal'], '3iyan': ['family', 'animal'], ji3an: ['family', 'animal'], meshghul: ['family'], mrid: ['family', 'animal'],
+  fer7an: ['family'], meskin: ['family', 'animal'], '3iyan': ['family', 'animal'], ji3an: ['family', 'animal'], mchghul: ['family'], mrid: ['family', 'animal'],
   byed: [...STUFF, 'animal'], k7el: [...STUFF, 'animal'], '7mer': STUFF, zreq: STUFF, khder: STUFF, sfer: STUFF,
 };
-const NO_AGREE = new Set(['bba', 'mmi', 'khu', 'khet', 'shems', 'sh3er']);
+const NO_AGREE = new Set(['bba', 'mmi', 'khu', 'khet', 'chems', 'ch3er']);
 const adjsFor = n => ADJS.filter(a => (ADJ_FOR[a.id] || []).includes(n.topic));
 
 const first = en => en.split(' / ')[0];
@@ -35,7 +35,7 @@ const G = { m: { lat: 'masculine', ar: 'مذكر' }, f: { lat: 'feminine', ar: '
 
 function genderWhy(n) {
   if (n.g === 'f' && /a$/.test(n.lat)) return n.lat + ' ends in -a, the usual sign of a feminine noun.';
-  if (n.g === 'f') return n.lat + ' is feminine without -a. Body parts that come in pairs, dar and shems are feminine anyway.';
+  if (n.g === 'f') return n.lat + ' is feminine without -a. Body parts that come in pairs, dar and chems are feminine anyway.';
   if (/a$/.test(n.lat)) return n.lat + ' ends in -a but is masculine. Watch for these.';
   return n.lat + ' ends in a consonant or another vowel, so it is masculine.';
 }
@@ -45,7 +45,7 @@ function articleSlip(defLat, rest) {
   const m = defLat.match(/^(\w+)-(.*)$/);
   if (!m || prefs.script === 'arabic') return [];
   const word = m[2];
-  const wrong = m[1] === 'l' ? word.match(/^(sh|kh|gh|.)/)[1] + '-' + word : 'l-' + word;
+  const wrong = m[1] === 'l' ? word.match(/^(ch|kh|gh|.)/)[1] + '-' + word : 'l-' + word;
   return [{ lat: wrong + rest, ar: '' }];
 }
 
@@ -66,7 +66,7 @@ const MODULES = {
   },
   dyal: {
     n: 2, title: 'The book of mine', sub: 'dyal: l-ktab dyali, d-dar dyalha',
-    intro: '<p>Put <strong>the</strong> on the noun and follow it with <strong>dyal</strong> plus an ending: l-ktab dyali, my book. dyal works with almost any noun, and it is the usual choice for things you own.</p><p><strong>the</strong> is l- before most letters but copies the first letter before t d r z s sh n l j and their emphatic forms: d-dar, s-sarut, t-tumubil.</p>',
+    intro: '<p>Put <strong>the</strong> on the noun and follow it with <strong>dyal</strong> plus an ending: l-ktab dyali, my book. dyal works with almost any noun, and it is the usual choice for things you own.</p><p><strong>the</strong> is l- before most letters but copies the first letter before t d r z s ch n l j and their emphatic forms: d-dar, s-sarut, t-tumubil.</p>',
     pool: () => NOUNS.filter(n => n.dyal).flatMap(n => st.owners.map(i => ({ n, i, key: 'dyal|' + n.id + '|' + i }))),
     render: ({ n, i }) => ({
       chip: 'dyal', gloss: n.en,
@@ -79,7 +79,7 @@ const MODULES = {
   },
   gender: {
     n: 3, title: 'Gender and agreement', sub: 'dar is feminine: dar kbira, d-dar l-kbira',
-    intro: '<p>Most nouns ending in <strong>-a</strong> are feminine; the rest are masculine. Exceptions: body parts that come in pairs (yedd, 3in, rjel, wden), dar and shems are feminine.</p><p>Adjectives come after the noun and add <strong>-a</strong> for a feminine noun: dar kbira, a big house. With <strong>the</strong>, both words take it: d-dar l-kbira. Without it on the adjective, d-dar kbira is a sentence: the house is big.</p>',
+    intro: '<p>Most nouns ending in <strong>-a</strong> are feminine; the rest are masculine. Exceptions: body parts that come in pairs (yedd, 3in, rjel, wden), dar and chems are feminine.</p><p>Adjectives come after the noun and add <strong>-a</strong> for a feminine noun: dar kbira, a big house. With <strong>the</strong>, both words take it: d-dar l-kbira. Without it on the adjective, d-dar kbira is a sentence: the house is big.</p>',
     pool: () => [
       ...NOUNS.map(n => ({ n, kind: 'g', key: 'g|' + n.id })),
       ...NOUNS.filter(n => !NO_AGREE.has(n.id)).flatMap(n => adjsFor(n).flatMap(a => [0, 1].map(d => ({ n, a, d, kind: 'a', key: 'a|' + n.id + '|' + a.id + '|' + d })))),

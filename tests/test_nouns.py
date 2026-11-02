@@ -21,7 +21,7 @@ class Nouns(unittest.TestCase):
         self.assertNotIn("dyal", N["bba"])
 
     def test_definite(self):
-        self.assertEqual(N["shems"]["def"]["lat"], "sh-shems")
+        self.assertEqual(N["chems"]["def"]["lat"], "ch-chems")
         self.assertEqual(N["kelb"]["def"]["lat"], "l-kelb")
         self.assertEqual(A["kbir"]["def"]["lat"], ["l-kbir", "l-kbira", "l-kbar"])
 

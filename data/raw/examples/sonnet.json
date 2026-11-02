@@ -14,27 +14,27 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tqedru tshufu l-film f d-dar",
+   "lat": "ghadi tqedru tchufu l-film f d-dar",
    "ar": "غادي تقدرو تشوفو الفيلم فالدار",
    "en": "You will be able to watch the film at home."
   }
  ],
- "shreb": [
+ "chreb": [
   {
    "slot": 0,
-   "lat": "sherbu l-atay f l-qahwa",
+   "lat": "cherbu l-atay f l-qahwa",
    "ar": "شربو الاتاي فالقهوة",
    "en": "They drank tea at the café."
   },
   {
    "slot": 1,
-   "lat": "kansherbu l-7lib f s-sba7",
+   "lat": "kancherbu l-7lib f s-sba7",
    "ar": "كنشربو الحليب فالصباح",
    "en": "We drink milk in the morning."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshreb l-ma daba",
+   "lat": "ghadi ychreb l-ma daba",
    "ar": "غادي يشرب الما دابا",
    "en": "He is going to drink water now."
   }
@@ -108,7 +108,7 @@
   },
   {
    "slot": 1,
-   "lat": "kantel3u l s-sta7 f l-3shiya",
+   "lat": "kantel3u l s-sta7 f l-3chiya",
    "ar": "كنطلعو للسطح فالعشية",
    "en": "We go up to the roof in the evening."
   },
@@ -219,22 +219,22 @@
    "en": "You will bring the money tomorrow."
   }
  ],
- "shra": [
+ "chra": [
   {
    "slot": 0,
-   "lat": "shrit tumubil jdida",
+   "lat": "chrit tumubil jdida",
    "ar": "شريت طوموبيل جديدة",
    "en": "I bought a new car."
   },
   {
    "slot": 1,
-   "lat": "katshri l-khodra mn s-suq",
+   "lat": "katchri l-khodra mn s-suq",
    "ar": "كتشري الخضرة من السوق",
    "en": "You buy vegetables from the market."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshri 7wayej jdad l l-3id",
+   "lat": "ghadi tchri 7wayej jdad l l-3id",
    "ar": "غادي تشري حوايج جداد للعيد",
    "en": "She will buy new clothes for Eid."
   }
@@ -282,7 +282,7 @@
  "ja": [
   {
    "slot": 0,
-   "lat": "jaw l d-dar dyalna f l-3shiya",
+   "lat": "jaw l d-dar dyalna f l-3chiya",
    "ar": "جاو للدار ديالنا فالعشية",
    "en": "They came to our house in the evening."
   },
@@ -368,7 +368,7 @@
   },
   {
    "slot": 1,
-   "lat": "shnu katdiru f l-3otla",
+   "lat": "chnu katdiru f l-3otla",
    "ar": "شنو كتديرو فالعطلة",
    "en": "What do you all do during the holiday?"
   },
@@ -502,7 +502,7 @@
  "t3uwed": [
   {
    "slot": 0,
-   "lat": "t3uwedti tshrebi l-qehwa bla sukkar",
+   "lat": "t3uwedti tchrebi l-qehwa bla sukkar",
    "ar": "تعودتي تشربي القهوة بلا سكر",
    "en": "You got accustomed to drinking coffee without sugar."
   },
@@ -522,7 +522,7 @@
  "wellef": [
   {
    "slot": 0,
-   "lat": "wellfat l-3ish f r-rbat",
+   "lat": "wellfat l-3ich f r-rbat",
    "ar": "ولفات العيش فالرباط",
    "en": "She got used to life in Rabat."
   },
@@ -534,7 +534,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nwellfu had l-7ay ba3d shi shhur",
+   "lat": "ghadi nwellfu had l-7ay ba3d chi chhur",
    "ar": "غادي نولفو هاد الحي بعد شي شهور",
    "en": "We will get used to this neighborhood after a few months."
   }
@@ -542,7 +542,7 @@
  "wje3": [
   {
    "slot": 0,
-   "lat": "rasha wej3at l-bare7",
+   "lat": "racha wej3at l-bare7",
    "ar": "راسها وجعات البارح",
    "en": "Her head ached yesterday."
   },
@@ -654,7 +654,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yzid shwiya dyal l-ma",
+   "lat": "ghadi yzid chwiya dyal l-ma",
    "ar": "غادي يزيد شوية ديال الما",
    "en": "He is going to add a little water."
   }
@@ -688,7 +688,7 @@
   },
   {
    "slot": 1,
-   "lat": "kattqeddem shwiya b shwiya f d-darija",
+   "lat": "kattqeddem chwiya b chwiya f d-darija",
    "ar": "كتتقدم شوية بشوية فالدارجة",
    "en": "You are progressing little by little in Darija."
   },
@@ -714,7 +714,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tnes7u khukum bach ma ysafersh",
+   "lat": "ghadi tnes7u khukum bach ma ysaferch",
    "ar": "غادي تنصحو خوكم باش ما يسافرش",
    "en": "You will advise your brother not to travel."
   }
@@ -739,22 +739,22 @@
    "en": "I am going to affect this decision."
   }
  ],
- "shref": [
+ "chref": [
   {
    "slot": 0,
-   "lat": "shrefti bzaf f had s-snin",
+   "lat": "chrefti bzaf f had s-snin",
    "ar": "شرفتي بزاف فهاد السنين",
    "en": "You aged a lot in these years."
   },
   {
    "slot": 1,
-   "lat": "katshref mnin katkhdem bzaf",
+   "lat": "katchref mnin katkhdem bzaf",
    "ar": "كتشرف منين كتخدم بزاف",
    "en": "You age when you work a lot."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshref ila bqat tkhdem hakka",
+   "lat": "ghadi tchref ila bqat tkhdem hakka",
    "ar": "غادي تشرف إلا بقات تخدم هاكا",
    "en": "She will get old if she keeps working like this."
   }
@@ -768,7 +768,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanttafqu m3a l-jiran 3la kolshi",
+   "lat": "kanttafqu m3a l-jiran 3la kolchi",
    "ar": "كنتافقو مع الجيران على كلشي",
    "en": "We agree with the neighbors on everything."
   },
@@ -779,22 +779,22 @@
    "en": "You will agree with the manager on the price."
   }
  ],
- "neshshet": [
+ "nechchet": [
   {
    "slot": 0,
-   "lat": "neshshet l-wlad b n-nukat dyalu",
+   "lat": "nechchet l-wlad b n-nukat dyalu",
    "ar": "نشط الولاد بالنكت ديالو",
    "en": "He amused the kids with his jokes."
   },
   {
    "slot": 1,
-   "lat": "kanneshshet l-wlad f l-7efla dyal khuya",
+   "lat": "kannechchet l-wlad f l-7efla dyal khuya",
    "ar": "كننشط الولاد فالحفلة ديال خويا",
    "en": "I entertain the kids at my brother's party."
   },
   {
    "slot": 2,
-   "lat": "ghadi tneshshti n-nas f l-3urs dyalna",
+   "lat": "ghadi tnechchti n-nas f l-3urs dyalna",
    "ar": "غادي تنشطي الناس فالعرس ديالنا",
    "en": "You will entertain the people at our wedding."
   }
@@ -814,7 +814,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yde77ek 3lik ila shafek hakka",
+   "lat": "ghadi yde77ek 3lik ila chafek hakka",
    "ar": "غادي يضحك عليك إيلا شافك هكا",
    "en": "He will make fun of you if he sees you like this."
   }
@@ -828,13 +828,13 @@
   },
   {
    "slot": 1,
-   "lat": "kat7ellel l-ma3lumat dyal sh-sharika",
+   "lat": "kat7ellel l-ma3lumat dyal ch-charika",
    "ar": "كتحلل المعلومات ديال الشركة",
    "en": "She analyzes the company's information."
   },
   {
    "slot": 2,
-   "lat": "ghadi t7ellel l-mushkil m3ana ghedda",
+   "lat": "ghadi t7ellel l-muchkil m3ana ghedda",
    "ar": "غادي تحلل المشكل معانا غدا",
    "en": "You are going to analyze the problem with us tomorrow."
   }
@@ -854,7 +854,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ttqelleq ila ma jitish ghedda",
+   "lat": "ghadi ttqelleq ila ma jitich ghedda",
    "ar": "غادي تتقلق إيلا ما جيتيش غدا",
    "en": "She will be upset if you don't come tomorrow."
   }
@@ -948,7 +948,7 @@
   },
   {
    "slot": 1,
-   "lat": "kayqeddmu talab f bzzaf dyal sh-shrikat",
+   "lat": "kayqeddmu talab f bzzaf dyal ch-chrikat",
    "ar": "كيقدمو طلب فبزاف ديال الشركات",
    "en": "They apply to a lot of companies."
   },
@@ -1008,7 +1008,7 @@
   },
   {
    "slot": 1,
-   "lat": "kattkhasmi m3a khtek 3la shi 7aja sghira",
+   "lat": "kattkhasmi m3a khtek 3la chi 7aja sghira",
    "ar": "كتتخاصمي مع ختك على شي حاجة صغيرة",
    "en": "You argue with your sister over something small."
   },
@@ -1039,22 +1039,22 @@
    "en": "They are going to tidy up the house before the guests come."
   }
  ],
- "shedd": [
+ "chedd": [
   {
    "slot": 0,
-   "lat": "shedditu l-7rami f s-suq",
+   "lat": "chedditu l-7rami f s-suq",
    "ar": "شديتو الحرامي فالسوق",
    "en": "You caught the thief in the market."
   },
   {
    "slot": 1,
-   "lat": "kayshedd l-kas b ydu",
+   "lat": "kaychedd l-kas b ydu",
    "ar": "كيشد الكاس بيدو",
    "en": "He holds the glass with his hand."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshedd l-bab 7ta nji",
+   "lat": "ghadi tchedd l-bab 7ta nji",
    "ar": "غادي تشد الباب حتى نجي",
    "en": "She is going to hold the door until I come."
   }
@@ -1074,7 +1074,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi n7bes hna bash nshri l-khobz",
+   "lat": "ghadi n7bes hna bach nchri l-khobz",
    "ar": "غادي نحبس هنا باش نشري الخبز",
    "en": "I'm going to stop here to buy bread."
   }
@@ -1094,7 +1094,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nqbet 3lih ila shefto",
+   "lat": "ghadi nqbet 3lih ila chefto",
    "ar": "غادي نقبط عليه إيلا شفتو",
    "en": "I'm going to catch him if I see him."
   }
@@ -1174,7 +1174,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yhjem 3liya ila shafni hna",
+   "lat": "ghadi yhjem 3liya ila chafni hna",
    "ar": "غادي يهجم عليا إيلا شافني هنا",
    "en": "He is going to attack me if he sees me here."
   }
@@ -1242,7 +1242,7 @@
  "tjenneb": [
   {
    "slot": 0,
-   "lat": "tjennebna l-mushkil f l-khedma",
+   "lat": "tjennebna l-muchkil f l-khedma",
    "ar": "تجنبنا المشكل فالخدمة",
    "en": "We avoided the problem at work."
   },
@@ -1279,22 +1279,22 @@
    "en": "You all are going to make fun of your friend."
   }
  ],
- "tshetter": [
+ "tchetter": [
   {
    "slot": 0,
-   "lat": "tshetterti mzyan f s-suq",
+   "lat": "tchetterti mzyan f s-suq",
    "ar": "تشطرتي مزيان فالسوق",
    "en": "You bargained well at the market."
   },
   {
    "slot": 1,
-   "lat": "kantshetter dima m3a l-bayya3",
+   "lat": "kantchetter dima m3a l-bayya3",
    "ar": "كنتشطر ديما مع البياع",
    "en": "I always bargain with the seller."
   },
   {
    "slot": 2,
-   "lat": "ghadi ytshetter 3la t-taman",
+   "lat": "ghadi ytchetter 3la t-taman",
    "ar": "غادي يتشطر على الثمن",
    "en": "He's going to bargain over the price."
   }
@@ -1314,7 +1314,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nnbe7 daba bash nkhwef khuya",
+   "lat": "ghadi nnbe7 daba bach nkhwef khuya",
    "ar": "غادي ننبح دابا باش نخوف خويا",
    "en": "I'm going to bark now to scare my brother."
   }
@@ -1322,7 +1322,7 @@
  "t7emmem": [
   {
    "slot": 0,
-   "lat": "t7emmemt qbel l-3sha",
+   "lat": "t7emmemt qbel l-3cha",
    "ar": "تحممت قبل العشا",
    "en": "I bathed before dinner."
   },
@@ -1334,7 +1334,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tt7emmemi mn b3d l-3sha",
+   "lat": "ghadi tt7emmemi mn b3d l-3cha",
    "ar": "غادي تتحممي من بعد العشا",
    "en": "You're going to bathe after dinner."
   }
@@ -1462,7 +1462,7 @@
  "tgerre3": [
   {
    "slot": 0,
-   "lat": "tgerr3at mn b3d l-3sha",
+   "lat": "tgerr3at mn b3d l-3cha",
    "ar": "تڭرعات من بعد العشا",
    "en": "She burped after dinner."
   },
@@ -1474,7 +1474,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi ttgerr3i qeddam n-nas",
+   "lat": "wach ghadi ttgerr3i qeddam n-nas",
    "ar": "واش غادي تتڭرعي قدام الناس",
    "en": "Are you going to burp in front of people?"
   }
@@ -1482,7 +1482,7 @@
  "tiyeq": [
   {
    "slot": 0,
-   "lat": "tiyeq khuh f kul shi",
+   "lat": "tiyeq khuh f kul chi",
    "ar": "تيق خوه فكل شي",
    "en": "He believed his brother in everything."
   },
@@ -1508,13 +1508,13 @@
   },
   {
    "slot": 1,
-   "lat": "kanamen b had l-mushru3 bzaf",
+   "lat": "kanamen b had l-muchru3 bzaf",
    "ar": "كنامن بهاد المشروع بزاف",
    "en": "I really believe in this project."
   },
   {
    "slot": 2,
-   "lat": "ghadi tamen b rasha mni tnja7",
+   "lat": "ghadi tamen b racha mni tnja7",
    "ar": "غادي تامن براسها مني تنجح",
    "en": "She'll believe in herself when she succeeds."
   }
@@ -1554,7 +1554,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ykhun sa7bu bash yakhed l-flus",
+   "lat": "ghadi ykhun sa7bu bach yakhed l-flus",
    "ar": "غادي يخون صاحبو باش ياخد الفلوس",
    "en": "He's going to betray his friend to take the money."
   }
@@ -1568,13 +1568,13 @@
   },
   {
    "slot": 1,
-   "lat": "kankebbru l-7erf bash nqraw mzyan",
+   "lat": "kankebbru l-7erf bach nqraw mzyan",
    "ar": "كنكبرو الحرف باش نقراو مزيان",
    "en": "We enlarge the letters so we can read well."
   },
   {
    "slot": 2,
-   "lat": "ghadi tkebber l-kherita bash tban mzyan",
+   "lat": "ghadi tkebber l-kherita bach tban mzyan",
    "ar": "غادي تكبر الخريطة باش تبان مزيان",
    "en": "She'll enlarge the map so it shows up well."
   }
@@ -1582,19 +1582,19 @@
  "wled": [
   {
    "slot": 0,
-   "lat": "weldat bent jmila f l-mustashfa",
+   "lat": "weldat bent jmila f l-mustachfa",
    "ar": "ولدات بنت جميلة فالمستشفى",
    "en": "She gave birth to a beautiful girl at the hospital."
   },
   {
    "slot": 1,
-   "lat": "n-nsa kayweldu f l-mustashfa",
+   "lat": "n-nsa kayweldu f l-mustachfa",
    "ar": "النسا كيولدو فالمستشفى",
    "en": "Women give birth at the hospital."
   },
   {
    "slot": 2,
-   "lat": "ghadi nwled f sh-shher j-jay",
+   "lat": "ghadi nwled f ch-chher j-jay",
    "ar": "غادي نولد فالشهر الجاي",
    "en": "I'm going to give birth next month."
   }
@@ -1662,7 +1662,7 @@
  "ghella": [
   {
    "slot": 0,
-   "lat": "wash ghelliti l-7elib?",
+   "lat": "wach ghelliti l-7elib?",
    "ar": "واش غليتي الحليب؟",
    "en": "Did you boil the milk?"
   },
@@ -1682,19 +1682,19 @@
  "tzad": [
   {
    "slot": 0,
-   "lat": "wash tzaditi f l-maghrib?",
+   "lat": "wach tzaditi f l-maghrib?",
    "ar": "واش تزاديتي فالمغرب؟",
    "en": "Were you born in Morocco?"
   },
   {
    "slot": 1,
-   "lat": "kul wa7ed kaytzad f l-mustashfa",
+   "lat": "kul wa7ed kaytzad f l-mustachfa",
    "ar": "كل واحد كيتزاد فالمستشفى",
    "en": "Everyone is born in the hospital."
   },
   {
    "slot": 2,
-   "lat": "bentha ghadi ttzad f shher jay",
+   "lat": "bentha ghadi ttzad f chher jay",
    "ar": "بنتها غادي تتزاد فشهر جاي",
    "en": "Her daughter is going to be born next month."
   }
@@ -1748,7 +1748,7 @@
   },
   {
    "slot": 1,
-   "lat": "katherrsu kul shi f d-dar",
+   "lat": "katherrsu kul chi f d-dar",
    "ar": "كتهرسو كل شي فالدار",
    "en": "You break everything in the house."
   },
@@ -1802,7 +1802,7 @@
  "tneffes": [
   {
    "slot": 0,
-   "lat": "wash tneffesti mzyan?",
+   "lat": "wach tneffesti mzyan?",
    "ar": "واش تنفستي مزيان؟",
    "en": "Did you breathe well?"
   },
@@ -1814,27 +1814,27 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ntneffes shwiya f l-ghaba",
+   "lat": "ghadi ntneffes chwiya f l-ghaba",
    "ar": "غادي نتنفس شوية فالغابة",
    "en": "I'm going to breathe a bit in the forest."
   }
  ],
- "mshet": [
+ "mchet": [
   {
    "slot": 0,
-   "lat": "wash mshetti sha3rek?",
+   "lat": "wach mchetti cha3rek?",
    "ar": "واش مشطتي شعرك؟",
    "en": "Did you brush your hair?"
   },
   {
    "slot": 1,
-   "lat": "kaymshet sha3ru kul sba7",
+   "lat": "kaymchet cha3ru kul sba7",
    "ar": "كيمشط شعرو كل صباح",
    "en": "He brushes his hair every morning."
   },
   {
    "slot": 2,
-   "lat": "ghadi tmeshtu sha3rekum qbel l-madrasa",
+   "lat": "ghadi tmechtu cha3rekum qbel l-madrasa",
    "ar": "غادي تمشطو شعركم قبل المدرسة",
    "en": "You are going to brush your hair before school."
   }
@@ -1882,7 +1882,7 @@
  "te7req": [
   {
    "slot": 0,
-   "lat": "te7reqtu mn sh-shems f l-bhar",
+   "lat": "te7reqtu mn ch-chems f l-bhar",
    "ar": "تحرقتو من الشمس فالبحر",
    "en": "You got sunburnt at the beach."
   },
@@ -1894,7 +1894,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tte7rqi mn sh-shems l-yum",
+   "lat": "ghadi tte7rqi mn ch-chems l-yum",
    "ar": "غادي تتحرقي من الشمس اليوم",
    "en": "You are going to get sunburnt today."
   }
@@ -1922,7 +1922,7 @@
  "dfen": [
   {
    "slot": 0,
-   "lat": "wash dfenti l-flus f l-jnan?",
+   "lat": "wach dfenti l-flus f l-jnan?",
    "ar": "واش دفنتي الفلوس فالجنان؟",
    "en": "Did you bury the money in the garden?"
   },
@@ -1942,7 +1942,7 @@
  "dreb": [
   {
    "slot": 0,
-   "lat": "wash drebti t-tilifun l mama?",
+   "lat": "wach drebti t-tilifun l mama?",
    "ar": "واش ضربتي التيليفون لماما؟",
    "en": "Did you call mom?"
   },
@@ -1962,7 +1962,7 @@
  "thenna": [
   {
    "slot": 0,
-   "lat": "thennaw mn had l-mushkil",
+   "lat": "thennaw mn had l-muchkil",
    "ar": "تهناو من هاد المشكل",
    "en": "They got rid of this problem."
   },
@@ -2019,22 +2019,22 @@
    "en": "You're going to lift this table by yourself."
   }
  ],
- "nqesh": [
+ "nqech": [
   {
    "slot": 0,
-   "lat": "nqesht had l-khshba b yeddi",
+   "lat": "nqecht had l-khchba b yeddi",
    "ar": "نقشت هاد الخشبة بيدي",
    "en": "I carved this piece of wood by hand."
   },
   {
    "slot": 1,
-   "lat": "kaynqesh l-khshab f d-dar",
+   "lat": "kaynqech l-khchab f d-dar",
    "ar": "كينقش الخشب فالدار",
    "en": "He carves wood at home."
   },
   {
    "slot": 2,
-   "lat": "ghadi nneqshu had l-bab ghedda",
+   "lat": "ghadi nneqchu had l-bab ghedda",
    "ar": "غادي ننقشو هاد الباب غدا",
    "en": "We're going to carve this door tomorrow."
   }
@@ -2102,19 +2102,19 @@
  "sebbeb": [
   {
    "slot": 0,
-   "lat": "sebbebt mushkil l khuya",
+   "lat": "sebbebt muchkil l khuya",
    "ar": "سببت مشكل لخويا",
    "en": "I caused my brother a problem."
   },
   {
    "slot": 1,
-   "lat": "had n-nas kaysebbebu mushkil kbir",
+   "lat": "had n-nas kaysebbebu muchkil kbir",
    "ar": "هاد الناس كيسببو مشكل كبير",
    "en": "These people cause a big problem."
   },
   {
    "slot": 2,
-   "lat": "ghadi ysebbeb lina mushkil kbir",
+   "lat": "ghadi ysebbeb lina muchkil kbir",
    "ar": "غادي يسبب لينا مشكل كبير",
    "en": "He's going to cause us a big problem."
   }
@@ -2122,19 +2122,19 @@
  "tsebbeb": [
   {
    "slot": 0,
-   "lat": "tsebbebat f had l-mushkil",
+   "lat": "tsebbebat f had l-muchkil",
    "ar": "تسببات فهاد المشكل",
    "en": "She caused this problem."
   },
   {
    "slot": 1,
-   "lat": "kattsebbebi f mushkil kbir",
+   "lat": "kattsebbebi f muchkil kbir",
    "ar": "كتتسببي فمشكل كبير",
    "en": "You are causing a big problem."
   },
   {
    "slot": 2,
-   "lat": "ghadi ntsebbeb f mushkil l khuya",
+   "lat": "ghadi ntsebbeb f muchkil l khuya",
    "ar": "غادي نتسبب فمشكل لخويا",
    "en": "I'm going to cause a problem for my brother."
   }
@@ -2168,7 +2168,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanraqbu l-flus dyalna kul shher",
+   "lat": "kanraqbu l-flus dyalna kul chher",
    "ar": "كنراقبو الفلوس ديالنا كل شهر",
    "en": "We keep an eye on our money every month."
   },
@@ -2239,22 +2239,22 @@
    "en": "They'll be in charge of tomorrow's party."
   }
  ],
- "gheshsh": [
+ "ghechch": [
   {
    "slot": 0,
-   "lat": "gheshshitu f l-imti7an",
+   "lat": "ghechchitu f l-imti7an",
    "ar": "غشيتو فالامتحان",
    "en": "You cheated on the exam."
   },
   {
    "slot": 1,
-   "lat": "kaygheshshu dima f l-imti7an",
+   "lat": "kayghechchu dima f l-imti7an",
    "ar": "كيغشو ديما فالامتحان",
    "en": "They always cheat on the exam."
   },
   {
    "slot": 2,
-   "lat": "wash ghadi tgheshsh f had l-lu3ba",
+   "lat": "wach ghadi tghechch f had l-lu3ba",
    "ar": "واش غادي تغش فهاد اللعبة",
    "en": "Are you going to cheat in this game?"
   }
@@ -2279,22 +2279,22 @@
    "en": "You're going to copy the homework from your friend."
   }
  ],
- "shmet": [
+ "chmet": [
   {
    "slot": 0,
-   "lat": "shmet sa7bu f l-flus",
+   "lat": "chmet sa7bu f l-flus",
    "ar": "شمت صاحبو فالفلوس",
    "en": "He cheated his friend out of the money."
   },
   {
    "slot": 1,
-   "lat": "katshemti n-nas f t-tman dima",
+   "lat": "katchemti n-nas f t-tman dima",
    "ar": "كتشمتي الناس فالتمن ديما",
    "en": "You always trick people on the price."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshmet z-zbun f l-7sab",
+   "lat": "ghadi tchmet z-zbun f l-7sab",
    "ar": "غادي تشمت الزبون فالحساب",
    "en": "She's going to cheat the customer on the bill."
   }
@@ -2314,7 +2314,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ymedghu l-lham b shwiya",
+   "lat": "ghadi ymedghu l-lham b chwiya",
    "ar": "غادي يمضغو اللحم بشوية",
    "en": "They're going to chew the meat slowly."
   }
@@ -2342,7 +2342,7 @@
  "mkhed": [
   {
    "slot": 0,
-   "lat": "mekhdu l-7lib bash ydiru z-zebda",
+   "lat": "mekhdu l-7lib bach ydiru z-zebda",
    "ar": "مخضو الحليب باش يديرو الزبدة",
    "en": "They churned the milk to make butter."
   },
@@ -2359,22 +2359,22 @@
    "en": "He's going to churn the milk at my grandfather's."
   }
  ],
- "shre7": [
+ "chre7": [
   {
    "slot": 0,
-   "lat": "shre7 lina d-dars mzyan",
+   "lat": "chre7 lina d-dars mzyan",
    "ar": "شرح لينا الدرس مزيان",
    "en": "He explained the lesson to us well."
   },
   {
    "slot": 1,
-   "lat": "kansher7u l-mushkil l l-mudir",
+   "lat": "kancher7u l-muchkil l l-mudir",
    "ar": "كنشرحو المشكل للمدير",
    "en": "We explain the problem to the manager."
   },
   {
    "slot": 2,
-   "lat": "ghadi nshre7 lik kulshi daba",
+   "lat": "ghadi nchre7 lik kulchi daba",
    "ar": "غادي نشرح ليك كلشي دابا",
    "en": "I'm going to explain everything to you now."
   }
@@ -2394,7 +2394,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ywedde7 lina kulshi ghedda",
+   "lat": "ghadi ywedde7 lina kulchi ghedda",
    "ar": "غادي يوضح لينا كلشي غدا",
    "en": "He's going to clarify everything for us tomorrow."
   }
@@ -2428,7 +2428,7 @@
   },
   {
    "slot": 1,
-   "lat": "katserre7 l-qadus dyal l-kuzina kul shher",
+   "lat": "katserre7 l-qadus dyal l-kuzina kul chher",
    "ar": "كتسرح القادوس ديال الكوزينة كل شهر",
    "en": "She cleans the kitchen pipe every month."
   },
@@ -2474,7 +2474,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nghemmdu 3aynina shwiya",
+   "lat": "ghadi nghemmdu 3aynina chwiya",
    "ar": "غادي نغمضو عينينا شوية",
    "en": "We're going to close our eyes for a bit."
   }
@@ -2508,7 +2508,7 @@
   },
   {
    "slot": 1,
-   "lat": "d-dyur l-qdima kayribu f sh-shta",
+   "lat": "d-dyur l-qdima kayribu f ch-chta",
    "ar": "الديور القديمة كيريبو فالشتا",
    "en": "The old houses collapse in the rain."
   },
@@ -2534,7 +2534,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yjme3 l-flus bash yshri t-tumubil",
+   "lat": "ghadi yjme3 l-flus bach ychri t-tumubil",
    "ar": "غادي يجمع الفلوس باش يشري الطوموبيل",
    "en": "He's going to save up money to buy the car."
   }
@@ -2568,7 +2568,7 @@
   },
   {
    "slot": 1,
-   "lat": "katqarnu bin l-as3ar qbel ma tshriw",
+   "lat": "katqarnu bin l-as3ar qbel ma tchriw",
    "ar": "كتقارنو بين الاسعار قبل ما تشريو",
    "en": "You (pl.) compare the prices before you buy."
   },
@@ -2579,22 +2579,22 @@
    "en": "I'm going to compare these two phones."
   }
  ],
- "tshekka": [
+ "tchekka": [
   {
    "slot": 0,
-   "lat": "tshekkiti mn l-jar dyalek l-bare7",
+   "lat": "tchekkiti mn l-jar dyalek l-bare7",
    "ar": "تشكيتي من الجار ديالك البارح",
    "en": "You complained about your neighbor yesterday."
   },
   {
    "slot": 1,
-   "lat": "kaytshekkaw dima mn l-khedma",
+   "lat": "kaytchekkaw dima mn l-khedma",
    "ar": "كيتشكاو ديما من الخدمة",
    "en": "They always complain about work."
   },
   {
    "slot": 2,
-   "lat": "ghadi ttshekka 3la had l-mushkil",
+   "lat": "ghadi ttchekka 3la had l-muchkil",
    "ar": "غادي تتشكا على هاد المشكل",
    "en": "You're going to complain about this problem."
   }
@@ -2654,7 +2654,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yhettmu b had l-mushkil ghedda",
+   "lat": "ghadi yhettmu b had l-muchkil ghedda",
    "ar": "غادي يهتمو بهاد المشكل غدا",
    "en": "They're going to deal with this problem tomorrow."
   }
@@ -2739,22 +2739,22 @@
    "en": "You (pl.) are going to tie the tent with the rope."
   }
  ],
- "tshawer": [
+ "tchawer": [
   {
    "slot": 0,
-   "lat": "tshawer m3a khuh qbel ma yshri d-dar",
+   "lat": "tchawer m3a khuh qbel ma ychri d-dar",
    "ar": "تشاور مع خوه قبل ما يشري الدار",
    "en": "He consulted his brother before he bought the house."
   },
   {
    "slot": 1,
-   "lat": "kaytshawru m3a babahum f kul 7aja",
+   "lat": "kaytchawru m3a babahum f kul 7aja",
    "ar": "كيتشاورو مع باباهم فكل حاجة",
    "en": "They consult their father about everything."
   },
   {
    "slot": 2,
-   "lat": "ghadi ttshawri m3a t-tbib ghedda",
+   "lat": "ghadi ttchawri m3a t-tbib ghedda",
    "ar": "غادي تتشاوري مع الطبيب غدا",
    "en": "You (f.) are going to consult the doctor tomorrow."
   }
@@ -2774,7 +2774,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ttasel b sh-sherika ghedda",
+   "lat": "ghadi ttasel b ch-cherika ghedda",
    "ar": "غادي تتاصل بالشركة غدا",
    "en": "You're going to contact the company tomorrow."
   }
@@ -2842,13 +2842,13 @@
  "sahem": [
   {
    "slot": 0,
-   "lat": "khuya sahem f had l-mashru3",
+   "lat": "khuya sahem f had l-machru3",
    "ar": "خويا ساهم فهاد المشروع",
    "en": "My brother contributed to this project."
   },
   {
    "slot": 1,
-   "lat": "katsahem f masarif d-dar kul shhar",
+   "lat": "katsahem f masarif d-dar kul chhar",
    "ar": "كتساهم فمصاريف الدار كل شهر",
    "en": "You contribute to the household expenses every month."
   },
@@ -2868,7 +2868,7 @@
   },
   {
    "slot": 1,
-   "lat": "kayt7ekkem f kolshi f d-dar",
+   "lat": "kayt7ekkem f kolchi f d-dar",
    "ar": "كيتحكم فكلشي فالدار",
    "en": "He controls everything at home."
   },
@@ -2908,7 +2908,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaysellku b shwiya dyal l-flus",
+   "lat": "kaysellku b chwiya dyal l-flus",
    "ar": "كيسلكو بشوية ديال الفلوس",
    "en": "They cope with a little money."
   },
@@ -2988,7 +2988,7 @@
   },
   {
    "slot": 1,
-   "lat": "katke77u bzzaf f sh-shta",
+   "lat": "katke77u bzzaf f ch-chta",
    "ar": "كتكحو بزاف فالشتا",
    "en": "You cough a lot in the winter."
   },
@@ -3039,22 +3039,22 @@
    "en": "I'm going to count my money now."
   }
  ],
- "khsha": [
+ "khcha": [
   {
    "slot": 0,
-   "lat": "khshiti l-ktub kamlin f s-sak",
+   "lat": "khchiti l-ktub kamlin f s-sak",
    "ar": "خشيتي الكتب كاملين فالساك",
    "en": "You crammed all the books into the bag."
   },
   {
    "slot": 1,
-   "lat": "katkhshi l-7wayej f l-balisa",
+   "lat": "katkhchi l-7wayej f l-balisa",
    "ar": "كتخشي الحوايج فالباليزة",
    "en": "You cram the clothes into the suitcase."
   },
   {
    "slot": 2,
-   "lat": "ghadi nkhshiw kolshi f t-tumubil",
+   "lat": "ghadi nkhchiw kolchi f t-tumubil",
    "ar": "غادي نخشيو كلشي فالطوموبيل",
    "en": "We're going to cram everything into the car."
   }
@@ -3074,7 +3074,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi t7meq ila shafet n-natija",
+   "lat": "ghadi t7meq ila chafet n-natija",
    "ar": "غادي تحمق إلا شافت النتيجة",
    "en": "She's going to go crazy if she sees the result."
   }
@@ -3102,19 +3102,19 @@
  "khleq": [
   {
    "slot": 0,
-   "lat": "hiya khelqat mushkil kbir f d-dar",
+   "lat": "hiya khelqat muchkil kbir f d-dar",
    "ar": "هي خلقات مشكل كبير فالدار",
    "en": "She created a big problem at home."
   },
   {
    "slot": 1,
-   "lat": "kankhleq shi 7aja jdida kul nhar",
+   "lat": "kankhleq chi 7aja jdida kul nhar",
    "ar": "كنخلق شي حاجة جديدة كل نهار",
    "en": "I create something new every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi tkhelqi shi mashru3 dyalek",
+   "lat": "ghadi tkhelqi chi machru3 dyalek",
    "ar": "غادي تخلقي شي مشروع ديالك",
    "en": "You're going to create a project of your own."
   }
@@ -3148,13 +3148,13 @@
   },
   {
    "slot": 1,
-   "lat": "kayleqqmu sh-shejer f l-fesl dyal r-rbi3",
+   "lat": "kayleqqmu ch-chejer f l-fesl dyal r-rbi3",
    "ar": "كيلقمو الشجر فالفصل ديال الربيع",
    "en": "They graft trees in the spring season."
   },
   {
    "slot": 2,
-   "lat": "ghadi yleqqem sh-shejra dyalu ghedda",
+   "lat": "ghadi yleqqem ch-chejra dyalu ghedda",
    "ar": "غادي يلقم الشجرة ديالو غدا",
    "en": "He's going to graft his tree tomorrow."
   }
@@ -3188,13 +3188,13 @@
   },
   {
    "slot": 1,
-   "lat": "katdawiw l-merd b l-3shab",
+   "lat": "katdawiw l-merd b l-3chab",
    "ar": "كتداويو المريض بالعشب",
    "en": "You treat the patient with herbs."
   },
   {
    "slot": 2,
-   "lat": "ghadi tdawi l-wlid f l-mustashfa",
+   "lat": "ghadi tdawi l-wlid f l-mustachfa",
    "ar": "غادي تداوي الولد فالمستشفى",
    "en": "She's going to treat the boy at the hospital."
   }
@@ -3214,7 +3214,7 @@
   },
   {
    "slot": 2,
-   "lat": "khuya ghadi ybra b3d shi iyam",
+   "lat": "khuya ghadi ybra b3d chi iyam",
    "ar": "خويا غادي يبرا بعد شي ايام",
    "en": "My brother will get well after a few days."
   }
@@ -3222,7 +3222,7 @@
  "7essen": [
   {
    "slot": 0,
-   "lat": "wesh 7essenti sh-sh3ar dyalek lyum",
+   "lat": "wech 7essenti ch-ch3ar dyalek lyum",
    "ar": "واش حسنتي الشعر ديالك اليوم",
    "en": "Did you cut your hair today?"
   },
@@ -3242,7 +3242,7 @@
  "jre7": [
   {
    "slot": 0,
-   "lat": "kifash jre7tu yedkum",
+   "lat": "kifach jre7tu yedkum",
    "ar": "كيفاش جرحتو يديكم",
    "en": "How did you cut your hands?"
   },
@@ -3262,7 +3262,7 @@
  "tejre7": [
   {
    "slot": 0,
-   "lat": "wesh tejre7tu mn z-zjaj",
+   "lat": "wech tejre7tu mn z-zjaj",
    "ar": "واش تجرحتو من الزجاج",
    "en": "Did you get cut by the glass?"
   },
@@ -3288,7 +3288,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanfessel l-qmash f d-dar",
+   "lat": "kanfessel l-qmach f d-dar",
    "ar": "كنفصل القماش فالدار",
    "en": "I cut fabric at home."
   },
@@ -3342,39 +3342,39 @@
  "fzeg": [
   {
    "slot": 0,
-   "lat": "l-hdum fezgu mn sh-shta",
+   "lat": "l-hdum fezgu mn ch-chta",
    "ar": "الهدوم فزڭو من الشتا",
    "en": "The clothes got wet from the rain."
   },
   {
    "slot": 1,
-   "lat": "ntuma katfezgu dima f sh-shta",
+   "lat": "ntuma katfezgu dima f ch-chta",
    "ar": "نتوما كتفزڭو ديما فالشتا",
    "en": "You always get wet in the rain."
   },
   {
    "slot": 2,
-   "lat": "ghadi nfzeg ila khrejt f sh-shta",
+   "lat": "ghadi nfzeg ila khrejt f ch-chta",
    "ar": "غادي نفزڭ ايلا خرجت فالشتا",
    "en": "I'll get wet if I go out in the rain."
   }
  ],
- "shte7": [
+ "chte7": [
   {
    "slot": 0,
-   "lat": "shte7tu bzzaf f l-3ers",
+   "lat": "chte7tu bzzaf f l-3ers",
    "ar": "شطحتو بزاف فالعرس",
    "en": "You danced a lot at the wedding."
   },
   {
    "slot": 1,
-   "lat": "7na kanshet7u dima f l-7efla",
+   "lat": "7na kanchet7u dima f l-7efla",
    "ar": "احنا كنشطحو ديما فالحفلة",
    "en": "We always dance at the party."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshte7 f l-3ers dyal khuk",
+   "lat": "ghadi tchte7 f l-3ers dyal khuk",
    "ar": "غادي تشطح فالعرس ديال خوك",
    "en": "You are going to dance at your brother's wedding."
   }
@@ -3402,7 +3402,7 @@
  "t3amel": [
   {
    "slot": 0,
-   "lat": "kifash t3amelti m3a l-mudir",
+   "lat": "kifach t3amelti m3a l-mudir",
    "ar": "كيفاش تعاملتي مع المدير",
    "en": "How did you deal with the manager?"
   },
@@ -3414,7 +3414,7 @@
   },
   {
    "slot": 2,
-   "lat": "wesh ghadi tt3amel m3a had r-rajel",
+   "lat": "wech ghadi tt3amel m3a had r-rajel",
    "ar": "واش غادي تتعامل مع هاد الراجل",
    "en": "Are you going to deal with this man?"
   }
@@ -3422,13 +3422,13 @@
  "qerrer": [
   {
    "slot": 0,
-   "lat": "wesh qerrerti shnu ghadi tdiri",
+   "lat": "wech qerrerti chnu ghadi tdiri",
    "ar": "واش قررتي شنو غادي تديري",
    "en": "Did you decide what you're going to do?"
   },
   {
    "slot": 1,
-   "lat": "7na kanqerreru kollshi m3a ba3dna",
+   "lat": "7na kanqerreru kollchi m3a ba3dna",
    "ar": "احنا كنقررو كلشي مع بعضنا",
    "en": "We decide everything together."
   },
@@ -3528,7 +3528,7 @@
   },
   {
    "slot": 1,
-   "lat": "kat7eddedi l-masruf dyalek kul shher",
+   "lat": "kat7eddedi l-masruf dyalek kul chher",
    "ar": "كتحددي المصروف ديالك كل شهر",
    "en": "You limit your spending money every month."
   },
@@ -3554,7 +3554,7 @@
   },
   {
    "slot": 2,
-   "lat": "wesh ghadi tt7edda bak daba",
+   "lat": "wech ghadi tt7edda bak daba",
    "ar": "واش غادي تتحدا باك دابا",
    "en": "Are you going to defy your father now?"
   }
@@ -3574,7 +3574,7 @@
   },
   {
    "slot": 2,
-   "lat": "wesh nti ghadi t3ettli l-ftur ghedda",
+   "lat": "wech nti ghadi t3ettli l-ftur ghedda",
    "ar": "واش نتي غادي تعطلي الفطور غدا",
    "en": "Are you going to delay breakfast tomorrow?"
   }
@@ -3622,7 +3622,7 @@
  "wsef": [
   {
    "slot": 0,
-   "lat": "wsefna l-mushkil l l-mudir",
+   "lat": "wsefna l-muchkil l l-mudir",
    "ar": "وصفنا المشكل للمدير",
    "en": "We described the problem to the manager."
   },
@@ -3674,7 +3674,7 @@
   },
   {
    "slot": 2,
-   "lat": "shnu ghadi tkhettetu l-3am j-jay",
+   "lat": "chnu ghadi tkhettetu l-3am j-jay",
    "ar": "شنو غادي تخططو العام الجاي",
    "en": "What are you going to plan next year?"
   }
@@ -3694,7 +3694,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi theddmi had l-7anut",
+   "lat": "wach ghadi theddmi had l-7anut",
    "ar": "واش غادي تهدمي هاد الحانوت",
    "en": "Are you going to demolish this shop?"
   }
@@ -3708,7 +3708,7 @@
   },
   {
    "slot": 1,
-   "lat": "kantuwru l-meshru3 dyalna shwiya b shwiya",
+   "lat": "kantuwru l-mechru3 dyalna chwiya b chwiya",
    "ar": "كنطورو المشروع ديالنا شوية بشوية",
    "en": "We develop our project little by little."
   },
@@ -3782,7 +3782,7 @@
  "hdem": [
   {
    "slot": 0,
-   "lat": "hedmat l-makla b shwiya",
+   "lat": "hedmat l-makla b chwiya",
    "ar": "هضمات الماكلة بشوية",
    "en": "She digested the food slowly."
   },
@@ -3794,27 +3794,27 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi thedmu l-makla mzyan ila mshitu shwiya",
+   "lat": "ghadi thedmu l-makla mzyan ila mchitu chwiya",
    "ar": "غادي تهضمو الماكلة مزيان الا مشيتو شوية",
    "en": "You'll digest the food well if you walk a little."
   }
  ],
- "t3eshsha": [
+ "t3echcha": [
   {
    "slot": 0,
-   "lat": "t3eshshat m3a sa7btha f l-mat3am",
+   "lat": "t3echchat m3a sa7btha f l-mat3am",
    "ar": "تعشات مع صاحبتها فالمطعم",
    "en": "She had dinner with her friend at the restaurant."
   },
   {
    "slot": 1,
-   "lat": "wash katt3eshshay dima bakri",
+   "lat": "wach katt3echchay dima bakri",
    "ar": "واش كتتعشاي ديما بكري",
    "en": "Do you always have dinner early?"
   },
   {
    "slot": 2,
-   "lat": "ghadi tt3eshsha m3ana had l-lila",
+   "lat": "ghadi tt3echcha m3ana had l-lila",
    "ar": "غادي تتعشا معانا هاد الليلة",
    "en": "Are you going to have dinner with us tonight?"
   }
@@ -3894,7 +3894,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ytussekh ila msha f t-tin",
+   "lat": "ghadi ytussekh ila mcha f t-tin",
    "ar": "غادي يتوسخ الا مشا فالطين",
    "en": "He'll get dirty if he walks in the mud."
   }
@@ -3914,7 +3914,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tghber 3lina ila mshiti l-berra",
+   "lat": "ghadi tghber 3lina ila mchiti l-berra",
    "ar": "غادي تغبر علينا الا مشيتي لبرا",
    "en": "You'll disappear on us if you go abroad."
   }
@@ -3934,7 +3934,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi naddeb weldi ila 3awed hadshi",
+   "lat": "ghadi naddeb weldi ila 3awed hadchi",
    "ar": "غادي نادب ولدي الا عاود هادشي",
    "en": "I'll discipline my son if he does this again."
   }
@@ -3959,42 +3959,42 @@
    "en": "They're going to raise their kids in the village."
   }
  ],
- "ktashef": [
+ "ktachef": [
   {
    "slot": 0,
-   "lat": "fin ktashefti had l-mat3am",
+   "lat": "fin ktachefti had l-mat3am",
    "ar": "فين كتاشفتي هاد المطعم",
    "en": "Where did you discover this restaurant?"
   },
   {
    "slot": 1,
-   "lat": "katktashfi 7wayej jdad kul nhar",
+   "lat": "katktachfi 7wayej jdad kul nhar",
    "ar": "كتكتاشفي حوايج جداد كل نهار",
    "en": "You discover new things every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi tktashfu l-medina l-qdima ghedda",
+   "lat": "ghadi tktachfu l-medina l-qdima ghedda",
    "ar": "غادي تكتاشفو المدينة القديمة غدا",
    "en": "You'll discover the old city tomorrow."
   }
  ],
- "naqesh": [
+ "naqech": [
   {
    "slot": 0,
-   "lat": "naqesht l-mushkil m3a l-mudir",
+   "lat": "naqecht l-muchkil m3a l-mudir",
    "ar": "ناقشت المشكل مع المدير",
    "en": "I discussed the problem with the manager."
   },
   {
    "slot": 1,
-   "lat": "kannaqshu l-mushkil dyalna m3a l-3ayla",
+   "lat": "kannaqchu l-muchkil dyalna m3a l-3ayla",
    "ar": "كنناقشو المشكل ديالنا مع العايلة",
    "en": "We discuss our problem with the family."
   },
   {
    "slot": 2,
-   "lat": "ghadi ynaqshu l-meshru3 ghedda f l-ijtima3",
+   "lat": "ghadi ynaqchu l-mechru3 ghedda f l-ijtima3",
    "ar": "غادي يناقشو المشروع غدا فالاجتماع",
    "en": "They'll discuss the project tomorrow in the meeting."
   }
@@ -4022,7 +4022,7 @@
  "duweb": [
   {
    "slot": 0,
-   "lat": "wash duwebti s-sukar f l-atay",
+   "lat": "wach duwebti s-sukar f l-atay",
    "ar": "واش دوبتي السكر فالاتاي",
    "en": "Did you dissolve the sugar in the tea?"
   },
@@ -4068,7 +4068,7 @@
   },
   {
    "slot": 1,
-   "lat": "katbe33di mn l-mashakil dima",
+   "lat": "katbe33di mn l-machakil dima",
    "ar": "كتبعدي من المشاكل ديما",
    "en": "You always stay away from trouble."
   },
@@ -4128,7 +4128,7 @@
   },
   {
    "slot": 1,
-   "lat": "katdukhi mnin katshufi d-demm",
+   "lat": "katdukhi mnin katchufi d-demm",
    "ar": "كتدوخي منين كتشوفي الدم",
    "en": "You get dizzy when you see blood."
   },
@@ -4259,22 +4259,22 @@
    "en": "I'm going to dress up for Eid."
   }
  ],
- "sherreb": [
+ "cherreb": [
   {
    "slot": 0,
-   "lat": "sherrebna l-wlad l-7lib",
+   "lat": "cherrebna l-wlad l-7lib",
    "ar": "شربنا الولاد الحليب",
    "en": "We made the kids drink milk."
   },
   {
    "slot": 1,
-   "lat": "katsherrbu l-wlad l-3asir kul nhar",
+   "lat": "katcherrbu l-wlad l-3asir kul nhar",
    "ar": "كتشربو الولاد العصير كل نهار",
    "en": "You all make the kids drink juice every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi ysherreb bnu d-dwa",
+   "lat": "ghadi ycherreb bnu d-dwa",
    "ar": "غادي يشرب بنو الدوا",
    "en": "He's going to make his son drink the medicine."
   }
@@ -4288,7 +4288,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanqter shwiya dyal l-limun f l-atay",
+   "lat": "kanqter chwiya dyal l-limun f l-atay",
    "ar": "كنقطر شوية ديال الليمون فالاتاي",
    "en": "I drip a little lemon into the tea."
   },
@@ -4348,7 +4348,7 @@
   },
   {
    "slot": 1,
-   "lat": "katgherqi ila ma katsba7ish mzyan",
+   "lat": "katgherqi ila ma katsba7ich mzyan",
    "ar": "كتغرقي إلا ما كتسبحيش مزيان",
    "en": "You drown if you don't swim well."
   },
@@ -4368,33 +4368,33 @@
   },
   {
    "slot": 1,
-   "lat": "kaysker mnin kayshreb bzaf",
+   "lat": "kaysker mnin kaychreb bzaf",
    "ar": "كيسكر منين كيشرب بزاف",
    "en": "He gets drunk when he drinks a lot."
   },
   {
    "slot": 2,
-   "lat": "ghadi tsekru ila shrebtu bzaf",
+   "lat": "ghadi tsekru ila chrebtu bzaf",
    "ar": "غادي تسكرو إلا شربتو بزاف",
    "en": "You all are going to get drunk if you drink a lot."
   }
  ],
- "nshef": [
+ "nchef": [
   {
    "slot": 0,
-   "lat": "neshfat l-qmija f sh-shems",
+   "lat": "nechfat l-qmija f ch-chems",
    "ar": "نشفات القميجة فالشمس",
    "en": "The shirt dried in the sun."
   },
   {
    "slot": 1,
-   "lat": "kannshef bsur3a mnin kanbqa f sh-shems",
+   "lat": "kannchef bsur3a mnin kanbqa f ch-chems",
    "ar": "كننشف بسرعة منين كنبقى فالشمس",
    "en": "I dry quickly when I stay in the sun."
   },
   {
    "slot": 2,
-   "lat": "ghadi ynshef l-wad f s-sif",
+   "lat": "ghadi ynchef l-wad f s-sif",
    "ar": "غادي ينشف الواد فالصيف",
    "en": "The river is going to dry up in summer."
   }
@@ -4408,33 +4408,33 @@
   },
   {
    "slot": 1,
-   "lat": "nta katybes mnin ma katshrebsh l-ma",
+   "lat": "nta katybes mnin ma katchrebch l-ma",
    "ar": "نتا كتيبس منين ما كتشربش الما",
    "en": "You dry up when you don't drink water."
   },
   {
    "slot": 2,
-   "lat": "ghadi nybes mn l-3tesh daba",
+   "lat": "ghadi nybes mn l-3tech daba",
    "ar": "غادي نيبس من العطش دابا",
    "en": "I'm going to dry up from thirst now."
   }
  ],
- "neshshef": [
+ "nechchef": [
   {
    "slot": 0,
-   "lat": "neshshef yeddih b l-futa",
+   "lat": "nechchef yeddih b l-futa",
    "ar": "نشف يديه بالفوطة",
    "en": "He dried his hands with the towel."
   },
   {
    "slot": 1,
-   "lat": "katneshshfi sha3rek b s-sishwar kul sba7",
+   "lat": "katnechchfi cha3rek b s-sichwar kul sba7",
    "ar": "كتنشفي شعرك بالسيشوار كل صباح",
    "en": "You dry your hair with the hair dryer every morning."
   },
   {
    "slot": 2,
-   "lat": "ghadi nneshshfu l-ghsil f s-stta7 ghedda",
+   "lat": "ghadi nnechchfu l-ghsil f s-stta7 ghedda",
    "ar": "غادي ننشفو الغسيل فالسطح غدا",
    "en": "We're going to dry the laundry on the roof tomorrow."
   }
@@ -4442,7 +4442,7 @@
  "yebbes": [
   {
    "slot": 0,
-   "lat": "yebbsu l-khobz f sh-shems",
+   "lat": "yebbsu l-khobz f ch-chems",
    "ar": "يبسو الخبز فالشمس",
    "en": "They dried the bread in the sun."
   },
@@ -4462,7 +4462,7 @@
  "jeffef": [
   {
    "slot": 0,
-   "lat": "wash jeffeftu l-qa3 dyal l-7emmam",
+   "lat": "wach jeffeftu l-qa3 dyal l-7emmam",
    "ar": "واش جففتو القاع ديال الحمام",
    "en": "Did you dry the bathroom floor?"
   },
@@ -4482,7 +4482,7 @@
  "sbegh": [
   {
    "slot": 0,
-   "lat": "wash sbeghti l-bab b lun akhder",
+   "lat": "wach sbeghti l-bab b lun akhder",
    "ar": "واش صبغتي الباب بلون أخضر",
    "en": "Did you paint the door green?"
   },
@@ -4562,7 +4562,7 @@
  "fter": [
   {
    "slot": 0,
-   "lat": "wash fterti f d-dar lyum",
+   "lat": "wach fterti f d-dar lyum",
    "ar": "واش فطرتي فالدار اليوم",
    "en": "Did you eat breakfast at home today?"
   },
@@ -4582,7 +4582,7 @@
  "tghedda": [
   {
    "slot": 0,
-   "lat": "wash tghedditu f l-mat3am lbare7",
+   "lat": "wach tghedditu f l-mat3am lbare7",
    "ar": "واش تغديتو فالمطعم البارح",
    "en": "Did you have lunch at the restaurant yesterday?"
   },
@@ -4602,7 +4602,7 @@
  "qtased": [
   {
    "slot": 0,
-   "lat": "qtasedt had sh-shher bash nshri telefun",
+   "lat": "qtasedt had ch-chher bach nchri telefun",
    "ar": "قتاصدت هاد الشهر باش نشري تلفون",
    "en": "I economized this month to buy a phone."
   },
@@ -4614,7 +4614,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yqtased 7it ghadi yshri dar",
+   "lat": "ghadi yqtased 7it ghadi ychri dar",
    "ar": "غادي يقتاصد حيت غادي يشري دار",
    "en": "He's going to economize because he's going to buy a house."
   }
@@ -4634,47 +4634,47 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi tntakhbi nhar l-7ad",
+   "lat": "wach ghadi tntakhbi nhar l-7ad",
    "ar": "واش غادي تنتاخبي نهار الحد",
    "en": "Are you going to vote on Sunday?"
   }
  ],
- "7eshshem": [
+ "7echchem": [
   {
    "slot": 0,
-   "lat": "7eshshemt khuya qeddam n-nas",
+   "lat": "7echchemt khuya qeddam n-nas",
    "ar": "حشمت خويا قدام الناس",
    "en": "I embarrassed my brother in front of people."
   },
   {
    "slot": 1,
-   "lat": "kat7eshshem khuk qeddam s-s7ab dyalu",
+   "lat": "kat7echchem khuk qeddam s-s7ab dyalu",
    "ar": "كتحشم خوك قدام الصحاب ديالو",
    "en": "You embarrass your brother in front of his friends."
   },
   {
    "slot": 2,
-   "lat": "hiya ghadi t7eshshem khtha f l-3ers",
+   "lat": "hiya ghadi t7echchem khtha f l-3ers",
    "ar": "هي غادي تحشم ختها فالعرس",
    "en": "She's going to embarrass her sister at the wedding."
   }
  ],
- "7shem": [
+ "7chem": [
   {
    "slot": 0,
-   "lat": "7shemtu mnin ghltu qeddam l-ustad",
+   "lat": "7chemtu mnin ghltu qeddam l-ustad",
    "ar": "حشمتو منين غلطتو قدام الأستاذ",
    "en": "You were embarrassed when you made a mistake in front of the teacher."
   },
   {
    "slot": 1,
-   "lat": "l-wlad kay7eshmu ytkellmu qeddam n-nas",
+   "lat": "l-wlad kay7echmu ytkellmu qeddam n-nas",
    "ar": "الولاد كيحشمو يتكلمو قدام الناس",
    "en": "The kids are embarrassed to speak in front of people."
   },
   {
    "slot": 2,
-   "lat": "ghadi t7eshmi mnin tshufi dak l-fidyu",
+   "lat": "ghadi t7echmi mnin tchufi dak l-fidyu",
    "ar": "غادي تحشمي منين تشوفي داك الفيديو",
    "en": "You're going to be embarrassed when you see that video."
   }
@@ -4682,7 +4682,7 @@
  "3aneq": [
   {
    "slot": 0,
-   "lat": "wash 3aneqti jeddek mnin wsel",
+   "lat": "wach 3aneqti jeddek mnin wsel",
    "ar": "واش عانقتي جدك منين وصل",
    "en": "Did you hug your grandfather when he arrived?"
   },
@@ -4702,7 +4702,7 @@
  "slem": [
   {
    "slot": 0,
-   "lat": "wash slemti mnin kunti f faransa",
+   "lat": "wach slemti mnin kunti f faransa",
    "ar": "واش سلمتي منين كنتي ففرنسا",
    "en": "Did you convert to Islam when you were in France?"
   },
@@ -4714,7 +4714,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi tselmu m3a l-imam ghedda",
+   "lat": "wach ghadi tselmu m3a l-imam ghedda",
    "ar": "واش غادي تسلمو مع الإمام غدا",
    "en": "Are you going to convert to Islam with the imam tomorrow?"
   }
@@ -4728,7 +4728,7 @@
   },
   {
    "slot": 1,
-   "lat": "huwa kayhajer l faransa bash ykhdem",
+   "lat": "huwa kayhajer l faransa bach ykhdem",
    "ar": "هو كيهاجر لفرنسا باش يخدم",
    "en": "He emigrates to France to work."
   },
@@ -4742,7 +4742,7 @@
  "khwa": [
   {
    "slot": 0,
-   "lat": "wash khwiti l-ma mn d-dlu",
+   "lat": "wach khwiti l-ma mn d-dlu",
    "ar": "واش خويتي الما من الدلو",
    "en": "Did you pour the water out of the bucket?"
   },
@@ -4754,27 +4754,27 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nkhwiw d-dar f shher jay",
+   "lat": "ghadi nkhwiw d-dar f chher jay",
    "ar": "غادي نخويو الدار فشهر جاي",
    "en": "We're going to vacate the house next month."
   }
  ],
- "shejje3": [
+ "chejje3": [
   {
    "slot": 0,
-   "lat": "shejje3ti wldek f l-qraya",
+   "lat": "chejje3ti wldek f l-qraya",
    "ar": "شجعتي ولدك فالقراية",
    "en": "You encouraged your son in his studies."
   },
   {
    "slot": 1,
-   "lat": "katshejje3 l-fariq dyalek f l-mal3ab",
+   "lat": "katchejje3 l-fariq dyalek f l-mal3ab",
    "ar": "كتشجع الفريق ديالك فالملعب",
    "en": "You cheer on your team at the stadium."
   },
   {
    "slot": 2,
-   "lat": "ghadi nshejj3u l-muntakhab dyalna ghedda",
+   "lat": "ghadi nchejj3u l-muntakhab dyalna ghedda",
    "ar": "غادي نشجعو المنتخب ديالنا غدا",
    "en": "We're going to cheer on our national team tomorrow."
   }
@@ -4782,7 +4782,7 @@
  "tebre3": [
   {
    "slot": 0,
-   "lat": "tebr3at b d-dem f l-mustashfa",
+   "lat": "tebr3at b d-dem f l-mustachfa",
    "ar": "تبرعات بالدم فالمستشفى",
    "en": "She donated blood at the hospital."
   },
@@ -4802,7 +4802,7 @@
  "tsejjel": [
   {
    "slot": 0,
-   "lat": "3lash tsejjelti f had l-madrasa",
+   "lat": "3lach tsejjelti f had l-madrasa",
    "ar": "علاش تسجلتي فهاد المدرسة",
    "en": "Why did you enroll in this school?"
   },
@@ -4834,7 +4834,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ndkhel l-7anut bash nshri l-khobz",
+   "lat": "ghadi ndkhel l-7anut bach nchri l-khobz",
    "ar": "غادي ندخل الحانوت باش نشري الخبز",
    "en": "I'm going to go into the shop to buy bread."
   }
@@ -4842,13 +4842,13 @@
  "7sed": [
   {
    "slot": 0,
-   "lat": "wash 7sedti jartna 3la d-dar l-jdida",
+   "lat": "wach 7sedti jartna 3la d-dar l-jdida",
    "ar": "واش حسدتي جارتنا على الدار الجديدة",
    "en": "Did you envy our neighbor for her new house?"
   },
   {
    "slot": 1,
-   "lat": "3lash kat7esdu sa7bkum 3la n-nuta",
+   "lat": "3lach kat7esdu sa7bkum 3la n-nuta",
    "ar": "علاش كتحسدو صاحبكم على النوطة",
    "en": "Why do you envy your friend for his grade?"
   },
@@ -4874,7 +4874,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tmse7 l-ard mn ba3d shwiya",
+   "lat": "ghadi tmse7 l-ard mn ba3d chwiya",
    "ar": "غادي تمسح الارض من بعد شوية",
    "en": "She's going to wipe the floor in a little while."
   }
@@ -4882,7 +4882,7 @@
  "m7a": [
   {
    "slot": 0,
-   "lat": "wash m7iti l-kelma lli ktebti",
+   "lat": "wach m7iti l-kelma lli ktebti",
    "ar": "واش محيتي الكلمة لي كتبتي",
    "en": "Did you erase the word that you wrote?"
   },
@@ -4902,13 +4902,13 @@
  "hreb": [
   {
    "slot": 0,
-   "lat": "3lash hrebtu mn l-madrasa lbare7",
+   "lat": "3lach hrebtu mn l-madrasa lbare7",
    "ar": "علاش هربتو من المدرسة لبارح",
    "en": "Why did you run away from school yesterday?"
   },
   {
    "slot": 1,
-   "lat": "3lash dima kathreb mn l-mushkil",
+   "lat": "3lach dima kathreb mn l-muchkil",
    "ar": "علاش ديما كتهرب من المشكل",
    "en": "Why do you always run away from the problem?"
   },
@@ -4922,7 +4922,7 @@
  "qedder": [
   {
    "slot": 0,
-   "lat": "wash qedderti t-taman dyal d-dar",
+   "lat": "wach qedderti t-taman dyal d-dar",
    "ar": "واش قدرتي التمن ديال الدار",
    "en": "Did you estimate the price of the house?"
   },
@@ -4948,7 +4948,7 @@
   },
   {
    "slot": 1,
-   "lat": "khuya kayttuwer f d-dirasa shwiya b shwiya",
+   "lat": "khuya kayttuwer f d-dirasa chwiya b chwiya",
    "ar": "خويا كيتطور فالدراسة شوية بشوية",
    "en": "My brother is improving in his studies little by little."
   },
@@ -4962,7 +4962,7 @@
  "balegh": [
   {
    "slot": 0,
-   "lat": "baleghna shwiya f l-kelam",
+   "lat": "baleghna chwiya f l-kelam",
    "ar": "بالغنا شوية فالكلام",
    "en": "We exaggerated a bit in what we said."
   },
@@ -5002,7 +5002,7 @@
  "3red": [
   {
    "slot": 0,
-   "lat": "3redtu 3la jiranna bash yakulu m3ana",
+   "lat": "3redtu 3la jiranna bach yakulu m3ana",
    "ar": "عرضتو على جيراننا باش ياكلو معانا",
    "en": "You invited our neighbors to eat with us."
   },
@@ -5014,7 +5014,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi t3red 3la s7abek bash yjiw l d-dar",
+   "lat": "ghadi t3red 3la s7abek bach yjiw l d-dar",
    "ar": "غادي تعرض على صحابك باش يجيو للدار",
    "en": "You're going to invite your friends to come to the house."
   }
@@ -5028,13 +5028,13 @@
   },
   {
    "slot": 1,
-   "lat": "wash katkherju m3a s7abkum kul jem3a",
+   "lat": "wach katkherju m3a s7abkum kul jem3a",
    "ar": "واش كتخرجو مع صحابكم كل جمعة",
    "en": "Do you go out with your friends every Friday?"
   },
   {
    "slot": 2,
-   "lat": "fuqash ghadi tkhrej mn l-khedma",
+   "lat": "fuqach ghadi tkhrej mn l-khedma",
    "ar": "فوقاش غادي تخرج من الخدمة",
    "en": "When are you going to leave work?"
   }
@@ -5074,7 +5074,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yfessru l-mushkil f l-ijtima3",
+   "lat": "ghadi yfessru l-muchkil f l-ijtima3",
    "ar": "غادي يفسرو المشكل فالاجتماع",
    "en": "They're going to explain the problem in the meeting."
   }
@@ -5082,7 +5082,7 @@
  "staghel": [
   {
    "slot": 0,
-   "lat": "staghelna l-ard dyalna bash nzer3u",
+   "lat": "staghelna l-ard dyalna bach nzer3u",
    "ar": "ستاغلنا الارض ديالنا باش نزرعو",
    "en": "We used our land to farm."
   },
@@ -5142,13 +5142,13 @@
  "tkhelles": [
   {
    "slot": 0,
-   "lat": "wash tkhellestu mn had t-tumubil l-qdima",
+   "lat": "wach tkhellestu mn had t-tumubil l-qdima",
    "ar": "واش تخلصتو من هاد الطوموبيل القديمة",
    "en": "Did you get rid of this old car?"
   },
   {
    "slot": 1,
-   "lat": "kantkhelles mn l-khedma f nehayet sh-shhar",
+   "lat": "kantkhelles mn l-khedma f nehayet ch-chhar",
    "ar": "كنتخلص من الخدمة فنهاية الشهر",
    "en": "I get paid from work at the end of the month."
   },
@@ -5188,13 +5188,13 @@
   },
   {
    "slot": 1,
-   "lat": "3lash katseqti dima f l-fransiya",
+   "lat": "3lach katseqti dima f l-fransiya",
    "ar": "علاش كتسقطي ديما فالفرنسية",
    "en": "Why do you always fail French?"
   },
   {
    "slot": 2,
-   "lat": "ghadi nseqtu f l-imti7an ila ma qrinash",
+   "lat": "ghadi nseqtu f l-imti7an ila ma qrinach",
    "ar": "غادي نسقطو فالامتحان ايلا ما قريناش",
    "en": "We're going to fail the exam if we don't study."
   }
@@ -5234,7 +5234,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tti7 ila mshiti b had s-sebbat",
+   "lat": "ghadi tti7 ila mchiti b had s-sebbat",
    "ar": "غادي تطيح إلا مشيتي بهاد الصباط",
    "en": "You will fall if you walk in these shoes."
   }
@@ -5254,7 +5254,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yzuwru l-wraq bash yakhdu l-flus",
+   "lat": "ghadi yzuwru l-wraq bach yakhdu l-flus",
    "ar": "غادي يزورو الوراق باش ياخدو الفلوس",
    "en": "They are going to forge the papers to get the money."
   }
@@ -5302,7 +5302,7 @@
  "wekkel": [
   {
    "slot": 0,
-   "lat": "wekklat wlidha qbel ma temshi l l-madrasa",
+   "lat": "wekklat wlidha qbel ma temchi l l-madrasa",
    "ar": "وكلات ولدها قبل ما تمشي للمدرسة",
    "en": "She fed her son before going to school."
   },
@@ -5342,13 +5342,13 @@
  "7ess": [
   {
    "slot": 0,
-   "lat": "7essitu b shi 7aja ghriba f d-dar",
+   "lat": "7essitu b chi 7aja ghriba f d-dar",
    "ar": "حسيتو بشي حاجة غريبة فالدار",
    "en": "You felt something strange in the house."
   },
   {
    "slot": 1,
-   "lat": "kay7essu b l-bard f sh-shta",
+   "lat": "kay7essu b l-bard f ch-chta",
    "ar": "كيحسو بالبرد فالشتا",
    "en": "They feel the cold in winter."
   },
@@ -5442,7 +5442,7 @@
  "seffa": [
   {
    "slot": 0,
-   "lat": "seffaw l-ma qbel ma shrebu",
+   "lat": "seffaw l-ma qbel ma chrebu",
    "ar": "صفاو الما قبل ما شربو",
    "en": "They filtered the water before they drank."
   },
@@ -5454,7 +5454,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tseffi z-zit b hadak l-qmash",
+   "lat": "ghadi tseffi z-zit b hadak l-qmach",
    "ar": "غادي تصفي الزيت بهداك القماش",
    "en": "You will filter the oil with that cloth."
   }
@@ -5474,7 +5474,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nmuwel l-mashru3 dyalek ila bghiti",
+   "lat": "ghadi nmuwel l-machru3 dyalek ila bghiti",
    "ar": "غادي نمول المشروع ديالك إلا بغيتي",
    "en": "I will finance your project if you want."
   }
@@ -5494,7 +5494,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nlqa shi 7el ghedda",
+   "lat": "ghadi nlqa chi 7el ghedda",
    "ar": "غادي نلقا شي حل غدا",
    "en": "I will find some solution tomorrow."
   }
@@ -5662,19 +5662,19 @@
  "tar": [
   {
    "slot": 0,
-   "lat": "tar t-ter mn l-shejra",
+   "lat": "tar t-ter mn l-chejra",
    "ar": "طار الطير من الشجرة",
    "en": "The bird flew from the tree."
   },
   {
    "slot": 1,
-   "lat": "kattir l fransa kul shhar",
+   "lat": "kattir l fransa kul chhar",
    "ar": "كتطير لفرنسا كل شهر",
    "en": "You fly to France every month."
   },
   {
    "slot": 2,
-   "lat": "ghadi ytiru l marrakesh b t-tayyara",
+   "lat": "ghadi ytiru l marrakech b t-tayyara",
    "ar": "غادي يطيرو لمراكش بالطيارة",
    "en": "They are going to fly to Marrakesh by plane."
   }
@@ -5788,7 +5788,7 @@
   },
   {
    "slot": 1,
-   "lat": "katsme7 l wlidha f kolshi",
+   "lat": "katsme7 l wlidha f kolchi",
    "ar": "كتسمح لولدها فكلشي",
    "en": "She lets her son get away with everything."
   },
@@ -5848,7 +5848,7 @@
   },
   {
    "slot": 1,
-   "lat": "kayjmed l-ma f l-jbal f sh-shta",
+   "lat": "kayjmed l-ma f l-jbal f ch-chta",
    "ar": "كيجمد الما فالجبال فالشتا",
    "en": "The water freezes in the mountains in winter."
   },
@@ -5899,22 +5899,22 @@
    "en": "She is going to fry the potatoes now."
   }
  ],
- "shbe3": [
+ "chbe3": [
   {
    "slot": 0,
-   "lat": "wash shbe3ti mn l-ghda",
+   "lat": "wach chbe3ti mn l-ghda",
    "ar": "واش شبعتي من الغدا",
    "en": "Did you get full from lunch?"
   },
   {
    "slot": 1,
-   "lat": "kaysheb3u dima mn l-7rira",
+   "lat": "kaycheb3u dima mn l-7rira",
    "ar": "كيشبعو ديما من الحريرة",
    "en": "They always get full from the harira."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshbe3 mn had l-makla",
+   "lat": "ghadi ychbe3 mn had l-makla",
    "ar": "غادي يشبع من هاد المكلة",
    "en": "He is going to get full from this food."
   }
@@ -5939,22 +5939,22 @@
    "en": "You are going to laugh a lot in this movie."
   }
  ],
- "nshet": [
+ "nchet": [
   {
    "slot": 0,
-   "lat": "nshettu 3la sa7bkum f t-tobis",
+   "lat": "nchettu 3la sa7bkum f t-tobis",
    "ar": "نشطتو على صاحبكم فالطوبيس",
    "en": "You made fun of your friend on the bus."
   },
   {
    "slot": 1,
-   "lat": "kannshet 3la khuya kul nhar",
+   "lat": "kannchet 3la khuya kul nhar",
    "ar": "كننشط على خويا كل نهار",
    "en": "I make fun of my brother every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi ynshet 3la jarhum ghedda",
+   "lat": "ghadi ynchet 3la jarhum ghedda",
    "ar": "غادي ينشط على جارهم غدا",
    "en": "He is going to make fun of their neighbor tomorrow."
   }
@@ -6094,7 +6094,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nwelled l-kahraba b s-shems",
+   "lat": "ghadi nwelled l-kahraba b s-chems",
    "ar": "غادي نولد الكهربا بالشمس",
    "en": "I'm going to generate electricity with the sun."
   }
@@ -6148,7 +6148,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaymred f l-shta dima",
+   "lat": "kaymred f l-chta dima",
    "ar": "كيمرض فالشتا ديما",
    "en": "He always gets sick in the winter."
   },
@@ -6234,7 +6234,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tddi mama l l-mestashfa",
+   "lat": "ghadi tddi mama l l-mestachfa",
    "ar": "غادي تدي ماما للمستشفى",
    "en": "You are going to take Mom to the hospital."
   }
@@ -6308,7 +6308,7 @@
   },
   {
    "slot": 1,
-   "lat": "t-tumubil dyalha katlme3 f s-shems",
+   "lat": "t-tumubil dyalha katlme3 f s-chems",
    "ar": "الطوموبيل ديالها كتلمع فالشمس",
    "en": "Her car shines in the sun."
   },
@@ -6359,22 +6359,22 @@
    "en": "You are going to stick the pictures in the room."
   }
  ],
- "msha": [
+ "mcha": [
   {
    "slot": 0,
-   "lat": "mshiti l s-suq lbare7",
+   "lat": "mchiti l s-suq lbare7",
    "ar": "مشيتي للسوق البارح",
    "en": "You went to the market yesterday."
   },
   {
    "slot": 1,
-   "lat": "katmshiw l l-khedma b t-tobis",
+   "lat": "katmchiw l l-khedma b t-tobis",
    "ar": "كتمشيو للخدمة بالطوبيس",
    "en": "You go to work by bus."
   },
   {
    "slot": 2,
-   "lat": "ghadi nmshiw l r-rbat ghedda",
+   "lat": "ghadi nmchiw l r-rbat ghedda",
    "ar": "غادي نمشيو للرباط غدا",
    "en": "We are going to go to Rabat tomorrow."
   }
@@ -6402,7 +6402,7 @@
  "hder": [
   {
    "slot": 0,
-   "lat": "hedru f l-mushkil dyalhum lbare7",
+   "lat": "hedru f l-muchkil dyalhum lbare7",
    "ar": "هضرو فالمشكل ديالهم البارح",
    "en": "They talked about their problem yesterday."
   },
@@ -6448,7 +6448,7 @@
   },
   {
    "slot": 1,
-   "lat": "nta katsellem 3la kulshi f l-mektab",
+   "lat": "nta katsellem 3la kulchi f l-mektab",
    "ar": "نتا كتسلم على كلشي فالمكتب",
    "en": "You greet everybody at the office."
   },
@@ -6479,22 +6479,22 @@
    "en": "You and your sister will greet each other at Eid."
   }
  ],
- "shwa": [
+ "chwa": [
   {
    "slot": 0,
-   "lat": "shwina l-l7em f d-dar lbare7",
+   "lat": "chwina l-l7em f d-dar lbare7",
    "ar": "شوينا اللحم فالدار البارح",
    "en": "We grilled meat at home yesterday."
   },
   {
    "slot": 1,
-   "lat": "hiya katshwi l-7ut kul jem3a",
+   "lat": "hiya katchwi l-7ut kul jem3a",
    "ar": "هيا كتشوي الحوت كل جمعة",
    "en": "She grills fish every Friday."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshwiw l-kefta f l-7diqa ghedda",
+   "lat": "ghadi ychwiw l-kefta f l-7diqa ghedda",
    "ar": "غادي يشويو الكفتة فالحديقة غدا",
    "en": "They're going to grill kefta in the garden tomorrow."
   }
@@ -6574,7 +6574,7 @@
   },
   {
    "slot": 2,
-   "lat": "ana ghadi n3ess d-dar mnin tmshiw",
+   "lat": "ana ghadi n3ess d-dar mnin tmchiw",
    "ar": "أنا غادي نعس الدار منين تمشيو",
    "en": "I'm going to watch the house when you go."
   }
@@ -6599,22 +6599,22 @@
    "en": "He's going to hand you the book tomorrow."
   }
  ],
- "nsher": [
+ "ncher": [
   {
    "slot": 0,
-   "lat": "nshert l-7wayej f s-sta7",
+   "lat": "nchert l-7wayej f s-sta7",
    "ar": "نشرت الحوايج فالسطح",
    "en": "I hung the clothes to dry on the roof."
   },
   {
    "slot": 1,
-   "lat": "katneshri l-7wayej f sh-shems",
+   "lat": "katnechri l-7wayej f ch-chems",
    "ar": "كتنشري الحوايج فالشمس",
    "en": "You hang the clothes to dry in the sun."
   },
   {
    "slot": 2,
-   "lat": "ghadi nneshru l-ktab dyalna 3am jay",
+   "lat": "ghadi nnechru l-ktab dyalna 3am jay",
    "ar": "غادي ننشرو الكتاب ديالنا عام جاي",
    "en": "We're going to publish our book next year."
   }
@@ -6622,7 +6622,7 @@
  "fre7": [
   {
    "slot": 0,
-   "lat": "fre7t bzzaf mnin shuftek",
+   "lat": "fre7t bzzaf mnin chuftek",
    "ar": "فرحت بزاف منين شفتك",
    "en": "I was very happy when I saw you."
   },
@@ -6634,7 +6634,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tfer7i mnin tshufi l-hdiya",
+   "lat": "ghadi tfer7i mnin tchufi l-hdiya",
    "ar": "غادي تفرحي منين تشوفي الهدية",
    "en": "You'll be happy when you see the gift."
   }
@@ -6668,7 +6668,7 @@
   },
   {
    "slot": 1,
-   "lat": "nti kat7esdi l-3nab f shtenber",
+   "lat": "nti kat7esdi l-3nab f chtenber",
    "ar": "نتي كتحصدي العنب فشتنبر",
    "en": "You harvest grapes in September."
   },
@@ -6828,13 +6828,13 @@
   },
   {
    "slot": 1,
-   "lat": "wash katkri tumubil f s-sif",
+   "lat": "wach katkri tumubil f s-sif",
    "ar": "واش كتكري طوموبيل فالصيف",
    "en": "Do you rent a car in the summer?"
   },
   {
    "slot": 2,
-   "lat": "ghadi nkri shqa f r-rbat",
+   "lat": "ghadi nkri chqa f r-rbat",
    "ar": "غادي نكري شقة فالرباط",
    "en": "I'm going to rent an apartment in Rabat."
   }
@@ -6868,7 +6868,7 @@
   },
   {
    "slot": 1,
-   "lat": "wash kattedrbu f l-mdrasa",
+   "lat": "wach kattedrbu f l-mdrasa",
    "ar": "واش كتتضربو فالمدرسة",
    "en": "Do you get hit at school?"
   },
@@ -6879,22 +6879,22 @@
    "en": "The kids are going to get hit by the big ones."
   }
  ],
- "sherref": [
+ "cherref": [
   {
    "slot": 0,
-   "lat": "l-wazir sherref l-3alim b jayza",
+   "lat": "l-wazir cherref l-3alim b jayza",
    "ar": "الوزير شرف العالم بجايزة",
    "en": "The minister honored the scientist with a prize."
   },
   {
    "slot": 1,
-   "lat": "katsherref bladek f kul blasa",
+   "lat": "katcherref bladek f kul blasa",
    "ar": "كتشرف بلادك فكل بلاصة",
    "en": "You do your country proud everywhere."
   },
   {
    "slot": 2,
-   "lat": "ghadi ysherrfu l-mudir f l-7efla",
+   "lat": "ghadi ycherrfu l-mudir f l-7efla",
    "ar": "غادي يشرفو المدير فالحفلة",
    "en": "They're going to honor the director at the party."
   }
@@ -7094,7 +7094,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ttkhaylu shnu kayn f had s-sendoq",
+   "lat": "ghadi ttkhaylu chnu kayn f had s-sendoq",
    "ar": "غادي تتخايلو شنو كاين فهاد الصندوق",
    "en": "You're going to imagine what's in this box."
   }
@@ -7162,13 +7162,13 @@
  "sjen": [
   {
    "slot": 0,
-   "lat": "sjenti l-7rami 3ashr snin",
+   "lat": "sjenti l-7rami 3achr snin",
    "ar": "سجنتي الحرامي عشر سنين",
    "en": "You imprisoned the thief for ten years."
   },
   {
    "slot": 1,
-   "lat": "wash katsejnu n-nas bla dnub",
+   "lat": "wach katsejnu n-nas bla dnub",
    "ar": "واش كتسجنو الناس بلا ذنب",
    "en": "Do you imprison people for no reason?"
   },
@@ -7179,22 +7179,22 @@
    "en": "The judge is going to imprison this man for three years."
   }
  ],
- "shedd-2": [
+ "chedd-2": [
   {
    "slot": 0,
-   "lat": "l-qadi shedd f l-7bs kul wa7ed seraq",
+   "lat": "l-qadi chedd f l-7bs kul wa7ed seraq",
    "ar": "القاضي شد ف الحبس كل واحد سرق",
    "en": "The judge put everyone who stole in prison."
   },
   {
    "slot": 1,
-   "lat": "7na kansheddu f l-7bs lli kayqetlu n-nas",
+   "lat": "7na kancheddu f l-7bs lli kayqetlu n-nas",
    "ar": "حنا كنشدو ف الحبس لي كيقتلو الناس",
    "en": "We put those who kill people in prison."
   },
   {
    "slot": 2,
-   "lat": "ghadi tsheddu f l-7bs lli kaydreb mratu",
+   "lat": "ghadi tcheddu f l-7bs lli kaydreb mratu",
    "ar": "غادي تشدو ف الحبس لي كيضرب مراتو",
    "en": "You're going to put the one who hits his wife in prison."
   }
@@ -7202,7 +7202,7 @@
  "t7essen": [
   {
    "slot": 0,
-   "lat": "t7essnat sa7tha bzzaf had sh-shher",
+   "lat": "t7essnat sa7tha bzzaf had ch-chher",
    "ar": "تحسنات صحتها بزاف هاد الشهر",
    "en": "Her health improved a lot this month."
   },
@@ -7214,7 +7214,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tt7essen f l-ingliziya bshwiya bshwiya",
+   "lat": "ghadi tt7essen f l-ingliziya bchwiya bchwiya",
    "ar": "غادي تتحسن فالانجليزية بشوية بشوية",
    "en": "You're going to improve in English little by little."
   }
@@ -7222,13 +7222,13 @@
  "rtajel": [
   {
    "slot": 0,
-   "lat": "rtajlu f l-7efla w kulshi daz mzyan",
+   "lat": "rtajlu f l-7efla w kulchi daz mzyan",
    "ar": "رتاجلو فالحفلة وكلشي داز مزيان",
    "en": "They improvised at the party and everything went well."
   },
   {
    "slot": 1,
-   "lat": "kanrtajel mnin ma kan3ref shi 7aja",
+   "lat": "kanrtajel mnin ma kan3ref chi 7aja",
    "ar": "كنرتاجل منين ما كنعرف شي حاجة",
    "en": "I improvise when I don't know something."
   },
@@ -7282,13 +7282,13 @@
  "3lem": [
   {
    "slot": 0,
-   "lat": "3lemna l-mudir b l-mushkil",
+   "lat": "3lemna l-mudir b l-muchkil",
    "ar": "علمنا المدير بالمشكل",
    "en": "We informed the manager about the problem."
   },
   {
    "slot": 1,
-   "lat": "kay3elmu l-mudir b kulshi",
+   "lat": "kay3elmu l-mudir b kulchi",
    "ar": "كيعلمو المدير بكلشي",
    "en": "They inform the manager about everything."
   },
@@ -7339,22 +7339,22 @@
    "en": "You're going to inherit this house from your uncle."
   }
  ],
- "fettesh": [
+ "fettech": [
   {
    "slot": 0,
-   "lat": "fetteshna d-dfatir dyal l-wlad",
+   "lat": "fettechna d-dfatir dyal l-wlad",
    "ar": "فتشنا الدفاتر ديال الولاد",
    "en": "We inspected the kids' notebooks."
   },
   {
    "slot": 1,
-   "lat": "katfettshu had l-qism kul shher",
+   "lat": "katfettchu had l-qism kul chher",
    "ar": "كتفتشو هاد القسم كل شهر",
    "en": "You inspect this class every month."
   },
   {
    "slot": 2,
-   "lat": "ghadi tfettesh l-qism l-jdid ghedda",
+   "lat": "ghadi tfettech l-qism l-jdid ghedda",
    "ar": "غادي تفتش القسم الجديد غدا",
    "en": "She's going to inspect the new class tomorrow."
   }
@@ -7402,7 +7402,7 @@
  "sebb": [
   {
    "slot": 0,
-   "lat": "sebbit shi wa7ed f t-triq",
+   "lat": "sebbit chi wa7ed f t-triq",
    "ar": "سبيت شي واحد فالطريق",
    "en": "I insulted someone on the road."
   },
@@ -7434,7 +7434,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tdemju l-khddama l-jdad f sh-sharika",
+   "lat": "ghadi tdemju l-khddama l-jdad f ch-charika",
    "ar": "غادي تدمجو الخدامة الجداد فالشركة",
    "en": "You're going to integrate the new workers into the company."
   }
@@ -7442,19 +7442,19 @@
  "tdekhkhel": [
   {
    "slot": 0,
-   "lat": "tdekhkheltu f shi 7aja mashi dyalkum",
+   "lat": "tdekhkheltu f chi 7aja machi dyalkum",
    "ar": "تدخلتو فشي حاجة ماشي ديالكم",
    "en": "You got involved in something that's not yours."
   },
   {
    "slot": 1,
-   "lat": "kantdekhkhel bash n3awen sa7bi",
+   "lat": "kantdekhkhel bach n3awen sa7bi",
    "ar": "كنتدخل باش نعاون صاحبي",
    "en": "I step in to help my friend."
   },
   {
    "slot": 2,
-   "lat": "ghadi ttdekhkhel f had l-mushkil ghedda",
+   "lat": "ghadi ttdekhkhel f had l-muchkil ghedda",
    "ar": "غادي تتدخل فهاد المشكل غدا",
    "en": "She's going to get involved in this problem tomorrow."
   }
@@ -7508,7 +7508,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaykhtar3u shi 7aja jdida kul 3am",
+   "lat": "kaykhtar3u chi 7aja jdida kul 3am",
    "ar": "كيختارعو شي حاجة جديدة كل عام",
    "en": "They invent something new every year."
   },
@@ -7528,7 +7528,7 @@
   },
   {
    "slot": 1,
-   "lat": "katsgiw l-jnan kul 3shiya",
+   "lat": "katsgiw l-jnan kul 3chiya",
    "ar": "كتسڭيو الجنان كل عشية",
    "en": "You water the garden every evening."
   },
@@ -7554,7 +7554,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nsqiw sh-shejra dyalna ghedda",
+   "lat": "ghadi nsqiw ch-chejra dyalna ghedda",
    "ar": "غادي نسقيو الشجرة ديالنا غدا",
    "en": "We're going to water our tree tomorrow."
   }
@@ -7579,22 +7579,22 @@
    "en": "He's going to annoy his sister if he goes into her room."
   }
  ],
- "hemmesh": [
+ "hemmech": [
   {
    "slot": 0,
-   "lat": "hemmesh l-wld l-jdid f l-qism",
+   "lat": "hemmech l-wld l-jdid f l-qism",
    "ar": "همش الولد الجديد فالقسم",
    "en": "He isolated the new boy in class."
   },
   {
    "slot": 1,
-   "lat": "kathemmshi khtek bla sabab",
+   "lat": "kathemmchi khtek bla sabab",
    "ar": "كتهمشي ختك بلا سبب",
    "en": "You isolate your sister for no reason."
   },
   {
    "slot": 2,
-   "lat": "ghadi nhemmshu l-mrid f bit wa7ed",
+   "lat": "ghadi nhemmchu l-mrid f bit wa7ed",
    "ar": "غادي نهمشو المريض فبيت واحد",
    "en": "We're going to isolate the patient in one room."
   }
@@ -7622,7 +7622,7 @@
  "ghar": [
   {
    "slot": 0,
-   "lat": "3lash ghrti 3la sa7bek",
+   "lat": "3lach ghrti 3la sa7bek",
    "ar": "علاش غرتي على صاحبك",
    "en": "Why were you jealous of your friend?"
   },
@@ -7739,22 +7739,22 @@
    "en": "You're going to maintain the cleanliness of the classroom."
   }
  ],
- "shat": [
+ "chat": [
   {
    "slot": 0,
-   "lat": "shtt l-kura l khuya",
+   "lat": "chtt l-kura l khuya",
    "ar": "شت الكورة لخويا",
    "en": "I kicked the ball to my brother."
   },
   {
    "slot": 1,
-   "lat": "kayshut l-kura mzyan f l-mal3eb",
+   "lat": "kaychut l-kura mzyan f l-mal3eb",
    "ar": "كيشوت الكورة مزيان فالملعب",
    "en": "He kicks the ball well on the field."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshutu l-kura mn b3id",
+   "lat": "ghadi ychutu l-kura mn b3id",
    "ar": "غادي يشوتو الكورة من بعيد",
    "en": "They're going to kick the ball from far away."
   }
@@ -7794,7 +7794,7 @@
   },
   {
    "slot": 2,
-   "lat": "ma ghadi tkhetfi 7ed hadshi 7aram",
+   "lat": "ma ghadi tkhetfi 7ed hadchi 7aram",
    "ar": "ما غادي تخطفي حد هادشي حرام",
    "en": "You won't kidnap anyone, that's forbidden."
   }
@@ -7802,7 +7802,7 @@
  "bas": [
   {
    "slot": 0,
-   "lat": "bst yed jeddi qbel ma nmshi",
+   "lat": "bst yed jeddi qbel ma nmchi",
    "ar": "بست يد جدي قبل ما نمشي",
    "en": "I kissed my grandfather's hand before I left."
   },
@@ -7854,7 +7854,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi t3ref kolshi mnin tqra l-ktab",
+   "lat": "ghadi t3ref kolchi mnin tqra l-ktab",
    "ar": "غادي تعرف كلشي منين تقرا الكتاب",
    "en": "You'll know everything when you read the book."
   }
@@ -7914,7 +7914,7 @@
   },
   {
    "slot": 2,
-   "lat": "khti ghadi tt3ettel 3la l-3sha",
+   "lat": "khti ghadi tt3ettel 3la l-3cha",
    "ar": "ختي غادي تتعطل على العشا",
    "en": "My sister is going to be late for dinner."
   }
@@ -7994,7 +7994,7 @@
   },
   {
    "slot": 2,
-   "lat": "l-ma ghadi ysil mn s-sqf ila shta",
+   "lat": "l-ma ghadi ysil mn s-sqf ila chta",
    "ar": "الما غادي يسيل من السقف إيلا شتا",
    "en": "Water is going to leak from the ceiling if it rains."
   }
@@ -8054,7 +8054,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi tre7li l fas",
+   "lat": "wach ghadi tre7li l fas",
    "ar": "واش غادي ترحلي لفاس",
    "en": "Are you going to move to Fes?"
   }
@@ -8102,7 +8102,7 @@
  "tuwel": [
   {
    "slot": 0,
-   "lat": "tuwlat l-fustan shwiya",
+   "lat": "tuwlat l-fustan chwiya",
    "ar": "طولات الفستان شوية",
    "en": "She lengthened the dress a little."
   },
@@ -8159,22 +8159,22 @@
    "en": "He is going to lie to us tomorrow."
   }
  ],
- "sh3el": [
+ "ch3el": [
   {
    "slot": 0,
-   "lat": "sh3elt d-duw f l-ghorfa",
+   "lat": "ch3elt d-duw f l-ghorfa",
    "ar": "شعلت الضو فالغرفة",
    "en": "I turned on the light in the room."
   },
   {
    "slot": 1,
-   "lat": "kayshe3lu t-tilfaza mnin kayjiw",
+   "lat": "kayche3lu t-tilfaza mnin kayjiw",
    "ar": "كيشعلو التلفازة منين كيجيو",
    "en": "They turn on the TV when they come."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshe3li t-tilfaza daba",
+   "lat": "ghadi tche3li t-tilfaza daba",
    "ar": "غادي تشعلي التلفازة دابا",
    "en": "You are going to turn on the TV now."
   }
@@ -8194,7 +8194,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ykheffef l-7mul dyalu qbel ma yemshi",
+   "lat": "ghadi ykheffef l-7mul dyalu qbel ma yemchi",
    "ar": "غادي يخفف الحمل ديالو قبل ما يمشي",
    "en": "He is going to lighten his load before he leaves."
   }
@@ -8214,7 +8214,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi n3rej shwiya ila mshit bezzaf",
+   "lat": "ghadi n3rej chwiya ila mchit bezzaf",
    "ar": "غادي نعرج شوية إلا مشيت بزاف",
    "en": "I am going to limp a little if I walk a lot."
   }
@@ -8234,7 +8234,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nsetter khett f l-kunnash",
+   "lat": "ghadi nsetter khett f l-kunnach",
    "ar": "غادي نسطر خط فالكناش",
    "en": "I am going to draw a line in the notebook."
   }
@@ -8242,13 +8242,13 @@
  "sken": [
   {
    "slot": 0,
-   "lat": "skent f kaza 3shr snin",
+   "lat": "skent f kaza 3chr snin",
    "ar": "سكنت فكازا عشر سنين",
    "en": "I lived in Casablanca for ten years."
   },
   {
    "slot": 1,
-   "lat": "kayseknu f shqqa sghira",
+   "lat": "kayseknu f chqqa sghira",
    "ar": "كيسكنو فشقة صغيرة",
    "en": "They live in a small apartment."
   },
@@ -8262,7 +8262,7 @@
  "suret": [
   {
    "slot": 0,
-   "lat": "surtat l-bab qbel ma temshi",
+   "lat": "surtat l-bab qbel ma temchi",
    "ar": "سورتات الباب قبل ما تمشي",
    "en": "She locked the door before she left."
   },
@@ -8279,22 +8279,22 @@
    "en": "You are going to lock the door when you go out."
   }
  ],
- "shaf": [
+ "chaf": [
   {
    "slot": 0,
-   "lat": "shfti fatima f s-suq",
+   "lat": "chfti fatima f s-suq",
    "ar": "شفتي فاطمة فالسوق",
    "en": "You saw Fatima at the market."
   },
   {
    "slot": 1,
-   "lat": "katshuf l-bahr mn l-balkun",
+   "lat": "katchuf l-bahr mn l-balkun",
    "ar": "كتشوف البحر من البالكون",
    "en": "You see the sea from the balcony."
   },
   {
    "slot": 2,
-   "lat": "ghadi nshuf l-film m3a sa7bi",
+   "lat": "ghadi nchuf l-film m3a sa7bi",
    "ar": "غادي نشوف الفيلم مع صاحبي",
    "en": "I am going to watch the movie with my friend."
   }
@@ -8339,22 +8339,22 @@
    "en": "I am going to monitor the exam tomorrow."
   }
  ],
- "tshabeh": [
+ "tchabeh": [
   {
    "slot": 0,
-   "lat": "tshabeht m3a khuya mnin knna sghar",
+   "lat": "tchabeht m3a khuya mnin knna sghar",
    "ar": "تشابهت مع خويا منين كنا صغار",
    "en": "I looked like my brother when we were little."
   },
   {
    "slot": 1,
-   "lat": "kattshabeh m3a khtha bezzaf",
+   "lat": "kattchabeh m3a khtha bezzaf",
    "ar": "كتتشابه مع ختها بزاف",
    "en": "She looks a lot like her sister."
   },
   {
    "slot": 2,
-   "lat": "ghadi ttshabhi m3a mmek mnin tkberi",
+   "lat": "ghadi ttchabhi m3a mmek mnin tkberi",
    "ar": "غادي تتشابهي مع مك منين تكبري",
    "en": "You are going to look like your mom when you grow up."
   }
@@ -8362,7 +8362,7 @@
  "tleffet": [
   {
    "slot": 0,
-   "lat": "tleffettu u shftu l-kelb",
+   "lat": "tleffettu u chftu l-kelb",
    "ar": "تلفتو وشفتو الكلب",
    "en": "You looked behind and saw the dog."
   },
@@ -8394,7 +8394,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi t7egri sa7btek",
+   "lat": "wach ghadi t7egri sa7btek",
    "ar": "واش غادي تحڭري صاحبتك",
    "en": "Are you going to look down on your friend?"
   }
@@ -8419,22 +8419,22 @@
    "en": "You're going to look for your keys."
   }
  ],
- "shbeh": [
+ "chbeh": [
   {
    "slot": 0,
-   "lat": "shbeh khalu bezzaf",
+   "lat": "chbeh khalu bezzaf",
    "ar": "شبه خالو بزاف",
    "en": "He looked a lot like his uncle."
   },
   {
    "slot": 1,
-   "lat": "katshebhu khalkum bezzaf",
+   "lat": "katchebhu khalkum bezzaf",
    "ar": "كتشبهو خالكم بزاف",
    "en": "You look a lot like your uncle."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshbeh mama dyalha mnin tkber",
+   "lat": "ghadi tchbeh mama dyalha mnin tkber",
    "ar": "غادي تشبه ماما ديالها منين تكبر",
    "en": "She's going to look like her mother when she grows up."
   }
@@ -8482,13 +8482,13 @@
  "rkha": [
   {
    "slot": 0,
-   "lat": "rkhina l-7bel shwiya",
+   "lat": "rkhina l-7bel chwiya",
    "ar": "رخينا الحبل شوية",
    "en": "We loosened the rope a little."
   },
   {
    "slot": 1,
-   "lat": "katrkhiw l-7bel shwiya b shwiya",
+   "lat": "katrkhiw l-7bel chwiya b chwiya",
    "ar": "كترخيو الحبل شوية بشوية",
    "en": "You loosen the rope little by little."
   },
@@ -8614,7 +8614,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nhebbet s-swt shwiya",
+   "lat": "ghadi nhebbet s-swt chwiya",
    "ar": "غادي نهبط الصوت شوية",
    "en": "I'm going to lower the volume a little."
   }
@@ -8668,7 +8668,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaykerfes kulshi mnin kayghdeb",
+   "lat": "kaykerfes kulchi mnin kayghdeb",
    "ar": "كيكرفس كلشي منين كيغضب",
    "en": "He messes everything up when he gets angry."
   },
@@ -8699,22 +8699,22 @@
    "en": "You're going to grade the exam tomorrow."
   }
  ],
- "rshem": [
+ "rchem": [
   {
    "slot": 0,
-   "lat": "reshmu l-7wayej dyalhum",
+   "lat": "rechmu l-7wayej dyalhum",
    "ar": "رشمو الحوايج ديالهم",
    "en": "They marked their clothes."
   },
   {
    "slot": 1,
-   "lat": "katrshem l-kelmat b qelem 7mer",
+   "lat": "katrchem l-kelmat b qelem 7mer",
    "ar": "كترشم الكلمات بقلم حمر",
    "en": "She marks the words with a red pen."
   },
   {
    "slot": 2,
-   "lat": "ghadi trshem l-blasa 3la l-kharita",
+   "lat": "ghadi trchem l-blasa 3la l-kharita",
    "ar": "غادي ترشم البلاصة على الخريطة",
    "en": "You're going to mark the place on the map."
   }
@@ -8782,13 +8782,13 @@
  "3na": [
   {
    "slot": 0,
-   "lat": "shnu 3nitu b had l-kelma",
+   "lat": "chnu 3nitu b had l-kelma",
    "ar": "شنو عنيتو بهاد الكلمة",
    "en": "What did you mean by this word?"
   },
   {
    "slot": 1,
-   "lat": "shnu kat3ni b had l-kelma",
+   "lat": "chnu kat3ni b had l-kelma",
    "ar": "شنو كتعني بهاد الكلمة",
    "en": "What do you mean by this word?"
   },
@@ -8874,7 +8874,7 @@
   },
   {
    "slot": 2,
-   "lat": "l-7lawiyat ghadi ydubu f sh-shems",
+   "lat": "l-7lawiyat ghadi ydubu f ch-chems",
    "ar": "الحلويات غادي يدوبو فالشمس",
    "en": "The sweets are going to melt in the sun."
   }
@@ -8928,7 +8928,7 @@
   },
   {
    "slot": 1,
-   "lat": "3lash kathejri mn l-bled",
+   "lat": "3lach kathejri mn l-bled",
    "ar": "علاش كتهجري من البلاد",
    "en": "Why are you migrating from the country?"
   },
@@ -9088,7 +9088,7 @@
   },
   {
    "slot": 1,
-   "lat": "3lash katke77zi l-7wayej dyalek dima",
+   "lat": "3lach katke77zi l-7wayej dyalek dima",
    "ar": "علاش كتكحزي الحوايج ديالك ديما",
    "en": "Why do you always move your things?"
   },
@@ -9108,7 +9108,7 @@
   },
   {
    "slot": 1,
-   "lat": "katt7errek b shwiya f l-bit",
+   "lat": "katt7errek b chwiya f l-bit",
    "ar": "كتتحرك بشوية فالبيت",
    "en": "She moves slowly in the room."
   },
@@ -9122,7 +9122,7 @@
  "tke77ez": [
   {
    "slot": 0,
-   "lat": "tke77ez shwiya l hna",
+   "lat": "tke77ez chwiya l hna",
    "ar": "تكحز شوية لهنا",
    "en": "He moved a little over this way."
   },
@@ -9142,7 +9142,7 @@
  "b3ed": [
   {
    "slot": 0,
-   "lat": "b3ed mn l-bab shwiya",
+   "lat": "b3ed mn l-bab chwiya",
    "ar": "بعد من الباب شوية",
    "en": "He moved away from the door a little."
   },
@@ -9222,7 +9222,7 @@
  "7taj": [
   {
    "slot": 0,
-   "lat": "7tajti shi 7aja mn s-suq",
+   "lat": "7tajti chi 7aja mn s-suq",
    "ar": "حتاجتي شي حاجة من السوق",
    "en": "Did you need anything from the market?"
   },
@@ -9242,7 +9242,7 @@
  "ferret": [
   {
    "slot": 0,
-   "lat": "ferret f shghlu",
+   "lat": "ferret f chghlu",
    "ar": "فرط فشغلو",
    "en": "He neglected his work."
   },
@@ -9279,22 +9279,22 @@
    "en": "I'm going to make noise at the party tomorrow."
   }
  ],
- "reshshe7": [
+ "rechche7": [
   {
    "slot": 0,
-   "lat": "reshsh7u sa7bi f l-intikhabat",
+   "lat": "rechch7u sa7bi f l-intikhabat",
    "ar": "رشحو صاحبي فالانتخابات",
    "en": "They nominated my friend in the elections."
   },
   {
    "slot": 1,
-   "lat": "shkun katreshsh7u l had l-jayza",
+   "lat": "chkun katrechch7u l had l-jayza",
    "ar": "شكون كترشحو لهاد الجايزة",
    "en": "Who are you nominating for this prize?"
   },
   {
    "slot": 2,
-   "lat": "ghadi nreshsh7u khuna f l-jam3iya",
+   "lat": "ghadi nrechch7u khuna f l-jam3iya",
    "ar": "غادي نرشحو خونا فالجمعية",
    "en": "We're going to nominate our brother in the association."
   }
@@ -9302,13 +9302,13 @@
  "la7ed": [
   {
    "slot": 0,
-   "lat": "la7edti shi 7aja jdida f d-dar",
+   "lat": "la7edti chi 7aja jdida f d-dar",
    "ar": "لاحضتي شي حاجة جديدة فالدار",
    "en": "Did you notice something new in the house?"
   },
   {
    "slot": 1,
-   "lat": "kayla7ed kulshi f l-qism",
+   "lat": "kayla7ed kulchi f l-qism",
    "ar": "كيلاحض كلشي فالقسم",
    "en": "He notices everything in class."
   },
@@ -9322,7 +9322,7 @@
  "ta3": [
   {
    "slot": 0,
-   "lat": "wash t3tu l-ostad dyalkum",
+   "lat": "wach t3tu l-ostad dyalkum",
    "ar": "واش طعتو الأستاذ ديالكم",
    "en": "Did you obey your teacher?"
   },
@@ -9348,13 +9348,13 @@
   },
   {
    "slot": 1,
-   "lat": "kay3ared 3la kulshi",
+   "lat": "kay3ared 3la kulchi",
    "ar": "كيعارض على كلشي",
    "en": "He objects to everything."
   },
   {
    "slot": 2,
-   "lat": "wash ghadi t3ared 3la had l-fekra",
+   "lat": "wach ghadi t3ared 3la had l-fekra",
    "ar": "واش غادي تعارض على هاد الفكرة",
    "en": "Are you going to object to this idea?"
   }
@@ -9362,7 +9362,7 @@
  "bezzez": [
   {
    "slot": 0,
-   "lat": "bezzezt 3la khuya ymshi m3aya",
+   "lat": "bezzezt 3la khuya ymchi m3aya",
    "ar": "بززت على خويا يمشي معايا",
    "en": "I made my brother go with me."
   },
@@ -9408,7 +9408,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanziytu l-makina kul shher",
+   "lat": "kanziytu l-makina kul chher",
    "ar": "كنزيتو الماكينة كل شهر",
    "en": "We oil the machine every month."
   },
@@ -9428,7 +9428,7 @@
   },
   {
    "slot": 1,
-   "lat": "kay7ellu l-mushkil b sh-shwiya",
+   "lat": "kay7ellu l-muchkil b ch-chwiya",
    "ar": "كيحلو المشكل بالشوية",
    "en": "They solve the problem little by little."
   },
@@ -9442,13 +9442,13 @@
  "fte7": [
   {
    "slot": 0,
-   "lat": "wash fte7tu l-merid l-bare7",
+   "lat": "wach fte7tu l-merid l-bare7",
    "ar": "واش فتحتو المريض البارح",
    "en": "Did you operate on the patient yesterday?"
   },
   {
    "slot": 1,
-   "lat": "kanfet7u l-qalb f had l-mustashfa",
+   "lat": "kanfet7u l-qalb f had l-mustachfa",
    "ar": "كنفتحو القلب فهاد المستشفى",
    "en": "We operate on hearts in this hospital."
   },
@@ -9494,7 +9494,7 @@
   },
   {
    "slot": 2,
-   "lat": "wash ghadi tneddmi l-7efla b wa7dek",
+   "lat": "wach ghadi tneddmi l-7efla b wa7dek",
    "ar": "واش غادي تنضمي الحفلة بوحدك",
    "en": "Are you going to organize the party by yourself?"
   }
@@ -9508,7 +9508,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaytghelleb 3la kul mushkil b sber",
+   "lat": "kaytghelleb 3la kul muchkil b sber",
    "ar": "كيتغلب على كل مشكل بصبر",
    "en": "He overcomes every problem with patience."
   },
@@ -9522,7 +9522,7 @@
  "mlek": [
   {
    "slot": 0,
-   "lat": "wash mlekti shi tumubil",
+   "lat": "wach mlekti chi tumubil",
    "ar": "واش ملكتي شي طوموبيل",
    "en": "Did you own a car?"
   },
@@ -9579,22 +9579,22 @@
    "en": "She's going to park her car in the street."
   }
  ],
- "sharek": [
+ "charek": [
   {
    "slot": 0,
-   "lat": "sharek f l-mubara l-bare7",
+   "lat": "charek f l-mubara l-bare7",
    "ar": "شارك فالمباراة البارح",
    "en": "He took part in the match yesterday."
   },
   {
    "slot": 1,
-   "lat": "kansharku f l-jam3iya dyal l-7ay",
+   "lat": "kancharku f l-jam3iya dyal l-7ay",
    "ar": "كنشاركو فالجمعية ديال الحي",
    "en": "We take part in the neighborhood association."
   },
   {
    "slot": 2,
-   "lat": "ghadi nsharek f had l-mosabaqa",
+   "lat": "ghadi ncharek f had l-mosabaqa",
    "ar": "غادي نشارك فهاد المسابقة",
    "en": "I'm going to take part in this competition."
   }
@@ -9654,7 +9654,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tsebri shwiya 7ta yji t-tobis",
+   "lat": "ghadi tsebri chwiya 7ta yji t-tobis",
    "ar": "غادي تصبري شوية حتى يجي الطوبيس",
    "en": "You will be patient a little until the bus comes."
   }
@@ -9668,53 +9668,53 @@
   },
   {
    "slot": 1,
-   "lat": "kaykhellsu f akhir sh-shher",
+   "lat": "kaykhellsu f akhir ch-chher",
    "ar": "كيخلصو فاخر الشهر",
    "en": "They pay at the end of the month."
   },
   {
    "slot": 2,
-   "lat": "ghadi tkhelles kolshi ghedda",
+   "lat": "ghadi tkhelles kolchi ghedda",
    "ar": "غادي تخلص كلشي غدا",
    "en": "She will pay for everything tomorrow."
   }
  ],
- "qeshsher": [
+ "qechcher": [
   {
    "slot": 0,
-   "lat": "qeshshert l-btata l-bare7",
+   "lat": "qechchert l-btata l-bare7",
    "ar": "قشرت البطاطا البارح",
    "en": "I peeled the potatoes yesterday."
   },
   {
    "slot": 1,
-   "lat": "katqeshsher t-tfa7 l weldha",
+   "lat": "katqechcher t-tfa7 l weldha",
    "ar": "كتقشر التفاح لولدها",
    "en": "She peels apples for her son."
   },
   {
    "slot": 2,
-   "lat": "ghadi tqeshsher l-bartuqal b had s-skin",
+   "lat": "ghadi tqechcher l-bartuqal b had s-skin",
    "ar": "غادي تقشر البرتقال بهاد السكين",
    "en": "You will peel the orange with this knife."
   }
  ],
- "tqeshsher": [
+ "tqechcher": [
   {
    "slot": 0,
-   "lat": "tqeshshert dra3i mn sh-shems",
+   "lat": "tqechchert dra3i mn ch-chems",
    "ar": "تقشرت دراعي من الشمس",
    "en": "My arm peeled from the sun."
   },
   {
    "slot": 1,
-   "lat": "kaytqeshshru mn sh-shems f s-sif",
+   "lat": "kaytqechchru mn ch-chems f s-sif",
    "ar": "كيتقشرو من الشمس فالصيف",
    "en": "They peel from the sun in the summer."
   },
   {
    "slot": 2,
-   "lat": "ghadi ytqeshsher wejhu mn sh-shems",
+   "lat": "ghadi ytqechcher wejhu mn ch-chems",
    "ar": "غادي يتقشر وجهو من الشمس",
    "en": "His face will peel from the sun."
   }
@@ -9722,7 +9722,7 @@
  "qne3": [
   {
    "slot": 0,
-   "lat": "qen3u baba w mshaw l s-suq",
+   "lat": "qen3u baba w mchaw l s-suq",
    "ar": "قنعو بابا ومشاو للسوق",
    "en": "They persuaded Dad and went to the market."
   },
@@ -9742,7 +9742,7 @@
  "jna": [
   {
    "slot": 0,
-   "lat": "jnitu t-tut mn sh-shejra",
+   "lat": "jnitu t-tut mn ch-chejra",
    "ar": "جنيتو التوت من الشجرة",
    "en": "You picked the berries from the tree."
   },
@@ -9879,22 +9879,22 @@
    "en": "They will plow the land early tomorrow."
   }
  ],
- "riyesh": [
+ "riyech": [
   {
    "slot": 0,
-   "lat": "riyesht d-djaja qbel ma nteyyebha",
+   "lat": "riyecht d-djaja qbel ma nteyyebha",
    "ar": "ريشت الدجاجة قبل ما نطيبها",
    "en": "I plucked the chicken before I cooked it."
   },
   {
    "slot": 1,
-   "lat": "katriyesh l-farruj b sor3a",
+   "lat": "katriyech l-farruj b sor3a",
    "ar": "كتريش الفروج بسرعة",
    "en": "She plucks the chicken quickly."
   },
   {
    "slot": 2,
-   "lat": "ghadi nriyshu d-djaj ghedda f d-dar",
+   "lat": "ghadi nriychu d-djaj ghedda f d-dar",
    "ar": "غادي نريشو الدجاج غدا فالدار",
    "en": "We will pluck the chickens tomorrow at home."
   }
@@ -9908,7 +9908,7 @@
   },
   {
    "slot": 1,
-   "lat": "kaysemmem l-7ashrat b had d-dwa",
+   "lat": "kaysemmem l-7achrat b had d-dwa",
    "ar": "كيسمم الحشرات بهاد الدوا",
    "en": "He poisons the insects with this medicine."
   },
@@ -10022,7 +10022,7 @@
  "sella": [
   {
    "slot": 0,
-   "lat": "sellat l-3sha f d-dar",
+   "lat": "sellat l-3cha f d-dar",
    "ar": "صلات العشا فالدار",
    "en": "She prayed the evening prayer at home."
   },
@@ -10048,13 +10048,13 @@
   },
   {
    "slot": 1,
-   "lat": "kayfeddlu sh-shay b n-na3na3",
+   "lat": "kayfeddlu ch-chay b n-na3na3",
    "ar": "كيفضلو الشاي بالنعناع",
    "en": "They prefer tea with mint."
   },
   {
    "slot": 2,
-   "lat": "ghadi tfeddel l-qehwa wlla sh-shay",
+   "lat": "ghadi tfeddel l-qehwa wlla ch-chay",
    "ar": "غادي تفضل القهوة ولا الشاي",
    "en": "Are you going to prefer coffee or tea?"
   }
@@ -10074,7 +10074,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nwejjdu l-3sha bekri",
+   "lat": "ghadi nwejjdu l-3cha bekri",
    "ar": "غادي نوجدو العشا بكري",
    "en": "We're going to prepare dinner early."
   }
@@ -10088,13 +10088,13 @@
   },
   {
    "slot": 1,
-   "lat": "kaydghet 3la wldu bash yqra",
+   "lat": "kaydghet 3la wldu bach yqra",
    "ar": "كيضغط على ولدو باش يقرا",
    "en": "He pressures his son so that he studies."
   },
   {
    "slot": 2,
-   "lat": "ghadi ndeghtu 3la sh-sharika daba",
+   "lat": "ghadi ndeghtu 3la ch-charika daba",
    "ar": "غادي نضغطو على الشركة دابا",
    "en": "We're going to pressure the company now."
   }
@@ -10194,7 +10194,7 @@
   },
   {
    "slot": 2,
-   "lat": "had sh-sharika ghadi tntej siyarat jdad",
+   "lat": "had ch-charika ghadi tntej siyarat jdad",
    "ar": "هاد الشركة غادي تنتج سيارات جداد",
    "en": "This company is going to produce new cars."
   }
@@ -10202,7 +10202,7 @@
  "wa3ed": [
   {
    "slot": 0,
-   "lat": "wa3edna bba nmshiw l s-suq",
+   "lat": "wa3edna bba nmchiw l s-suq",
    "ar": "واعدنا بابا نمشيو للسوق",
    "en": "We promised dad we'd go to the market."
   },
@@ -10288,13 +10288,13 @@
   },
   {
    "slot": 1,
-   "lat": "katzebri l-3enb f sh-shta",
+   "lat": "katzebri l-3enb f ch-chta",
    "ar": "كتزبري العنب فالشتا",
    "en": "You prune the grapevine in winter."
   },
   {
    "slot": 2,
-   "lat": "ghadi yzebru sh-shjar ghedda",
+   "lat": "ghadi yzebru ch-chjar ghedda",
    "ar": "غادي يزبرو الشجر غدا",
    "en": "They're going to prune the trees tomorrow."
   }
@@ -10414,7 +10414,7 @@
   },
   {
    "slot": 2,
-   "lat": "hiya ghadi tsket mn ba3d shwiya",
+   "lat": "hiya ghadi tsket mn ba3d chwiya",
    "ar": "هي غادي تسكت من بعد شوية",
    "en": "She's going to be quiet after a little while."
   }
@@ -10434,7 +10434,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tsekket l-wlad b shi lu3ba",
+   "lat": "ghadi tsekket l-wlad b chi lu3ba",
    "ar": "غادي تسكت الولاد بشي لعبة",
    "en": "You're going to quiet the kids with some toy."
   }
@@ -10468,7 +10468,7 @@
   },
   {
    "slot": 1,
-   "lat": "shkun qal bli katghtasbi nas",
+   "lat": "chkun qal bli katghtasbi nas",
    "ar": "شكون قال بلي كتغتاصبي ناس",
    "en": "Who said that you (f.) rape people?"
   },
@@ -10482,7 +10482,7 @@
  "qra": [
   {
    "slot": 0,
-   "lat": "wash qritu had l-ktab",
+   "lat": "wach qritu had l-ktab",
    "ar": "واش قريتو هاد الكتاب",
    "en": "Did you (pl.) read this book?"
   },
@@ -10522,7 +10522,7 @@
  "rfed": [
   {
    "slot": 0,
-   "lat": "refdu yemshiw m3ana",
+   "lat": "refdu yemchiw m3ana",
    "ar": "رفضو يمشيو معانا",
    "en": "They refused to go with us."
   },
@@ -10588,7 +10588,7 @@
   },
   {
    "slot": 1,
-   "lat": "kan3uwdu s-slef dyalna kul shhar",
+   "lat": "kan3uwdu s-slef dyalna kul chhar",
    "ar": "كنعوضو السلف ديالنا كل شهر",
    "en": "We pay back our loan every month."
   },
@@ -10602,7 +10602,7 @@
  "rta7": [
   {
    "slot": 0,
-   "lat": "rta7at shwiya mn ba3d l-khedma",
+   "lat": "rta7at chwiya mn ba3d l-khedma",
    "ar": "رتاحات شوية من بعد الخدمة",
    "en": "She rested a bit after work."
   },
@@ -10614,7 +10614,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi yrta7 f l-bit shwiya",
+   "lat": "ghadi yrta7 f l-bit chwiya",
    "ar": "غادي يرتاح فالبيت شوية",
    "en": "He's going to rest in the room for a bit."
   }
@@ -10628,7 +10628,7 @@
   },
   {
    "slot": 1,
-   "lat": "kay3uwel 3la khuh f kolshi",
+   "lat": "kay3uwel 3la khuh f kolchi",
    "ar": "كيعول على خوه فكلشي",
    "en": "He relies on his brother for everything."
   },
@@ -10662,7 +10662,7 @@
  "tfekker": [
   {
    "slot": 0,
-   "lat": "wash tfekkerti smitu",
+   "lat": "wach tfekkerti smitu",
    "ar": "واش تفكرتي سميتو",
    "en": "Did you (m.) remember his name?"
   },
@@ -10742,7 +10742,7 @@
  "jedded": [
   {
    "slot": 0,
-   "lat": "wash jeddedti l-3aqd dyalek",
+   "lat": "wach jeddedti l-3aqd dyalek",
    "ar": "واش جددتي العقد ديالك",
    "en": "Did you (m.) renew your contract?"
   },
@@ -10782,7 +10782,7 @@
  "tab": [
   {
    "slot": 0,
-   "lat": "tbtu f shhar rmdan",
+   "lat": "tbtu f chhar rmdan",
    "ar": "تبتو فشهر رمضان",
    "en": "You (pl.) repented in the month of Ramadan."
   },
@@ -10834,7 +10834,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nstaqel mn l-khedma sh-shher j-jay",
+   "lat": "ghadi nstaqel mn l-khedma ch-chher j-jay",
    "ar": "غادي نستاقل من الخدمة الشهر الجاي",
    "en": "I'm going to resign from my job next month."
   }
@@ -10908,7 +10908,7 @@
   },
   {
    "slot": 1,
-   "lat": "fuqash katrje3 l d-dar?",
+   "lat": "fuqach katrje3 l d-dar?",
    "ar": "فوقاش كترجع للدار؟",
    "en": "When do you come back home?"
   },
@@ -10939,22 +10939,22 @@
    "en": "You're going to review your lessons well."
   }
  ],
- "shellel": [
+ "chellel": [
   {
    "slot": 0,
-   "lat": "bba shellel l-kas b l-ma",
+   "lat": "bba chellel l-kas b l-ma",
    "ar": "بابا شلل الكاس بالما",
    "en": "Dad rinsed the glass with water."
   },
   {
    "slot": 1,
-   "lat": "katshellel l-khodra mzyan qbel t-tbikh",
+   "lat": "katchellel l-khodra mzyan qbel t-tbikh",
    "ar": "كتشلل الخضرة مزيان قبل الطبيخ",
    "en": "You rinse the vegetables well before cooking."
   },
   {
    "slot": 2,
-   "lat": "ghadi nshellel l-fakya b l-ma",
+   "lat": "ghadi nchellel l-fakya b l-ma",
    "ar": "غادي نشلل الفاكية بالما",
    "en": "I'm going to rinse the fruit with water."
   }
@@ -11068,13 +11068,13 @@
   },
   {
    "slot": 1,
-   "lat": "khuya kaytqada mn l-flus f akhir sh-shher",
+   "lat": "khuya kaytqada mn l-flus f akhir ch-chher",
    "ar": "خويا كيتقاضا من الفلوس فاخر الشهر",
    "en": "My brother runs out of money at the end of the month."
   },
   {
    "slot": 2,
-   "lat": "ghadi ntqadaw mn l-khobz qbel l-3shiya",
+   "lat": "ghadi ntqadaw mn l-khobz qbel l-3chiya",
    "ar": "غادي نتقاضاو من الخبز قبل العشية",
    "en": "We're going to run out of bread before the evening."
   }
@@ -11088,13 +11088,13 @@
   },
   {
    "slot": 1,
-   "lat": "katde77i b waqtek bash t3awen khuk",
+   "lat": "katde77i b waqtek bach t3awen khuk",
    "ar": "كتضحي بوقتك باش تعاون خوك",
    "en": "You sacrifice your time to help your brother."
   },
   {
    "slot": 2,
-   "lat": "ghadi tde77i b shi 7aja 3la wladek",
+   "lat": "ghadi tde77i b chi 7aja 3la wladek",
    "ar": "غادي تضحي بشي حاجة على ولادك",
    "en": "You're going to sacrifice something for your kids."
   }
@@ -11148,7 +11148,7 @@
   },
   {
    "slot": 1,
-   "lat": "katkhebbe3 l-flus f shi blasa",
+   "lat": "katkhebbe3 l-flus f chi blasa",
    "ar": "كتخبع الفلوس فشي بلاصة",
    "en": "She hides the money somewhere."
   },
@@ -11162,19 +11162,19 @@
  "jme3-2": [
   {
    "slot": 0,
-   "lat": "jme3tu l-flus bash tshriw tumubil",
+   "lat": "jme3tu l-flus bach tchriw tumubil",
    "ar": "جمعتو الفلوس باش تشريو طوموبيل",
    "en": "You saved money to buy a car."
   },
   {
    "slot": 1,
-   "lat": "kayjem3u l-flus bash yshriw dar",
+   "lat": "kayjem3u l-flus bach ychriw dar",
    "ar": "كيجمعو الفلوس باش يشريو دار",
    "en": "They save money to buy a house."
   },
   {
    "slot": 2,
-   "lat": "ghadi tjme3 l-flus bash tsafer",
+   "lat": "ghadi tjme3 l-flus bach tsafer",
    "ar": "غادي تجمع الفلوس باش تسافر",
    "en": "She's going to save money to travel."
   }
@@ -11188,7 +11188,7 @@
   },
   {
    "slot": 1,
-   "lat": "katweffer l-flus kul shher",
+   "lat": "katweffer l-flus kul chher",
    "ar": "كتوفر الفلوس كل شهر",
    "en": "You save money every month."
   },
@@ -11202,13 +11202,13 @@
  "gal": [
   {
    "slot": 0,
-   "lat": "gelna lih kulshi",
+   "lat": "gelna lih kulchi",
    "ar": "قلنا ليه كلشي",
    "en": "We told him everything."
   },
   {
    "slot": 1,
-   "lat": "katgul lina shnu khessna ndiru",
+   "lat": "katgul lina chnu khessna ndiru",
    "ar": "كتقول لينا شنو خصنا نديرو",
    "en": "She tells us what we need to do."
   },
@@ -11228,7 +11228,7 @@
   },
   {
    "slot": 1,
-   "lat": "kanghuwet mnin kanshuf l-far",
+   "lat": "kanghuwet mnin kanchuf l-far",
    "ar": "كنغوت منين كنشوف الفار",
    "en": "I shout when I see a mouse."
   },
@@ -11259,22 +11259,22 @@
    "en": "They're going to tighten the door screws tomorrow."
   }
  ],
- "tshawef": [
+ "tchawef": [
   {
    "slot": 0,
-   "lat": "tshawefti m3a sa7btek lbare7",
+   "lat": "tchawefti m3a sa7btek lbare7",
    "ar": "تشاوفتي مع صاحبتك البارح",
    "en": "You saw your friend yesterday."
   },
   {
    "slot": 1,
-   "lat": "kaytshawfu kul nhar f l-madrasa",
+   "lat": "kaytchawfu kul nhar f l-madrasa",
    "ar": "كيتشاوفو كل نهار فالمدرسة",
    "en": "They see each other every day at school."
   },
   {
    "slot": 2,
-   "lat": "ghadi ntshawfu b3d l-khedma",
+   "lat": "ghadi ntchawfu b3d l-khedma",
    "ar": "غادي نتشاوفو بعد الخدمة",
    "en": "We're going to see each other after work."
   }
@@ -11308,7 +11308,7 @@
   },
   {
    "slot": 1,
-   "lat": "katsifet l-flus l khutha kul shhar",
+   "lat": "katsifet l-flus l khutha kul chhar",
    "ar": "كتصيفط الفلوس لخوتها كل شهر",
    "en": "She sends money to her siblings every month."
   },
@@ -11368,7 +11368,7 @@
   },
   {
    "slot": 1,
-   "lat": "kangherbu l l-bhar f l-3shiya",
+   "lat": "kangherbu l l-bhar f l-3chiya",
    "ar": "كنغربو للبحر فالعشية",
    "en": "In the evening we head west to the sea."
   },
@@ -11488,7 +11488,7 @@
   },
   {
    "slot": 1,
-   "lat": "katmeddiw l-mqess kul shhar",
+   "lat": "katmeddiw l-mqess kul chhar",
    "ar": "كتمضيو المقص كل شهر",
    "en": "You sharpen the scissors every month."
   },
@@ -11554,7 +11554,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tqessri sh-sha3r dyalek",
+   "lat": "ghadi tqessri ch-cha3r dyalek",
    "ar": "غادي تقصري الشعر ديالك",
    "en": "You're going to cut your hair short."
   }
@@ -11579,22 +11579,22 @@
    "en": "You're going to show us the house."
   }
  ],
- "duwesh": [
+ "duwech": [
   {
    "slot": 0,
-   "lat": "duwshat b l-ma s-skhun",
+   "lat": "duwchat b l-ma s-skhun",
    "ar": "دوشات بالما السخون",
    "en": "She showered with hot water."
   },
   {
    "slot": 1,
-   "lat": "katduwshu kul sba7 qbel l-khedma",
+   "lat": "katduwchu kul sba7 qbel l-khedma",
    "ar": "كتدوشو كل صباح قبل الخدمة",
    "en": "You shower every morning before work."
   },
   {
    "slot": 2,
-   "lat": "ghadi nduwesh daba w nmshi",
+   "lat": "ghadi nduwech daba w nmchi",
    "ar": "غادي ندوش دابا ونمشي",
    "en": "I'm going to shower now and then leave."
   }
@@ -11602,7 +11602,7 @@
  "gherbel": [
   {
    "slot": 0,
-   "lat": "gherbel d-dqiq qbel l-3shiya",
+   "lat": "gherbel d-dqiq qbel l-3chiya",
    "ar": "غربل الدقيق قبل العشية",
    "en": "He sifted the flour before the evening."
   },
@@ -11634,7 +11634,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ttsaraw f merrakesh f l-3otla",
+   "lat": "ghadi ttsaraw f merrakech f l-3otla",
    "ar": "غادي تتساراو فمراكش فالعطلة",
    "en": "You're going to sightsee in Marrakech during the holiday."
   }
@@ -11754,7 +11754,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nslekh l-kebsh m3a bba ghedda",
+   "lat": "ghadi nslekh l-kebch m3a bba ghedda",
    "ar": "غادي نسلخ الكبش مع بابا غدا",
    "en": "I'm going to skin the ram with my dad tomorrow."
   }
@@ -11779,22 +11779,22 @@
    "en": "She's going to slap her brother now."
   }
  ],
- "terresh": [
+ "terrech": [
   {
    "slot": 0,
-   "lat": "terrshu l-weld f wejhu",
+   "lat": "terrchu l-weld f wejhu",
    "ar": "طرشو الولد فوجهو",
    "en": "They slapped the boy in the face."
   },
   {
    "slot": 1,
-   "lat": "3lash katterrshu sa7bkum",
+   "lat": "3lach katterrchu sa7bkum",
    "ar": "علاش كتطرشو صاحبكم",
    "en": "Why do you slap your friend?"
   },
   {
    "slot": 2,
-   "lat": "ghadi tterresh khtha ila ma sketsh",
+   "lat": "ghadi tterrech khtha ila ma sketch",
    "ar": "غادي تطرش ختها إلا ما سكتش",
    "en": "She's going to slap her sister if she doesn't keep quiet."
   }
@@ -11899,22 +11899,22 @@
    "en": "She's going to smear honey on the msemmen."
   }
  ],
- "shemm": [
+ "chemm": [
   {
    "slot": 0,
-   "lat": "shemmit ri7a zwina f l-metbakh",
+   "lat": "chemmit ri7a zwina f l-metbakh",
    "ar": "شميت ريحة زوينة فالمطبخ",
    "en": "I smelled a nice scent in the kitchen."
   },
   {
    "slot": 1,
-   "lat": "katshemm l-ward f j-jnan",
+   "lat": "katchemm l-ward f j-jnan",
    "ar": "كتشم الورد فالجنان",
    "en": "She smells the roses in the garden."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshemmu l-3tur f s-suq",
+   "lat": "ghadi ychemmu l-3tur f s-suq",
    "ar": "غادي يشمو العطور فالسوق",
    "en": "They're going to smell the perfumes in the market."
   }
@@ -11928,13 +11928,13 @@
   },
   {
    "slot": 1,
-   "lat": "katbtasmi mnin katshufi l-wlad",
+   "lat": "katbtasmi mnin katchufi l-wlad",
    "ar": "كتبتاسمي منين كتشوفي الولاد",
    "en": "You smile when you see the kids."
   },
   {
    "slot": 2,
-   "lat": "ghadi ybtasmu mnin yshufu l-hadiya",
+   "lat": "ghadi ybtasmu mnin ychufu l-hadiya",
    "ar": "غادي يبتاسمو منين يشوفو الهدية",
    "en": "They're going to smile when they see the gift."
   }
@@ -12008,7 +12008,7 @@
   },
   {
    "slot": 1,
-   "lat": "nti katle77mi l-7did f l-warsha kul nhar",
+   "lat": "nti katle77mi l-7did f l-warcha kul nhar",
    "ar": "نتي كتلحمي الحديد فالورشة كل نهار",
    "en": "You (f.) solder iron in the workshop every day."
   },
@@ -12134,7 +12134,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nduwez l-3otla f marrakesh",
+   "lat": "ghadi nduwez l-3otla f marrakech",
    "ar": "غادي ندوز العطلة فمراكش",
    "en": "I'm going to spend the vacation in Marrakesh."
   }
@@ -12179,42 +12179,42 @@
    "en": "She is going to spit in the trash."
   }
  ],
- "reshsh": [
+ "rechch": [
   {
    "slot": 0,
-   "lat": "reshshina l-ward b l-ma",
+   "lat": "rechchina l-ward b l-ma",
    "ar": "رشينا الورد بالما",
    "en": "We sprayed the roses with water."
   },
   {
    "slot": 1,
-   "lat": "huma kayreshshu z-zenqa b l-ma kul sba7",
+   "lat": "huma kayrechchu z-zenqa b l-ma kul sba7",
    "ar": "هوما كيرشو الزنقة بالما كل صباح",
    "en": "They spray the street with water every morning."
   },
   {
    "slot": 2,
-   "lat": "ghadi yreshsh d-dwa 3la sh-shejra",
+   "lat": "ghadi yrechch d-dwa 3la ch-chejra",
    "ar": "غادي يرش الدوا على الشجرة",
    "en": "He is going to spray the tree with pesticide."
   }
  ],
- "feshshesh": [
+ "fechchech": [
   {
    "slot": 0,
-   "lat": "feshshesht weldi bzzaf",
+   "lat": "fechchecht weldi bzzaf",
    "ar": "فششت ولدي بزاف",
    "en": "I spoiled my son a lot."
   },
   {
    "slot": 1,
-   "lat": "nti katfeshsheshi bentek bzzaf",
+   "lat": "nti katfechchechi bentek bzzaf",
    "ar": "نتي كتفششي بنتك بزاف",
    "en": "You (f.) spoil your daughter a lot."
   },
   {
    "slot": 2,
-   "lat": "hiya ghadi tfeshshesh weldha f l-3id",
+   "lat": "hiya ghadi tfechchech weldha f l-3id",
    "ar": "هي غادي تفشش ولدها فالعيد",
    "en": "She is going to spoil her son at Eid."
   }
@@ -12294,12 +12294,12 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi ttekhl3i mnin tshufi l-film",
+   "lat": "ghadi ttekhl3i mnin tchufi l-film",
    "ar": "غادي تتخلعي منين تشوفي الفيلم",
    "en": "You (f.) are going to be startled when you watch the movie."
   }
  ],
- "s'her": [
+ "sher": [
   {
    "slot": 0,
    "lat": "huma sehru 7ta l-fejr",
@@ -12328,7 +12328,7 @@
   },
   {
    "slot": 1,
-   "lat": "ash katserqu mn l-7anut",
+   "lat": "ach katserqu mn l-7anut",
    "ar": "اش كتسرقو من الحانوت",
    "en": "What do you (pl.) steal from the shop?"
   },
@@ -12339,22 +12339,22 @@
    "en": "The thief is going to steal our car."
   }
  ],
- "sheffer": [
+ "cheffer": [
   {
    "slot": 0,
-   "lat": "shefferna t-tuffa7 mn l-jnan",
+   "lat": "chefferna t-tuffa7 mn l-jnan",
    "ar": "شفرنا التفاح من الجنان",
    "en": "We swiped apples from the garden."
   },
   {
    "slot": 1,
-   "lat": "nti katsheffri l-7lawa mn l-7anut",
+   "lat": "nti katcheffri l-7lawa mn l-7anut",
    "ar": "نتي كتشفري الحلاوة من الحانوت",
    "en": "You (f.) swipe sweets from the shop."
   },
   {
    "slot": 2,
-   "lat": "huma ghadi ysheffru l-bisklit dyali",
+   "lat": "huma ghadi ycheffru l-bisklit dyali",
    "ar": "هوما غادي يشفرو البيسكليت ديالي",
    "en": "They are going to steal my bike."
   }
@@ -12462,7 +12462,7 @@
  "dar-3": [
   {
    "slot": 0,
-   "lat": "3lash drti l-idrab l-bare7",
+   "lat": "3lach drti l-idrab l-bare7",
    "ar": "علاش درتي الإضراب البارح",
    "en": "Why did you strike yesterday?"
   },
@@ -12479,22 +12479,22 @@
    "en": "The teacher is going to strike tomorrow."
   }
  ],
- "tmeshsha": [
+ "tmechcha": [
   {
    "slot": 0,
-   "lat": "tmeshshitu f l-b7er l-bare7",
+   "lat": "tmechchitu f l-b7er l-bare7",
    "ar": "تمشيتو فالبحر البارح",
    "en": "You walked around at the beach yesterday."
   },
   {
    "slot": 1,
-   "lat": "kaytmeshshaw f l-ghaba kul nhar",
+   "lat": "kaytmechchaw f l-ghaba kul nhar",
    "ar": "كيتمشاو فالغابة كل نهار",
    "en": "They stroll in the forest every day."
   },
   {
    "slot": 2,
-   "lat": "wash ghadi ttmeshsha m3a khuk",
+   "lat": "wach ghadi ttmechcha m3a khuk",
    "ar": "واش غادي تتمشا مع خوك",
    "en": "Are you going to walk around with your brother?"
   }
@@ -12562,7 +12562,7 @@
  "d3a": [
   {
    "slot": 0,
-   "lat": "d3ina 3la sh-sharika",
+   "lat": "d3ina 3la ch-charika",
    "ar": "دعينا على الشركة",
    "en": "We sued the company."
   },
@@ -12599,22 +12599,22 @@
    "en": "You're going to suffer with this man."
   }
  ],
- "tshemmesh": [
+ "tchemmech": [
   {
    "slot": 0,
-   "lat": "fin tshemmeshti l-bare7",
+   "lat": "fin tchemmechti l-bare7",
    "ar": "فين تشمشتي البارح",
    "en": "Where did you sunbathe yesterday?"
   },
   {
    "slot": 1,
-   "lat": "huwa kaytshemmesh f s-sta7",
+   "lat": "huwa kaytchemmech f s-sta7",
    "ar": "هو كيتشمش فالسطح",
    "en": "He sunbathes on the roof."
   },
   {
    "slot": 2,
-   "lat": "ghadi ntshemmshu f l-b7er ghedda",
+   "lat": "ghadi ntchemmchu f l-b7er ghedda",
    "ar": "غادي نتشمشو فالبحر غدا",
    "en": "We're going to sunbathe at the beach tomorrow."
   }
@@ -12622,7 +12622,7 @@
  "staslem": [
   {
    "slot": 0,
-   "lat": "3lash staslemti b sur3a",
+   "lat": "3lach staslemti b sur3a",
    "ar": "علاش ستاسلمتي بسرعة",
    "en": "Why did you surrender so fast?"
   },
@@ -12648,7 +12648,7 @@
   },
   {
    "slot": 1,
-   "lat": "khti katnja dima mn l-mshakil",
+   "lat": "khti katnja dima mn l-mchakil",
    "ar": "ختي كتنجا ديما من المشاكل",
    "en": "My sister always gets through problems."
   },
@@ -12659,22 +12659,22 @@
    "en": "We're going to survive this crisis."
   }
  ],
- "3ash": [
+ "3ach": [
   {
    "slot": 0,
-   "lat": "3eshna f l-bdiya 3ashr snin",
+   "lat": "3echna f l-bdiya 3achr snin",
    "ar": "عشنا فالبادية عشر سنين",
    "en": "We lived in the countryside for ten years."
   },
   {
    "slot": 1,
-   "lat": "hiya kat3ish f r-rbat m3a mmha",
+   "lat": "hiya kat3ich f r-rbat m3a mmha",
    "ar": "هي كتعيش فالرباط مع مها",
    "en": "She lives in Rabat with her mother."
   },
   {
    "slot": 2,
-   "lat": "fin ghadi t3ish b3d l-jam3a",
+   "lat": "fin ghadi t3ich b3d l-jam3a",
    "ar": "فين غادي تعيش بعد الجامعة",
    "en": "Where are you going to live after university?"
   }
@@ -12722,13 +12722,13 @@
  "7lef": [
   {
    "slot": 0,
-   "lat": "mmi 7elfat b-llah 3la had shi",
+   "lat": "mmi 7elfat b-llah 3la had chi",
    "ar": "أمي حلفات بالله على هاد الشي",
    "en": "My mother swore by God about this."
   },
   {
    "slot": 1,
-   "lat": "3lash kat7elfu b-llah dima",
+   "lat": "3lach kat7elfu b-llah dima",
    "ar": "علاش كتحلفو بالله ديما",
    "en": "Why do you always swear by God?"
   },
@@ -12799,22 +12799,22 @@
    "en": "We're going to sweat at the field tomorrow."
   }
  ],
- "shetteb": [
+ "chetteb": [
   {
    "slot": 0,
-   "lat": "shettbat l-bit f s-sba7",
+   "lat": "chettbat l-bit f s-sba7",
    "ar": "شطبات البيت فالصباح",
    "en": "She swept the room in the morning."
   },
   {
    "slot": 1,
-   "lat": "kanshettbu d-dar kul nhar",
+   "lat": "kanchettbu d-dar kul nhar",
    "ar": "كنشطبو الدار كل نهار",
    "en": "We sweep the house every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi nshetteb l-mtbakh daba",
+   "lat": "ghadi nchetteb l-mtbakh daba",
    "ar": "غادي نشطب المطبخ دابا",
    "en": "I'm going to sweep the kitchen now."
   }
@@ -12962,7 +12962,7 @@
  "3ellem": [
   {
    "slot": 0,
-   "lat": "3ellemti khtek kifash tsuq",
+   "lat": "3ellemti khtek kifach tsuq",
    "ar": "علمتي ختك كيفاش تسوق",
    "en": "You taught your sister how to drive."
   },
@@ -12974,7 +12974,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi y3ellmu khuhum kifash y3umu",
+   "lat": "ghadi y3ellmu khuhum kifach y3umu",
    "ar": "غادي يعلمو خوهم كيفاش يعومو",
    "en": "They're going to teach their brother how to swim."
   }
@@ -13019,22 +13019,22 @@
    "en": "I'm going to fall apart laughing."
   }
  ],
- "qeshsheb": [
+ "qechcheb": [
   {
    "slot": 0,
-   "lat": "qeshshebt khuya s-sghir f d-dar",
+   "lat": "qechchebt khuya s-sghir f d-dar",
    "ar": "قشبت خويا الصغير فالدار",
    "en": "I teased my little brother at home."
   },
   {
    "slot": 1,
-   "lat": "katqeshsheb sa7bek kul nhar",
+   "lat": "katqechcheb sa7bek kul nhar",
    "ar": "كتقشب صاحبك كل نهار",
    "en": "You tease your friend every day."
   },
   {
    "slot": 2,
-   "lat": "ghadi tqeshshbu khukum ghedda",
+   "lat": "ghadi tqechchbu khukum ghedda",
    "ar": "غادي تقشبو خوكم غدا",
    "en": "You're going to tease your brother tomorrow."
   }
@@ -13042,7 +13042,7 @@
  "khemmem": [
   {
    "slot": 0,
-   "lat": "khemmemna f l-mushkil bzzaf",
+   "lat": "khemmemna f l-muchkil bzzaf",
    "ar": "خممنا فالمشكل بزاف",
    "en": "We thought a lot about the problem."
   },
@@ -13074,7 +13074,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tdennu blli ma bghitsh nji",
+   "lat": "ghadi tdennu blli ma bghitch nji",
    "ar": "غادي تضنو بلي ما بغيتش نجي",
    "en": "You're going to think that I didn't want to come."
   }
@@ -13142,7 +13142,7 @@
  "7zem": [
   {
    "slot": 0,
-   "lat": "7zem l-7zam dyalu qbel ma yemshi",
+   "lat": "7zem l-7zam dyalu qbel ma yemchi",
    "ar": "حزم الحزام ديالو قبل ما يمشي",
    "en": "He tied his belt before he left."
   },
@@ -13208,7 +13208,7 @@
   },
   {
    "slot": 1,
-   "lat": "katqis l-ma bach t3ref wash sakhun",
+   "lat": "katqis l-ma bach t3ref wach sakhun",
    "ar": "كتقيس الما باش تعرف واش سخون",
    "en": "You touch the water to know if it's hot."
   },
@@ -13222,13 +13222,13 @@
  "mess-2": [
   {
    "slot": 0,
-   "lat": "wash messiti l-bab dyal d-dar",
+   "lat": "wach messiti l-bab dyal d-dar",
    "ar": "واش مسيتي الباب ديال الدار",
    "en": "Did you touch the door of the house?"
   },
   {
    "slot": 1,
-   "lat": "katmessu kul shi f l-7anut",
+   "lat": "katmessu kul chi f l-7anut",
    "ar": "كتمسو كل شي فالحانوت",
    "en": "You touch everything in the shop."
   },
@@ -13314,7 +13314,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nsafru l merrakesh f l-3utla",
+   "lat": "ghadi nsafru l merrakech f l-3utla",
    "ar": "غادي نسافرو لمراكش فالعطلة",
    "en": "We're going to travel to Marrakesh during the holiday."
   }
@@ -13328,13 +13328,13 @@
   },
   {
    "slot": 1,
-   "lat": "kat3ter bzzaf 7it ma katshufsh mzyan",
+   "lat": "kat3ter bzzaf 7it ma katchufch mzyan",
    "ar": "كتعتر بزاف حيت ما كتشوفش مزيان",
    "en": "You trip a lot because you don't see well."
   },
   {
    "slot": 2,
-   "lat": "ghadi t3ter ila mshat f d-dlam",
+   "lat": "ghadi t3ter ila mchat f d-dlam",
    "ar": "غادي تعتر إلا مشات فالضلام",
    "en": "She's going to trip if she walks in the dark."
   }
@@ -13422,7 +13422,7 @@
  "lwa": [
   {
    "slot": 0,
-   "lat": "wash lwiti rjlek f l-kura",
+   "lat": "wach lwiti rjlek f l-kura",
    "ar": "واش لويتي رجلك فالكورة",
    "en": "Did you twist your foot playing football?"
   },
@@ -13434,7 +13434,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi nlwiw had l-7ebl shwiya",
+   "lat": "ghadi nlwiw had l-7ebl chwiya",
    "ar": "غادي نلويو هاد الحبل شوية",
    "en": "We're going to twist this rope a little."
   }
@@ -13448,13 +13448,13 @@
   },
   {
    "slot": 1,
-   "lat": "kanfehmu l-ingliziya shwiya",
+   "lat": "kanfehmu l-ingliziya chwiya",
    "ar": "كنفهمو الانجليزية شوية",
    "en": "We understand English a little."
   },
   {
    "slot": 2,
-   "lat": "ghadi tfhem kulshi ila qrit mzyan",
+   "lat": "ghadi tfhem kulchi ila qrit mzyan",
    "ar": "غادي تفهم كلشي إلا قريت مزيان",
    "en": "You'll understand everything if you read well."
   }
@@ -13462,7 +13462,7 @@
  "fehhem": [
   {
    "slot": 0,
-   "lat": "fehhemna l-wlad d-dars b shwiya",
+   "lat": "fehhemna l-wlad d-dars b chwiya",
    "ar": "فهمنا الولاد الدرس بشوية",
    "en": "We made the kids understand the lesson slowly."
   },
@@ -13474,7 +13474,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tfehhmu khukum shnu wqe3",
+   "lat": "ghadi tfehhmu khukum chnu wqe3",
    "ar": "غادي تفهمو خوكم شنو وقع",
    "en": "You're going to make your brother understand what happened."
   }
@@ -13528,7 +13528,7 @@
   },
   {
    "slot": 1,
-   "lat": "kannfe3 f d-dar shwiya",
+   "lat": "kannfe3 f d-dar chwiya",
    "ar": "كننفع فالدار شوية",
    "en": "I'm a bit useful at home."
   },
@@ -13542,7 +13542,7 @@
  "leqqe7": [
   {
    "slot": 0,
-   "lat": "wash leqqe7tu l-wlad qbel l-madrasa",
+   "lat": "wach leqqe7tu l-wlad qbel l-madrasa",
    "ar": "واش لقحتو الولاد قبل المدرسة",
    "en": "Did you vaccinate the kids before school?"
   },
@@ -13562,7 +13562,7 @@
  "zar": [
   {
    "slot": 0,
-   "lat": "zaru jeddhum f l-mustashfa",
+   "lat": "zaru jeddhum f l-mustachfa",
    "ar": "زارو جدهم فالمستشفى",
    "en": "They visited their grandfather in the hospital."
   },
@@ -13634,7 +13634,7 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi n3aynu hna shwiya",
+   "lat": "ghadi n3aynu hna chwiya",
    "ar": "غادي نعاينو هنا شوية",
    "en": "We're going to wait here a little."
   }
@@ -13668,7 +13668,7 @@
   },
   {
    "slot": 1,
-   "lat": "katbghi tmshi l l-b7er f s-sif",
+   "lat": "katbghi tmchi l l-b7er f s-sif",
    "ar": "كتبغي تمشي للبحر فالصيف",
    "en": "She wants to go to the sea in the summer."
   },
@@ -13688,7 +13688,7 @@
   },
   {
    "slot": 1,
-   "lat": "kansekhnu b l-kanun f sh-shta",
+   "lat": "kansekhnu b l-kanun f ch-chta",
    "ar": "كنسخنو بالكانون فالشتا",
    "en": "We keep warm with the heater in winter."
   },
@@ -13799,22 +13799,22 @@
    "en": "I'm going to watch the match with my brother."
   }
  ],
- "shiyer": [
+ "chiyer": [
   {
    "slot": 0,
-   "lat": "shiyru lina mn t-tumubil",
+   "lat": "chiyru lina mn t-tumubil",
    "ar": "شيرو لينا من الطوموبيل",
    "en": "They waved at us from the car."
   },
   {
    "slot": 1,
-   "lat": "kayshiyer l l-jar dyalna kul sba7",
+   "lat": "kaychiyer l l-jar dyalna kul sba7",
    "ar": "كيشير للجار ديالنا كل صباح",
    "en": "He waves at our neighbor every morning."
   },
   {
    "slot": 2,
-   "lat": "ghadi tshiyru lihum mn l-qitar",
+   "lat": "ghadi tchiyru lihum mn l-qitar",
    "ar": "غادي تشيرو ليهم من القطار",
    "en": "You're going to wave at them from the train."
   }
@@ -13908,7 +13908,7 @@
   },
   {
    "slot": 1,
-   "lat": "kansudi l-7did f l-warsha kul nhar",
+   "lat": "kansudi l-7did f l-warcha kul nhar",
    "ar": "كنسودي الحديد فالورشة كل نهار",
    "en": "I weld iron in the workshop every day."
   },
@@ -13942,13 +13942,13 @@
  "wesse3": [
   {
    "slot": 0,
-   "lat": "wesse3 l-bab shwiya",
+   "lat": "wesse3 l-bab chwiya",
    "ar": "وسع الباب شوية",
    "en": "He widened the door a little."
   },
   {
    "slot": 1,
-   "lat": "katwess3u l-kuzina bash tkun kbira",
+   "lat": "katwess3u l-kuzina bach tkun kbira",
    "ar": "كتوسعو الكوزينة باش تكون كبيرة",
    "en": "You widen the kitchen so it will be big."
   },
@@ -13962,7 +13962,7 @@
  "lwa-2": [
   {
    "slot": 0,
-   "lat": "lwiti mn l-3tesh f s-sif",
+   "lat": "lwiti mn l-3tech f s-sif",
    "ar": "لويتي من العطش فالصيف",
    "en": "You wilted from thirst in the summer."
   },
@@ -13974,27 +13974,27 @@
   },
   {
    "slot": 2,
-   "lat": "ghadi tlwa ila bqiti f sh-shems",
+   "lat": "ghadi tlwa ila bqiti f ch-chems",
    "ar": "غادي تلوا ايلا بقيتي فالشمس",
    "en": "You'll wilt if you stay in the sun."
   }
  ],
- "shhed": [
+ "chhed": [
   {
    "slot": 0,
-   "lat": "shhedna l-7adsa b 3inina",
+   "lat": "chhedna l-7adsa b 3inina",
    "ar": "شهدنا الحادثة بعينينا",
    "en": "We witnessed the accident with our own eyes."
   },
   {
    "slot": 1,
-   "lat": "katshhed 3la khuha f l-ma7kama",
+   "lat": "katchhed 3la khuha f l-ma7kama",
    "ar": "كتشهد على خوها فالمحكمة",
    "en": "She testifies for her brother in court."
   },
   {
    "slot": 2,
-   "lat": "ghadi yshehdu 3la had r-rajel",
+   "lat": "ghadi ychehdu 3la had r-rajel",
    "ar": "غادي يشهدو على هاد الراجل",
    "en": "They're going to testify against this man."
   }
@@ -14002,7 +14002,7 @@
  "t3ejjeb": [
   {
    "slot": 0,
-   "lat": "t3ejjbat mn had sh-shi bzzaf",
+   "lat": "t3ejjbat mn had ch-chi bzzaf",
    "ar": "تعجبات من هاد الشي بزاف",
    "en": "She was very surprised at this."
   },
@@ -14039,22 +14039,22 @@
    "en": "Are you going to work until night?"
   }
  ],
- "teshten": [
+ "techten": [
   {
    "slot": 0,
-   "lat": "teshtnat 3la weldha bzzaf",
+   "lat": "techtnat 3la weldha bzzaf",
    "ar": "تشطنات على ولدها بزاف",
    "en": "She worried a lot about her son."
   },
   {
    "slot": 1,
-   "lat": "kayteshtnu 3la l-imti7an dyalhum",
+   "lat": "kaytechtnu 3la l-imti7an dyalhum",
    "ar": "كيتشطنو على الامتحان ديالهم",
    "en": "They worry about their exam."
   },
   {
    "slot": 2,
-   "lat": "ghadi yteshten ila ma jash",
+   "lat": "ghadi ytechten ila ma jach",
    "ar": "غادي يتشطن إيلا ما جاش",
    "en": "He'll worry if he doesn't come."
   }
@@ -14088,7 +14088,7 @@
   },
   {
    "slot": 1,
-   "lat": "katketbu kolshi f d-daftar",
+   "lat": "katketbu kolchi f d-daftar",
    "ar": "كتكتبو كلشي فالدفتر",
    "en": "You write everything in the notebook."
   },

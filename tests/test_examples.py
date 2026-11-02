@@ -20,8 +20,8 @@ class Slots(unittest.TestCase):
         self.assertEqual(len({s["p"] for s in a}), 3)
 
     def test_future_matches_site(self):
-        fut = slots(V["msha"])[2]
-        pres = V["msha"]["pres"]
+        fut = slots(V["mcha"])[2]
+        pres = V["mcha"]["pres"]
         self.assertEqual(fut["lat"], "ghadi " + pres["lat"][fut["p"]][2:])
         self.assertEqual(fut["ar"], "غادي " + pres["ar"][fut["p"]][1:])
 
@@ -34,14 +34,14 @@ class Full(unittest.TestCase):
         self.assertEqual(len({(s["tense"], s["p"], s["neg"]) for s in a}), 48)
 
     def test_negation(self):
-        self.assertEqual(negate("ktebt", "كتبت", "past"), ("ma ktebtsh", "ما كتبتش"))
-        self.assertEqual(negate("ghadi nkteb", "غادي نكتب", "fut"), ("ma ghadish nkteb", "ما غاديش نكتب"))
+        self.assertEqual(negate("ktebt", "كتبت", "past"), ("ma ktebtch", "ما كتبتش"))
+        self.assertEqual(negate("ghadi nkteb", "غادي نكتب", "fut"), ("ma ghadich nkteb", "ما غاديش نكتب"))
         neg = [s for s in slots(V["kteb"], full=True) if s["neg"] and s["tense"] == "fut"]
-        self.assertTrue(all(s["lat"].startswith("ma ghadish ") for s in neg))
+        self.assertTrue(all(s["lat"].startswith("ma ghadich ") for s in neg))
 
 
 class Reviewed(unittest.TestCase):
-    gem: ClassVar = {"kteb": [{"slot": i, "lat": f"l{i}", "ar": f"a{i}", "en": f"e{i}"} for i in range(4)], "shaf": [{"slot": 0, "lat": "x", "ar": "x", "en": "x"}]}
+    gem: ClassVar = {"kteb": [{"slot": i, "lat": f"l{i}", "ar": f"a{i}", "en": f"e{i}"} for i in range(4)], "chaf": [{"slot": 0, "lat": "x", "ar": "x", "en": "x"}]}
 
     def test_ok_fixed_dropped_unreviewed(self):
         rev = {"kteb": {"0": {"ok": True}, "1": {"ok": False, "why": "w", "lat": "L", "ar": "A", "en": "E"},

@@ -48,13 +48,13 @@ document.querySelectorAll('#rulesSeg button').forEach(b => b.addEventListener('c
 renderTense();
 
 const NEG = [['past', 'kteb', 3], ['pres', 'kteb', 3], ['fut', 'kteb', 3]];
-$('negTable').innerHTML = '<h2>kteb · ma … sh</h2>' + NEG.map(([t, id, i]) => {
+$('negTable').innerHTML = '<h2>kteb · ma … ch</h2>' + NEG.map(([t, id, i]) => {
   const x = V[id][t];
   const n = negate({ lat: x.lat[i], ar: x.ar[i] }, t);
   return '<div class="row"><span class="p">' + esc(TENSE[t].label.toLowerCase()) + '</span><span class="f">' + both(x.lat[i], x.ar[i]) + '</span><span class="f">' + both(n.lat, n.ar) + '</span></div>';
 }).join('');
 
-const EXAMPLES = { sound: 'fhem', initial: 'wsel', hollow: 'shaf', final: 'bgha', doubled: 'shedd', longa: 'khtar', hamza: 'kla', irregular: 'kan' };
+const EXAMPLES = { sound: 'fhem', initial: 'wsel', hollow: 'chaf', final: 'bgha', doubled: 'chedd', longa: 'khtar', hamza: 'kla', irregular: 'kan' };
 $('kinds').innerHTML = Object.entries(KINDS).map(([k, x]) => {
   const v = V[EXAMPLES[k]];
   const n = verbs.filter(w => w.kind === k).length;
@@ -97,7 +97,7 @@ $('prepTable').innerHTML = ph + '</tbody></table></div>';
 const nm = n => '<strong>' + esc(say(n).lat) + '</strong>';
 $('numRules').innerHTML = [
   '<p><strong>1 to 10:</strong> ' + [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(nm).join(', ') + '.</p>',
-  '<p><strong>11 to 19</strong> end in <strong>-ash</strong>: ' + [11, 12, 13, 14, 15, 19].map(nm).join(', ') + '. Learn them as their own words.</p>',
+  '<p><strong>11 to 19</strong> end in <strong>-ach</strong>: ' + [11, 12, 13, 14, 15, 19].map(nm).join(', ') + '. Learn them as their own words.</p>',
   '<p><strong>Tens</strong> end in <strong>-in</strong>: ' + [20, 30, 40, 50, 90].map(nm).join(', ') + '.</p>',
   '<p><strong>Putting them together:</strong> the small number comes first, joined with <strong>w</strong> (and): ' + nm(21) + ' (21), ' + nm(35) + ' (35). Beside a ten, 2 is <strong>tnin</strong>, not juj: ' + nm(22) + ' (22). Bigger numbers go in order, biggest first, with a <strong>w</strong> between each part: ' + nm(347) + ' (347).</p>',
   '<p><strong>Hundreds:</strong> ' + nm(100) + ' and ' + nm(200) + ' are their own words. From 300 the count is shortened and put before <strong>mya</strong>: ' + [300, 400, 500, 900].map(nm).join(', ') + '.</p>',

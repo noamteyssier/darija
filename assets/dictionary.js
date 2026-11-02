@@ -9,7 +9,7 @@ const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
 // 0 a whole gloss matches, 1 a word matches, 2 a word starts with the query, 3 contains it,
-// -1 no match. So "go" puts msha before tle3 (go up), and "house" puts dar before husband.
+// -1 no match. So "go" puts mcha before tle3 (go up), and "house" puts dar before husband.
 function score(texts) {
   const n = norm(q);
   if (!n) return 0;

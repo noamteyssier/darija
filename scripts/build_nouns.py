@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 
 from build_verbs import ar, lat
+from spelling import canon_fields, load
 
 ROOT = Path(__file__).resolve().parent.parent
 SUN = set("tdrzsšṣḍṭẓnlj")
@@ -77,7 +78,7 @@ def main():
         if a.get("human"):
             e["human"] = True
         adjs.append(e)
-    body = {"nouns": nouns, "adjectives": adjs}
+    body = canon_fields({"nouns": nouns, "adjectives": adjs}, load(), ("id", "lat"))
     out = json.dumps(body, ensure_ascii=False, separators=(",", ":"))
     out = out.replace('},{"id"', '},\n{"id"')
     (ROOT / "data/nouns.json").write_text(out + "\n")

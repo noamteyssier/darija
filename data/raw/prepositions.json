@@ -19,7 +19,7 @@
       "examples": [
         { "lat": "ṣifṭt bra lih", "ar": "صيفطت برا ليه", "en": "I sent a letter to him" },
         { "lat": "sm7 liya", "ar": "سمح ليا", "en": "Excuse me / forgive me" },
-        { "lat": "ymkn lina n-mshiw", "ar": "يمكن لينا نمشيو", "en": "We can go (it is possible for us to go)" },
+        { "lat": "ymkn lina n-mchiw", "ar": "يمكن لينا نمشيو", "en": "We can go (it is possible for us to go)" },
         { "lat": "Thomas šrah liha", "ar": "توماس شراه ليها", "en": "Thomas bought it for her" }
       ]
     },
@@ -55,12 +55,12 @@
         "lat": ["biya", "bik", "bih", "biha", "bina", "bikum", "bihum"],
         "ar": ["بيا", "بيك", "بيه", "بيها", "بينا", "بيكم", "بيهم"]
       },
-      "note": "Prefix expressing instrument (b l-yed = with hands), manner (b sh-shwiya = slowly, b z-zerba = quickly), price (b-sh7al = for how much), and verbs like tzuwj b (marry) and 7lm b (dream of).",
+      "note": "Prefix expressing instrument (b l-yed = with hands), manner (b ch-chwiya = slowly, b z-zerba = quickly), price (b-ch7al = for how much), and verbs like tzuwj b (marry) and 7lm b (dream of).",
       "examples": [
         { "lat": "tzuwjat bih l-عam l-li fat", "ar": "تزوجات بيه العام اللي فات", "en": "She married him last year" },
         { "lat": "7lmt bik", "ar": "حلمت بيك", "en": "I dreamed about you" },
         { "lat": "r77bu bina f ḍarhum", "ar": "رحبو بينا ف دارهم", "en": "They welcomed us into their home" },
-        { "lat": "b sh-shwiya عafak", "ar": "ب الشوية عفاك", "en": "Slowly, please" }
+        { "lat": "b ch-chwiya عafak", "ar": "ب الشوية عفاك", "en": "Slowly, please" }
       ]
     },
     {
@@ -94,7 +94,7 @@
         "lat": ["3liya", "3lik", "3lih", "3liha", "3lina", "3likum", "3lihum"],
         "ar": ["عليا", "عليك", "عليه", "عليها", "علينا", "عليكم", "عليهم"]
       },
-      "note": "Spatial 'on', topical 'about', obligation (3liya n-mshi = I must go), directions (3l limn = to the right), and verbs like qllb 3la (look for), mat 3la (love), d7k 3la (laugh at / mock).",
+      "note": "Spatial 'on', topical 'about', obligation (3liya n-mchi = I must go), directions (3l limn = to the right), and verbs like qllb 3la (look for), mat 3la (love), d7k 3la (laugh at / mock).",
       "examples": [
         { "lat": "tkllmna عlih", "ar": "تكلمنا عليه", "en": "We talked about it" },
         { "lat": "kan-qllb عliha", "ar": "كانقلب عليها", "en": "I am looking for it (f.)" },
@@ -133,7 +133,7 @@
         "lat": ["3ndi", "3ndek", "3ndu", "3ndha", "3ndna", "3ndkum", "3ndhum"],
         "ar": ["عندي", "عندك", "عندو", "عندها", "عندنا", "عندكم", "عندهم"]
       },
-      "note": "The primary verb equivalent for 'to have' in Darija: 3ndi ktab (I have a book). Also means at someone's place: mshit 3nd t-tbib (I went to the doctor).",
+      "note": "The primary verb equivalent for 'to have' in Darija: 3ndi ktab (I have a book). Also means at someone's place: mchit 3nd t-tbib (I went to the doctor).",
       "examples": [
         { "lat": "weš عndk ṣ-ṣrf?", "ar": "واش عندك الصرف؟", "en": "Do you have change?" },
         { "lat": "عndna ustad mzyan", "ar": "عندنا أستاد مزيان", "en": "We have a good teacher" },
@@ -192,7 +192,7 @@
         "lat": ["te7ti", "te7tek", "te7tu", "te7tha", "te7tna", "te7tkum", "te7thum"],
         "ar": ["تحتي", "تحتك", "تحتو", "تحتها", "تحتنا", "تحتكم", "تحتهم"]
       },
-      "note": "Location physically underneath: te7t t-tebla (under the table), te7t sh-shjra (under the tree).",
+      "note": "Location physically underneath: te7t t-tebla (under the table), te7t ch-chjra (under the tree).",
       "examples": [
         { "lat": "l-meṣṣ te7t t-tebla", "ar": "المص تحت الطبلة", "en": "The cat is under the table" },
         { "lat": "gls te7t š-šjra", "ar": "جلس تحت الشجرة", "en": "He sat under the tree" }
@@ -450,7 +450,7 @@
       "type": "relational",
       "src": "LP 26",
       "with_pronouns": false,
-      "note": "Expresses cause or reason: b-sabab sh-shta (due to the rain).",
+      "note": "Expresses cause or reason: b-sabab ch-chta (due to the rain).",
       "examples": [
         { "lat": "ma-ja-š b-sbab š-šta", "ar": "ما جاش بسباب الشتا", "en": "He didn't come because of the rain" }
       ]
@@ -727,7 +727,7 @@
       "src": "PC 116"
     },
     {
-      "verb": "shark",
+      "verb": "chark",
       "verbAr": "شارك",
       "en": "to participate",
       "prep": "f",
@@ -862,7 +862,7 @@
       "id": "thirsty",
       "pattern": "f",
       "prompt": "I am thirsty",
-      "lat": "fiya l-3ṭsh",
+      "lat": "fiya l-3ṭch",
       "ar": "فيا العطش",
       "en": "I am thirsty (lit. in me thirst)",
       "note": "f + pronoun expresses sensations and physical states.",
@@ -922,17 +922,17 @@
       "id": "no_time",
       "pattern": "3nd",
       "prompt": "I don't have time",
-      "lat": "ma-3ndi-sh l-weqt",
+      "lat": "ma-3ndi-ch l-weqt",
       "ar": "ما عنديش الوقت",
       "en": "I don't have time",
-      "note": "Negation wraps 3ndi: ma-3ndi-sh.",
+      "note": "Negation wraps 3ndi: ma-3ndi-ch.",
       "src": "PC 35"
     },
     {
       "id": "must_go",
       "pattern": "3la",
       "prompt": "I must go",
-      "lat": "3liya n-mshi",
+      "lat": "3liya n-mchi",
       "ar": "عليا نمشي",
       "en": "I have to go (lit. upon me to go)",
       "note": "3la + pronoun expresses obligation or duty.",
@@ -965,7 +965,7 @@
       "lat": "bla jmil",
       "ar": "بلا جميل",
       "en": "You're welcome (lit. without favor)",
-      "note": "The polite Darija answer to shukran (thank you).",
+      "note": "The polite Darija answer to chukran (thank you).",
       "src": "PC 35"
     },
     {
@@ -982,7 +982,7 @@
       "id": "can_we_go",
       "pattern": "l",
       "prompt": "We can go",
-      "lat": "ymkn lina n-mshiw",
+      "lat": "ymkn lina n-mchiw",
       "ar": "يمكن لينا نمشيو",
       "en": "We can go (lit. it is possible for us to go)",
       "note": "ymkn + l + pronoun expresses capability or permission.",
@@ -1002,7 +1002,7 @@
       "id": "dont_lie_to_me",
       "pattern": "3la",
       "prompt": "Don't lie to me",
-      "lat": "ma-tkdb-sh 3liya",
+      "lat": "ma-tkdb-ch 3liya",
       "ar": "ما تكدبش عليا",
       "en": "Don't lie to me",
       "note": "kdb requires 3la before the person.",
