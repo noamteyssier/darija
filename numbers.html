@@ -24,7 +24,11 @@
       <button type="button" data-val="en-ar">English → Darija</button>
       <button type="button" data-val="ar-en">Darija → English</button>
     </div>
-    <div>
+    <div class="seg" role="group" aria-label="Kind" data-group="kind">
+      <button type="button" data-val="whole">Numbers</button>
+      <button type="button" data-val="fractions">Fractions</button>
+    </div>
+    <div id="rangeBox">
       <p class="lbl">Range (0 to 10,000)</p>
       <div class="range">
         <input type="range" id="loS" min="0" max="401" aria-label="Lowest number">
