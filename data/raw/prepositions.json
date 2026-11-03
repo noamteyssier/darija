@@ -471,6 +471,20 @@
       "examples": [
         { "lat": "jit عla qblk", "ar": "جيت على قبلك", "en": "I came for your sake" }
       ]
+    },
+    {
+      "id": "walakin",
+      "lat": "walakin",
+      "ar": "ولكن",
+      "en": "but",
+      "type": "relational",
+      "src": "",
+      "with_pronouns": false,
+      "note": "Joins two clauses and sets the second against the first. Also lakin, and bs / ghir for a short 'but only'. It does not take pronoun endings.",
+      "examples": [
+        { "lat": "bghit nji walakin ma 3ndich l-weqt", "ar": "بغيت نجي ولكن ما عنديش الوقت", "en": "I want to come but I do not have time" },
+        { "lat": "l-makla mzyana walakin ghalya", "ar": "الماكلة مزيانة ولكن غالية", "en": "The food is good but expensive" }
+      ]
     }
   ],
   "collocations": [
