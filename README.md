@@ -25,6 +25,7 @@ and bump `CACHE` so old entries are dropped. Service workers need HTTPS or `loca
 ```
 index.html verbs.html match.html nouns.html prepositions.html numbers.html words.html dictionary.html rules.html
 manifest.webmanifest, sw.js  PWA manifest and offline cache
+content/*.md           markdown for the home page's About and Install sections
 assets/                shared CSS and ES modules (common.js, quiz.js, one module per page)
 data/verbs.json        706 verbs with full past and present paradigms (generated)
 data/nouns.json        nouns and adjectives with possessive, dyal, definite and plural forms (generated)

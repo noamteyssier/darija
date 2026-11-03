@@ -175,3 +175,5 @@ input:disabled{opacity:.75}
 .about ul{padding-inline-start:20px}
 .about li{margin-bottom:6px}
 .about b{color:var(--fg)}
+.about h3{margin:0 0 8px; font:700 1rem var(--body); color:var(--fg)}
+.about code{font-size:.85em}

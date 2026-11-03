@@ -1,9 +1,9 @@
 // Offline cache. Everything same-origin is served from cache and refreshed in the background,
 // so a deploy shows up on the next launch. Bump CACHE only to drop old entries (renamed or removed files).
-const CACHE = 'darija-v1';
+const CACHE = 'darija-v2';
 const CORE = [
   './', 'index.html', 'verbs.html', 'match.html', 'nouns.html', 'prepositions.html', 'numbers.html',
-  'words.html', 'dictionary.html', 'rules.html', 'manifest.webmanifest',
+  'words.html', 'dictionary.html', 'rules.html', 'manifest.webmanifest', 'content/about.md', 'content/install.md',
   'assets/style.css', 'assets/common.js', 'assets/quiz.js', 'assets/verbs-data.js', 'assets/numbers-data.js',
   'assets/verbs.js', 'assets/match.js', 'assets/nouns.js', 'assets/prepositions.js', 'assets/numbers.js',
   'assets/words.js', 'assets/dictionary.js', 'assets/rules.js',

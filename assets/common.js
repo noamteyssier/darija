@@ -289,3 +289,18 @@ export async function importProgress(file) {
   const data = JSON.parse(await file.text());
   for (const [k, v] of Object.entries(data)) if (k.startsWith('darija:')) localStorage.setItem(k, v);
 }
+
+// Minimal markdown for the home page text: paragraphs, "- " lists, "### " headings, **bold**, *italic*, `code`, [links](url).
+export function md(src) {
+  const inline = s => esc(s)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/\*([^*]+)\*/g, '<i>$1</i>')
+    .replace(/\[([^\]]+)\]\(((?:https?:\/\/|[\w./#-])[^)\s]*)\)/g, '<a href="$2">$1</a>');
+  return src.trim().split(/\n\s*\n/).map(block => {
+    const lines = block.split('\n');
+    if (lines.every(l => /^\s*[-*] /.test(l))) return '<ul>' + lines.map(l => '<li>' + inline(l.replace(/^\s*[-*] /, '')) + '</li>').join('') + '</ul>';
+    if (/^###? /.test(block)) return '<h3>' + inline(block.replace(/^###? /, '')) + '</h3>';
+    return '<p>' + inline(lines.join(' ')) + '</p>';
+  }).join('');
+}
