@@ -1,9 +1,13 @@
 import { $, header, load, esc, getJSON, shuffle } from './common.js';
 import { quiz } from './quiz.js';
+import { clock } from './numbers-data.js';
 
 header();
 const st = load('words-set', { module: 'time', dir: 'ar-en' });
 const { words: WORDS } = await getJSON('data/words.json');
+
+// Round times only (on the hour, half past, quarters), every hour of the day.
+const TIMES = Array.from({ length: 24 }, (_, h) => [0, 30, 15, 45].map(m => ({ m, ...clock(h, m) }))).flat();
 
 const BY = g => WORDS.filter(w => w.group === g);
 const first = en => en.split(' / ')[0];
@@ -50,6 +54,27 @@ const MODULES = {
     n: 3, title: 'Left, right, north, south', sub: 'limen, liser, nichan, chmal, hna, tmma...',
     intro: '<p>To a place, use <strong>3la</strong>: 3la limen to the right, 3la liser to the left. Straight on is <strong>nichan</strong>. A few short commands cover most directions: dewer 3la limen, mchi nichan, 7bes hna.</p><p>The compass words are <strong>chmal</strong>, <strong>janub</strong>, <strong>charq</strong> and <strong>gharb</strong>. People mostly use left and right in the street.</p>',
     ...make('direction'),
+  },
+  clock: {
+    n: 4, title: 'Telling the time', sub: 's-sa3a juj, tlata w nus, setta ila rub3, z-zwal...',
+    intro: '<p>The hour takes <strong>the</strong> and follows <strong>s-sa3a</strong>: s-sa3a t-tlata, three o\'clock (or just t-tlata). One o\'clock is <strong>l-wa7da</strong>, two is <strong>j-juj</strong>. Add <strong>w nus</strong> for half past and <strong>w rub3</strong> for a quarter past. A quarter to is <strong>ghir rub3</strong> on the next hour: s-sa3a t-tlata ghir rub3, 2:45. To say am or pm, add <strong>d s-sba7</strong> (morning), <strong>d z-zwal</strong> (around noon), <strong>d l-3chiya</strong> (afternoon and early evening) or <strong>d l-lil</strong> (night). Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>.</p>',
+    pool: () => TIMES.flatMap(t => ['ar-en', 'en-ar'].filter(d => st.dir === 'both' || st.dir === d).map(d => ({ t, d, key: 'clock|' + t.en + '|' + d }))),
+    render: ({ t, d }) => {
+      const toAr = d === 'en-ar';
+      // Same minutes first: the hour and the part of the day are what the learner has to tell apart.
+      const near = TIMES.filter(o => o.en !== t.en);
+      const others = [...shuffle(near.filter(o => o.m === t.m)), ...shuffle(near.filter(o => o.m !== t.m))].slice(0, 6);
+      return {
+        chip: (toAr ? 'English → Darija' : 'Darija → English') + ' · time',
+        word: toAr ? null : { lat: t.lat, ar: t.ar },
+        wordHtml: toAr ? '<span class="lat">' + esc(t.en) + '</span>' : undefined,
+        small: true,
+        ask: { lat: '' },
+        plain: !toAr,
+        answer: toAr ? { lat: t.lat, ar: t.ar } : { lat: t.en, ar: '' },
+        options: others.map(o => (toAr ? { lat: o.lat, ar: o.ar } : { lat: o.en, ar: '' })),
+      };
+    },
   },
 };
 

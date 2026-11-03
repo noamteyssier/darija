@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sentences · Darija Drills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#282828">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Darija">
+</head>
+<body data-script="both">
+<div class="wrap">
+  <header id="top"></header>
+  <div class="card" id="filters">
+    <div class="seg" role="group" aria-label="Sentences from" data-group="kind">
+      <button type="button" data-val="all">All</button>
+      <button type="button" data-val="v">Verbs</button>
+      <button type="button" data-val="p">Prepositions</button>
+      <button type="button" data-val="w">Time &amp; place</button>
+    </div>
+    <label for="search">Search by English, arabizi or Arabic</label>
+    <input type="search" id="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="e.g. now, daba, دابا">
+  </div>
+  <p class="note" id="count"></p>
+  <div class="vlist" id="list"></div>
+  <button class="btn ghost" type="button" id="more" hidden>Show more</button>
+  <p class="note">Every example sentence on the site. Underlined words open their dictionary entry; the tag on each sentence opens the verb, preposition or word it was written for. The sentences were written by Claude, so check them with a speaker.</p>
+</div>
+<script type="module" src="assets/sentences.js"></script>
+</body>
+</html>

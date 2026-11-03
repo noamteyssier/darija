@@ -1,5 +1,5 @@
 import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON, toggleStar } from './common.js';
-import { say, english } from './numbers-data.js';
+import { say, english, FRACTIONS, clock, theHour } from './numbers-data.js';
 import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
@@ -7,6 +7,10 @@ const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres', tag: '' })
 const [vdata, ndata, pdata, wdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
+
+// dictionary.html#verbs/kteb opens that entry (links from the Sentences page).
+const [hashWhat, hashId] = decodeURIComponent(location.hash.slice(1)).split('/');
+if (hashId && ['verbs', 'nouns', 'adjs', 'preps', 'words', 'nums'].includes(hashWhat)) { st.what = hashWhat; st.tag = ''; open = hashId; if (hashWhat === 'verbs') { st.level = 'all'; await loadExamples(hashId); } }
 
 // 0 a whole gloss matches, 1 a word matches, 2 a word starts with the query, 3 contains it,
 // -1 no match. So "go" puts mcha before tle3 (go up), and "house" puts dar before husband.
@@ -105,10 +109,12 @@ function prepItems() {
 const NUMS = [...Array(21).keys(), ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 10), 200, ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 100), 2000, ...[3, 4, 5, 6, 7, 8, 9, 10].map(i => i * 1000)];
 const NUM_ADD = n => (n < 20 ? 0 : n < 100 ? 5 : n < 1000 ? 21 : 500);
 function numberItems() {
-  return ranked(NUMS.map(n => ({ n, ...say(n), en: english(n) + ' (' + n + ')' })), x => [x.lat, x.ar, x.en]).map(x => ({
+  const items = [...NUMS.map(n => ({ n, ...say(n), en: english(n) + ' (' + n + ')' })), ...FRACTIONS.map(f => ({ ...f, n: f.sym, en: f.en + ' (' + f.sym + ')' }))];
+  return ranked(items, x => [x.lat, x.ar, x.en]).map(x => ({
     id: 'num-' + x.n, lat: x.lat, ar: x.ar, en: x.en,
-    badges: [['strong', x.n < 21 ? 'number' : x.n < 100 ? 'tens' : x.n < 1000 ? 'hundreds' : 'thousands']],
+    badges: [['strong', x.sym ? 'fraction' : x.n < 21 ? 'number' : x.n < 100 ? 'tens' : x.n < 1000 ? 'hundreds' : 'thousands']],
     body: () => {
+      if (x.sym) return '<p class="note">Does not change form.</p>';
       const m = x.n + NUM_ADD(x.n), e = say(m);
       if (x.n === 2) return '<p class="kind">Also <strong>tnin</strong> (تنين), which is the form beside a ten: ' + both(say(22).lat, say(22).ar) + '.</p>';
       return NUM_ADD(x.n)
@@ -119,8 +125,20 @@ function numberItems() {
 }
 
 const GROUP = { time: 'time', calendar: 'calendar', direction: 'place' };
+// One entry per hour (1 to 12), with its half and quarter forms in the morning and the afternoon.
+const CLOCK = Array.from({ length: 12 }, (_, i) => {
+  const h = i + 1, w = theHour(h);
+  return { id: 'clock-' + h, lat: 's-sa3a ' + w.lat, ar: 'الساعة ' + w.ar, en: h + ' o\'clock', rows: [0, 15, 30, 45].map(m => [clock(h % 12, m), clock(h % 12 + 12, m)]) };
+});
 function wordItems() {
-  return ranked(wdata.words, w => [w.lat, w.ar, w.en, GROUP[w.group]]).map(w => ({
+  return ranked([...wdata.words, ...CLOCK], w => [w.lat, w.ar, w.en, GROUP[w.group], ...(w.rows ? w.rows.flat().map(r => r.en) : [])]).map(w => w.rows ? ({
+    id: w.id, lat: w.lat, ar: w.ar, en: w.en,
+    badges: [['strong', 'time of day']],
+    body: () => '<div class="table"><h2>' + esc(w.en) + ' · am / pm</h2>' + w.rows.map(([a, p]) =>
+      '<div class="row"><span class="p">' + esc(a.en) + '</span><span class="f">' + both(a.lat, a.ar) + '</span></div>'
+      + '<div class="row"><span class="p">' + esc(p.en) + '</span><span class="f">' + both(p.lat, p.ar) + '</span></div>').join('') + '</div>'
+      + '<p class="note">Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>. Check the times of day with a speaker.</p>',
+  }) : ({
     id: w.id, lat: w.lat, ar: w.ar, en: w.en,
     badges: [['strong', GROUP[w.group]]],
     body: () => {
@@ -134,7 +152,7 @@ function wordItems() {
 
 function render(focusId) {
   let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : st.what === 'nums' ? numberItems() : prepItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'nums' ? NUMS.length : pdata.prepositions.length;
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'nums' ? NUMS.length + FRACTIONS.length : pdata.prepositions.length;
   const tags = [...new Set(items.flatMap(it => it.badges.map(b => b[1])))].sort();
   if (!tags.includes(st.tag)) st.tag = '';
   if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));
@@ -144,6 +162,8 @@ function render(focusId) {
   tf.innerHTML = tags.map(t => '<button type="button" aria-pressed="' + (t === st.tag) + '" data-tag="' + esc(t) + '">' + esc(t) + '</button>').join('');
   $('verbFilters').hidden = st.what !== 'verbs';
   $('count').textContent = items.length + ' of ' + total;
+  const at = items.findIndex(it => it.id === open);
+  if (at >= shown) shown = at + 1;
   const box = $('list');
   box.innerHTML = '';
   if (!items.length) { box.innerHTML = '<p class="note">Nothing matches. Try another spelling.</p>'; $('more').hidden = true; return; }
