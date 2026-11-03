@@ -12,10 +12,19 @@ Pages load JSON with `fetch`, so open them through a server, not `file://`:
 python3 -m http.server 8765
 ```
 
+## Offline app (PWA)
+
+The site installs to the iOS Home Screen (Safari: Share, Add to Home Screen) and runs offline once opened online.
+`sw.js` serves everything from cache and refreshes it in the background, so a deploy shows on the second launch after it.
+Edits to existing files need nothing. When you add or remove a page, module or data file, update `CORE` in `sw.js`
+and bump `CACHE` so old entries are dropped. Service workers need HTTPS or `localhost`; to test on a phone, tunnel the local server
+(`cloudflared tunnel --url http://localhost:8765`). Icons are rendered by `scripts/build_icons.py`.
+
 ## Layout
 
 ```
 index.html verbs.html match.html nouns.html prepositions.html numbers.html words.html dictionary.html rules.html
+manifest.webmanifest, sw.js  PWA manifest and offline cache
 assets/                shared CSS and ES modules (common.js, quiz.js, one module per page)
 data/verbs.json        706 verbs with full past and present paradigms (generated)
 data/nouns.json        nouns and adjectives with possessive, dyal, definite and plural forms (generated)

@@ -265,3 +265,27 @@ export function toggleStar(id) {
   prefs.save();
   return i < 0;
 }
+
+// Offline support. Ask the browser not to evict progress; iOS may still refuse.
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+try { navigator.storage?.persist?.(); } catch (e) { /* ignore */ }
+
+export function exportProgress() {
+  const out = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k.startsWith('darija:')) out[k] = localStorage.getItem(k);
+    }
+  } catch (e) { /* blocked storage: export nothing */ }
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out)], { type: 'application/json' }));
+  a.download = 'darija-progress.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+export async function importProgress(file) {
+  const data = JSON.parse(await file.text());
+  for (const [k, v] of Object.entries(data)) if (k.startsWith('darija:')) localStorage.setItem(k, v);
+}

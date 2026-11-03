@@ -91,3 +91,20 @@ def test_prepositions_drill(browser, base_url):
     assert page.locator('[data-q="next"]').is_visible()
 
     page.close()
+
+
+def test_pwa_installable_and_offline(browser, base_url):
+    ctx = browser.new_context()
+    page = ctx.new_page()
+    page.route(lambda url: not url.startswith(base_url), lambda route: route.fulfill(status=200, body=""))
+    page.goto(f"{base_url}/index.html", wait_until="networkidle")
+
+    manifest = page.evaluate("fetch(document.querySelector('link[rel=manifest]').href).then(r => r.json())")
+    assert manifest["display"] == "standalone" and len(manifest["icons"]) >= 3
+    page.evaluate("navigator.serviceWorker.ready")
+    page.reload(wait_until="networkidle")  # now controlled by the worker
+
+    ctx.set_offline(True)
+    page.goto(f"{base_url}/verbs.html", wait_until="load")
+    assert page.locator("#top .brand").count() == 1
+    ctx.close()
