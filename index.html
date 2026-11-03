@@ -30,8 +30,9 @@
     <a class="tile" href="dictionary.html"><b>Dictionary</b><span>Search every verb, noun and word, see full tables, star verbs to drill.</span></a>
     <a class="tile" href="rules.html"><b>Rules</b><span>How the endings work, verb types, the article, agreement.</span></a>
   </div>
-  <p class="note">Progress is saved on this device only.
-    <span id="install" hidden>On iPhone or iPad, tap Share, then Add to Home Screen to use it offline.</span></p>
+  <details class="about"><summary>About</summary><div id="about"></div></details>
+  <details class="about"><summary>Install the app</summary><div id="installing"></div></details>
+  <p class="note">Progress is saved on this device only. Export it to back it up or move it to another device.</p>
   <div class="seg" role="group" aria-label="Progress backup">
     <button type="button" id="export">Export progress</button>
     <button type="button" id="import">Import progress</button>
@@ -39,9 +40,11 @@
   <input type="file" id="importfile" accept="application/json" hidden>
 </div>
 <script type="module">
-import { header, getJSON, exportProgress, importProgress } from './assets/common.js';
+import { header, getJSON, md, exportProgress, importProgress } from './assets/common.js';
 header();
-if (/iPhone|iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document && !navigator.standalone) document.getElementById('install').hidden = false;
+for (const [id, f] of [['about', 'about'], ['installing', 'install']]) {
+  fetch('content/' + f + '.md').then(r => r.ok ? r.text() : '').then(t => { document.getElementById(id).innerHTML = md(t); }).catch(() => {});
+}
 const file = document.getElementById('importfile');
 document.getElementById('export').onclick = exportProgress;
 document.getElementById('import').onclick = () => file.click();
