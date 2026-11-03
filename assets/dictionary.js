@@ -1,5 +1,5 @@
 import { $, PRON, OWNER, prefs, header, load, bindSeg, both, norm, esc, getJSON, toggleStar } from './common.js';
-import { say, english, FRACTIONS, clock, hourWord } from './numbers-data.js';
+import { say, english, FRACTIONS, clock, theHour } from './numbers-data.js';
 import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf } from './verbs-data.js';
 
 header();
@@ -127,7 +127,7 @@ function numberItems() {
 const GROUP = { time: 'time', calendar: 'calendar', direction: 'place' };
 // One entry per hour (1 to 12), with its half and quarter forms in the morning and the afternoon.
 const CLOCK = Array.from({ length: 12 }, (_, i) => {
-  const h = i + 1, w = hourWord(h);
+  const h = i + 1, w = theHour(h);
   return { id: 'clock-' + h, lat: 's-sa3a ' + w.lat, ar: 'الساعة ' + w.ar, en: h + ' o\'clock', rows: [0, 15, 30, 45].map(m => [clock(h % 12, m), clock(h % 12 + 12, m)]) };
 });
 function wordItems() {

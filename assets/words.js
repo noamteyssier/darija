@@ -57,7 +57,7 @@ const MODULES = {
   },
   clock: {
     n: 4, title: 'Telling the time', sub: 's-sa3a juj, tlata w nus, setta ila rub3, z-zwal...',
-    intro: '<p>The hour comes after <strong>s-sa3a</strong> (the hour): s-sa3a tlata, three o\'clock. Add <strong>w nus</strong> for half past, <strong>w rub3</strong> for a quarter past, and <strong>ila rub3</strong> for a quarter to the next hour: s-sa3a juj w nus, 2:30; s-sa3a tlata ila rub3, 2:45. One o\'clock is feminine, <strong>wa7da</strong>. To say am or pm, add <strong>d s-sba7</strong> (morning), <strong>d z-zwal</strong> (early afternoon), <strong>d l-3chiya</strong> (late afternoon and evening) or <strong>d l-lil</strong> (night). Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>.</p>',
+    intro: '<p>The hour takes <strong>the</strong> and follows <strong>s-sa3a</strong>: s-sa3a t-tlata, three o\'clock (or just t-tlata). One o\'clock is <strong>l-wa7da</strong>, two is <strong>j-juj</strong>. Add <strong>w nus</strong> for half past and <strong>w rub3</strong> for a quarter past. A quarter to is <strong>ghir rub3</strong> on the next hour: s-sa3a t-tlata ghir rub3, 2:45. To say am or pm, add <strong>d s-sba7</strong> (morning), <strong>d z-zwal</strong> (around noon), <strong>d l-3chiya</strong> (afternoon and early evening) or <strong>d l-lil</strong> (night). Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>.</p>',
     pool: () => TIMES.flatMap(t => ['ar-en', 'en-ar'].filter(d => st.dir === 'both' || st.dir === d).map(d => ({ t, d, key: 'clock|' + t.en + '|' + d }))),
     render: ({ t, d }) => {
       const toAr = d === 'en-ar';
