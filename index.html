@@ -8,6 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#282828">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Darija">
 </head>
 <body>
 <div class="wrap">
@@ -23,11 +29,22 @@
     <a class="tile" href="dictionary.html"><b>Dictionary</b><span>Search every verb, noun and word, see full tables, star verbs to drill.</span></a>
     <a class="tile" href="rules.html"><b>Rules</b><span>How the endings work, verb types, the article, agreement.</span></a>
   </div>
-  <p class="note">Progress is saved in this browser only.</p>
+  <p class="note">Progress is saved on this device only.
+    <span id="install" hidden>On iPhone or iPad, tap Share, then Add to Home Screen to use it offline.</span></p>
+  <div class="seg" role="group" aria-label="Progress backup">
+    <button type="button" id="export">Export progress</button>
+    <button type="button" id="import">Import progress</button>
+  </div>
+  <input type="file" id="importfile" accept="application/json" hidden>
 </div>
 <script type="module">
-import { header, getJSON } from './assets/common.js';
+import { header, getJSON, exportProgress, importProgress } from './assets/common.js';
 header();
+if (/iPhone|iPad|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document && !navigator.standalone) document.getElementById('install').hidden = false;
+const file = document.getElementById('importfile');
+document.getElementById('export').onclick = exportProgress;
+document.getElementById('import').onclick = () => file.click();
+file.onchange = () => importProgress(file.files[0]).then(() => location.reload(), () => alert('That file is not a progress export.'));
 getJSON('data/verbs.json').then(d => {
   document.getElementById('vcount').textContent = d.verbs.length + ' verbs in past, present and future. Start with the Starter set and add more as you learn them.';
 }).catch(() => {});
