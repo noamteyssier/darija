@@ -187,6 +187,26 @@ export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
     if (prefs.mode === 'type' && !noMode) { try { q('answer').focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
   });
 
+  // Swipe left on the card to go to the next question once answered (touch screens).
+  // Ignores mostly-vertical drags (scrolling) and swipes that start in a horizontally scrollable area, e.g. a wide table.
+  let sw = null;
+  const card = root.querySelector('.card');
+  const hScroll = el => {
+    for (; el && el !== card; el = el.parentElement) if (el.scrollWidth > el.clientWidth + 1 && /auto|scroll/.test(getComputedStyle(el).overflowX)) return true;
+    return false;
+  };
+  card.addEventListener('touchstart', e => {
+    const t = e.touches[0];
+    sw = e.touches.length === 1 && answered && !hScroll(e.target) ? { x: t.clientX, y: t.clientY } : null;
+  }, { passive: true });
+  card.addEventListener('touchend', e => {
+    if (!sw) return;
+    const t = e.changedTouches[0], dx = t.clientX - sw.x, dy = t.clientY - sw.y;
+    sw = null;
+    if (answered && dx < -60 && Math.abs(dx) > 1.5 * Math.abs(dy)) next();
+  }, { passive: true });
+  card.addEventListener('touchcancel', () => { sw = null; }, { passive: true });
+
   const settingsBox = root.querySelector('.settings');
   bindSeg(settingsBox, prefs, k => {
     prefs.save();
