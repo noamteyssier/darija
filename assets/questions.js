@@ -2,7 +2,7 @@ import { $, header, load, esc, getJSON, shuffle } from './common.js';
 import { quiz } from './quiz.js';
 
 header();
-const st = load('questions-set', { module: 'meanings' });
+const st = load('questions-set', { module: 'meanings', dir: 'both' });
 const { words: QW } = await getJSON('data/questions.json');
 const BY = Object.fromEntries(QW.map(w => [w.id, w]));
 
@@ -16,7 +16,7 @@ const MODULES = {
   meanings: {
     n: 1, title: 'Meanings', sub: 'fin, m3ach, wa9tach, imta, kifach, 3lach, achnu, chkun, chhal',
     intro: '<p><strong>fin</strong> where, <strong>imta</strong> / <strong>wa9tach</strong> when, <strong>kifach</strong> how, <strong>3lach</strong> why, <strong>achnu</strong> what, <strong>chkun</strong> who, <strong>chhal</strong> how much, <strong>m3ach</strong> with what. In Darija the question word usually stays in place at the start of the sentence, and the answer does not change the word order.</p>',
-    pool: () => QW.flatMap(w => ['ar-en', 'en-ar'].map(d => ({ w, d, key: w.id + '|' + d }))),
+    pool: () => QW.flatMap(w => ['ar-en', 'en-ar'].filter(d => st.dir === 'both' || st.dir === d).map(d => ({ w, d, key: w.id + '|' + d }))),
     render: ({ w, d }) => {
       const toAr = d === 'en-ar';
       const ex = w.s[Math.floor(Math.random() * w.s.length)];
@@ -66,9 +66,12 @@ function drawModules() {
 function start() {
   const m = MODULES[st.module] || MODULES.meanings;
   drawModules();
+  $('dir').hidden = st.module !== 'meanings';
+  $('dir').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.val === st.dir)));
   $('introText').innerHTML = m.intro;
   cache = null;
   q = quiz($('quiz'), { name: 'questions-' + st.module, pool: () => (cache ||= m.pool()), render: m.render });
   q.next();
 }
+$('dir').querySelectorAll('button').forEach(b => b.addEventListener('click', () => { st.dir = b.dataset.val; st.save(); start(); }));
 start();
