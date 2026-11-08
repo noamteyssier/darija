@@ -77,7 +77,8 @@ export function quiz(root, { name, pool, render, onSettings, traits, noMode }) {
     q('gloss').textContent = view.gloss || '';
     q('word').className = 'word' + (view.small ? ' small' : '');
     q('word').innerHTML = view.wordHtml ?? (view.word ? disp(view.word.lat, view.word.ar) : '');
-    const who = !view.ask.ar || prefs.script === 'latin' ? view.ask.lat : prefs.script === 'arabic' ? view.ask.ar : view.ask.lat + ' · ' + view.ask.ar;
+    const who = !view.ask.ar || prefs.script === 'latin' ? view.ask.lat : prefs.script === 'arabic' ? view.ask.ar : view.ask.lat + (view.ask.stack ? '\n' : ' · ') + view.ask.ar;
+    q('ask').className = 'ask' + (view.ask.stack ? ' stack' : '');
     q('ask').innerHTML = '<span class="who"></span>' + (view.ask.en ? '<span class="en">(' + esc(view.ask.en) + ')</span>' : '');
     q('ask').querySelector('.who').textContent = who || '';
   }

@@ -59,6 +59,8 @@ details.more .settings{gap:12px}
 .gloss{color:var(--muted); margin:0}
 .ask{font-size:1.05rem; margin:0; display:flex; flex-wrap:wrap; gap:6px 10px; align-items:baseline}
 .ask .who{font:700 1.5rem/1.2 var(--display)}
+.ask.stack{flex-direction:column; align-items:flex-start}
+.ask.stack .who{white-space:pre-line}
 .ask .en{color:var(--muted)}
 .lat,.ar{display:block}
 .ar{font-family:var(--arabic); line-height:1.5}

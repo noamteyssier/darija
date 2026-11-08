@@ -43,7 +43,7 @@ const MODULES = {
       gloss: w.en,
       word: null,
       wordHtml: '',
-      ask: { lat: blank(s.lat), ar: blank(s.ar), en: s.en },
+      ask: { lat: blank(s.lat), ar: blank(s.ar), en: s.en, stack: true },
       answer: { lat: w.lat, ar: w.ar },
       options: others(w).slice(0, 6).map(o => ({ lat: o.lat, ar: o.ar })),
       accept: twin(w),
