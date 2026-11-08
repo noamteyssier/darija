@@ -6,7 +6,7 @@ First time: uv run --with playwright playwright install chromium
 import pytest
 from playwright.sync_api import sync_playwright
 
-PAGES = ["index.html", "verbs.html", "match.html", "nouns.html", "prepositions.html", "numbers.html", "words.html", "sentences.html", "dictionary.html", "rules.html"]
+PAGES = ["index.html", "verbs.html", "match.html", "nouns.html", "prepositions.html", "numbers.html", "words.html", "questions.html", "sentences.html", "dictionary.html", "rules.html"]
 VIEWPORTS = {"desktop": {"width": 1280, "height": 800}, "mobile": {"width": 375, "height": 812}}
 
 
