@@ -3,7 +3,7 @@
 usage: python3 scripts/build_sentences.py
 
 Sources: data/examples/<verb>.json, the examples on prepositions, and the examples on time and place
-words. Each row is [lat, ar, en, kind, id]; kind is v (verb), p (preposition) or w (word), id the
+words and the question words. Each row is [lat, ar, en, kind, id]; kind is v (verb), p (preposition) or w (word) or q (question word), id the
 dictionary entry it belongs to.
 """
 import json
@@ -30,6 +30,9 @@ def main():
     for w in json.loads((ROOT / "data/words.json").read_text(encoding="utf-8"))["words"]:
         if "ex" in w:
             add(w["ex"]["lat"], w["ex"]["ar"], w["ex"]["en"], "w", w["id"])
+    for w in json.loads((ROOT / "data/questions.json").read_text(encoding="utf-8"))["words"]:
+        for s in w["s"]:
+            add(s["lat"].replace("{", "").replace("}", ""), s["ar"].replace("{", "").replace("}", ""), s["en"], "q", "q-" + w["id"])
 
     out = json.dumps({"s": rows}, ensure_ascii=False, separators=(",", ":")).replace("],[", "],\n[")
     (ROOT / "data/sentences.json").write_text(out + "\n", encoding="utf-8")
