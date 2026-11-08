@@ -2,10 +2,10 @@ import { $, header, load, bindSeg, norm, esc, getJSON } from './common.js';
 
 header();
 const st = load('sentences', { kind: 'all' });
-const [{ s: ROWS }, ndata, pdata, wdata] = await Promise.all([getJSON('data/sentences.json'), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
+const [{ s: ROWS }, ndata, pdata, wdata, qdata] = await Promise.all([getJSON('data/sentences.json'), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json'), getJSON('data/questions.json')]);
 const PAGE = 40;
-const WHAT = { v: 'verbs', p: 'preps', w: 'words' };
-const TAG = { v: 'verb', p: 'preposition', w: 'word' };
+const WHAT = { v: 'verbs', p: 'preps', w: 'words', q: 'words' };
+const TAG = { v: 'verb', p: 'preposition', w: 'word', q: 'question word' };
 let shown = PAGE, q = '';
 
 // Single words that have a dictionary entry: nouns, prepositions, time and place words. Short ones (l, f, b) are skipped.
@@ -14,6 +14,7 @@ const link = (lat, what, id) => { const k = norm(lat); if (k.length >= 3 && !lat
 for (const n of ndata.nouns) link(n.lat, 'nouns', n.id);
 for (const p of pdata.prepositions) link(p.lat, 'preps', p.id);
 for (const w of wdata.words) link(w.lat, 'words', w.id);
+for (const w of qdata.words) link(w.lat, 'words', 'q-' + w.id);
 
 const href = (what, id) => 'dictionary.html#' + what + '/' + encodeURIComponent(id);
 const words = s => s.split(/\s+/);

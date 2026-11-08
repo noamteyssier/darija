@@ -4,7 +4,7 @@ import { loadVerbs, loadExamples, exampleTable, TENSE, KINDS, isStrong, glossOf 
 
 header();
 const st = load('dict', { what: 'verbs', level: 'all', tense: 'pres', tag: '' });
-const [vdata, ndata, pdata, wdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json')]);
+const [vdata, ndata, pdata, wdata, qdata] = await Promise.all([loadVerbs(), getJSON('data/nouns.json'), getJSON('data/prepositions.json'), getJSON('data/words.json'), getJSON('data/questions.json')]);
 const PAGE = 60;
 let shown = PAGE, open = null, q = '';
 
@@ -130,8 +130,9 @@ const CLOCK = Array.from({ length: 12 }, (_, i) => {
   const h = i + 1, w = theHour(h);
   return { id: 'clock-' + h, lat: 's-sa3a ' + w.lat, ar: 'الساعة ' + w.ar, en: h + ' o\'clock', rows: [0, 15, 30, 45].map(m => [clock(h % 12, m), clock(h % 12 + 12, m)]) };
 });
+const QUESTIONS = qdata.words.map(w => ({ ...w, id: 'q-' + w.id, group: 'question' }));
 function wordItems() {
-  return ranked([...wdata.words, ...CLOCK], w => [w.lat, w.ar, w.en, GROUP[w.group], ...(w.rows ? w.rows.flat().map(r => r.en) : [])]).map(w => w.rows ? ({
+  return ranked([...wdata.words, ...QUESTIONS, ...CLOCK], w => [w.lat, w.ar, w.en, GROUP[w.group] || 'question', ...(w.rows ? w.rows.flat().map(r => r.en) : [])]).map(w => w.rows ? ({
     id: w.id, lat: w.lat, ar: w.ar, en: w.en,
     badges: [['strong', 'time of day']],
     body: () => '<div class="table"><h2>' + esc(w.en) + ' · am / pm</h2>' + w.rows.map(([a, p]) =>
@@ -140,8 +141,9 @@ function wordItems() {
       + '<p class="note">Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>. Check the times of day with a speaker.</p>',
   }) : ({
     id: w.id, lat: w.lat, ar: w.ar, en: w.en,
-    badges: [['strong', GROUP[w.group]]],
+    badges: [['strong', GROUP[w.group] || 'question']],
     body: () => {
+      if (w.s) return '<p class="kind">' + esc(w.note) + '</p><div class="table"><h2>examples</h2>' + w.s.map(s => '<div class="row"><span class="p">' + esc(s.en) + '</span><span class="f">' + both(s.lat.replace(/[{}]/g, ''), s.ar.replace(/[{}]/g, '')) + '</span></div>').join('') + '</div>';
       let h = '';
       if (w.note) h += '<p class="kind">' + esc(w.note) + '</p>';
       if (w.ex) h += '<div class="table"><h2>example</h2><div class="row"><span class="p">' + esc(w.ex.en) + '</span><span class="f">' + both(w.ex.lat, w.ex.ar) + '</span></div></div>';
@@ -152,7 +154,7 @@ function wordItems() {
 
 function render(focusId) {
   let items = st.what === 'verbs' ? verbItems() : st.what === 'nouns' ? nounItems() : st.what === 'adjs' ? adjItems() : st.what === 'words' ? wordItems() : st.what === 'nums' ? numberItems() : prepItems();
-  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length : st.what === 'nums' ? NUMS.length + FRACTIONS.length : pdata.prepositions.length;
+  const total = st.what === 'verbs' ? vdata.verbs.length : st.what === 'nouns' ? ndata.nouns.length : st.what === 'adjs' ? ndata.adjectives.length : st.what === 'words' ? wdata.words.length + QUESTIONS.length : st.what === 'nums' ? NUMS.length + FRACTIONS.length : pdata.prepositions.length;
   const tags = [...new Set(items.flatMap(it => it.badges.map(b => b[1])))].sort();
   if (!tags.includes(st.tag)) st.tag = '';
   if (st.tag) items = items.filter(it => it.badges.some(b => b[1] === st.tag));
