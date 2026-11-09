@@ -127,6 +127,8 @@ const RENAMED = {
   'dwer-3la-limen': 'dewer-3la-limen',
   'dwer-3la-liser': 'dewer-3la-liser',
   'mshi-nishan': 'mchi-nichan',
+  // question words
+  'wa9tach': 'waqtach',
   // collocations
   'c|2|d7k|3la': 'c|2|de7k|3la',
   'c|3|d7k|m3a': 'c|3|de7k|m3a',

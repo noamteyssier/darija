@@ -536,6 +536,14 @@
     "chafet": 0
    }
   },
+  "chhal": {
+   "by": "corpus",
+   "counts": {
+    "chhal": 286,
+    "chehal": 83,
+    "chal": 20
+   }
+  },
   "chhar": {
    "by": "corpus",
    "counts": {
@@ -1402,6 +1410,16 @@
     "khrrej": 4
    }
   },
+  "khsek": {
+   "by": "schwa",
+   "counts": {
+    "khsk": 17,
+    "khsek": 12,
+    "khesek": 4,
+    "khesk": 4,
+    "khessek": 0
+   }
+  },
   "khsna": {
    "by": "corpus",
    "counts": {
@@ -1894,6 +1912,13 @@
    "counts": {
     "mzyana": 130,
     "mezyana": 5
+   }
+  },
+  "n3awnek": {
+   "by": "corpus",
+   "counts": {
+    "n3awnek": 31,
+    "n3awnk": 17
    }
   },
   "ne3ref": {

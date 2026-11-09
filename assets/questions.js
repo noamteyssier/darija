@@ -6,16 +6,16 @@ const st = load('questions-set', { module: 'meanings', dir: 'both' });
 const { words: QW } = await getJSON('data/questions.json');
 const BY = Object.fromEntries(QW.map(w => [w.id, w]));
 
-// Sentences mark the answer as {word}. imta and wa9tach both mean when, so a word's twin ("like") is never offered as a wrong option and is accepted when typed.
+// Sentences mark the answer as {word}. m3ach, waqtach and imta all mean when, so a word's twins ("like") are never offered as wrong options and are accepted when typed.
 const blank = t => t.replace(/\{[^}]*\}/, '___');
 const full = t => t.replace(/[{}]/g, '');
-const twin = w => (w.like ? [BY[w.like].lat, BY[w.like].ar] : []);
-const others = w => shuffle(QW.filter(o => o.id !== w.id && o.id !== w.like));
+const twin = w => (w.like || []).flatMap(id => [BY[id].lat, BY[id].ar]);
+const others = w => shuffle(QW.filter(o => o.id !== w.id && !(w.like || []).includes(o.id)));
 
 const MODULES = {
   meanings: {
-    n: 1, title: 'Meanings', sub: 'fin, m3ach, wa9tach, imta, kifach, 3lach, achnu, chkun, chhal',
-    intro: '<p><strong>fin</strong> where, <strong>imta</strong> / <strong>wa9tach</strong> when, <strong>kifach</strong> how, <strong>3lach</strong> why, <strong>achnu</strong> what, <strong>chkun</strong> who, <strong>chhal</strong> how much, <strong>m3ach</strong> with what. In Darija the question word usually stays in place at the start of the sentence, and the answer does not change the word order.</p>',
+    n: 1, title: 'Meanings', sub: 'fin, m3ach, waqtach, imta, kifach, 3lach, achnu, chkun, chhal',
+    intro: '<p><strong>fin</strong> where, <strong>imta</strong> / <strong>waqtach</strong> / <strong>m3ach</strong> when, <strong>kifach</strong> how, <strong>3lach</strong> why, <strong>achnu</strong> what, <strong>chkun</strong> who, <strong>chhal</strong> how much. In Darija the question word usually stays in place at the start of the sentence, and the answer does not change the word order.</p>',
     pool: () => QW.flatMap(w => ['ar-en', 'en-ar'].filter(d => st.dir === 'both' || st.dir === d).map(d => ({ w, d, key: w.id + '|' + d }))),
     render: ({ w, d }) => {
       const toAr = d === 'en-ar';
@@ -36,7 +36,7 @@ const MODULES = {
   },
   blank: {
     n: 2, title: 'Fill in the blank', sub: 'Which question word completes the sentence?',
-    intro: '<p>Read the English, then pick the question word that fits the gap. Careful with <strong>achnu</strong> (what), <strong>chkun</strong> (who) and <strong>m3ach</strong> (with what), and remember that <strong>imta</strong> and <strong>wa9tach</strong> are the same word.</p>',
+    intro: '<p>Read the English, then pick the question word that fits the gap. Careful with <strong>achnu</strong> (what) and <strong>chkun</strong> (who), and remember that <strong>imta</strong>, <strong>waqtach</strong> and <strong>m3ach</strong> all mean when.</p>',
     pool: () => QW.flatMap(w => w.s.map((s, i) => ({ w, s, key: w.id + '|' + i }))),
     render: ({ w, s }) => ({
       chip: 'Fill in the blank',

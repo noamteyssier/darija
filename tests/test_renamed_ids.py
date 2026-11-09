@@ -28,7 +28,7 @@ IDS = {
     }.items()
     for k in keys
     for x in load(f)[k]
-}
+} | {x["id"] for x in load("questions")["words"]}
 COLLOCATIONS = {
     f"c|{i}|{c['verb']}|{c['prep']}" for i, c in enumerate(load("prepositions")["collocations"])
 }
