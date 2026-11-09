@@ -137,6 +137,8 @@ def site_text(raw=False):
         yield from (s["lat"] for s in json.loads(f.read_text()))
     for f in ("words", "prepositions", "nouns"):
         yield from latin(json.loads((ROOT / f"data/{f}.json").read_text()))
+    for w in json.loads((ROOT / "data/questions.json").read_text())["words"]:
+        yield from (s["lat"].replace("{", "").replace("}", "") for s in w["s"])
     if raw:
         for f in sorted((ROOT / "data/raw/examples").glob("*.json")):
             yield from latin(json.loads(f.read_text()))
