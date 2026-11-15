@@ -1,11 +1,11 @@
 // Offline cache. Everything same-origin is served from cache and refreshed in the background,
 // so a deploy shows up on the next launch. Bump CACHE only to drop old entries (renamed or removed files).
-const CACHE = 'darija-v3';
+const CACHE = 'darija-v4';
 const CORE = [
-  './', 'index.html', 'verbs.html', 'match.html', 'nouns.html', 'prepositions.html', 'numbers.html',
+  './', 'index.html', 'verbs.html', 'match.html', 'blank.html', 'nouns.html', 'prepositions.html', 'numbers.html',
   'words.html', 'questions.html', 'sentences.html', 'dictionary.html', 'rules.html', 'manifest.webmanifest', 'content/about.md', 'content/install.md',
   'assets/style.css', 'assets/common.js', 'assets/quiz.js', 'assets/verbs-data.js', 'assets/numbers-data.js',
-  'assets/verbs.js', 'assets/match.js', 'assets/nouns.js', 'assets/prepositions.js', 'assets/numbers.js',
+  'assets/verbs.js', 'assets/match.js', 'assets/blank.js', 'assets/nouns.js', 'assets/prepositions.js', 'assets/numbers.js',
   'assets/words.js', 'assets/questions.js', 'assets/sentences.js', 'assets/dictionary.js', 'assets/rules.js',
   'assets/icons/icon-192.png', 'assets/icons/apple-touch-icon.png',
   'data/verbs.json', 'data/nouns.json', 'data/prepositions.json', 'data/words.json', 'data/questions.json', 'data/spelling.json', 'data/examples.json',
