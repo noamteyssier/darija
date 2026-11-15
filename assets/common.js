@@ -216,6 +216,7 @@ export function getJSON(path) {
 const PAGES = [
   ['verbs.html', 'Verbs'],
   ['match.html', 'Match'],
+  ['blank.html', 'Fill in'],
   ['nouns.html', 'Nouns'],
   ['prepositions.html', 'Prepositions'],
   ['numbers.html', 'Numbers'],

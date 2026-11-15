@@ -23,7 +23,7 @@ and bump `CACHE` so old entries are dropped. Service workers need HTTPS or `loca
 ## Layout
 
 ```
-index.html verbs.html match.html nouns.html prepositions.html numbers.html words.html sentences.html dictionary.html rules.html
+index.html verbs.html match.html blank.html nouns.html prepositions.html numbers.html words.html sentences.html dictionary.html rules.html
 manifest.webmanifest, sw.js  PWA manifest and offline cache
 content/*.md           markdown for the home page's About and Install sections
 assets/                shared CSS and ES modules (common.js, quiz.js, one module per page)

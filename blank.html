@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fill in the blank · Darija Drills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#282828">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Darija">
+</head>
+<body>
+<div class="wrap">
+  <header id="top"></header>
+
+  <div class="settings" id="blankSettings">
+    <div class="seg" role="group" aria-label="Tense" data-group="tense">
+      <button type="button" data-val="past">Past</button>
+      <button type="button" data-val="pres">Present</button>
+      <button type="button" data-val="fut">Future</button>
+      <button type="button" data-val="all">All</button>
+    </div>
+    <div class="seg" role="group" aria-label="Positive or negative" data-group="polarity">
+      <button type="button" data-val="pos">Positive</button>
+      <button type="button" data-val="neg">Negative</button>
+      <button type="button" data-val="all">Both</button>
+    </div>
+    <div>
+      <p class="lbl">Verb set</p>
+      <div class="chipset" id="levels" role="group" aria-label="Levels"></div>
+    </div>
+    <details class="more">
+      <summary id="moreSummary">More filters</summary>
+      <div class="settings">
+        <div>
+          <p class="lbl">Topics (none picked = all)</p>
+          <div class="chipset" id="topics" role="group" aria-label="Topics"></div>
+        </div>
+        <div class="seg" role="group" aria-label="Verb type" data-group="vtype">
+          <button type="button" data-val="strong">Regular</button>
+          <button type="button" data-val="weak">Weak</button>
+          <button type="button" data-val="all">Both</button>
+        </div>
+        <p class="note">Star verbs in the <a href="dictionary.html">dictionary</a> to build your own set.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="panel" id="quiz"></div>
+  <p class="note">Sentences come from the verb examples, written by Claude, so check them with a speaker. Pick the verb and the conjugation that fit the person, tense and polarity. Negative is ma + verb + ch; the future is ghadi plus the present without ka-.</p>
+</div>
+<script type="module" src="assets/blank.js"></script>
+</body>
+</html>
