@@ -13,7 +13,7 @@ from pathlib import Path
 from spelling import canon_fields, load
 
 ROOT = Path(__file__).resolve().parent.parent
-GROUPS = ["time", "calendar", "direction"]
+GROUPS = ["time", "calendar", "direction", "weather"]
 KINDS = ["word", "phrase"]
 
 

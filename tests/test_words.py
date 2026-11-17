@@ -16,13 +16,13 @@ class Words(unittest.TestCase):
     def test_shape(self):
         self.assertEqual(len(W), len(D["words"]), "ids are unique")
         for w in W.values():
-            self.assertIn(w["group"], ("time", "calendar", "direction"))
+            self.assertIn(w["group"], ("time", "calendar", "direction", "weather"))
             self.assertIn(w["kind"], ("word", "phrase"))
             for k in ("lat", "ar", "en"):
                 self.assertTrue(w[k], w["id"])
 
     def test_groups_big_enough_to_drill(self):
-        for g in ("time", "calendar", "direction"):
+        for g in ("time", "calendar", "direction", "weather"):
             self.assertGreaterEqual(sum(w["group"] == g for w in W.values()), 8)
 
     def test_compass_and_days(self):

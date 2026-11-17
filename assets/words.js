@@ -9,13 +9,14 @@ const { words: WORDS } = await getJSON('data/words.json');
 // Round times only (on the hour, half past, quarters), every hour of the day.
 const TIMES = Array.from({ length: 24 }, (_, h) => [0, 30, 15, 45].map(m => ({ m, ...clock(h, m) }))).flat();
 
+const SEASONS = WORDS.filter(w => ['ch-chta', 'r-rbi3', 's-sif', 'l-khrif'].includes(w.id));
 const BY = g => WORDS.filter(w => w.group === g);
 const first = en => en.split(' / ')[0];
 const exHtml = w => (w.ex ? '<div class="ex"><strong>Example:</strong> ' + esc(w.ex.lat) + ' <em>(' + esc(w.ex.en) + ')</em></div>' : '');
 
 // Each word is asked both ways: Darija to English, and English to Darija.
-function make(group) {
-  const words = BY(group);
+function make(group, extra = []) {
+  const words = [...BY(group), ...extra];
   return {
     pool: () => words.flatMap(w => ['ar-en', 'en-ar'].filter(d => st.dir === 'both' || st.dir === d).map(d => ({ w, d, key: w.id + '|' + d }))),
     render: ({ w, d }) => {
@@ -75,6 +76,11 @@ const MODULES = {
         options: others.map(o => (toAr ? { lat: o.lat, ar: o.ar } : { lat: o.en, ar: '' })),
       };
     },
+  },
+  weather: {
+    n: 5, title: 'Seasons and weather', sub: 'l-fsul, j-jaw zwin, kayn r-rih, kayna ch-chta, kayn t-talj...',
+    intro: '<p>Two patterns: <strong>j-jaw</strong> plus an adjective, j-jaw zwin (nice weather), j-jaw bard (cold), j-jaw skhun (hot), j-jaw mghayem (cloudy); or <strong>kayn</strong> plus a noun, kayn r-rih (it is windy), kayn t-talj (it is snowing). The noun takes the article, and a feminine one takes <strong>kayna</strong>: kayna ch-chta, it is raining. Ask with <strong>kifach j-jaw?</strong> The seasons (<strong>l-fsul</strong>) are mixed in: ch-chta winter, r-rbi3 spring, s-sif summer, l-khrif autumn. Careful: ch-chta also means the rain.</p>',
+    ...make('weather', SEASONS),
   },
 };
 
