@@ -124,7 +124,13 @@ function numberItems() {
   }));
 }
 
-const GROUP = { time: 'time', calendar: 'calendar', direction: 'place' };
+const GROUP = { time: 'time', calendar: 'calendar', direction: 'place', weather: 'weather' };
+// Calendar words get a second tag. Week and month also cover "this / next / last" phrases.
+const SUB = Object.fromEntries(Object.entries({
+  week: ['t-tnin', 't-tlata', 'l-arb3a', 'l-khmis', 'j-jem3a', 's-sebt', 'l-7ed', 'semmana', 'had-s-semmana', 's-semmana-jaya', 's-semmana-lli-fatet'],
+  month: ['chher', 'had-ch-chher', 'ch-chher-jay', 'ch-chher-lli-fat'],
+  season: ['ch-chta', 'r-rbi3', 's-sif', 'l-khrif'],
+}).flatMap(([t, ids]) => ids.map(id => [id, t])));
 // One entry per hour (1 to 12), with its half and quarter forms in the morning and the afternoon.
 const CLOCK = Array.from({ length: 12 }, (_, i) => {
   const h = i + 1, w = theHour(h);
@@ -132,7 +138,7 @@ const CLOCK = Array.from({ length: 12 }, (_, i) => {
 });
 const QUESTIONS = qdata.words.map(w => ({ ...w, id: 'q-' + w.id, group: 'question' }));
 function wordItems() {
-  return ranked([...wdata.words, ...QUESTIONS, ...CLOCK], w => [w.lat, w.ar, w.en, GROUP[w.group] || 'question', ...(w.rows ? w.rows.flat().map(r => r.en) : [])]).map(w => w.rows ? ({
+  return ranked([...wdata.words, ...QUESTIONS, ...CLOCK], w => [w.lat, w.ar, w.en, GROUP[w.group] || 'question', SUB[w.id] || '', ...(w.rows ? w.rows.flat().map(r => r.en) : [])]).map(w => w.rows ? ({
     id: w.id, lat: w.lat, ar: w.ar, en: w.en,
     badges: [['strong', 'time of day']],
     body: () => '<div class="table"><h2>' + esc(w.en) + ' · am / pm</h2>' + w.rows.map(([a, p]) =>
@@ -141,7 +147,7 @@ function wordItems() {
       + '<p class="note">Noon is <strong>z-zwal</strong> and midnight is <strong>nus l-lil</strong>. Check the times of day with a speaker.</p>',
   }) : ({
     id: w.id, lat: w.lat, ar: w.ar, en: w.en,
-    badges: [['strong', GROUP[w.group] || 'question']],
+    badges: [['strong', GROUP[w.group] || 'question'], ...(SUB[w.id] ? [['strong', SUB[w.id]]] : [])],
     body: () => {
       if (w.s) return '<p class="kind">' + esc(w.note) + '</p><div class="table"><h2>examples</h2>' + w.s.map(s => '<div class="row"><span class="p">' + esc(s.en) + '</span><span class="f">' + both(s.lat.replace(/[{}]/g, ''), s.ar.replace(/[{}]/g, '')) + '</span></div>').join('') + '</div>';
       let h = '';
